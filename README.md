@@ -1,30 +1,33 @@
-# 👋 Hi, I'm Lifan!
+# Lifan Chen
 
-### Staff ML Engineer @ Google | Prolific Builder | Snowboarder 🏂
+AI-native generalist. Staff Engineer at Google. I ship tools that solve my own problems — then open-source them. Currently obsessed with **context engineering for AI agents** and **building apps entirely through vibe-coding**.
 
-I build local-first tools and agentic frameworks to solve real-world problems. I'm currently focused on the future of **Agentic Engineering** and **Personal Finance Optimization**.
+## What I'm Building
 
----
-
-## 🚀 Featured Projects
+### 🔄 [CouponCycle](https://github.com/lifan-builds/credit-card-tracker)
+Full-stack credit card benefits tracker with 30k+ active users. Track welcome bonuses, annual fee deadlines, and reward optimizations — all local-first, no spreadsheets. Real people use this daily to never miss a signup bonus or downgrade window again.
 
 ### 🧠 [Context Harness](https://github.com/lifan-builds/context-harness)
-*AI Agents lose context too fast.* I built a persistent filesystem-based context manager for autonomous AI agents. It ensures your coding agents remember decisions, plans, and discoveries across long-running sessions.
+AI agents forget everything between sessions. I built a filesystem-based context manager that gives coding agents persistent memory — decisions, plans, discoveries all survive across long-running sessions. Used across all my projects.
 
-### 💳 [Credit Card Tracker](https://github.com/lifan-builds/credit-card-tracker)
-A local-first, privacy-focused tool to optimize and track credit card points and welcome offers. No more spreadsheets—just clean, automated tracking of your path to the next free flight.
+### ❄️ [FreshPowder](https://github.com/lifan-builds/deal)
+Skiing is stupidly expensive. This scrapes and aggregates every lift ticket deal, flash sale, and discount pass so you never pay full price for a powder day. Auto-updated every 6 hours.
 
-### ❄️ [Snow Deals](https://github.com/lifan-builds/deal)
-Skiing is getting expensive. I built a bot/tracker to never miss a powder day deal or discount lift ticket again.
+### 🎙️ [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast)
+Weekly AI-generated podcast that distills the best threads from the largest Chinese-American credit card forum. Nitan MCP → NotebookLM → podcast, fully automated.
 
----
+### ⚡ [Agent Nexus](https://github.com/lifan-builds/agent-nexus)
+Centralized skill and MCP server manager for AI coding agents. One config to rule all your IDE agent setups — Cursor, Claude Code, Copilot, whatever comes next.
 
-## 🛠️ Build in Public
-I'm documenting my journey as I build and scale these tools. If you're into AI agents, local-first software, or just want to chat about the best lines at Tahoe, let's connect!
+## What's Next
 
-- **𝕏 (Twitter):** [@LifanBuilds](https://x.com/LifanBuilds)
-- **GitHub:** [lifan-builds](https://github.com/lifan-builds)
+| Project | What it does | Status |
+|---------|-------------|--------|
+| **VibeCoder** | Opinionated framework for shipping full apps through AI pair-programming | 🔬 Research |
+| **DealPilot** | AI agent that monitors and auto-applies the best deals across all your subscriptions | 💡 Ideation |
+| **ContextBench** | Benchmarks for measuring how well AI agents retain and use long-term context | 📐 Design |
 
----
+## Connect
 
-![Banner](avatar/twitter_banner.png)
+- **𝕏** [@LifanBuilds](https://x.com/LifanBuilds)
+- **GitHub** [lifan-builds](https://github.com/lifan-builds)
