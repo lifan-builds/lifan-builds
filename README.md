@@ -1,4 +1,4 @@
-# Lifan Chen
+# Lifan
 
 AI-native generalist. Staff Engineer at Google. I ship tools that solve my own problems — then open-source them. Currently obsessed with **context engineering for AI agents** and **building apps entirely through vibe-coding**.
 
