@@ -1,8 +1,13 @@
 # Lifan
 
+> **[CastForge](https://github.com/lifan-builds/castforge)** — open-source Python framework for automated podcast pipelines: hooks-based orchestration, optional Gemini briefing, NotebookLM audio, and RSS-friendly publishing. Each show repo owns its schedule and feed; CastForge is the reusable engine. Powers [**Nitan Podcast**](https://github.com/lifan-builds/nitan-podcast).
+
 AI-native generalist. Staff Engineer at Google. I ship tools that solve my own problems — then open-source them. Currently obsessed with **context engineering for AI agents** and **building apps entirely through vibe-coding**.
 
 ## What I'm Building
+
+### 🔧 [CastForge](https://github.com/lifan-builds/castforge)
+Framework for **source → podcast** automation. Show repos keep their own cron, runner, RSS, and public URLs; CastForge supplies the pipeline stages and integrations. Install from git, wire hooks, copy the [example workflow](https://github.com/lifan-builds/castforge/blob/main/examples/weekly-podcast.yml). First production user: [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast).
 
 ### 🔄 [CouponCycle](https://github.com/lifan-builds/credit-card-tracker)
 Full-stack credit card benefits tracker with 30k+ active users. Track welcome bonuses, annual fee deadlines, and reward optimizations — all local-first, no spreadsheets. Real people use this daily to never miss a signup bonus or downgrade window again.
@@ -14,7 +19,7 @@ AI agents forget everything between sessions. I built a filesystem-based context
 Skiing is stupidly expensive. This scrapes and aggregates every lift ticket deal, flash sale, and discount pass so you never pay full price for a powder day. Auto-updated every 6 hours.
 
 ### 🎙️ [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast)
-Weekly AI-generated podcast that distills the best threads from the largest Chinese-American credit card forum. Nitan MCP → NotebookLM → podcast, fully automated.
+Weekly AI-generated podcast that distills the best threads from the largest Chinese-American credit card forum. **Built on [CastForge](https://github.com/lifan-builds/castforge):** Nitan MCP → NotebookLM → podcast, fully automated.
 
 ### ⚡ [Agent Nexus](https://github.com/lifan-builds/agent-nexus)
 Centralized skill and MCP server manager for AI coding agents. One config to rule all your IDE agent setups — Cursor, Claude Code, Copilot, whatever comes next.
