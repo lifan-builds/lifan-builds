@@ -1,7 +1,5 @@
 # Lifan
 
-> **[CastForge](https://github.com/lifan-builds/castforge)** — open-source Python framework for automated podcast pipelines: hooks-based orchestration, optional Gemini briefing, NotebookLM audio, and RSS-friendly publishing. Each show repo owns its schedule and feed; CastForge is the reusable engine. Powers [**Nitan Podcast**](https://github.com/lifan-builds/nitan-podcast).
-
 AI-native generalist. Staff Engineer at Google. I ship tools that solve my own problems — then open-source them. Currently obsessed with **context engineering for AI agents** and **building apps entirely through vibe-coding**.
 
 ## What I'm Building
