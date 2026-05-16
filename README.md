@@ -5,13 +5,13 @@ AI-native generalist. Staff Engineer at Google. I ship tools that solve my own p
 ## What I'm Building
 
 ### 🔧 [CastForge](https://github.com/lifan-builds/castforge)
-Framework for **source → podcast** automation. Show repos keep their own cron, runner, RSS, and public URLs; CastForge supplies the pipeline stages and integrations. Install from git, wire hooks, copy the [example workflow](https://github.com/lifan-builds/castforge/blob/main/examples/weekly-podcast.yml). First production user: [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast).
+Source-to-podcast automation framework extracted from [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast). Show repos keep their own RSS identity, schedule, and public URLs; CastForge supplies reusable pipeline stages, NotebookLM/audio integrations, publishing, and validation.
 
-### 🔄 [CouponCycle](https://github.com/lifan-builds/credit-card-tracker)
-Full-stack credit card benefits tracker with 30k+ active users. Track welcome bonuses, annual fee deadlines, and reward optimizations — all local-first, no spreadsheets. Real people use this daily to never miss a signup bonus or downgrade window again.
+### 🔄 [Perks Reminder](https://github.com/lifan-builds/credit-card-tracker)
+Full-stack credit card benefits tracker with 30k+ active users. Track welcome bonuses, annual fee deadlines, loyalty expirations, and recurring credits without spreadsheet sprawl. Free, open source, and built for people who actually juggle multiple premium cards.
 
 ### 🧠 [Context Harness](https://github.com/lifan-builds/context-harness)
-AI agents forget everything between sessions. I built a filesystem-based context manager that gives coding agents persistent memory — decisions, plans, discoveries all survive across long-running sessions. Used across all my projects.
+Tiny companion-skill system for AI coding agents. It gives agents durable filesystem memory through `AGENTS.md`, `CONTEXT.md`, `NOW.md`, and `PLAN.md`, while local scripts handle the mechanical work. The goal is persistent context and behavioral guardrails without a giant prompt framework.
 
 ### ❄️ [FreshPowder](https://github.com/lifan-builds/deal)
 Skiing is stupidly expensive. This scrapes and aggregates every lift ticket deal, flash sale, and discount pass so you never pay full price for a powder day. Auto-updated every 6 hours.
