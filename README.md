@@ -1,36 +1,89 @@
+<p align="center">
+  <img src="./avatar/github_profile_banner.png" alt="Lifan Builds - ML and snow code banner" width="100%" />
+</p>
+
+<div align="center">
+
 # Lifan
 
-AI-native generalist. Staff Engineer at Google. I ship tools that solve my own problems, then open-source the parts that can help other builders.
+Staff ML Engineer @ Google building local-first AI tools, agent workflows, and practical consumer apps.
 
-Current themes: local-first AI, agent control planes, context engineering, and useful consumer utilities built end-to-end with AI pair-programming.
+![Profile Views](https://komarev.com/ghpvc/?username=lifan-builds&style=for-the-badge&color=0d1117&labelColor=161b22&label=PROFILE+VIEWS)
+![Followers](https://img.shields.io/github/followers/lifan-builds?style=for-the-badge&color=0d1117&labelColor=161b22&label=Followers&logo=github)
+![Stars](https://img.shields.io/github/stars/lifan-builds?style=for-the-badge&color=0d1117&labelColor=161b22&label=Total+Stars&logo=github)
 
-## What I'm Building
+</div>
 
-### [Flying Pig AI](https://github.com/lifan-builds/flyingpig)
-AI customer-service advocate that runs in a supervised local dashboard. It opens a controlled browser work window, drives support chats through browser-use, and pauses at structured decision checkpoints before consequential actions.
+---
 
-### [AwesomeMyChart](https://github.com/lifan-builds/med-context)
-Local-first Chrome extension for extracting, browsing, exporting, and asking questions over your own MyChart records. Records stay in browser storage by default; LLM calls happen only when you configure a provider.
+## `> whoami`
 
-### [Perks Reminder](https://github.com/lifan-builds/perks-reminder)
-Free, open-source credit card benefits tracker for people juggling premium cards, welcome bonuses, annual fee deadlines, recurring credits, certificates, and loyalty expirations. Built as a mobile-friendly Next.js PWA.
+```python
+lifan = {
+    "role": "Staff ML Engineer @ Google",
+    "builds": ["local-first AI", "agent control planes", "consumer utilities"],
+    "style": "ship useful tools, then open-source the parts that help builders",
+    "current_focus": "AI systems that stay useful under human control",
+    "hub": "https://x.com/LifanBuilds",
+}
+```
 
-### [FreshPowder](https://github.com/lifan-builds/snow-deal)
-Invite-gated ski and snowboard deal aggregator tracking 12k+ current and historical deals across 28+ North American retailers every 6 hours, with expert review context and fast filters for real buying decisions.
+---
 
-### [CastForge](https://github.com/lifan-builds/castforge)
-Source-to-podcast automation framework extracted from [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast). Show repos keep their own RSS identity, schedule, and public URLs; CastForge supplies reusable pipeline stages, NotebookLM/audio integrations, publishing, and validation.
+## What I Build With
 
-### [Nitan Podcast](https://github.com/lifan-builds/nitan-podcast)
-Weekly Chinese podcast generated from hot USCardForum discussions. It is the production proof for CastForge: Nitan MCP extraction, source-grounded briefs, NotebookLM audio, RSS publishing, and forum post generation.
+<div align="center">
 
-### [Context Harness](https://github.com/lifan-builds/context-harness)
-Tiny companion-skill system for AI coding agents. It gives agents durable filesystem memory through `AGENTS.md`, `CONTEXT.md`, `NOW.md`, and `PLAN.md`, while local scripts handle the mechanical work.
+![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-1f6feb?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-0d1117?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Chrome Extensions](https://img.shields.io/badge/Chrome%20Extensions-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![AI Agents](https://img.shields.io/badge/AI%20Agents-FF6F00?style=for-the-badge&logo=openai&logoColor=white)
 
-### [Agent Nexus](https://github.com/lifan-builds/agent-nexus)
-Centralized skill, hook, and MCP server manager for AI coding agents. One manifest deploys agent environments across Claude Code, Cursor, Google Antigravity, Codex, and whatever comes next.
+</div>
+
+---
+
+## GitHub Snapshot
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=lifan-builds&show_icons=true&theme=github_dark&hide_border=true&hide_title=true" alt="GitHub stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lifan-builds&layout=compact&theme=github_dark&hide_border=true" alt="Top languages" />
+
+</div>
+
+---
+
+## Featured Builds
+
+| Project | Stars | Why it exists |
+|---------|-------|---------------|
+| [**Flying Pig AI**](https://github.com/lifan-builds/flyingpig) | ![Stars](https://img.shields.io/github/stars/lifan-builds/flyingpig?style=flat&color=f5c542&label=stars) | AI customer-service advocate that runs in a supervised local dashboard, drives support chats, and pauses at decision checkpoints before consequential actions. |
+| [**AwesomeMyChart**](https://github.com/lifan-builds/med-context) | ![Stars](https://img.shields.io/github/stars/lifan-builds/med-context?style=flat&color=f5c542&label=stars) | Local-first Chrome extension for extracting, browsing, exporting, and asking questions over your own MyChart records. |
+| [**Perks Reminder**](https://github.com/lifan-builds/perks-reminder) | ![Stars](https://img.shields.io/github/stars/lifan-builds/perks-reminder?style=flat&color=f5c542&label=stars) | Free, open-source credit card benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations. |
+| [**FreshPowder**](https://github.com/lifan-builds/snow-deal) | ![Stars](https://img.shields.io/github/stars/lifan-builds/snow-deal?style=flat&color=f5c542&label=stars) | Ski and snowboard deal aggregator tracking 12k+ current and historical deals across 28+ North American retailers every 6 hours. |
+| [**CastForge**](https://github.com/lifan-builds/castforge) | ![Stars](https://img.shields.io/github/stars/lifan-builds/castforge?style=flat&color=f5c542&label=stars) | Source-to-podcast automation framework extracted from Nitan Podcast, with reusable pipeline stages, audio integrations, publishing, and validation. |
+| [**Nitan Podcast**](https://github.com/lifan-builds/nitan-podcast) | ![Stars](https://img.shields.io/github/stars/lifan-builds/nitan-podcast?style=flat&color=f5c542&label=stars) | Weekly Chinese podcast generated from USCardForum discussions and shipped through RSS, Apple Podcasts, Spotify, and GitHub Pages. |
+| [**Context Harness**](https://github.com/lifan-builds/context-harness) | ![Stars](https://img.shields.io/github/stars/lifan-builds/context-harness?style=flat&color=f5c542&label=stars) | Tiny filesystem memory layer for coding agents: `AGENTS.md`, `CONTEXT.md`, `NOW.md`, `PLAN.md`, and small local scripts. |
+| [**Agent Nexus**](https://github.com/lifan-builds/agent-nexus) | ![Stars](https://img.shields.io/github/stars/lifan-builds/agent-nexus?style=flat&color=f5c542&label=stars) | One manifest for deploying skills, hooks, and MCP servers across Claude Code, Cursor, Google Antigravity, Codex, and related IDEs. |
+
+---
+
+## Current Themes
+
+- Local-first AI that keeps user data and decisions close to the user.
+- Agent control planes that make AI coding sessions more durable and inspectable.
+- Consumer utilities that replace private spreadsheets with real products.
+- Practical automation that keeps humans in the loop for consequential actions.
+
+---
 
 ## Connect
 
-- X: [@LifanBuilds](https://x.com/LifanBuilds)
-- GitHub: [lifan-builds](https://github.com/lifan-builds)
+<div align="center">
+
+[![X](https://img.shields.io/badge/@LifanBuilds-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/LifanBuilds)
+
+</div>
