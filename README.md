@@ -43,19 +43,6 @@ lifan = {
 
 </div>
 
----
-
-## GitHub Snapshot
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=lifan-builds&show_icons=true&theme=github_dark&hide_border=true&hide_title=true" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lifan-builds&layout=compact&theme=github_dark&hide_border=true" alt="Top languages" />
-
-</div>
-
----
-
 ## Featured Builds
 
 | Project | Stars | Why it exists |
