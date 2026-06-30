@@ -38,7 +38,7 @@ lifan = {
 ![TypeScript](https://img.shields.io/badge/TypeScript-1f6feb?style=for-the-badge&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-0d1117?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Chrome Extensions](https://img.shields.io/badge/Chrome%20Extensions-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=for-the-badge&logo=puppeteer&logoColor=white)
 ![AI Agents](https://img.shields.io/badge/AI%20Agents-FF6F00?style=for-the-badge&logo=openai&logoColor=white)
 
 </div>
@@ -48,7 +48,7 @@ lifan = {
 | Project | Stars | Why it exists |
 |---------|-------|---------------|
 | [**Flying Pig AI**](https://github.com/lifan-builds/flyingpig) | ![Stars](https://img.shields.io/github/stars/lifan-builds/flyingpig?style=flat&color=f5c542&label=stars) | AI customer-service advocate that runs in a supervised local dashboard, drives support chats, and pauses at decision checkpoints before consequential actions. |
-| [**mychart-cli**](https://github.com/lifan-builds/mychart-cli) | ![Stars](https://img.shields.io/github/stars/lifan-builds/mychart-cli?style=flat&color=f5c542&label=stars) | Local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness while keeping credentials and raw records local. |
+| [**mychart-cli**](https://github.com/lifan-builds/mychart-cli) | ![Stars](https://img.shields.io/github/stars/lifan-builds/mychart-cli?style=flat&color=f5c542&label=stars) | Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness while keeping credentials and raw records local. |
 | [**Perks Reminder**](https://github.com/lifan-builds/perks-reminder) | ![Stars](https://img.shields.io/github/stars/lifan-builds/perks-reminder?style=flat&color=f5c542&label=stars) | Free, open-source credit card benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations. |
 | [**FreshPowder**](https://github.com/lifan-builds/snow-deal) | ![Stars](https://img.shields.io/github/stars/lifan-builds/snow-deal?style=flat&color=f5c542&label=stars) | Ski and snowboard deal aggregator tracking 12k+ current and historical deals across 28+ North American retailers every 6 hours. |
 | [**CastForge**](https://github.com/lifan-builds/castforge) | ![Stars](https://img.shields.io/github/stars/lifan-builds/castforge?style=flat&color=f5c542&label=stars) | Source-to-podcast automation framework extracted from Nitan Podcast, with reusable pipeline stages, audio integrations, publishing, and validation. |
