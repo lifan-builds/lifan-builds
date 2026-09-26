@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Lifan Builds — staff engineer building local-first systems</title>
+  <desc id="desc">A dark code-window banner with a moonlit mountain and snowboarder silhouette.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111b"/>
+      <stop offset="0.55" stop-color="#122535"/>
+      <stop offset="1" stop-color="#081019"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1825" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#12293b" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="snow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8ed8e9"/>
+      <stop offset="1" stop-color="#d5f4f6"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="stars" width="90" height="72" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="16" r="1.2" fill="#bdeaf1" opacity="0.75"/>
+      <circle cx="58" cy="41" r="0.9" fill="#bdeaf1" opacity="0.45"/>
+      <circle cx="82" cy="9" r="0.7" fill="#fff" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1164" height="384" rx="18" fill="url(#stars)" opacity="0.5"/>
+  <rect x="36" y="32" width="1128" height="356" rx="16" fill="none" stroke="#52758a" stroke-opacity="0.6"/>
+
+  <rect x="58" y="54" width="350" height="54" rx="13" fill="#0a1723" stroke="#416174"/>
+  <circle cx="82" cy="81" r="6" fill="#f26d75"/>
+  <circle cx="103" cy="81" r="6" fill="#f4c95d"/>
+  <circle cx="124" cy="81" r="6" fill="#62d6a7"/>
+  <text x="153" y="88" fill="#d7f6fa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" letter-spacing="2">STAFF ENGINEER</text>
+
+  <rect x="58" y="134" width="508" height="218" rx="15" fill="#091521" fill-opacity="0.82" stroke="#315368"/>
+  <text x="84" y="173" fill="#77d1e3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20">const lifan = {</text>
+  <text x="108" y="208" fill="#e9f5f6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19">focus: <tspan fill="#ffd580">"local-first systems"</tspan>,</text>
+  <text x="108" y="241" fill="#e9f5f6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19">craft: <tspan fill="#ffd580">"inspectable automation"</tspan>,</text>
+  <text x="108" y="274" fill="#e9f5f6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19">mode: <tspan fill="#ffd580">"ship useful tools"</tspan></text>
+  <text x="84" y="317" fill="#77d1e3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20">};</text>
+
+  <rect x="594" y="54" width="570" height="298" rx="15" fill="url(#panel)" stroke="#52758a"/>
+  <path d="M594 286 L726 184 L800 235 L905 116 L1002 224 L1080 161 L1164 239 V352 H594Z" fill="#1a3a4d" opacity="0.92"/>
+  <path d="M594 311 L723 223 L806 278 L910 162 L1009 260 L1080 202 L1164 273 V352 H594Z" fill="#28576b" opacity="0.8"/>
+  <path d="M594 329 L726 271 L806 304 L910 210 L1004 298 L1080 252 L1164 309 V352 H594Z" fill="url(#snow)" opacity="0.7"/>
+  <path d="M915 182 C942 164 962 165 977 179 C963 179 951 184 942 195 C951 209 961 222 973 232 C951 227 931 218 916 204 C907 194 908 187 915 182Z" fill="#061018"/>
+  <path d="M926 203 L891 240 L924 257 L972 244 L1005 264" fill="none" stroke="#061018" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M883 263 Q944 276 1024 264" fill="none" stroke="#d9f7f7" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M852 299 Q940 318 1074 290" fill="none" stroke="#9be8eb" stroke-opacity="0.42" stroke-width="3"/>
+  <text x="626" y="92" fill="#d7f6fa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">$ make something people can trust</text>
+  <text x="626" y="119" fill="#77d1e3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">→ evidence  → local control  → useful output</text>
+  <text x="626" y="337" fill="#c9e5e9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" opacity="0.8">build thoughtfully / ship visibly</text>
+</svg>
