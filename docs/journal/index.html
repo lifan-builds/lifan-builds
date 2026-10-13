@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Field notes from Lifan Builds: local-first products, agent systems, and the evaluation loop behind them.">
+  <title>Journal — Lifan Builds</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header wrap"><a class="wordmark" href="../" aria-label="Back to Lifan Builds home"><span class="pixel-mark">LB</span><span>LIFAN BUILDS</span></a><nav aria-label="Journal navigation"><a href="../#quests">Quests</a><a href="../#about">About</a><a class="nav-button" href="https://clifan.substack.com/">Substack ↗</a></nav></header>
+  <main>
+    <section class="journal-hero wrap"><p class="eyebrow">JOURNAL / FIELD NOTES</p><h1>Notes from<br><em>the workbench.</em></h1><p class="hero-lede">Build logs, product notes, and community conversations about software that keeps a person in the loop.</p></section>
+    <section class="journal-list wrap" aria-label="Journal posts">
+      <article class="long-note" id="mychart-cli"><div class="journal-meta"><span>BUILD LOG</span><time datetime="2026-08-01">AUG 2026</time></div><h2>Why I built a local MyChart CLI while the portal kept changing</h2><p>Patient-owned records should be exportable without handing a third party a permanent view of the account. This build uses a local Chrome/Puppeteer harness, keeps credentials in the user's browser, and treats every export as a visible, reviewable step.</p><p>The hard part was not downloading a file. It was drawing a clean boundary around sensitive data, recovery, and what the tool can safely claim.</p><div class="journal-links"><a href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while">Read the full essay on Substack ↗</a><a href="https://dev.to/lifanbuilds/building-a-local-first-mychart-exporter-for-a-changing-medical-record-3bob">Read the DEV edition ↗</a></div></article>
+      <article class="long-note" id="perks-reminder"><div class="journal-meta"><span>PRODUCT NOTE</span><time datetime="2026-07-01">JUL 2026</time></div><h2>Building a free, open-source tracker for credit-card benefits</h2><p>Perks Reminder started as a small answer to a recurring problem: benefits expire quietly, and the data needed to remember them should not require a bank login. The product keeps reminders, evidence, and correction paths close to the person using it.</p><p>The strongest product decisions were small ones: exportable data, duplicate-card workflows, and a visible distinction between a reminder and a financial recommendation.</p><div class="journal-links"><a href="https://clifan.substack.com/p/building-perks-reminder-a-small-open">Read the full dispatch on Substack ↗</a></div></article>
+      <article class="long-note" id="show-hn"><div class="journal-meta"><span>COMMUNITY NOTES</span><time datetime="2026-08-01">AUG 2026</time></div><h2>Show HN: mychart-cli</h2><p>Putting a privacy-first export tool in front of a technical audience sharpened the message: local control is a product feature, but only when the recovery path and the limits are clear too.</p><p>The conversation became another evaluation loop: explain the boundary, listen for the failure mode, then make the next build easier to inspect.</p><div class="journal-links"><a href="https://news.ycombinator.com/item?id=49253653">Read the community discussion ↗</a></div></article>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span><a href="../">← Back to Lifan Builds</a></span><span><a href="https://github.com/lifan-builds">GitHub</a> · <a href="https://x.com/LifanBuilds">X</a></span></footer>
+</body>
+</html>
