@@ -3,11 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=/agent-autofill/demo/">
-  <meta name="description" content="Agent Autofill · macOS-first local personal-data broker">
-  <title>Agent Autofill · macOS-first demo</title>
+  <meta name="description" content="Agent Autofill gives AI agents scoped access to saved details and read-only email through a local broker.">
+  <link rel="stylesheet" href="site.css">
+  <link rel="canonical" href="https://clifan.com/agent-autofill/">
+  <title>Agent Autofill — Your information, shared with permission</title>
 </head>
 <body>
-  <p>Opening the <a href="/agent-autofill/demo/">Agent Autofill demo</a>…</p>
+<main>
+  <nav><a href="/">Lifan Chen</a><a href="privacy.html">Privacy</a></nav>
+  <p class="eyebrow">LOCAL-FIRST · OPEN SOURCE · macOS</p>
+  <h1>Let your agent ask for the information it needs.</h1>
+  <p class="lead">Agent Autofill connects your AI tools to saved profile details and read-only email through a local broker. You choose the sources and approve access for the task.</p>
+  <p class="actions"><a class="button" href="https://github.com/lifan-builds/agent-autofill">Get Agent Autofill</a><a href="demo/">Try the synthetic demo →</a></p>
+  <h2>How it works</h2>
+  <ol><li>Install Agent Autofill on your Mac and connect the sources you choose.</li><li>Pair an agent and approve the data it can read. Remote clients use scoped, expiring grants.</li><li>The broker returns selected information. Your agent handles the task in its own tools.</li></ol>
+  <h2>Gmail access</h2>
+  <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code for a specified recipient. New Gmail connections request read-only access. Agent Autofill does not send, edit, or delete email.</p>
+  <p>OAuth setup uses a Google Cloud Desktop client supplied by you. Google verification belongs to that client's project; installing this open-source app does not verify a different project. Older IMAP connections may retain broader Google permissions until you revoke and reconnect them.</p>
+  <h2>Know where your data goes</h2>
+  <p>Saved records are encrypted locally, and connector credentials live in the operating-system credential store. When you authorize an agent to read information, returned content becomes available to that agent and may be sent to its model provider. Choose the agent and its data settings accordingly.</p>
+  <p>The broker does not submit forms or make purchases. Its local storage does not make a separate cloud AI service local.</p>
+  <footer><p>Built and maintained by Lifan Chen. <a href="mailto:fantasychen2016@gmail.com">Contact support</a></p><p><a href="privacy.html">Privacy policy</a> · <a href="https://github.com/lifan-builds/agent-autofill">Source code and setup</a></p></footer>
+</main>
 </body>
 </html>
