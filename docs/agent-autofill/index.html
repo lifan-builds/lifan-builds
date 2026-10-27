@@ -18,7 +18,7 @@
   <h2>How it works</h2>
   <ol><li>Install Agent Autofill on your Mac and connect the sources you choose.</li><li>Pair an agent and approve the data it can read. Remote clients use scoped, expiring grants.</li><li>The broker returns selected information. Your agent handles the task in its own tools.</li></ol>
   <h2>Gmail access</h2>
-  <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code for a specified recipient. New Gmail connections request read-only access. Agent Autofill does not send, edit, or delete email.</p>
+  <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code for a specified recipient. The updated Gmail API connector in the local development build requests read-only access; this change has not yet been released publicly. Agent Autofill does not send, edit, or delete email.</p>
   <p>OAuth setup uses a Google Cloud Desktop client supplied by you. Google verification belongs to that client's project; installing this open-source app does not verify a different project. Older IMAP connections may retain broader Google permissions until you revoke and reconnect them.</p>
   <h2>Know where your data goes</h2>
   <p>Saved records are encrypted locally, and connector credentials live in the operating-system credential store. When you authorize an agent to read information, returned content becomes available to that agent and may be sent to its model provider. Choose the agent and its data settings accordingly.</p>
