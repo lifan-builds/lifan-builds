@@ -42,7 +42,7 @@
       <sub>Supervised AI customer-service advocate that pauses at structured decision checkpoints before consequential actions.</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/mychart-cli"><strong>mychart-cli</strong></a><br />
+      <a href="https://github.com/lifan-builds/foliofen-cli"><strong>Foliofen CLI</strong></a><br />
       <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness.</sub>
     </td>
   </tr>
