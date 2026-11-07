@@ -162,8 +162,9 @@
         <button class="step active" data-step="0"><span class="step-number">1</span><span class="step-label">Open local vault</span></button>
         <button class="step" data-step="1"><span class="step-number">2</span><span class="step-label">Preview request</span></button>
         <button class="step" data-step="2"><span class="step-number">3</span><span class="step-label">Approve exact grant</span></button>
-        <button class="step" data-step="3"><span class="step-number">4</span><span class="step-label">Deliver selected data</span></button>
-        <button class="step" data-step="4"><span class="step-number">5</span><span class="step-label">Revoke access</span></button>
+        <button class="step" data-step="3"><span class="step-number">4</span><span class="step-label">Resolve a missing field</span></button>
+        <button class="step" data-step="4"><span class="step-number">5</span><span class="step-label">Deliver selected data</span></button>
+        <button class="step" data-step="5"><span class="step-number">6</span><span class="step-label">Revoke access</span></button>
         <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
         <small>Every value in this tour is synthetic. The final action is always yours.</small>
       </nav>
@@ -185,7 +186,7 @@
   <script>
     (() => {
       "use strict";
-      const state = { step: 0, delivery: "extension", approved: false, delivered: false, revoked: false };
+      const state = { step: 0, delivery: "extension", approved: false, missingChoice: "pending", delivered: false, revoked: false };
       const $ = (selector) => document.querySelector(selector);
       const body = $("#stageBody");
       const title = $("#stageTitle");
@@ -222,7 +223,15 @@
           render: () => `<div class="approval"><h3>Allow this request?</h3><p>Review every part before the grant is written.</p><div class="approval-list"><div class="approval-line"><span>Agent</span><strong>synthetic-agent-01</strong></div><div class="approval-line"><span>Origin</span><strong>example.test</strong></div><div class="approval-line"><span>Purpose</span><strong>Complete traveler profile</strong></div><div class="approval-line"><span>Fields</span><strong>display_name, postal_code</strong></div><div class="approval-line"><span>Delivery</span><strong>${state.delivery === "direct" ? "direct selected fields" : "one-time extension handoff"}</strong></div><div class="approval-line"><span>Expires</span><strong>in 10 minutes</strong></div></div></div><div class="status-row" style="color:${state.approved ? "var(--green)" : "var(--amber)"}">${state.approved ? "Grant active · revocable at any time" : "Waiting for your approval"}</div>`,
         },
         {
-          eyebrow: "Step 4 · scoped delivery",
+          eyebrow: "Step 4 · just-in-time memory",
+          title: "Choose once or remember it",
+          description: "The complete answer, reusable record scope, and narrow write scope are visible before you make one decision.",
+          hint: state.missingChoice === "skip" ? "The form is paused; choose use once or save in the card to continue." : "One choice completes the missing-field step. Submission remains separate.",
+          button: "Choose an option above",
+          render: () => `<div class="request-card"><div class="request-head"><div><strong>One field is missing</strong><br><small>Required by the synthetic job-application form · one decision</small></div><span class="chip">synthetic value</span></div><dl class="request-grid"><div class="request-item"><dt>Field ID</dt><dd>company_name</dd></div><div class="request-item"><dt>Category</dt><dd>organization</dd></div><div class="request-item"><dt>Display name</dt><dd>Company name</dd></div><div class="request-item"><dt>Exact value</dt><dd>Synthetic Example Co</dd></div><div class="request-item"><dt>Source</dt><dd>user supplied now</dd></div><div class="request-item"><dt>Sensitivity</dt><dd>normal profile</dd></div><div class="request-item"><dt>Saved record scope</dt><dd>any future authorized origin/purpose</dd></div><div class="request-item"><dt>Current form scope</dt><dd>example.test · job application</dd></div><div class="request-item"><dt>Confidence / ambiguity</dt><dd>high · none</dd></div></dl><div class="approval" style="margin-top:17px"><div class="approval-line"><span>Exact write grant, if needed</span><strong>profile.write · company_name · example.test · job application</strong></div><p style="margin-top:10px">Save is the single approval for this reusable record and this narrow grant. Future reads still require their own matching checks.</p></div><div class="choice-row"><button class="choice ${state.missingChoice === "once" ? "selected" : ""}" data-missing="once"><strong>Use once</strong><small>Continue now; discard this answer after the form.</small></button><button class="choice ${state.missingChoice === "save" ? "selected" : ""}" data-missing="save"><strong>Save to Agent Autofill</strong><small>Store this reusable record for later authorized forms.</small></button></div><button class="quiet" style="margin-top:11px" data-missing="skip">Skip this field</button></div>${state.missingChoice === "skip" ? `<div class="success revoke" style="margin-top:15px"><div class="success-icon" style="background:#9a5d5d">!</div><div><strong>Form paused</strong><p>No value is guessed or saved. Choose use once or Save to Agent Autofill to continue.</p></div></div>` : ""}`,
+        },
+        {
+          eyebrow: "Step 5 · scoped delivery",
           title: state.delivery === "direct" ? "Return only the selected fields" : "Keep the password out of agent input",
           description: state.delivery === "direct" ? "The authenticated response contains only the two approved synthetic fields and safe provenance." : "The local extension receives a one-time, origin-bound handle. It never navigates or submits.",
           hint: "The acting agent or user owns the next action.",
@@ -230,7 +239,7 @@
           render: () => `<div class="delivery"><div class="delivery-card ${state.delivery === "direct" ? "highlight" : ""}"><h3>Direct response</h3><p>Selected fields plus provenance. No password, token, or unrelated record.</p><div class="field-preview">display_name: Demo User<br>postal_code: 98101</div></div><div class="delivery-card ${state.delivery === "extension" ? "highlight" : ""}"><h3>Extension handoff</h3><p>Short-lived handle bound to <strong>example.test</strong>; consumed once.</p><div class="field-preview handle-preview">handle: demo-only · consumed after origin check</div></div></div><div class="success" style="margin-top:16px"><div class="success-icon">✓</div><div><h3>Scoped delivery complete</h3><p>Provenance: synthetic-demo · origin: example.test · purpose: traveler profile</p></div></div>`,
         },
         {
-          eyebrow: "Step 5 · revocation",
+          eyebrow: "Step 6 · revocation",
           title: "Revoke when the task is done",
           description: "A short-lived grant should disappear cleanly instead of becoming a standing permission.",
           hint: "Reset the tour to run it again.",
@@ -242,10 +251,10 @@
       function render() {
         const screen = screens[state.step];
         eyebrow.textContent = screen.eyebrow;
-        const deliveryTitle = state.step === 3 && state.delivery === "direct"
+        const deliveryTitle = state.step === 4 && state.delivery === "direct"
           ? "Return only the selected fields"
           : screen.title;
-        const deliveryDescription = state.step === 3 && state.delivery === "direct"
+        const deliveryDescription = state.step === 4 && state.delivery === "direct"
           ? "The authenticated response contains only the two approved synthetic fields and safe provenance."
           : screen.description;
         title.textContent = deliveryTitle;
@@ -256,24 +265,37 @@
         progress.style.width = `${((state.step + 1) / screens.length) * 100}%`;
         steps.forEach((button, index) => {
           button.classList.toggle("active", index === state.step);
-          button.classList.toggle("done", index < state.step || (index === 4 && state.revoked));
+          button.classList.toggle("done", index < state.step || (index === 5 && state.revoked));
         });
         document.querySelectorAll("[data-delivery]").forEach((button) => button.addEventListener("click", () => { state.delivery = button.dataset.delivery; render(); }));
+        document.querySelectorAll("[data-missing]").forEach((button) => button.addEventListener("click", () => {
+          state.missingChoice = button.dataset.missing;
+          if (state.missingChoice === "once" || state.missingChoice === "save") {
+            state.delivered = true;
+            state.step = 4;
+          }
+          render();
+        }));
       }
 
       function advance() {
         if (state.step === 0) state.step = 1;
         else if (state.step === 1) state.step = 2;
         else if (state.step === 2) { state.approved = true; state.step = 3; }
-        else if (state.step === 3) { state.delivered = true; state.revoked = true; state.step = 4; }
+        else if (state.step === 3) {
+          if (state.missingChoice !== "once" && state.missingChoice !== "save") return;
+          state.delivered = true;
+          state.step = 4;
+        }
+        else if (state.step === 4) { state.revoked = true; state.step = 5; }
         else reset();
         render();
       }
-      function reset() { state.step = 0; state.delivery = "extension"; state.approved = false; state.delivered = false; state.revoked = false; }
+      function reset() { state.step = 0; state.delivery = "extension"; state.approved = false; state.missingChoice = "pending"; state.delivered = false; state.revoked = false; }
       next.addEventListener("click", () => { advance(); $("#demo").scrollIntoView({ behavior: "smooth", block: "start" }); });
       $("#resetDemo").addEventListener("click", () => { reset(); render(); });
       $("#startDemo").addEventListener("click", () => { $("#demo").scrollIntoView({ behavior: "smooth", block: "start" }); });
-      steps.forEach((button) => button.addEventListener("click", () => { const requested = Number(button.dataset.step); if (requested <= state.step || (requested === state.step + 1 && state.step < 4)) { state.step = requested; render(); } }));
+      steps.forEach((button) => button.addEventListener("click", () => { const requested = Number(button.dataset.step); const missingReady = state.missingChoice === "once" || state.missingChoice === "save"; if (requested <= state.step || (requested === state.step + 1 && state.step < 5 && (state.step !== 3 || missingReady))) { state.step = requested; render(); } }));
       render();
     })();
   </script>

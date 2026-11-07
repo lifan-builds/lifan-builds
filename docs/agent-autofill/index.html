@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Agent Autofill gives AI agents scoped access to saved details and read-only email through a local broker.">
+  <meta name="description" content="Agent Autofill is a local-first personal vault and MCP broker for AI agents on macOS: Chrome intake, origin-bound credential handoff, and scoped email and Messages 2FA codes.">
+  <meta property="og:title" content="Agent Autofill — Autofill, for agents.">
+  <meta property="og:description" content="A 33-second product tour of local-first personal vault and MCP autofill for AI agents on macOS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/agent-autofill/">
+  <meta property="og:image" content="https://clifan.com/agent-autofill/poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="site.css">
   <link rel="canonical" href="https://clifan.com/agent-autofill/">
   <title>Agent Autofill — Your information, shared with permission</title>
@@ -11,18 +17,38 @@
 <body>
 <main>
   <nav><a href="/">Lifan Chen</a><a href="privacy.html">Privacy</a></nav>
-  <p class="eyebrow">LOCAL-FIRST · OPEN SOURCE · macOS</p>
+  <p class="eyebrow">LOCAL-FIRST · OPEN SOURCE · macOS (v0.1.2)</p>
   <h1>Let your agent ask for the information it needs.</h1>
-  <p class="lead">Agent Autofill connects your AI tools to saved profile details and read-only email through a local broker. You choose the sources and approve access for the task.</p>
-  <p class="actions"><a class="button" href="https://github.com/lifan-builds/agent-autofill">Get Agent Autofill</a><a href="demo/">Try the synthetic demo →</a></p>
+  <p class="lead">Agent Autofill connects your AI tools (Claude, Codex, Cursor, OpenClaw) to saved profile details, website logins, payment cards, read-only email, and local macOS Messages through an encrypted local broker. You choose the sources and approve access for the task.</p>
+  <p class="actions"><a class="button" href="https://github.com/lifan-builds/agent-autofill">Get Agent Autofill</a><a href="demo/">Try the interactive demo →</a></p>
+  <figure>
+    <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="Agent Autofill 33-second product tour" aria-describedby="video-description">
+      <source src="agent-autofill-tour.mp4" type="video/mp4">
+      <track kind="captions" src="captions.vtt" srclang="en" label="English">
+      <p><a href="agent-autofill-tour.mp4">Download the 33-second product tour</a>.</p>
+    </video>
+    <figcaption id="video-description">0:33 · Synthetic product tour showing Chrome profile intake, origin-bound credential handoff, and scoped 2FA retrieval. Captions included.</figcaption>
+  </figure>
+  <details>
+    <summary>Read the video transcript</summary>
+    <p>Every time an AI agent hits a form, you end up retyping your address, pasting a password into chat, or hunting down a verification code.</p>
+    <p>Agent Autofill is a local-first personal vault for AI agents on your Mac.</p>
+    <p>Start from Chrome. It organizes your saved addresses, confirms what is Home versus Work, and remembers those meanings across future tasks.</p>
+    <p>When a site needs a login or a two-factor code, it hands off a one-time, origin-bound token and pulls the code from your connected email or Messages—so your raw password never enters model context.</p>
+    <p>And before anything is submitted, you stay in control. Agent Autofill. Autofill, for agents.</p>
+  </details>
   <h2>How it works</h2>
-  <ol><li>Install Agent Autofill on your Mac and connect the sources you choose.</li><li>Pair an agent and approve the data it can read. Remote clients use scoped, expiring grants.</li><li>The broker returns selected information. Your agent handles the task in its own tools.</li></ol>
+  <ol>
+    <li>Install Agent Autofill on your Mac (<code>uv tool install git+https://github.com/lifan-builds/agent-autofill.git</code>) and connect the sources you choose—or import saved addresses and logins locally from Chrome without plaintext CSV files.</li>
+    <li>Pair an MCP client (<code>agent-autofill mcp-install --client claude|cursor|codex|antigravity</code>) and approve the exact fields it can read. Remote or untrusted clients use scoped, expiring grants; website logins can use a one-time origin-bound Chrome extension handoff (<code>credential.use</code>).</li>
+    <li>The broker returns only the approved fields or verification code. Your agent prepares the form in its own tools and stops for your confirmation before submission.</li>
+  </ol>
   <h2>Gmail access</h2>
-  <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code for a specified recipient. The updated Gmail API connector in the local development build requests read-only access; this change has not yet been released publicly. Agent Autofill does not send, edit, or delete email.</p>
+  <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code or verification link for a specified recipient. Version 0.1.2 uses the read-only Gmail API connector (<code>gmail.readonly</code> scope) by default. Agent Autofill does not send, edit, or delete email.</p>
   <p>OAuth setup uses a Google Cloud Desktop client supplied by you. Google verification belongs to that client's project; installing this open-source app does not verify a different project. Older IMAP connections may retain broader Google permissions until you revoke and reconnect them.</p>
   <h2>Know where your data goes</h2>
-  <p>Saved records are encrypted locally, and connector credentials live in the operating-system credential store. When you authorize an agent to read information, returned content becomes available to that agent and may be sent to its model provider. Choose the agent and its data settings accordingly.</p>
-  <p>The broker does not submit forms or make purchases. Its local storage does not make a separate cloud AI service local.</p>
+  <p>Saved records are encrypted locally in SQLite with AES-GCM, and vault keys plus connector credentials live in the macOS Keychain. When you authorize an agent to read information, returned content becomes available to that agent and may be sent to its model provider; using the Chrome extension handoff (<code>credential.use</code>) keeps website passwords out of model context. Choose the agent and its data settings accordingly.</p>
+  <p>The broker is strictly information-only: it does not navigate, submit forms, or make purchases. Its local storage does not make a separate cloud AI service local.</p>
   <footer><p>Built and maintained by Lifan Chen. <a href="mailto:fantasychen2016@gmail.com">Contact support</a></p><p><a href="privacy.html">Privacy policy</a> · <a href="https://github.com/lifan-builds/agent-autofill">Source code and setup</a></p></footer>
 </main>
 </body>
