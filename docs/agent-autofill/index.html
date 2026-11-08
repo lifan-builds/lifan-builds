@@ -32,9 +32,15 @@
     <div class="install-bar" role="region" aria-label="Install command">
       <div class="install-cmd">
         <span class="install-prompt" aria-hidden="true">$</span>
-        <code id="install-code">uv tool install git+https://github.com/lifan-builds/agent-autofill.git</code>
+        <code id="install-code" aria-live="polite">uv tool install git+https://github.com/lifan-builds/agent-autofill.git</code>
       </div>
-      <button class="copy-btn" type="button" id="copy-install" aria-label="Copy install command">Copy</button>
+      <button class="copy-btn" type="button" id="copy-install" aria-label="Copy install command" aria-live="polite">
+        <svg class="copy-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
+          <path class="icon-clip" fill="currentColor" d="M5.75 1a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-3a.75.75 0 0 0-.75-.75h-4.5Zm.75 3V2.5h3V4h-3Zm-2.874-.467a.75.75 0 0 0-.752-1.298A1.75 1.75 0 0 0 2 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 13.25v-9.5a1.75 1.75 0 0 0-.874-1.515.75.75 0 1 0-.752 1.298.25.25 0 0 1 .126.217v9.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-9.5a.25.25 0 0 1 .126-.217Z"/>
+          <path class="icon-check" fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/>
+        </svg>
+        <span class="copy-label">Copy</span>
+      </button>
     </div>
     <div class="actions">
       <a class="button" href="https://github.com/lifan-builds/agent-autofill">Get Agent Autofill</a>
@@ -63,14 +69,60 @@
 
   <section class="steps-grid" aria-label="How it works">
     <div class="step-item">
+      <svg class="step-schematic" viewBox="0 0 320 76" aria-hidden="true">
+        <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#eff5f2" stroke="#d5e0dc"/>
+        <rect x="8" y="14" width="96" height="48" rx="5" fill="#101920"/>
+        <text x="56" y="33" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8.5" font-weight="700" fill="#6fd4c0">127.0.0.1</text>
+        <text x="56" y="48" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#e6f2ef">SQLite · AES-GCM</text>
+        <line x1="108" y1="38" x2="134" y2="38" stroke="#00665a" stroke-width="1.5" stroke-dasharray="3 2"/>
+        <polygon points="112,34 105,38 112,42" fill="#00665a"/>
+        <polygon points="130,34 137,38 130,42" fill="#00665a"/>
+        <rect x="140" y="14" width="172" height="48" rx="5" fill="#ffffff" stroke="#b8cec7"/>
+        <rect x="148" y="20" width="114" height="15" rx="3" fill="#e6f4f1"/>
+        <text x="205" y="30" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" font-weight="700" fill="#00665a">Touch ID / Passcode</text>
+        <text x="304" y="30" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" font-weight="700" fill="#425560">0 CSV</text>
+        <text x="148" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="700" fill="#111c24">Zero-plaintext lease</text>
+      </svg>
       <h2>1. Import locally</h2>
       <p>Connect the sources you choose or import saved addresses and logins directly from Chrome on your Mac—no plaintext CSV exports.</p>
     </div>
     <div class="step-item">
+      <svg class="step-schematic" viewBox="0 0 320 76" aria-hidden="true">
+        <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#eff5f2" stroke="#d5e0dc"/>
+        <rect x="8" y="14" width="104" height="48" rx="5" fill="#101920"/>
+        <text x="60" y="33" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="700" fill="#6fd4c0">credential.use</text>
+        <text x="60" y="48" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#e6f2ef">Missing-field pause</text>
+        <line x1="112" y1="26" x2="140" y2="26" stroke="#00665a" stroke-width="1.5"/>
+        <polygon points="138,22 145,26 138,30" fill="#00665a"/>
+        <line x1="112" y1="50" x2="140" y2="50" stroke="#7c4a0a" stroke-width="1.5"/>
+        <polygon points="138,46 145,50 138,54" fill="#7c4a0a"/>
+        <rect x="146" y="14" width="166" height="22" rx="4" fill="#ffffff" stroke="#b8cec7"/>
+        <text x="154" y="28" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="700" fill="#00665a">Use once</text>
+        <text x="304" y="28" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#425560">10m handle</text>
+        <rect x="146" y="40" width="166" height="22" rx="4" fill="#ffffff" stroke="#b8cec7"/>
+        <text x="154" y="54" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="700" fill="#7c4a0a">Save to Vault</text>
+        <text x="304" y="54" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#425560">profile.write</text>
+      </svg>
       <h2>2. Approve exact scope</h2>
       <p>Pair an MCP client (<code>agent-autofill mcp-install</code>) and approve specific fields or expiring grants. Website logins use a one-time origin-bound Chrome handoff (<code>credential.use</code>).</p>
     </div>
     <div class="step-item">
+      <svg class="step-schematic" viewBox="0 0 320 76" aria-hidden="true">
+        <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#eff5f2" stroke="#d5e0dc"/>
+        <rect x="8" y="14" width="96" height="48" rx="5" fill="#101920"/>
+        <text x="56" y="33" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8.5" font-weight="700" fill="#6fd4c0">otp@domain</text>
+        <text x="56" y="48" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#e6f2ef">gmail.readonly</text>
+        <line x1="104" y1="38" x2="126" y2="38" stroke="#00665a" stroke-width="1.5"/>
+        <polygon points="124,34 131,38 124,42" fill="#00665a"/>
+        <rect x="132" y="14" width="102" height="48" rx="5" fill="#ffffff" stroke="#b8cec7"/>
+        <text x="183" y="33" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="700" fill="#00665a">Audit Trail</text>
+        <text x="183" y="48" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#425560">Pause pre-submit</text>
+        <line x1="234" y1="38" x2="248" y2="38" stroke="#7a2727" stroke-width="1.5"/>
+        <polygon points="246,34 253,38 246,42" fill="#7a2727"/>
+        <rect x="254" y="14" width="58" height="48" rx="5" fill="#fdf6f6" stroke="#d9a7a7"/>
+        <text x="283" y="34" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8.5" font-weight="700" fill="#7a2727">Revoke</text>
+        <text x="283" y="48" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#7a2727">1-click</text>
+      </svg>
       <h2>3. Stop before submit</h2>
       <p>The broker returns only approved fields or verification codes. Your agent prepares the form in its own tools and pauses for your confirmation before submission.</p>
     </div>
@@ -97,6 +149,7 @@
 <script>
   document.getElementById("copy-install")?.addEventListener("click", async function () {
     const codeEl = document.getElementById("install-code");
+    const labelEl = this.querySelector(".copy-label");
     const code = codeEl?.textContent;
     if (!code) return;
     let copied = false;
@@ -104,6 +157,19 @@
       try {
         await navigator.clipboard.writeText(code);
         copied = true;
+      } catch (_) {}
+    }
+    if (!copied) {
+      try {
+        const area = document.createElement("textarea");
+        area.value = code;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.opacity = "0";
+        document.body.append(area);
+        area.select();
+        copied = document.execCommand("copy");
+        area.remove();
       } catch (_) {}
     }
     if (!copied && codeEl) {
@@ -117,10 +183,21 @@
         selection?.removeAllRanges();
       } catch (_) {}
     }
-    if (copied) {
+    this.classList.add("is-copied");
+    if (labelEl) {
+      labelEl.textContent = "Copied";
+    } else {
       this.textContent = "Copied";
-      setTimeout(() => { this.textContent = "Copy"; }, 1600);
     }
+    clearTimeout(this._resetTimer);
+    this._resetTimer = setTimeout(() => {
+      this.classList.remove("is-copied");
+      if (labelEl) {
+        labelEl.textContent = "Copy";
+      } else {
+        this.textContent = "Copy";
+      }
+    }, 1600);
   });
 </script>
 </body>

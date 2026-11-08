@@ -37,10 +37,13 @@ body:has(dialog[open]) { overflow: hidden; }
 h2 { margin: 0; font-size: 14px; line-height: 1.7; }
 .close-dialog { flex: 0 0 40px; height: 40px; border: 2px solid var(--line); background: var(--bg); color: var(--gold); cursor: pointer; font: 24px monospace; }
 .close-dialog:hover { border-color: var(--gold); }
-.item-list > a { display: block; border-top: 1px solid var(--line); padding: 14px 4px; }
+.item-list > a { display: block; border-top: 1px solid var(--line); padding: 14px 10px; border-radius: 4px; transition: background 0.14s ease; }
 .item-list strong { display: flex; justify-content: space-between; gap: 12px; color: var(--gold); font-size: 14px; font-weight: 500; }
 .item-list p { margin: 5px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.item-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.metric-pill { display: inline-block; padding: 4px 9px; border: 1px solid var(--line); border-radius: 4px; background: #1d1a2e; color: var(--mint); font-size: 11px; line-height: 1.35; font-variant-numeric: tabular-nums; }
 .item-list > a:hover { background: #302a43; }
+.item-list > a:hover .metric-pill { border-color: var(--gold); color: var(--ink); }
 .dialog-footer { display: block; border-top: 1px solid var(--line); padding-top: 16px; color: var(--gold); font-size: 13px; }
 .about-copy { color: var(--muted); font-size: 13px; }
 .about-copy p { margin: 0 0 18px; }

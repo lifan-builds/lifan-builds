@@ -18,12 +18,16 @@
       --accent-soft: #e6f4f1;
       --amber: #7c4a0a;
       --amber-soft: #fef6e8;
+      --code-bg: #101920;
+      --code-ink: #e6f2ef;
+      --code-border: #283a47;
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
     ::selection { background: #cce8e3; color: var(--ink); }
     body { margin: 0; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
     button { font: inherit; }
+    button:active:not(:disabled) { transform: translateY(1px); }
     a { color: var(--accent); text-underline-offset: 4px; }
     a:hover { color: var(--accent-dark); }
     a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -44,35 +48,40 @@
     .secondary:hover { border-color: var(--muted); color: var(--ink); }
     .quiet { color: var(--muted); background: transparent; border: 1px solid var(--line); }
     .quiet:hover { color: var(--ink); border-color: var(--muted); }
-    .demo { scroll-margin-top: 18px; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 20px; align-items: start; }
-    .steps { position: sticky; top: 18px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
-    .steps h2 { margin: 0 0 12px; font-size: 13px; color: var(--ink); font-weight: 650; }
-    .step { width: 100%; display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 8px 0; border: 0; color: var(--muted); background: transparent; text-align: left; cursor: pointer; }
-    .step-number { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--line); border-radius: 50%; font-size: 12px; font-weight: 650; font-variant-numeric: tabular-nums; }
+    .demo { scroll-margin-top: 18px; display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 20px; align-items: start; }
+    .steps { position: sticky; top: 18px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #edf3f0; }
+    .steps h2 { margin: 0 0 10px; padding: 0 6px; font-size: 13px; color: var(--ink); font-weight: 650; }
+    .step { width: 100%; display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 7px 8px; margin-bottom: 2px; border: 0; border-radius: 8px; color: var(--muted); background: transparent; text-align: left; cursor: pointer; transition: background .14s ease, color .14s ease; }
+    .step:hover { background: rgba(255, 255, 255, .58); color: var(--ink); }
+    .step-number { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--line); border-radius: 50%; background: var(--white); font-size: 12px; font-weight: 650; font-variant-numeric: tabular-nums; }
     .step-label { padding-top: 2px; font-size: 13.5px; font-weight: 550; }
-    .step.active { color: var(--ink); }
+    .step.active { color: var(--ink); background: var(--white); box-shadow: 0 1px 3px rgba(17, 28, 36, .08); }
     .step.active .step-label { font-weight: 650; }
     .step.active .step-number { color: #ffffff; background: var(--accent); border-color: var(--accent); }
     .step.done .step-number { color: var(--accent-dark); border-color: #8fd4c6; background: var(--accent-soft); font-size: 0; }
     .step.done .step-number::before { content: "✓"; font-size: 12px; }
-    .progress { height: 4px; margin: 12px 0; overflow: hidden; border-radius: 99px; background: #e6eeeb; }
+    .progress { height: 4px; margin: 10px 4px; overflow: hidden; border-radius: 99px; background: #d8e4df; }
     .progress-bar { height: 100%; width: 20%; border-radius: inherit; background: var(--accent); transition: width .2s ease-out; }
-    .steps small { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; }
-    .stage { min-width: 0; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 32px rgba(17, 28, 36, .05); }
-    .stage-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .steps small { display: block; padding: 0 4px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .stage { min-width: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 32px rgba(17, 28, 36, .05); overflow: hidden; }
+    .window-chrome { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 18px; background: #eef4f1; border-bottom: 1px solid var(--line); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--muted); }
+    .window-title { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); }
+    .chrome-status { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px; color: var(--accent-dark); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .stage-inner { padding: 22px 26px 24px; }
+    .stage-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
     .stage-head h2 { margin: 0; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.25; letter-spacing: -0.025em; }
     .stage-head p { max-width: 56ch; margin: 6px 0 0; color: var(--muted); font-size: 15px; }
     .stage-meta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .stage-step-pill { padding: 5px 10px; color: var(--muted); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
     .stage-badge { padding: 5px 10px; color: var(--accent-dark); background: var(--accent-soft); border: 1px solid #b8ded6; border-radius: 6px; font-size: 12px; font-weight: 600; }
-    .stage-body { min-height: 230px; padding: 22px 0 10px; }
+    .stage-pipeline { display: block; width: 100%; height: auto; margin-top: 14px; }
+    .stage-body { min-height: 230px; padding: 18px 0 10px; }
     .inventory { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .inventory-card { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; }
-    .inventory-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; color: var(--accent-dark); background: var(--accent-soft); font-size: 13px; font-weight: 700; flex-shrink: 0; }
+    .inventory-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; color: var(--accent-dark); background: var(--accent-soft); flex-shrink: 0; }
     .inventory-card strong { display: block; font-size: 14px; }
     .inventory-card small { color: var(--muted); font-size: 12.5px; }
-    .status-row { display: flex; align-items: center; gap: 8px; margin-top: 18px; color: var(--accent-dark); font-size: 13.5px; font-weight: 600; }
-    .status-row::before { content: ""; display: block; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+    .status-row { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: var(--accent-dark); font-size: 13.5px; font-weight: 600; }
     .request-card { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
     .request-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
     .request-head strong { font-size: 16px; }
@@ -81,10 +90,11 @@
     .request-item dt { color: var(--muted); font-size: 12px; font-weight: 550; }
     .request-item dd { margin: 2px 0 0; font-size: 14px; font-weight: 650; }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-    .chip { padding: 3px 8px; color: var(--accent-dark); background: var(--accent-soft); border-radius: 5px; font-size: 12px; font-weight: 600; }
-    .choice-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 18px; }
-    .choice { padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); text-align: left; cursor: pointer; }
-    .choice.selected { border-color: var(--accent); background: var(--accent-soft); }
+    .chip { padding: 3px 8px; color: var(--accent-dark); background: var(--accent-soft); border-radius: 5px; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .choice-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 16px; padding: 5px; border-radius: 12px; background: #e6efec; }
+    .choice { padding: 12px; border: 1px solid transparent; border-radius: 9px; background: rgba(255, 255, 255, .6); text-align: left; cursor: pointer; transition: background .14s ease, border-color .14s ease; }
+    .choice:hover { background: rgba(255, 255, 255, .9); }
+    .choice.selected { border-color: var(--accent); background: var(--white); box-shadow: 0 2px 6px rgba(0, 102, 90, .1); }
     .choice strong { display: block; margin-bottom: 3px; font-size: 14px; }
     .choice small { color: var(--muted); font-size: 12.5px; }
     .approval { padding: 16px; border: 1px solid #b8ded6; border-radius: 12px; background: #f2faf8; }
@@ -93,14 +103,19 @@
     .approval-list { display: grid; gap: 8px; margin-top: 14px; }
     .approval-line { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 7px; border-bottom: 1px dashed #c4e2dc; font-size: 13.5px; }
     .approval-line span { color: var(--muted); }
-    .approval-line strong { text-align: right; }
+    .approval-line strong { text-align: right; font-variant-numeric: tabular-nums; }
     .delivery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
     .delivery-card { padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
     .delivery-card.highlight { border-color: var(--accent); background: #f2faf8; }
     .delivery-card h3 { margin: 0 0 4px; font-size: 16px; }
     .delivery-card p { margin: 0; color: var(--muted); font-size: 13.5px; }
-    .field-preview { margin-top: 14px; padding: 10px 12px; border-radius: 8px; background: var(--paper); border: 1px solid var(--line); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
-    .handle-preview { color: var(--ink); word-break: break-all; }
+    .field-preview { margin-top: 12px; padding: 10px 12px; border-radius: 8px; background: var(--code-bg); color: var(--code-ink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.55; font-variant-numeric: tabular-nums; overflow-x: auto; }
+    .handle-preview { word-break: break-all; }
+    .tok-key { color: #7cc4fa; }
+    .tok-str { color: #6fd4c0; }
+    .tok-num { color: #f7c873; font-weight: 600; }
+    .tok-kw { color: #f0a68b; font-weight: 600; }
+    .tok-comment { color: #93aba5; font-style: italic; }
     .success { display: flex; gap: 12px; align-items: flex-start; padding: 15px; color: var(--accent-dark); border: 1px solid #b8ded6; border-radius: 12px; background: var(--accent-soft); }
     .success-icon { display: grid; place-items: center; flex: none; width: 24px; height: 24px; border-radius: 50%; color: #ffffff; background: var(--accent); font-size: 13px; font-weight: 700; }
     .success h3 { margin: 0 0 2px; font-size: 15.5px; }
@@ -108,25 +123,28 @@
     .revoke { margin-top: 12px; color: #6e2c2c; border: 1px solid #e8c5c5; background: #fdf6f6; }
     .revoke strong { display: block; margin-bottom: 2px; }
     .stage-actions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; padding-top: 18px; border-top: 1px solid var(--line); }
-    .stage-actions > div { display: flex; gap: 8px; flex-shrink: 0; }
+    .stage-actions > div { display: flex; gap: 8px; flex-shrink: 0; align-items: center; }
     .stage-actions .hint { color: var(--muted); font-size: 13px; }
+    .kbd-hint { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: 12px; }
+    kbd { display: inline-block; padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: var(--ink); }
     .proof-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
     .proof-item h2 { margin: 0 0 6px; font-size: 15px; }
     .proof-item p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
     .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
     @media (max-width: 800px) {
       .demo { grid-template-columns: 1fr; }
-      .steps { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px 12px; padding: 14px; }
-      .step { padding: 6px 0; }
+      .steps { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 10px; padding: 12px; }
+      .step { padding: 6px 8px; margin-bottom: 0; }
       .steps h2, .steps small { display: none; }
       .steps .progress { grid-column: 1 / -1; margin: 8px 0 0; }
-      .stage { padding: 20px; }
+      .stage-inner { padding: 18px; }
       .proof-strip { grid-template-columns: 1fr; gap: 20px; }
     }
     @media (max-width: 540px) {
       .shell { padding: 18px 16px 44px; }
       .inventory, .choice-row, .delivery, .request-grid { grid-template-columns: 1fr; }
       .stage-head { flex-direction: column; }
+      .window-chrome { padding: 8px 14px; }
     }
   </style>
 </head>
@@ -161,20 +179,43 @@
       </nav>
 
       <article class="stage" aria-live="polite">
-        <div class="stage-head">
-          <div>
-            <h2 id="stageTitle">Start with a value-free inventory</h2>
-            <p id="stageDescription">See what is ready before an agent asks for anything.</p>
-          </div>
-          <div class="stage-meta">
-            <span class="stage-step-pill" id="stageEyebrow">Step 1 · local custody</span>
-            <span class="stage-badge" id="stageBadge">Synthetic</span>
-          </div>
+        <div class="window-chrome" aria-hidden="true">
+          <span class="window-title">
+            <svg viewBox="0 0 42 12" width="42" height="12" aria-hidden="true">
+              <circle cx="6" cy="6" r="4.5" fill="#c7d5d0"/>
+              <circle cx="21" cy="6" r="4.5" fill="#c7d5d0"/>
+              <circle cx="36" cy="6" r="4.5" fill="#c7d5d0"/>
+            </svg>
+            <span>Agent Autofill Broker · 127.0.0.1</span>
+          </span>
+          <span class="chrome-status" id="chromeStatus">
+            <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
+              <path fill="currentColor" d="M4 6V4.5a4 4 0 1 1 8 0V6h1.25c.69 0 1.25.56 1.25 1.25v6.5c0 .69-.56 1.25-1.25 1.25h-10.5c-.69 0-1.25-.56-1.25-1.25v-6.5C1.5 6.56 2.06 6 2.75 6H4Zm1.5 0h5V4.5a2.5 2.5 0 0 0-5 0V6Z"/>
+            </svg>
+            <span id="chromeStatusLabel">AES-GCM · Keychain Locked</span>
+          </span>
         </div>
-        <div class="stage-body" id="stageBody"></div>
-        <div class="stage-actions">
-          <span class="hint" id="stageHint">No account data is opened.</span>
-          <div><button class="quiet" id="resetDemo" type="button">Reset</button> <button class="primary" id="nextStep" type="button">Preview request</button></div>
+        <div class="stage-inner">
+          <div class="stage-head">
+            <div>
+              <h2 id="stageTitle">Start with a value-free inventory</h2>
+              <p id="stageDescription">See what is ready before an agent asks for anything.</p>
+            </div>
+            <div class="stage-meta">
+              <span class="stage-step-pill" id="stageEyebrow">Step 1 · local custody</span>
+              <span class="stage-badge" id="stageBadge">Synthetic</span>
+            </div>
+          </div>
+          <svg class="stage-pipeline" id="stagePipeline" viewBox="0 0 600 40" aria-hidden="true"></svg>
+          <div class="stage-body" id="stageBody"></div>
+          <div class="stage-actions">
+            <span class="hint" id="stageHint">No account data is opened.</span>
+            <div>
+              <span class="kbd-hint" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd></span>
+              <button class="quiet" id="resetDemo" type="button">Reset</button>
+              <button class="primary" id="nextStep" type="button">Preview request</button>
+            </div>
+          </div>
         </div>
       </article>
     </section>
@@ -212,63 +253,104 @@
       const hint = $("#stageHint");
       const next = $("#nextStep");
       const progress = $("#progressBar");
+      const pipeline = $("#stagePipeline");
+      const chromeStatusLabel = $("#chromeStatusLabel");
       const steps = [...document.querySelectorAll(".step")];
       const missingReady = () => state.missingChoice === "once" || state.missingChoice === "save";
+
+      const ICONS = {
+        id: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M2 3.75C2 2.78 2.78 2 3.75 2h8.5C13.22 2 14 2.78 14 3.75v8.5c0 .97-.78 1.75-1.75 1.75h-8.5C2.78 14 2 13.22 2 12.25v-8.5Zm3.5 2.75a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0ZM4.25 11c.34-1.15 1.4-2 2.75-2s2.41.85 2.75 2h-5.5Zm6-5.25h2v1.25h-2V5.75Zm0 2.5h2V9.5h-2V8.25Z"/></svg>`,
+        mail: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M1.75 3h12.5c.69 0 1.25.56 1.25 1.25v7.5c0 .69-.56 1.25-1.25 1.25H1.75C1.06 13 .5 12.44.5 11.75v-7.5C.5 3.56 1.06 3 1.75 3Zm.5 1.6v6.9h11.5V4.6L8 8.45 2.25 4.6Zm10.7-.35H3.05L8 7.05l4.95-2.8Z"/></svg>`,
+        key: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10.5 2a4.5 4.5 0 0 0-4.38 5.52L1.5 12.14V14.5h2.5v-1.5h1.5v-1.5h1.5l1.12-1.12A4.5 4.5 0 1 0 10.5 2Zm1 4.5a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z"/></svg>`,
+        grant: `<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 1.25 2.5 3.5v4.25c0 3.65 2.34 6.64 5.5 7.5 3.16-.86 5.5-3.85 5.5-7.5V3.5L8 1.25Zm-.75 8.94L4.72 7.66l1.06-1.06 1.47 1.47 3.47-3.47 1.06 1.06-4.53 4.53Z"/></svg>`,
+        check: `<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>`,
+        pause: `<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M4.5 3h2.25v10H4.5V3Zm4.75 0h2.25v10H9.25V3Z"/></svg>`,
+        stop: `<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm2.78 8.22-1.06 1.06L8 9.06l-1.72 1.72-1.06-1.06L6.94 8 5.22 6.28l1.06-1.06L8 6.94l1.72-1.72 1.06 1.06L9.06 8l1.72 1.72Z"/></svg>`,
+        pulse: `<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="currentColor"/></svg>`
+      };
+
+      function renderPipeline(activeStep) {
+        const nodes = [
+          { x: 6, label: "1. Vault Ready" },
+          { x: 105, label: "2. Request" },
+          { x: 204, label: "3. Grant" },
+          { x: 303, label: "4. Memory" },
+          { x: 402, label: "5. Delivery" },
+          { x: 501, label: "6. Revoke" }
+        ];
+        const parts = [`<rect x="0.5" y="0.5" width="599" height="39" rx="6" fill="#eff5f2" stroke="#d5e0dc"/>`];
+        nodes.forEach((n, idx) => {
+          const isCurrent = idx === activeStep;
+          const isDone = idx < activeStep || (idx === 5 && state.revoked);
+          const fill = isCurrent ? "#101920" : isDone ? "#e6f4f1" : "#ffffff";
+          const stroke = isCurrent ? "#101920" : isDone ? "#00665a" : "#c7d5d0";
+          const textFill = isCurrent ? "#6fd4c0" : isDone ? "#00665a" : "#425560";
+          parts.push(`<rect x="${n.x}" y="7" width="93" height="26" rx="4" fill="${fill}" stroke="${stroke}"/>`);
+          parts.push(`<text x="${n.x + 46.5}" y="23" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8.5" font-weight="700" fill="${textFill}">${n.label}</text>`);
+        });
+        pipeline.innerHTML = parts.join("");
+      }
 
       const getScreens = () => [
         {
           eyebrow: "Step 1 · local custody",
+          status: "AES-GCM · 0 Active Grants",
           title: "Start with a value-free inventory",
           description: "See what is ready before an agent asks for anything.",
           hint: "No account data is opened.",
           button: "Preview request",
           disabled: false,
-          render: () => `<div class="inventory"><div class="inventory-card"><div class="inventory-icon">ID</div><div><strong>Profile fields</strong><small>12 approved fields · metadata only</small></div></div><div class="inventory-card"><div class="inventory-icon">✉</div><div><strong>Email source</strong><small>1 read-only inbox · health ready</small></div></div><div class="inventory-card"><div class="inventory-icon">⌂</div><div><strong>Credential records</strong><small>2 sites · no passwords shown</small></div></div><div class="inventory-card"><div class="inventory-icon">◌</div><div><strong>Access grants</strong><small>${state.revoked ? "0 active · last grant revoked" : "0 active · nothing shared yet"}</small></div></div></div><div class="status-row">Encrypted broker ready · loopback review surface</div>`,
+          render: () => `<div class="inventory"><div class="inventory-card"><div class="inventory-icon" aria-hidden="true">${ICONS.id}</div><div><strong>Profile fields</strong><small>12 approved fields · metadata only</small></div></div><div class="inventory-card"><div class="inventory-icon" aria-hidden="true">${ICONS.mail}</div><div><strong>Email source</strong><small>1 read-only inbox · health ready</small></div></div><div class="inventory-card"><div class="inventory-icon" aria-hidden="true">${ICONS.key}</div><div><strong>Credential records</strong><small>2 sites · no passwords shown</small></div></div><div class="inventory-card"><div class="inventory-icon" aria-hidden="true">${ICONS.grant}</div><div><strong>Access grants</strong><small>${state.revoked ? "0 active · last grant revoked" : "0 active · nothing shared yet"}</small></div></div></div><div class="status-row">${ICONS.pulse}<span>Encrypted broker ready · loopback review surface</span></div>`,
         },
         {
           eyebrow: "Step 2 · metadata first",
+          status: "Request Pending · Origin Bound",
           title: "Preview the exact request",
           description: "The agent names the origin, purpose, fields, expiry, and delivery mode before any value is returned.",
           hint: "Change delivery mode to compare exposure.",
           button: "Review approval",
           disabled: false,
-          render: () => `<div class="request-card"><div class="request-head"><div><strong>Travel form helper</strong><br><small>Requesting agent · synthetic-agent-01</small></div><span class="chip">awaiting approval</span></div><dl class="request-grid"><div class="request-item"><dt>Target origin</dt><dd>https://example.test</dd></div><div class="request-item"><dt>Purpose</dt><dd>Complete traveler profile</dd></div><div class="request-item"><dt>Fields</dt><dd><div class="chips"><span class="chip">display_name</span><span class="chip">postal_code</span></div></dd></div><div class="request-item"><dt>Expiry</dt><dd>10 minutes · one task</dd></div></dl><div class="choice-row"><button class="choice ${state.delivery === "direct" ? "selected" : ""}" data-delivery="direct" type="button"><strong>Direct selected fields</strong><small>Values appear in the authenticated agent response.</small></button><button class="choice ${state.delivery === "extension" ? "selected" : ""}" data-delivery="extension" type="button"><strong>Extension handoff</strong><small>One-time origin-bound handle; password stays out of agent input.</small></button></div></div>`,
+          render: () => `<div class="request-card"><div class="request-head"><div><strong>Travel form helper</strong><br><small>Requesting agent · synthetic-agent-01</small></div><span class="chip">awaiting approval</span></div><dl class="request-grid"><div class="request-item"><dt>Target origin</dt><dd>https://example.test</dd></div><div class="request-item"><dt>Purpose</dt><dd>Complete traveler profile</dd></div><div class="request-item"><dt>Fields</dt><dd><div class="chips"><span class="chip">display_name</span><span class="chip">postal_code</span></div></dd></div><div class="request-item"><dt>Expiry</dt><dd>10 minutes · one task</dd></div></dl><div class="choice-row"><button class="choice ${state.delivery === "direct" ? "selected" : ""}" data-delivery="direct" type="button"><strong>Direct selected fields</strong><small>Values appear in the authenticated agent response.</small></button><button class="choice ${state.delivery === "extension" ? "selected" : ""}" data-delivery="extension" type="button"><strong>Extension handoff</strong><small>One-time origin-bound handle; password stays out of agent input.</small></button></div><div class="field-preview"><span class="tok-comment">// MCP request envelope</span><br>{ <span class="tok-key">"agent"</span>: <span class="tok-str">"synthetic-agent-01"</span>, <span class="tok-key">"origin"</span>: <span class="tok-str">"https://example.test"</span>, <span class="tok-key">"mode"</span>: <span class="tok-str">"${state.delivery === "direct" ? "profile.read" : "credential.use"}"</span>, <span class="tok-key">"ttl_sec"</span>: <span class="tok-num">600</span> }</div></div>`,
         },
         {
           eyebrow: "Step 3 · human approval",
+          status: state.approved ? "Grant Active · TTL 600s" : "Touch ID / Approval Gate",
           title: "Approve the smallest useful grant",
           description: "A clear approval card makes the consent boundary visible and reversible.",
           hint: state.approved ? "Grant approved; delivery is ready." : "Nothing is shared until you approve.",
           button: state.approved ? "Resolve missing field" : "Approve exact grant",
           disabled: false,
-          render: () => `<div class="approval"><h3>Allow this request?</h3><p>Review every part before the grant is written.</p><div class="approval-list"><div class="approval-line"><span>Agent</span><strong>synthetic-agent-01</strong></div><div class="approval-line"><span>Origin</span><strong>example.test</strong></div><div class="approval-line"><span>Purpose</span><strong>Complete traveler profile</strong></div><div class="approval-line"><span>Fields</span><strong>display_name, postal_code</strong></div><div class="approval-line"><span>Delivery</span><strong>${state.delivery === "direct" ? "direct selected fields" : "one-time extension handoff"}</strong></div><div class="approval-line"><span>Expires</span><strong>in 10 minutes</strong></div></div></div><div class="status-row" style="color:${state.approved ? "var(--accent-dark)" : "var(--amber)"}">${state.approved ? "Grant active · revocable at any time" : "Waiting for your approval"}</div>`,
+          render: () => `<div class="approval"><h3>Allow this request?</h3><p>Review every part before the grant is written.</p><div class="approval-list"><div class="approval-line"><span>Agent</span><strong>synthetic-agent-01</strong></div><div class="approval-line"><span>Origin</span><strong>example.test</strong></div><div class="approval-line"><span>Purpose</span><strong>Complete traveler profile</strong></div><div class="approval-line"><span>Fields</span><strong>display_name, postal_code</strong></div><div class="approval-line"><span>Delivery</span><strong>${state.delivery === "direct" ? "direct selected fields" : "one-time extension handoff"}</strong></div><div class="approval-line"><span>Expires</span><strong>in 10 minutes</strong></div></div><div class="field-preview"><span class="tok-kw">grant.verify</span>({ <span class="tok-key">"scope"</span>: [<span class="tok-str">"display_name"</span>, <span class="tok-str">"postal_code"</span>], <span class="tok-key">"approved"</span>: <span class="tok-num">${state.approved ? "true" : "false"}</span> })</div></div><div class="status-row" style="color:${state.approved ? "var(--accent-dark)" : "var(--amber)"}">${ICONS.pulse}<span>${state.approved ? "Grant active · revocable at any time" : "Waiting for your approval"}</span></div>`,
         },
         {
           eyebrow: "Step 4 · just-in-time memory",
+          status: state.missingChoice === "skip" ? "Paused · Missing Field" : "Save-Back Loop",
           title: "Choose once or remember it",
           description: "When a form needs a missing field, decide whether to use your answer once or save it for future tasks.",
           hint: state.missingChoice === "skip" ? "The form is paused; choose Use once or Save to continue." : "One choice completes the missing-field step.",
           button: missingReady() ? "Deliver selected data" : "Choose an option above",
           disabled: !missingReady(),
-          render: () => `<div class="request-card"><div class="request-head"><div><strong>Missing field: Company name</strong><br><small>Required by example.test · job application</small></div><span class="chip">synthetic value</span></div><dl class="request-grid"><div class="request-item"><dt>Field ID</dt><dd>company_name (organization)</dd></div><div class="request-item"><dt>Value supplied now</dt><dd>Synthetic Example Co</dd></div><div class="request-item"><dt>Current form scope</dt><dd>example.test · job application</dd></div><div class="request-item"><dt>Write grant if saved</dt><dd>profile.write · company_name</dd></div></dl><div class="choice-row"><button class="choice ${state.missingChoice === "once" ? "selected" : ""}" data-missing="once" type="button"><strong>Use once</strong><small>Continue now; discard this answer after the form.</small></button><button class="choice ${state.missingChoice === "save" ? "selected" : ""}" data-missing="save" type="button"><strong>Save to Agent Autofill</strong><small>Store this reusable record for later authorized forms.</small></button></div><button class="quiet" style="margin-top:10px" data-missing="skip" type="button">Skip this field</button></div>${state.missingChoice === "skip" ? `<div class="success revoke"><div class="success-icon" style="background:#9a5d5d">!</div><div><strong>Form paused</strong><p>No value is guessed or saved. Choose Use once or Save to Agent Autofill to continue.</p></div></div>` : ""}`,
+          render: () => `<div class="request-card"><div class="request-head"><div><strong>Missing field: Company name</strong><br><small>Required by example.test · job application</small></div><span class="chip">synthetic value</span></div><dl class="request-grid"><div class="request-item"><dt>Field ID</dt><dd>company_name (organization)</dd></div><div class="request-item"><dt>Value supplied now</dt><dd>Synthetic Example Co</dd></div><div class="request-item"><dt>Current form scope</dt><dd>example.test · job application</dd></div><div class="request-item"><dt>Write grant if saved</dt><dd>profile.write · company_name</dd></div></dl><div class="choice-row"><button class="choice ${state.missingChoice === "once" ? "selected" : ""}" data-missing="once" type="button"><strong>Use once</strong><small>Continue now; discard this answer after the form.</small></button><button class="choice ${state.missingChoice === "save" ? "selected" : ""}" data-missing="save" type="button"><strong>Save to Agent Autofill</strong><small>Store this reusable record for later authorized forms.</small></button></div><button class="quiet" style="margin-top:10px" data-missing="skip" type="button">Skip this field</button></div>${state.missingChoice === "skip" ? `<div class="success revoke"><div class="success-icon" style="background:#9a5d5d" aria-hidden="true">${ICONS.pause}</div><div><strong>Form paused</strong><p>No value is guessed or saved. Choose Use once or Save to Agent Autofill to continue.</p></div></div>` : ""}`,
         },
         {
           eyebrow: "Step 5 · scoped delivery",
+          status: state.delivery === "direct" ? "Returned · 2 Scoped Fields" : "Consumed · 1-Time Handle",
           title: state.delivery === "direct" ? "Return only the selected fields" : "Keep the password out of agent input",
           description: state.delivery === "direct" ? "The authenticated response contains only the two approved synthetic fields and safe provenance." : "The local extension receives a one-time, origin-bound handle. It never navigates or submits.",
           hint: "The acting agent or user owns the next action.",
           button: "Revoke grant",
           disabled: false,
-          render: () => `<div class="delivery"><div class="delivery-card ${state.delivery === "direct" ? "highlight" : ""}"><h3>Direct response</h3><p>Selected fields plus provenance. No password, token, or unrelated record.</p><div class="field-preview">display_name: Demo User<br>postal_code: 98101</div></div><div class="delivery-card ${state.delivery === "extension" ? "highlight" : ""}"><h3>Extension handoff</h3><p>Short-lived handle bound to <strong>example.test</strong>; consumed once.</p><div class="field-preview handle-preview">handle: demo-only · consumed after origin check</div></div></div><div class="success" style="margin-top:14px"><div class="success-icon">✓</div><div><h3>Scoped delivery complete</h3><p>Provenance: synthetic-demo · origin: example.test · purpose: traveler profile</p></div></div>`,
+          render: () => `<div class="delivery"><div class="delivery-card ${state.delivery === "direct" ? "highlight" : ""}"><h3>Direct response</h3><p>Selected fields plus provenance. No password, token, or unrelated record.</p><div class="field-preview"><span class="tok-key">"display_name"</span>: <span class="tok-str">"Demo User"</span>,<br><span class="tok-key">"postal_code"</span>: <span class="tok-str">"98101"</span></div></div><div class="delivery-card ${state.delivery === "extension" ? "highlight" : ""}"><h3>Extension handoff</h3><p>Short-lived handle bound to <strong>example.test</strong>; consumed once.</p><div class="field-preview handle-preview"><span class="tok-key">"handle"</span>: <span class="tok-str">"hnd_demo_01"</span>,<br><span class="tok-key">"origin"</span>: <span class="tok-str">"example.test"</span> · <span class="tok-num">1x</span></div></div></div><div class="success" style="margin-top:14px"><div class="success-icon" aria-hidden="true">${ICONS.check}</div><div><h3>Scoped delivery complete</h3><p>Provenance: synthetic-demo · origin: example.test · purpose: traveler profile</p></div></div>`,
         },
         {
           eyebrow: "Step 6 · revocation",
+          status: "Grant Revoked · Vault Locked",
           title: "Revoke when the task is done",
           description: "A short-lived grant disappears cleanly instead of becoming a standing permission.",
           hint: "Reset the tour to run it again.",
           button: "Reset demo",
           disabled: false,
-          render: () => `<div class="success"><div class="success-icon">✓</div><div><h3>Grant revoked</h3><p>Future requests from synthetic-agent-01 for this scope are blocked. The local vault remains intact.</p></div></div><div class="success revoke"><div class="success-icon" style="background:#9a5d5d">↗</div><div><strong>The stopping point is deliberate</strong><p>The acting agent owns browser actions and must obtain a fresh submission confirmation; financial information always requires it.</p></div></div>`,
+          render: () => `<div class="success"><div class="success-icon" aria-hidden="true">${ICONS.check}</div><div><h3>Grant revoked</h3><p>Future requests from synthetic-agent-01 for this scope are blocked. The local vault remains intact.</p></div></div><div class="field-preview"><span class="tok-kw">grant.revoke</span>({ <span class="tok-key">"agent"</span>: <span class="tok-str">"synthetic-agent-01"</span>, <span class="tok-key">"active_grants"</span>: <span class="tok-num">0</span>, <span class="tok-key">"status"</span>: <span class="tok-str">"revoked"</span> })</div><div class="success revoke"><div class="success-icon" style="background:#9a5d5d" aria-hidden="true">${ICONS.stop}</div><div><strong>The stopping point is deliberate</strong><p>The acting agent owns browser actions and must obtain a fresh submission confirmation; financial information always requires it.</p></div></div>`,
         },
       ];
 
@@ -276,11 +358,13 @@
         const screens = getScreens();
         const screen = screens[state.step];
         eyebrow.textContent = screen.eyebrow;
+        if (chromeStatusLabel) chromeStatusLabel.textContent = screen.status;
         title.textContent = screen.title;
         description.textContent = screen.description;
         hint.textContent = screen.hint;
         next.textContent = screen.button;
         next.disabled = Boolean(screen.disabled);
+        renderPipeline(state.step);
         body.innerHTML = screen.render();
         progress.style.width = `${((state.step + 1) / screens.length) * 100}%`;
         steps.forEach((button, index) => {
@@ -327,6 +411,15 @@
           render();
         }
       }));
+      document.addEventListener("keydown", (e) => {
+        if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
+        if (e.key === "ArrowRight" && state.step < 5) {
+          advance();
+        } else if (e.key === "ArrowLeft" && state.step > 0) {
+          state.step -= 1;
+          render();
+        }
+      });
       render();
     })();
   </script>
