@@ -16,40 +16,93 @@
 </head>
 <body>
 <main>
-  <nav><a href="/">Lifan Chen</a><a href="privacy.html">Privacy</a></nav>
-  <p class="eyebrow">LOCAL-FIRST · OPEN SOURCE · macOS (v0.1.2)</p>
+  <nav aria-label="Primary">
+    <a class="nav-brand" href="/">Lifan Chen <span class="nav-meta">· Agent Autofill v0.1.2 (macOS)</span></a>
+    <span class="nav-links">
+      <a href="demo/">Interactive demo</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a>
+    </span>
+  </nav>
+
   <h1>Let your agent ask for the information it needs.</h1>
-  <p class="lead">Agent Autofill connects your AI tools (Claude, Codex, Cursor, OpenClaw) to saved profile details, website logins, payment cards, read-only email, and local macOS Messages through an encrypted local broker. You choose the sources and approve access for the task.</p>
-  <p class="actions"><a class="button" href="https://github.com/lifan-builds/agent-autofill">Get Agent Autofill</a><a href="demo/">Try the interactive demo →</a></p>
+  <p class="lead">An encrypted macOS broker for Claude, Codex, Cursor, and OpenClaw. Share approved profile details, website logins, payment cards, read-only Gmail, and local Messages without exposing your vault.</p>
+
+  <div class="cta-stack">
+    <div class="install-bar" role="region" aria-label="Install command">
+      <div class="install-cmd">
+        <span class="install-prompt" aria-hidden="true">$</span>
+        <code id="install-code">uv tool install git+https://github.com/lifan-builds/agent-autofill.git</code>
+      </div>
+      <button class="copy-btn" type="button" id="copy-install" aria-label="Copy install command">Copy</button>
+    </div>
+    <div class="actions">
+      <a class="button" href="https://github.com/lifan-builds/agent-autofill">Get Agent Autofill</a>
+      <a class="secondary-link" href="demo/">Try the interactive demo →</a>
+    </div>
+  </div>
+
   <figure>
-    <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="Agent Autofill 33-second product tour" aria-describedby="video-description">
-      <source src="https://raw.githubusercontent.com/lifan-builds/agent-autofill/main/docs/assets/agent-autofill-tour.mp4" type="video/mp4">
-      <track kind="captions" src="captions.vtt" srclang="en" label="English">
-      <p><a href="https://raw.githubusercontent.com/lifan-builds/agent-autofill/main/docs/assets/agent-autofill-tour.mp4">Download the 33-second product tour</a>.</p>
-    </video>
-    <figcaption id="video-description">0:33 · Synthetic product tour showing Chrome profile intake, origin-bound credential handoff, and scoped 2FA retrieval. Captions included.</figcaption>
+    <div class="video-frame">
+      <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="Agent Autofill 33-second product tour" aria-describedby="video-description">
+        <source src="https://raw.githubusercontent.com/lifan-builds/agent-autofill/main/docs/assets/agent-autofill-tour.mp4" type="video/mp4">
+        <track kind="captions" src="captions.vtt" srclang="en" label="English">
+      </video>
+    </div>
+    <figcaption id="video-description">
+      <span>0:33 synthetic tour · Chrome intake, origin-bound credential handoff, and scoped 2FA retrieval (captions included).</span>
+      <a href="https://raw.githubusercontent.com/lifan-builds/agent-autofill/main/docs/assets/agent-autofill-tour.mp4">Download MP4 ↓</a>
+    </figcaption>
   </figure>
+
   <details>
-    <summary>Read the video transcript</summary>
-    <p>Every time an AI agent hits a form, you end up retyping your address, pasting a password into chat, or hunting down a verification code.</p>
-    <p>Agent Autofill is a local-first personal vault for AI agents on your Mac.</p>
-    <p>Start from Chrome. It organizes your saved addresses, confirms what is Home versus Work, and remembers those meanings across future tasks.</p>
-    <p>When a site needs a login or a two-factor code, it hands off a one-time, origin-bound token and pulls the code from your connected email or Messages—so your raw password never enters model context.</p>
-    <p>And before anything is submitted, you stay in control. Agent Autofill. Autofill, for agents.</p>
+    <summary>Read the 33-second video transcript</summary>
+    <p>Every time an AI agent hits a form, you end up retyping your address, pasting a password into chat, or hunting down a verification code. Agent Autofill is a local-first personal vault for AI agents on your Mac.</p>
+    <p>Start from Chrome. It organizes your saved addresses, confirms what is Home versus Work, and remembers those meanings across future tasks. When a site needs a login or a two-factor code, it hands off a one-time, origin-bound token and pulls the code from your connected email or Messages—so your raw password never enters model context. And before anything is submitted, you stay in control. Agent Autofill. Autofill, for agents.</p>
   </details>
-  <h2>How it works</h2>
-  <ol>
-    <li>Install Agent Autofill on your Mac (<code>uv tool install git+https://github.com/lifan-builds/agent-autofill.git</code>) and connect the sources you choose—or import saved addresses and logins locally from Chrome without plaintext CSV files.</li>
-    <li>Pair an MCP client (<code>agent-autofill mcp-install --client claude|cursor|codex|antigravity</code>) and approve the exact fields it can read. Remote or untrusted clients use scoped, expiring grants; website logins can use a one-time origin-bound Chrome extension handoff (<code>credential.use</code>).</li>
-    <li>The broker returns only the approved fields or verification code. Your agent prepares the form in its own tools and stops for your confirmation before submission.</li>
-  </ol>
-  <h2>Gmail access</h2>
-  <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code or verification link for a specified recipient. Version 0.1.2 uses the read-only Gmail API connector (<code>gmail.readonly</code> scope) by default. Agent Autofill does not send, edit, or delete email.</p>
-  <p>OAuth setup uses a Google Cloud Desktop client supplied by you. Google verification belongs to that client's project; installing this open-source app does not verify a different project. Older IMAP connections may retain broader Google permissions until you revoke and reconnect them.</p>
-  <h2>Know where your data goes</h2>
-  <p>Saved records are encrypted locally in SQLite with AES-GCM, and vault keys plus connector credentials live in the macOS Keychain. When you authorize an agent to read information, returned content becomes available to that agent and may be sent to its model provider; using the Chrome extension handoff (<code>credential.use</code>) keeps website passwords out of model context. Choose the agent and its data settings accordingly.</p>
-  <p>The broker is strictly information-only: it does not navigate, submit forms, or make purchases. Its local storage does not make a separate cloud AI service local.</p>
-  <footer><p>Built and maintained by Lifan Chen. <a href="mailto:fantasychen2016@gmail.com">Contact support</a></p><p><a href="privacy.html">Privacy policy</a> · <a href="https://github.com/lifan-builds/agent-autofill">Source code and setup</a></p></footer>
+
+  <section class="steps-grid" aria-label="How it works">
+    <div class="step-item">
+      <h2>1. Import locally</h2>
+      <p>Connect the sources you choose or import saved addresses and logins directly from Chrome on your Mac—no plaintext CSV exports.</p>
+    </div>
+    <div class="step-item">
+      <h2>2. Approve exact scope</h2>
+      <p>Pair an MCP client (<code>agent-autofill mcp-install</code>) and approve specific fields or expiring grants. Website logins use a one-time origin-bound Chrome handoff (<code>credential.use</code>).</p>
+    </div>
+    <div class="step-item">
+      <h2>3. Stop before submit</h2>
+      <p>The broker returns only approved fields or verification codes. Your agent prepares the form in its own tools and pauses for your confirmation before submission.</p>
+    </div>
+  </section>
+
+  <section class="trust-grid" aria-label="Gmail access and local data custody">
+    <div class="trust-col">
+      <h2>Gmail access</h2>
+      <p>Connect Gmail to find a message, read information for an email task, or retrieve a recent sign-in code or verification link for a specified recipient. Version 0.1.2 uses the read-only Gmail API connector (<code>gmail.readonly</code> scope) by default and never sends, edits, or deletes email.</p>
+      <p>OAuth setup uses a Google Cloud Desktop client supplied by you. Google verification belongs to that client's project; installing this open-source app does not verify a different project. Older IMAP connections may retain broader Google permissions until you revoke and reconnect them.</p>
+    </div>
+    <div class="trust-col">
+      <h2>Know where your data goes</h2>
+      <p>Saved records are encrypted locally in SQLite with AES-GCM, and vault keys plus connector credentials live in the macOS Keychain. Authorized fields returned to an agent may be sent to its model provider, while the Chrome extension handoff (<code>credential.use</code>) keeps website passwords out of model context.</p>
+      <p>The broker is strictly information-only: it does not navigate, submit forms, or make purchases. Its local storage does not make a separate cloud AI service local.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built and maintained by Lifan Chen · <a href="mailto:fantasychen2016@gmail.com">Contact support</a></p>
+    <p><a href="privacy.html">Privacy policy</a> · <a href="https://github.com/lifan-builds/agent-autofill">Source code &amp; setup</a></p>
+  </footer>
 </main>
+<script>
+  document.getElementById("copy-install")?.addEventListener("click", function () {
+    const code = document.getElementById("install-code")?.textContent;
+    if (!code || !navigator.clipboard) return;
+    navigator.clipboard.writeText(code).then(() => {
+      this.textContent = "Copied";
+      setTimeout(() => { this.textContent = "Copy"; }, 1600);
+    });
+  });
+</script>
 </body>
 </html>

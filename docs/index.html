@@ -14,7 +14,7 @@
   <script type="module" src="dungeon.js"></script>
   <noscript><style>dialog:not([open]){display:block;position:static;margin:24px auto}dialog .close-dialog{display:none}</style></noscript>
 </head>
-<body>
+<body data-impeccable-ignore="hard-offset-shadow">
   <header class="site-header">
     <a class="wordmark" href="./" aria-label="Lifan Builds home"><span class="pixel-mark" aria-hidden="true">LB</span>LIFAN BUILDS</a>
     <a href="https://github.com/lifan-builds">GitHub ↗</a>
@@ -38,10 +38,10 @@
   <footer><span>© 2026 Lifan Builds</span><span><a href="https://x.com/LifanBuilds">X ↗</a><a href="https://clifan.substack.com/">Substack ↗</a></span></footer>
 
   <dialog id="quests" aria-labelledby="quests-title">
-    <div class="dialog-heading"><div><p class="eyebrow">THE TREASURE CHEST</p><h2 id="quests-title">Things I’ve built.</h2></div><button class="close-dialog" type="button" aria-label="Close projects" autofocus>×</button></div>
+    <div class="dialog-heading"><h2 id="quests-title">Things I’ve built.</h2><button class="close-dialog" type="button" aria-label="Close projects" autofocus>×</button></div>
     <div class="item-list">
       <a href="https://lifan-builds.github.io/faster-mac-use/"><strong>Faster Mac Use (fmu) <span>↗</span></strong><p>Background multi-cursor browser &amp; macOS computer-use engine (0.0 px drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in @playwright/mcp, 1,510 tok / 326 ms 3-agent swarm).</p></a>
-      <a href="https://github.com/lifan-builds/agent-autofill"><strong>Agent Autofill <span>↗</span></strong><p>Scoped, reviewable information for agents. You approve external submissions.</p></a>
+      <a href="agent-autofill/"><strong>Agent Autofill <span>→</span></strong><p>Local-first personal vault and MCP broker for macOS agents. You approve external submissions.</p></a>
       <a href="https://github.com/lifan-builds/foliofen-cli"><strong>Foliofen CLI <span>↗</span></strong><p>Export patient-owned MyChart records through a local browser harness.</p></a>
       <a href="https://github.com/lifan-builds/perks-reminder"><strong>Perks Reminder <span>↗</span></strong><p>Track card benefits, fees, certificates, and loyalty expirations.</p></a>
       <a href="freshpowder/"><strong>FreshPowder <span>→</span></strong><p>Ski and snowboard deals in one place. Watch the two-minute live demo, then find your next setup.</p></a>
@@ -51,7 +51,7 @@
   </dialog>
 
   <dialog id="journal" aria-labelledby="journal-title">
-    <div class="dialog-heading"><div><p class="eyebrow">THE OPEN BOOK</p><h2 id="journal-title">Notes along the way.</h2></div><button class="close-dialog" type="button" aria-label="Close journal" autofocus>×</button></div>
+    <div class="dialog-heading"><h2 id="journal-title">Notes along the way.</h2><button class="close-dialog" type="button" aria-label="Close journal" autofocus>×</button></div>
     <div class="item-list">
       <a href="journal/"><strong>The journal <span>→</span></strong><p>Build logs, experiments, and daily AI Builder Briefs.</p></a>
       <a href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while"><strong>Why I built Foliofen CLI <span>↗</span></strong><p>Patient-owned exports and a portal that kept changing.</p></a>
@@ -62,7 +62,7 @@
   </dialog>
 
   <dialog id="about" aria-labelledby="about-title">
-    <div class="dialog-heading"><div><p class="eyebrow">THE BUILDER</p><h2 id="about-title">Hey, I’m Lifan.</h2></div><button class="close-dialog" type="button" aria-label="Close about" autofocus>×</button></div>
+    <div class="dialog-heading"><h2 id="about-title">Hey, I’m Lifan.</h2><button class="close-dialog" type="button" aria-label="Close about" autofocus>×</button></div>
     <div class="about-copy">
       <p>I’m a staff engineer building local-first products, agent systems, and the evaluation loops that make them trustworthy.</p>
       <p>I like useful tools, small experiments, and leaving a clear trail of what worked.</p>
