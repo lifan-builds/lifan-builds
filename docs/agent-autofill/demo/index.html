@@ -32,14 +32,14 @@
     .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 650; color: var(--ink); text-decoration: none; white-space: nowrap; }
     .toplinks { display: flex; align-items: center; gap: 18px; color: var(--muted); }
     .platform { display: inline-flex; align-items: center; gap: 7px; color: var(--accent-dark); background: var(--accent-soft); border: 1px solid #b8ded6; border-radius: 999px; padding: 4px 11px; font-size: 12.5px; font-weight: 600; }
-    .intro { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
-    .intro-copy { max-width: 640px; }
-    h1 { margin: 0 0 10px; font-size: clamp(1.85rem, 3.6vw, 2.55rem); line-height: 1.12; letter-spacing: -0.03em; text-wrap: balance; }
+    .intro { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 24px; }
+    .intro-copy { max-width: 680px; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.85rem, 3.6vw, 2.55rem); line-height: 1.12; letter-spacing: -0.03em; text-wrap: balance; }
     .lede { margin: 0; color: var(--muted); font-size: 16.5px; line-height: 1.55; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
     .primary, .secondary, .quiet { cursor: pointer; border-radius: 8px; padding: 9px 15px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s, border-color .15s; }
     .primary { color: #ffffff; background: var(--accent); border: 1px solid var(--accent); }
-    .primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #ffffff; }
+    .primary:hover:not(:disabled) { background: var(--accent-dark); border-color: var(--accent-dark); color: #ffffff; }
+    .primary:disabled { color: var(--muted); background: var(--paper); border-color: var(--line); cursor: not-allowed; }
     .secondary { color: var(--ink); background: var(--white); border: 1px solid var(--line); }
     .secondary:hover { border-color: var(--muted); color: var(--ink); }
     .quiet { color: var(--muted); background: transparent; border: 1px solid var(--line); }
@@ -134,17 +134,16 @@
   <main class="shell">
     <header class="topbar">
       <a class="brand" href="../">← Agent Autofill</a>
-      <div class="toplinks"><span class="platform">Synthetic walkthrough · macOS local broker</span></div>
+      <div class="toplinks">
+        <span class="platform">Synthetic walkthrough · macOS local broker</span>
+        <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a>
+      </div>
     </header>
 
     <section class="intro" aria-labelledby="hero-title">
       <div class="intro-copy">
         <h1 id="hero-title">Give your agent the exact information it needs.</h1>
         <p class="lede">Step through how Agent Autofill previews requests, scopes approval, resolves missing fields, and revokes access—using synthetic data in your browser.</p>
-      </div>
-      <div class="hero-actions">
-        <button class="primary" id="startDemo" type="button">Jump to walkthrough</button>
-        <a class="secondary" href="../gtm.md">Read GTM brief</a>
       </div>
     </section>
 
@@ -214,14 +213,16 @@
       const next = $("#nextStep");
       const progress = $("#progressBar");
       const steps = [...document.querySelectorAll(".step")];
+      const missingReady = () => state.missingChoice === "once" || state.missingChoice === "save";
 
-      const screens = [
+      const getScreens = () => [
         {
           eyebrow: "Step 1 · local custody",
           title: "Start with a value-free inventory",
           description: "See what is ready before an agent asks for anything.",
           hint: "No account data is opened.",
           button: "Preview request",
+          disabled: false,
           render: () => `<div class="inventory"><div class="inventory-card"><div class="inventory-icon">ID</div><div><strong>Profile fields</strong><small>12 approved fields · metadata only</small></div></div><div class="inventory-card"><div class="inventory-icon">✉</div><div><strong>Email source</strong><small>1 read-only inbox · health ready</small></div></div><div class="inventory-card"><div class="inventory-icon">⌂</div><div><strong>Credential records</strong><small>2 sites · no passwords shown</small></div></div><div class="inventory-card"><div class="inventory-icon">◌</div><div><strong>Access grants</strong><small>${state.revoked ? "0 active · last grant revoked" : "0 active · nothing shared yet"}</small></div></div></div><div class="status-row">Encrypted broker ready · loopback review surface</div>`,
         },
         {
@@ -230,6 +231,7 @@
           description: "The agent names the origin, purpose, fields, expiry, and delivery mode before any value is returned.",
           hint: "Change delivery mode to compare exposure.",
           button: "Review approval",
+          disabled: false,
           render: () => `<div class="request-card"><div class="request-head"><div><strong>Travel form helper</strong><br><small>Requesting agent · synthetic-agent-01</small></div><span class="chip">awaiting approval</span></div><dl class="request-grid"><div class="request-item"><dt>Target origin</dt><dd>https://example.test</dd></div><div class="request-item"><dt>Purpose</dt><dd>Complete traveler profile</dd></div><div class="request-item"><dt>Fields</dt><dd><div class="chips"><span class="chip">display_name</span><span class="chip">postal_code</span></div></dd></div><div class="request-item"><dt>Expiry</dt><dd>10 minutes · one task</dd></div></dl><div class="choice-row"><button class="choice ${state.delivery === "direct" ? "selected" : ""}" data-delivery="direct" type="button"><strong>Direct selected fields</strong><small>Values appear in the authenticated agent response.</small></button><button class="choice ${state.delivery === "extension" ? "selected" : ""}" data-delivery="extension" type="button"><strong>Extension handoff</strong><small>One-time origin-bound handle; password stays out of agent input.</small></button></div></div>`,
         },
         {
@@ -237,7 +239,8 @@
           title: "Approve the smallest useful grant",
           description: "A clear approval card makes the consent boundary visible and reversible.",
           hint: state.approved ? "Grant approved; delivery is ready." : "Nothing is shared until you approve.",
-          button: state.approved ? "Deliver selected data" : "Approve exact grant",
+          button: state.approved ? "Resolve missing field" : "Approve exact grant",
+          disabled: false,
           render: () => `<div class="approval"><h3>Allow this request?</h3><p>Review every part before the grant is written.</p><div class="approval-list"><div class="approval-line"><span>Agent</span><strong>synthetic-agent-01</strong></div><div class="approval-line"><span>Origin</span><strong>example.test</strong></div><div class="approval-line"><span>Purpose</span><strong>Complete traveler profile</strong></div><div class="approval-line"><span>Fields</span><strong>display_name, postal_code</strong></div><div class="approval-line"><span>Delivery</span><strong>${state.delivery === "direct" ? "direct selected fields" : "one-time extension handoff"}</strong></div><div class="approval-line"><span>Expires</span><strong>in 10 minutes</strong></div></div></div><div class="status-row" style="color:${state.approved ? "var(--accent-dark)" : "var(--amber)"}">${state.approved ? "Grant active · revocable at any time" : "Waiting for your approval"}</div>`,
         },
         {
@@ -245,7 +248,8 @@
           title: "Choose once or remember it",
           description: "When a form needs a missing field, decide whether to use your answer once or save it for future tasks.",
           hint: state.missingChoice === "skip" ? "The form is paused; choose Use once or Save to continue." : "One choice completes the missing-field step.",
-          button: "Choose an option above",
+          button: missingReady() ? "Deliver selected data" : "Choose an option above",
+          disabled: !missingReady(),
           render: () => `<div class="request-card"><div class="request-head"><div><strong>Missing field: Company name</strong><br><small>Required by example.test · job application</small></div><span class="chip">synthetic value</span></div><dl class="request-grid"><div class="request-item"><dt>Field ID</dt><dd>company_name (organization)</dd></div><div class="request-item"><dt>Value supplied now</dt><dd>Synthetic Example Co</dd></div><div class="request-item"><dt>Current form scope</dt><dd>example.test · job application</dd></div><div class="request-item"><dt>Write grant if saved</dt><dd>profile.write · company_name</dd></div></dl><div class="choice-row"><button class="choice ${state.missingChoice === "once" ? "selected" : ""}" data-missing="once" type="button"><strong>Use once</strong><small>Continue now; discard this answer after the form.</small></button><button class="choice ${state.missingChoice === "save" ? "selected" : ""}" data-missing="save" type="button"><strong>Save to Agent Autofill</strong><small>Store this reusable record for later authorized forms.</small></button></div><button class="quiet" style="margin-top:10px" data-missing="skip" type="button">Skip this field</button></div>${state.missingChoice === "skip" ? `<div class="success revoke"><div class="success-icon" style="background:#9a5d5d">!</div><div><strong>Form paused</strong><p>No value is guessed or saved. Choose Use once or Save to Agent Autofill to continue.</p></div></div>` : ""}`,
         },
         {
@@ -254,6 +258,7 @@
           description: state.delivery === "direct" ? "The authenticated response contains only the two approved synthetic fields and safe provenance." : "The local extension receives a one-time, origin-bound handle. It never navigates or submits.",
           hint: "The acting agent or user owns the next action.",
           button: "Revoke grant",
+          disabled: false,
           render: () => `<div class="delivery"><div class="delivery-card ${state.delivery === "direct" ? "highlight" : ""}"><h3>Direct response</h3><p>Selected fields plus provenance. No password, token, or unrelated record.</p><div class="field-preview">display_name: Demo User<br>postal_code: 98101</div></div><div class="delivery-card ${state.delivery === "extension" ? "highlight" : ""}"><h3>Extension handoff</h3><p>Short-lived handle bound to <strong>example.test</strong>; consumed once.</p><div class="field-preview handle-preview">handle: demo-only · consumed after origin check</div></div></div><div class="success" style="margin-top:14px"><div class="success-icon">✓</div><div><h3>Scoped delivery complete</h3><p>Provenance: synthetic-demo · origin: example.test · purpose: traveler profile</p></div></div>`,
         },
         {
@@ -262,23 +267,20 @@
           description: "A short-lived grant disappears cleanly instead of becoming a standing permission.",
           hint: "Reset the tour to run it again.",
           button: "Reset demo",
+          disabled: false,
           render: () => `<div class="success"><div class="success-icon">✓</div><div><h3>Grant revoked</h3><p>Future requests from synthetic-agent-01 for this scope are blocked. The local vault remains intact.</p></div></div><div class="success revoke"><div class="success-icon" style="background:#9a5d5d">↗</div><div><strong>The stopping point is deliberate</strong><p>The acting agent owns browser actions and must obtain a fresh submission confirmation; financial information always requires it.</p></div></div>`,
         },
       ];
 
       function render() {
+        const screens = getScreens();
         const screen = screens[state.step];
         eyebrow.textContent = screen.eyebrow;
-        const deliveryTitle = state.step === 4 && state.delivery === "direct"
-          ? "Return only the selected fields"
-          : screen.title;
-        const deliveryDescription = state.step === 4 && state.delivery === "direct"
-          ? "The authenticated response contains only the two approved synthetic fields and safe provenance."
-          : screen.description;
-        title.textContent = deliveryTitle;
-        description.textContent = deliveryDescription;
+        title.textContent = screen.title;
+        description.textContent = screen.description;
         hint.textContent = screen.hint;
         next.textContent = screen.button;
+        next.disabled = Boolean(screen.disabled);
         body.innerHTML = screen.render();
         progress.style.width = `${((state.step + 1) / screens.length) * 100}%`;
         steps.forEach((button, index) => {
@@ -288,9 +290,12 @@
         document.querySelectorAll("[data-delivery]").forEach((button) => button.addEventListener("click", () => { state.delivery = button.dataset.delivery; render(); }));
         document.querySelectorAll("[data-missing]").forEach((button) => button.addEventListener("click", () => {
           state.missingChoice = button.dataset.missing;
-          if (state.missingChoice === "once" || state.missingChoice === "save") {
+          if (missingReady()) {
             state.delivered = true;
             state.step = 4;
+          } else {
+            state.delivered = false;
+            state.revoked = false;
           }
           render();
         }));
@@ -301,19 +306,27 @@
         else if (state.step === 1) state.step = 2;
         else if (state.step === 2) { state.approved = true; state.step = 3; }
         else if (state.step === 3) {
-          if (state.missingChoice !== "once" && state.missingChoice !== "save") return;
+          if (!missingReady()) return false;
           state.delivered = true;
           state.step = 4;
         }
         else if (state.step === 4) { state.revoked = true; state.step = 5; }
         else reset();
         render();
+        return true;
       }
       function reset() { state.step = 0; state.delivery = "extension"; state.approved = false; state.missingChoice = "pending"; state.delivered = false; state.revoked = false; }
-      next.addEventListener("click", () => { advance(); $("#demo").scrollIntoView({ behavior: "smooth", block: "start" }); });
+      next.addEventListener("click", () => { if (advance()) $("#demo").scrollIntoView({ behavior: "smooth", block: "start" }); });
       $("#resetDemo").addEventListener("click", () => { reset(); render(); });
-      $("#startDemo").addEventListener("click", () => { $("#demo").scrollIntoView({ behavior: "smooth", block: "start" }); });
-      steps.forEach((button) => button.addEventListener("click", () => { const requested = Number(button.dataset.step); const missingReady = state.missingChoice === "once" || state.missingChoice === "save"; if (requested <= state.step || (requested === state.step + 1 && state.step < 5 && (state.step !== 3 || missingReady))) { state.step = requested; render(); } }));
+      steps.forEach((button) => button.addEventListener("click", () => {
+        const requested = Number(button.dataset.step);
+        if (requested === state.step + 1 && state.step < 5) {
+          advance();
+        } else if (requested <= state.step) {
+          state.step = requested;
+          render();
+        }
+      }));
       render();
     })();
   </script>

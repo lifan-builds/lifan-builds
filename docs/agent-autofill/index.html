@@ -95,13 +95,32 @@
   </footer>
 </main>
 <script>
-  document.getElementById("copy-install")?.addEventListener("click", function () {
-    const code = document.getElementById("install-code")?.textContent;
-    if (!code || !navigator.clipboard) return;
-    navigator.clipboard.writeText(code).then(() => {
+  document.getElementById("copy-install")?.addEventListener("click", async function () {
+    const codeEl = document.getElementById("install-code");
+    const code = codeEl?.textContent;
+    if (!code) return;
+    let copied = false;
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(code);
+        copied = true;
+      } catch (_) {}
+    }
+    if (!copied && codeEl) {
+      try {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(codeEl);
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        copied = document.execCommand("copy");
+        selection?.removeAllRanges();
+      } catch (_) {}
+    }
+    if (copied) {
       this.textContent = "Copied";
       setTimeout(() => { this.textContent = "Copy"; }, 1600);
-    });
+    }
   });
 </script>
 </body>
