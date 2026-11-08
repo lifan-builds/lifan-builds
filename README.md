@@ -38,6 +38,16 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/lifan-builds/faster-mac-use"><strong>Faster Mac Use (fmu)</strong></a> <sup>NEW</sup><br />
+      <sub>Background-first, multi-cursor browser &amp; native macOS computer-use engine (0.0 px cursor drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in <code>@playwright/mcp</code>, 326 ms 3-agent swarm; <a href="https://lifan-builds.github.io/faster-mac-use/">interactive benchmarks</a>).</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/lifan-builds/agent-autofill"><strong>Agent Autofill</strong></a> <sup>NEW</sup><br />
+      <sub>Local-first personal data broker for AI agents with scoped credential/profile access and explicit human approval gates.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <a href="https://github.com/lifan-builds/flyingpig"><strong>Flying Pig AI</strong></a><br />
       <sub>Supervised AI customer-service advocate that pauses at structured decision checkpoints before consequential actions.</sub>
     </td>
