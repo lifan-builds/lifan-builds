@@ -3,6 +3,7 @@ const BUILD_DATA = {
     name: 'Faster Mac Use (fmu)',
     route: 'clifan.com/faster-mac-use/',
     href: 'faster-mac-use/',
+    art: 'faster-mac-use/assets/swarm-vs-mcp-demo.svg',
     repo: 'https://github.com/lifan-builds/faster-mac-use',
     repoLabel: 'lifan-builds/faster-mac-use ↗',
     summary: 'Background multi-cursor browser & macOS computer-use engine driving unfocused Chrome tab groups and native apps in parallel.',
@@ -24,6 +25,7 @@ const BUILD_DATA = {
     name: 'Agent Autofill',
     route: 'clifan.com/agent-autofill/',
     href: 'agent-autofill/',
+    art: 'agent-autofill/poster.jpg',
     repo: 'agent-autofill/demo/',
     repoLabel: 'Interactive approval demo →',
     summary: 'Local-first personal vault and MCP broker for macOS agents. Share scoped fields, origin-bound logins, and 2FA codes with explicit human approval.',
@@ -45,6 +47,7 @@ const BUILD_DATA = {
     name: 'QuotaSwitch',
     route: 'clifan.com/quotaswitch/',
     href: 'quotaswitch/',
+    art: 'assets/pillar-ml-agents-pixel.jpg',
     repo: 'https://github.com/lifan-builds/quotaswitch',
     repoLabel: 'lifan-builds/quotaswitch ↗',
     summary: 'Unified quota-driven multi-account switcher and 30s background auto-rotator for Google Antigravity (agy) and OpenAI Codex (codex).',
@@ -66,6 +69,7 @@ const BUILD_DATA = {
     name: 'FreshPowder',
     route: 'clifan.com/freshpowder/',
     href: 'freshpowder/',
+    art: 'freshpowder/poster.jpg',
     repo: 'https://freshpowder.clifan.com/',
     repoLabel: 'Launch live deal finder ↗',
     summary: 'Ski and snowboard deal aggregator across 28 North American retailers, normalized across USD/CAD and filtered by exact size and budget.',
@@ -87,6 +91,7 @@ const BUILD_DATA = {
     name: 'Perks Reminder',
     route: 'clifan.com/perks-reminder/',
     href: 'perks-reminder/',
+    art: 'assets/workshop-room.svg',
     repo: 'https://www.perks-reminder.com/',
     repoLabel: 'Launch perks-reminder.com ↗',
     summary: 'Free, open-source credit card benefits, welcome bonus, and annual-fee ROI tracker with duplicate physical-card support and zero bank logins.',
@@ -108,6 +113,7 @@ const BUILD_DATA = {
     name: 'AI Builder Brief',
     route: 'clifan.com/ai-builder-brief/',
     href: 'ai-builder-brief/',
+    art: 'ai-builder-brief/cover.jpg',
     repo: 'journal/ai-builder-brief/',
     repoLabel: 'Browse 59 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
@@ -129,6 +135,7 @@ const BUILD_DATA = {
     name: 'Nitan Podcast (泥潭播客)',
     route: 'clifan.com/nitan-podcast/',
     href: 'nitan-podcast/',
+    art: 'assets/jrpg-overworld-pixel.png',
     repo: 'https://github.com/lifan-builds/nitan-podcast',
     repoLabel: 'lifan-builds/nitan-podcast ↗',
     summary: 'Weekly six-minute Chinese audio digest synthesized from high-signal USCardForum discussions and shipped with verified thread receipts via RSS.',
@@ -150,6 +157,7 @@ const BUILD_DATA = {
     name: 'Foliofen CLI',
     route: 'clifan.com/foliofen-cli/',
     href: 'foliofen-cli/',
+    art: 'assets/pillar-eval-forge-pixel.jpg',
     repo: 'https://github.com/lifan-builds/foliofen-cli',
     repoLabel: 'lifan-builds/foliofen-cli ↗',
     summary: 'Local-first CLI for exporting patient-owned Epic MyChart health records into deterministic Markdown or JSONL with zero cloud custody.',
@@ -171,6 +179,7 @@ const BUILD_DATA = {
     name: 'CastForge',
     route: 'clifan.com/castforge/',
     href: 'castforge/',
+    art: 'assets/pillar-eval-forge-pixel.jpg',
     repo: 'https://pypi.org/project/castforge/',
     repoLabel: 'PyPI: castforge 0.1.3 ↗',
     summary: 'Open-source Python framework for source-transparent podcast pipelines with StoryCluster evidence gates, NotebookLM audio, and atomic R2 + RSS checks.',
@@ -293,12 +302,14 @@ function selectBuild(key) {
   const summaryEl = document.getElementById('stage-summary');
   const metricsEl = document.getElementById('stage-metrics');
   const traceEl = document.getElementById('stage-trace');
+  const stageArtEl = document.getElementById('stage-art-img');
   const primaryLink = document.getElementById('stage-primary-link');
   const secondaryLink = document.getElementById('stage-secondary-link');
 
   if (nameEl) nameEl.textContent = item.name;
   if (routeEl) routeEl.textContent = item.route;
   if (summaryEl) summaryEl.textContent = item.summary;
+  if (stageArtEl && item.art) stageArtEl.src = item.art;
 
   // Update 4-Pillar Signal SVG nodes
   if (item.signals) {
