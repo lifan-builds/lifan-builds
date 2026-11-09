@@ -1,0 +1,898 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Nitan Podcast</title>
+    <link>https://lifan-builds.github.io/nitan-podcast/</link>
+    <description>每周精选美卡论坛（泥潭）热帖，AI 自动生成的中文播客。6-8 分钟听完一周精华。</description>
+    <language>zh</language>
+    <generator>nitan-pod RSS generator</generator>
+    <atom:link href="https://lifan-builds.github.io/nitan-podcast/feed.xml" rel="self" type="application/rss+xml" />
+    <itunes:author>Nitan Podcast</itunes:author>
+    <itunes:summary>每周精选美卡论坛（泥潭）热帖，AI 自动生成的中文播客。6-8 分钟听完一周精华。</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Technology" />
+    <itunes:image href="https://github.com/lifan-builds/nitan-podcast/raw/main/assets/cover.png" />
+    <itunes:owner>
+      <itunes:name>Nitan Podcast</itunes:name>
+      <itunes:email>lifan.builds@gmail.com</itunes:email>
+    </itunes:owner>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第45周</title>
+      <description>本期看点：退谭：你可以不喜欢我的观点，但你凭什么让、我的近30年玩卡经历、世界上还有哪些地方值得年轻时头铁去签一次……
+
+本期精选 7 个热帖，涵盖闲聊 / 航空常旅客 / 旅行 / 股市投资 / 信用卡 / 情感。
+本周合计 21,108 次浏览。
+
+【闲聊】
+• 退谭：你可以不喜欢我的观点，但你凭什么让我闭嘴？2  (❤️400 👀2390 💬228)
+  └ 我一直认为，一个好的论坛应该鼓励不同观点的讨论，而不是管理员通过禁言、禁止登录、删号，消灭自己不喜欢的内容。
+
+【航空常旅客】
+• AA link ATT账户 白嫖 5000 miles（前6w5 5000 之后2500 速撸！） 第一波已到账！  (❤️94 👀4122 💬170)
+  └ 超过6w5名额 只给 2500 速撸
+
+【旅行】
+• 世界上还有哪些地方值得年轻时头铁去签一次H1b  (❤️162 👀3391 💬103)
+  └ 编辑一下吧，发之前意料到有人会觉得我是在炫耀，实际上客观来说我承认我去过的地方超过了大部分人，但我同时也承认泥潭有人在发…
+
+【股市投资】
+• 转载 -- 警惕新型骗局，美股youtub博主- Selina聊美股, Terry 美股，Amber研股记, Ruby投资笔记  (❤️149 👀2599 💬63)
+  └ **
+• [2026/10/30] 紧急发帖提醒下大家今天不要ALLIN  (❤️157 👀5282 💬86)
+  └ 这个不是连续下跌后，进一步大暴跌，而是多头强势拉了3，4天，最终干不赢空头被死踩下去了，这样的走法今天可能不是底，尤其不…
+
+【信用卡】
+• 我的近30年玩卡经历  (❤️200 👀2387 💬60)
+  └ 90年代大学毕业在国内创业时，团队中有美国回来的partner向我展示他的Amex卡，能够转点各大航空公司换机票，当时都…
+
+【情感】
+• 🌈八年恋爱结束后的第十五个月，我又一次见到了你  (❤️60 👀937 💬28)
+  └ 十五个月前，我在这里写下了一个帖子，叫《[🌈8年恋爱在今天结束了](https://www.uscardforum.co…</description>
+      <pubDate>Mon, 02 Nov 2026 08:46:52 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W45</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W45.mp3" length="7509609" type="audio/mpeg" />
+      <itunes:duration>00:05:13</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第44周</title>
+      <description>本期看点：退谭：你可以不喜欢我的观点，但你凭什么让、【新增 6.1 Sol｜iOS 电脑都可、世界上还有哪些地方值得年轻时头铁去签一次……
+
+本期精选 7 个热帖，涵盖玩卡 / 闲聊 / 航空常旅客 / 旅行 / 股市投资 / 情感。
+本周合计 20,170 次浏览。
+
+【玩卡】
+• 做了一个Fake DD 数据库：查哪些方法能触发奖励，欢迎大家补充！  (❤️150 👀1990 💬54)
+  └ 更新：做了不少的界面优化。增加了logo。也在做导入bank offer的内容，还在摸索最佳流程中，争取之后自动化更新
+• 【新增 6.1 Sol｜iOS 电脑都可用】这次真的外婆都会用了 — 全能泥潭搜索 Chrome AI 插件  (❤️198 👀3953 💬135)
+  └ https://xgoose.org/
+
+【闲聊】
+• 退谭：你可以不喜欢我的观点，但你凭什么让我闭嘴？2  (❤️399 👀2366 💬228)
+  └ 我一直认为，一个好的论坛应该鼓励不同观点的讨论，而不是管理员通过禁言、禁止登录、删号，消灭自己不喜欢的内容。
+
+【航空常旅客】
+• AA link ATT账户 白嫖 5000 miles（前6w5 5000 之后2500 速撸！） 第一波已到账！  (❤️94 👀4102 💬170)
+  └ 超过6w5名额 只给 2500 速撸
+
+【旅行】
+• 世界上还有哪些地方值得年轻时头铁去签一次H1b  (❤️162 👀3264 💬101)
+  └ 编辑一下吧，发之前意料到有人会觉得我是在炫耀，实际上客观来说我承认我去过的地方超过了大部分人，但我同时也承认泥潭有人在发…
+
+【股市投资】
+• 转载 -- 警惕新型骗局，美股youtub博主- Selina聊美股, Terry 美股，Amber研股记, Ruby投资笔记  (❤️149 👀2568 💬63)
+  └ **
+
+【情感】
+• 我作为一个长者给年轻人的一些忠告 爱情不是你们的破产生意  (❤️98 👀1927 💬36)
+  └ 我作为一个长者，最近看情感区看了不少。Believe me，我懂爱情，真的懂，非常懂，可能比任何人都懂。年轻人现在很有创…</description>
+      <pubDate>Sun, 01 Nov 2026 22:16:49 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W44</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W44.mp3" length="9433057" type="audio/mpeg" />
+      <itunes:duration>00:06:33</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第39周</title>
+      <description>本期看点：阿美下个白牛来了、Amex plat 175/ gold 、costco uber/doordash……
+
+本期精选 7 个热帖，涵盖白金 / 信用卡 / 旅行 / 败家 / 生活。
+本周合计 27,608 次浏览。
+
+【白金】
+• 阿美下个白牛来了  (❤️829 👀6544 💬1114)
+  └ lz经过几天的不懈努力，找到了阿美下一些有用的50k的牛来链接，搜了几遍只找到plat的，gold的暂时没找到。
+• Amex plat 175/ gold 100k LL?  (❤️498 👀5814 💬702)
+  └ 刚好试出来应该是LL , 不过应该 快要有Plat 185K了？
+
+【信用卡】
+• Amex Delta NLL  (❤️242 👀5825 💬356)
+  └ 好久都没看见简单的NLL链接了
+
+【旅行】
+• 我又写了个Marriott的Chrome插件 - HotelXray  (❤️171 👀1124 💬36)
+  └ 之前写的[查Hyatt房价和积分房的Chrome插件HotelXray](https://www.uscardforum…
+• 登顶乞力马扎罗  (❤️138 👀1284 💬49)
+  └ 搜了一下坛子里，关于攀爬乞力马扎罗的帖子寥寥无几于是打算趁刚从非洲回来但心还在山上这段时间写点有的没的
+
+【败家】
+• costco uber/doordash gc已经回归  (❤️345 👀5230 💬255)
+  └ costco.com已经可以购买
+
+【生活】
+• 美丽小岛我滴家-Alameda, CA  (❤️91 👀1787 💬73)
+  └ 转眼搬到Alameda已经半年了，在加州的潭友感觉还是在南湾居多？好像对于Alameda讨论比较少，分享一下在这边住的一…</description>
+      <pubDate>Mon, 21 Sep 2026 19:10:13 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W39</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W39.mp3" length="11305399" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第38周</title>
+      <description>本期看点：[DeAd]AMEX 刷商白300k 商、在第48国后意识到了旅行的乐趣越来越少，、X Money 贵宾贴……
+
+本期精选 7 个热帖，涵盖旅行 / 败家 / 白金 / 情感 / 钛金 / 玩卡。
+本周合计 24,354 次浏览。
+
+【旅行】
+• 在第48国后意识到了旅行的乐趣越来越少，我放下相机走到了家门口的大街  (❤️326 👀3084 💬92)
+  └ 以前是想走但走不了，总有各种各样的麻烦， 没钱，没时间，有其他的事情， 没有人愿意陪我一起
+
+【败家】
+• costco uber/doordash gc已经回归  (❤️280 👀2107 💬149)
+  └ costco.com已经可以购买
+
+【白金】
+• [DeAd]AMEX 刷商白300k 商金200k offer 技巧[backend team review 警告]  (❤️453 👀3544 💬668)
+  └ 在假设AHA页面能透过脚本读取出实际offer且offer为真的情况下
+• X Money 贵宾贴  (❤️314 👀3351 💬542)
+  └ 外面真真假假，这里只有真真。
+
+【情感】
+• 逃离了国内40万年包的965工作  (❤️205 👀4504 💬167)
+  └ 不知道应该放在搬砖区还是情感区，但是因为主要是发发牢骚讲讲心情，所以还是就在情感区吧。
+
+【钛金】
+• [已发车] 快速车 -&gt; 商白300k 商金200k  (❤️121 👀732 💬108)
+  └ :troll:
+
+【玩卡】
+• [Public] Hilton系列石膏回归 Aspire 200k | Offer ends 01/13/2027  (❤️189 👀7032 💬239)
+  └ 白板：</description>
+      <pubDate>Mon, 14 Sep 2026 19:05:21 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W38</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W38.mp3" length="12220122" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第37周</title>
+      <description>本期看点：2026教程：不用vpn破解 注册DL 、[Update 9/6 支持商业卡了！]、【第一季完结】撸卡，恋爱，人生 - 白金……
+
+本期精选 7 个热帖，涵盖玩卡 / 旅行 / 游记攻略 / 白金 / 健康。
+本周合计 11,089 次浏览。
+
+【玩卡】
+• 2026教程：不用vpn破解 注册DL 12Status免费拿skymiles  (❤️157 👀2488 💬81)
+  └ **2026/09/02更新**：建议大家用完browser extension后就把它卸载了。
+• [Update 9/6 支持商业卡了！][GreaseMonkey Script] 查看amex welcome As High As offer到底有多少  (❤️155 👀1795 💬77)
+  └ 找不到什么好卡开，天天看as high as然后被弹窗心烦，发现amex居然有些页面会把welcome offer的具体…
+• 【第一季完结】撸卡，恋爱，人生 - 白金骑士的免费恋爱学/撸铁，把妹，过夜 - 高富帅的人生  (❤️82 👀2815 💬79)
+  └ 小李，湾区码农，钱包里躺着一百多张信用卡：五张希尔顿轮转大法，五张 Amex 个人白金NLL、十张商业白金，剩下的是为了…
+
+【旅行】
+• 统计全美 Hilton 非 Resort: Semi-Flex Pay now 列表  (❤️80 👀1327 💬38)
+  └ 有潭友希望 [FHR Scout](https://terrytan.dev/fhr/) 能收录非 Resort、但支持…
+
+【游记攻略】
+• :oman: 那年的盛夏，当阿拉伯海的风拂过宣礼塔 (阿曼游记)  (❤️68 👀485 💬39)
+  └ 2026年的中东，[很不太平](https://www.uscardforum.com/t/topic/489530)。…
+
+【白金】
+• aa不放临期国内直达票，as可能破解法  (❤️69 👀1053 💬42)
+  └ 众所周知，aa现在国内直达里程票准点144小时下架。因为之前就有过多次用as改换奇葩经历，于是做了下实验，发现仍然可行。
+
+【健康】
+• 美国配眼镜/隐形的一点经验：镜框、镜片、保险，以及从国内配了寄过来  (❤️71 👀1126 💬47)
+  └ 飞机上闲得没事写的，本来只想写一点，结果越写越长，下飞机整理了一下发出来。</description>
+      <pubDate>Mon, 07 Sep 2026 18:37:26 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W37</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W37.mp3" length="14698861" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第36周</title>
+      <description>本期看点：[来加麦当油] Shell 免费加油、[DEAD]轮到我们这代人领鸡蛋了！无限、发现美国人很多时候喜欢不懂乱说……
+
+本期精选 7 个热帖，涵盖白金 / 情感 / 旅行 / 购物折扣 / 生活。
+本周合计 26,027 次浏览。
+
+【白金】
+• [来加麦当油] Shell 免费加油  (❤️640 👀5836 💬1030)
+  └ ps:**大家应该都到了线下加油阶段，请千万看到折扣后的价格再加油！**
+
+【情感】
+• 我在纽约市立图书馆认识了一个韩国妹妹 没想到最后和她结婚了  (❤️225 👀6189 💬170)
+  └ 纽约的第二个学期 我报名了之前一直想学的吉他 在midtown 每周去两次 买了地铁月票 我记得是127块 。
+
+【旅行】
+• OW现金环球票101  (❤️96 👀1236 💬45)
+  └ 第一次接触One World现金环球票，搜了一下目前也没有专门的帖子讲这个，故发一贴分享一下经验和tricks。此帖**…
+• 岳父美国意外受伤缝针，支付宝境外险7天100%理赔到账！  (❤️144 👀3118 💬113)
+  └ 本文由Claude 生成，真的不是广告😂😂 Claude 说帮我写成了小某书风格
+
+【购物折扣】
+• [DEAD]轮到我们这代人领鸡蛋了！无限？免费Vital鸡蛋coupon up to $15  (❤️309 👀4684 💬540)
+  └ Update2: 美西时间5点左右这个deal疑似DEAD了 无法获得新coupon了，收到邮件但是没claim的也无了…
+• 白嫖 Jetpac 免费终身eSIM - 1年四次，每次100MB  (❤️69 👀1708 💬39)
+  └ 这是一家叫Jetpac 搞的名为 **Jetpac Eterna** 的计划，主打一个**终身免费白嫖**的旅行 eSI…
+
+【生活】
+• 发现美国人很多时候喜欢不懂乱说  (❤️278 👀3256 💬68)
+  └ 今天去机场，因为有个手机不小心掉在ua的航班上面，然后在网上也提交了失物招领的申请表，发现手机已经定位到机场里面。去了机…</description>
+      <pubDate>Mon, 31 Aug 2026 23:41:47 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W36</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W36.mp3" length="14395447" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第35周</title>
+      <description>本期看点：泥潭新 feature：白金会员 (Tr、quit了phd，回国打工一年多，分享情、杭州君悦，真好啊………
+
+本期精选 7 个热帖，涵盖生活 / 回国or留美 / 新政 / 旅行 / 白金 / 闲聊。
+本周合计 16,212 次浏览。
+
+【生活】
+• 顺着header反查并举报了垃圾邮件的服务器  (❤️124 👀1559 💬31)
+
+【回国or留美】
+• quit了phd，回国打工一年多，分享情况，想回国的话可以参考  (❤️229 👀3673 💬204)
+  └ 2025年因为 ICE、各种法案、学签全停、项目不好、对象偏好 等多种原因，退学回国打工。
+
+【新政】
+• 针对F1的取消D/S新规收到了诉讼  (❤️93 👀1803 💬26)
+  └ 刚在X上看到的
+
+【旅行】
+• 杭州君悦，真好啊…  (❤️133 👀2985 💬85)
+  └ 特种兵行程，西湖住一晚上。目前：
+• 又来了一次LAX, 深深觉得到了美帝才领悟资本主义的真谛  (❤️120 👀3434 💬79)
+  └ 什么叫 有钱能使鬼推磨
+
+【白金】
+• BR 美國"非"臨期夥伴糧倉availability 一時辰一報 ## DFW 注意幽靈票!!  (❤️59 👀1231 💬25)
+  └ https://www.uscardforum.com/t/topic/525416
+
+【闲聊】
+• 泥潭新 feature：白金会员 (Trust Level 3) 进度条  (❤️267 👀1527 💬111)
+  └ 很多人都很关心自己在美卡论坛的升级进度，想知道自己离[白金会员 (Trust Level 3)](https://www…</description>
+      <pubDate>Mon, 24 Aug 2026 14:40:53 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W35</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W35.mp3" length="13259707" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第34周</title>
+      <description>本期看点：裸辞准备回国了，离开湾区前还有什么值得去、看看你们的2026日全食照片、BR 美國臨期夥伴糧倉(30天)avai……
+
+本期精选 7 个热帖，涵盖旅行 / 生活 / 白金 / 败家 / 购物折扣。
+本周合计 16,071 次浏览。
+
+【旅行】
+• 看看你们的2026日全食照片  (❤️200 👀1350 💬56)
+  └ 其实我就是想自己发照片嘻嘻
+• BR北美临期票规律总结  (❤️102 👀1253 💬43)
+  └ 有需要兑换的可以关注谭友的爬虫帖 https://www.uscardforum.com/t/topic/525416
+• 一次有点偏科的台北旅行  (❤️97 👀1542 💬53)
+  └ 感谢论坛上很多人的台湾游记分享，我也来添砖加瓦一下。
+
+【生活】
+• 裸辞准备回国了，离开湾区前还有什么值得去/值得吃的吗？  (❤️298 👀3348 💬191)
+  └ 上个月裸辞了
+
+【白金】
+• BR 美國臨期夥伴糧倉(30天)availability 整點報時  (❤️126 👀1682 💬69)
+  └ 雖然 BR 北美航點早沒了穩定的遠期夥伴糧倉
+
+【败家】
+• 稳定的土耳其和菲律宾订阅支付，每年省几百刀订阅费  (❤️78 👀2161 💬44)
+  └ 门槛相对友好的的低价区基本只剩土耳其和菲律宾了，想长期订阅避免封号的或者看看这些数字银行有没有奇技淫巧的，可以开一下他们…
+
+【购物折扣】
+• 【DEAD】【奇技淫巧】【逆天BUG】挂壁福音：无限白嫖 GPT-5.6-Sol 隐藏模型，实测不扣费！  (❤️123 👀4735 💬45)
+  └ 泥潭的家人们，今天给大家分享一个非常重磅的奇技淫巧，属于是属于官方系统漏洞级别的大羊毛！🐏</description>
+      <pubDate>Mon, 17 Aug 2026 20:38:43 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W34</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W34.mp3" length="11523534" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第33周</title>
+      <description>本期看点：我开发的亚麻内部3.8万人在用的AI产品、Pointlane：免费里程票搜索工具、泥潭首发：美国去台湾旅行规划最优解……
+
+本期精选 7 个热帖，涵盖旅行 / 搬砖 / 航空常旅客 / 签证与身份（美国以外） / 股市投资 / 信用卡。
+本周合计 21,521 次浏览。
+
+【旅行】
+• Pointlane：免费里程票搜索工具  (❤️283 👀2759 💬98)
+  └ 搞了个搜里程票的工具，免费不用注册：https://pointlane.io
+• 俄罗斯远东+海岛+贝加尔湖 完结！  (❤️140 👀3806 💬112)
+  └ TLDR
+
+【搬砖】
+• 我开发的亚麻内部3.8万人在用的AI产品，今天发布了  (❤️488 👀5933 💬199)
+  └ 主包除了做视频的副业之外，主业其实是在亚麻写码，半年前我们几个人搞了个东西叫 MeshClaw，
+
+【航空常旅客】
+• 泥潭首发：美国去台湾旅行规划最优解  (❤️213 👀3487 💬165)
+  └ 我真的很爱台湾 :pleading_face:
+
+【签证与身份（美国以外）】
+• 26年8月DP：重庆机场红本顺利出发经台湾转机去美国  (❤️123 👀1921 💬64)
+  └ 行程：国航从重庆到台北桃园机场（加航出的里程票），然后接中华航空从桃园机场回美国（法航出的里程票）
+
+【股市投资】
+• 东八区合法投资美股自救指南  (❤️75 👀2733 💬68)
+  └ *Disclaimer: 以下内容不构成任何投资建议。文中出现的金融名词概念或许有误。作者不具备任何金融相关学位或投资指…
+
+【信用卡】
+• BOA Atmos Summit Trip Delay 保险报销DP  (❤️62 👀882 💬23)
+  └ 从欧洲回来的机票在费城中转，赶上AA IT outage + 暴风雨，最后延误了两个小时到夜间，最终航班取消，行李已经托…</description>
+      <pubDate>Tue, 11 Aug 2026 01:28:47 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W33</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W33.mp3" length="13294711" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第30周</title>
+      <description>本期看点：当规则只对一边生效：阿根廷连续两届的保送、[Targeted] BOA reten、旅游攻略：如何优雅地参加一场欧洲老钱的婚……
+
+本期精选 7 个热帖，涵盖信用卡 / 旅行 / 玩卡 / 游记攻略 / 体育 / 败家。
+本周合计 25,077 次浏览。
+
+【信用卡】
+• [Targeted] BOA retention offer $175 不用找客服  (❤️621 👀7027 💬387)
+  └ 最近发现boa app里面，信用卡拉到最下面
+
+【旅行】
+• 真实无滤镜不美化的2026阿拉斯加夏季之旅  (❤️180 👀2433 💬104)
+  └ 想去阿拉斯加很多年了，从24年开始研究抽签，一直到2026年才成行。这次阿拉斯加的旅程可能是我多年旅游生涯里难度最高、费…
+• 旅游攻略：如何优雅地参加一场欧洲老钱的婚礼（多图长文预警）？  (❤️219 👀2127 💬84)
+  └ 背景： 去年年底收到了我的研究生时代关系最近的老钱澳洲朋友和他的德国女友的婚礼邀请，婚期定于26年7月中（就在前几天）。…
+
+【玩卡】
+• 【Paze】助力刷AS points/status好办法  (❤️197 👀4699 💬164)
+  └ Newegg被砍，Dunkin半死不活之后相信大家对于手头剩下的Paze credit都比较难低成本有效撸了，这里分享一…
+
+【游记攻略】
+• 误机、阿留申、冰川与 Milk Run：阿拉斯加三日八段飞行记  (❤️212 👀1191 💬99)
+  └ ## 前言
+
+【体育】
+• 当规则只对一边生效：阿根廷连续两届的保送账本  (❤️769 👀4970 💬328)
+  └ Edit 3：我觉得真正对梅西的尊重，是在“希望阿根廷对面的球队胜利”的立场下，每次梅西拿球，都会非常紧张、提心吊胆才对…
+
+【败家】
+• [猴猴买]Costco 的Lulu/Vuori 平替衣服  (❤️97 👀2630 💬76)
+  └ 这些款式在老外论坛上很火,都说是90%的质量for 10%价格, 每年一上货就被抢的光光的,尤其是M/L码的. 用这贴整…</description>
+      <pubDate>Mon, 20 Jul 2026 21:16:59 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W30</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W30.mp3" length="12787240" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第29周</title>
+      <description>本期看点：实在没人说话了，很抱歉占用大家时间、癌症总是在不经意间闯入我们的生活、【DEAD】【CB】AA商业账号免费拿2……
+
+本期精选 7 个热帖，涵盖旅行 / 情感 / 生活 / 玩卡 / 败家。
+本周合计 23,509 次浏览。
+
+【旅行】
+• 我写了个Hyatt的Chrome插件 - HotelXray  (❤️194 👀1492 💬50)
+  └ 作为一个多年Hyatt羊毛党，一直觉得Hyatt官网查房价、查积分兑换特别反人类
+• 巴巴多斯 Barbados 🇧🇧 千萬別去！強力勸退帖  (❤️189 👀3952 💬187)
+  └ **TLDR：當地黒人態度極差，餐廳比紐約還貴，景色普通沒特色，這是我人生中唯一一次出遊感到後悔的地方**
+
+【情感】
+• 马上30了 突然疯狂怀念自己20岁在台湾交换的日子  (❤️248 👀3055 💬69)
+  └ 昨天刷到旅行博主拍的花莲 想起自己大三在台湾交换的日子
+
+【生活】
+• 癌症总是在不经意间闯入我们的生活  (❤️257 👀3770 💬122)
+  └ P2，40岁，本来只是常规的去做乳腺常规检查，没想到结果竟是有95%的概率是乳腺癌，第几期目前不清楚，今天刚刚做了病理等…
+• 实在没人说话了，很抱歉占用大家时间  (❤️293 👀4147 💬241)
+  └ 累，不是喘不过气那种累，是累到呼吸都感觉没必要了的累。
+
+【玩卡】
+• 【DEAD】【CB】AA商业账号免费拿25k积分  (❤️252 👀5070 💬366)
+  └ AAdvantage Business 25K Miles For Joining New User/Existing…
+
+【败家】
+• Fox one 免费无验证看世界杯？(via Verizon)  (❤️67 👀2023 💬65)
+  └ 之前发过一个\*\*[Sling TV免费(电表倒转)](https://www.uscardforum.com/t/t…</description>
+      <pubDate>Mon, 13 Jul 2026 16:29:01 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W29</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W29.mp3" length="14559912" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第28周</title>
+      <description>本期看点：三十岁了，想放弃了。、承认自己是废物的勇气、记录一下爸妈的第一次商务舱旅行✈️……
+
+本期精选 7 个热帖，涵盖旅行 / 玩卡 / 情感 / 签证与身份（美国） / 搬砖。
+本周合计 12,729 次浏览。
+
+【旅行】
+• 做了个免费版 MaxFHR: FHR Scout  (❤️227 👀1896 💬75)
+  └ https://terrytan.dev/fhr/
+• 记录一下爸妈的第一次商务舱旅行✈️  (❤️239 👀2397 💬75)
+  └ 爸妈这次暑假来美国带娃 给安排上了全程商务舱（骄傲脸hhh） 小小的记录一下吧
+
+【玩卡】
+• 手把手教你怎么 iPhone 用 WLOC 伪装定位  (❤️78 👀1415 💬37)
+  └ 今天在用滴滴[撸 rideshare credit ](https://www.uscardforum.com/t/to…
+
+【情感】
+• 承认自己是废物的勇气  (❤️249 👀1858 💬44)
+  └ 深夜胡言乱语贴 感觉价值观不符合泥潭绝大多数画像 可以骂我 我会白白胖胖的躺平被指指点点
+• 三十岁了，想放弃了。  (❤️376 👀3590 💬130)
+  └ 今天满三十岁生日了，一个人点外卖吃了一顿，在床上怎么都翻来覆去睡不着觉，肩膀激烈的疼痛，回忆起很多过去，只觉得胸口憋着一…
+
+【签证与身份（美国）】
+• [Papers] 各种签证及移民的小工具日子计算器 CPT OPT H-1B 入籍 居留时间 CSPA J-1等等  (❤️40 👀628 💬12)
+  └ 我做的纯公益项目，免费无广告，希望本文不算是广告，谢谢钛金会员管理员大人们高抬贵手
+
+【搬砖】
+• 【ADHD有福了】自己开发的以分支对话为核心的AI聊天界面：Michi  (❤️64 👀945 💬43)
+  └ ## 什么是 Michi</description>
+      <pubDate>Mon, 06 Jul 2026 16:55:57 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W28</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W28.mp3" length="10409351" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第27周</title>
+      <description>本期看点：【06-25-2026】立一个帖子为证，、几乎无损撸Paze、UA888旁座阿姨被区别对待的应对……
+
+本期精选 7 个热帖，涵盖航空常旅客 / 白金 / 旅行 / 游记攻略 / 玩卡 / 股市投资。
+本周合计 17,280 次浏览。
+
+【航空常旅客】
+• UA888旁座阿姨被区别对待的应对  (❤️272 👀3348 💬60)
+  └ 本人小透明 今日飞了打航吉祥号码888
+
+【白金】
+• 几乎无损撸Paze  (❤️318 👀3155 💬148)
+  └ tl;dr: 自己开 Poynt 用 Paze 收款，2.70%手续费，10次$10-10的活动每张卡可以套出来~$95…
+
+【旅行】
+• [挪威|瑞典|芬兰]自行车骑行2200公里随拍（74楼漏照）  (❤️114 👀979 💬74)
+  └ 这是一次重新认识自己的过程。
+
+【游记攻略】
+• [已完工]从夯到拉排名在国内大吃一个月的各个餐馆  (❤️119 👀2056 💬93)
+  └ 最近去国内安排了一次吃吃吃之旅，90%的时间都在吃。想给这些餐馆排个名，供大家参考。本排名结合价位排序。基本都有图片
+• 死亡谷银河攻略  (❤️64 👀853 💬28)
+  └ 首先成果镇楼。
+
+【玩卡】
+• F1 PhD 小留首年玩卡总结  (❤️126 👀2093 💬90)
+  └ 【长文预警】
+
+【股市投资】
+• 【06-25-2026】立一个帖子为证，存储板块的涨势已经见顶  (❤️383 👀4796 💬314)
+  └ TLDR：我认为存储产品价格涨幅已经进入顶部区间。</description>
+      <pubDate>Mon, 29 Jun 2026 16:57:52 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W27</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W27.mp3" length="11098353" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第26周</title>
+      <description>本期看点：来美2年8个月，我还清了127万人民币的、[DEad]Chartway Credi、chewy震惊到我了……
+
+本期精选 7 个热帖，涵盖搬砖 / 败家 / 玩卡 / 信用卡 / 白金。
+本周合计 23,900 次浏览。
+
+【搬砖】
+• 来美2年8个月，我还清了127万人民币的欠款和利息，债主群今天被我解散了，关于华人快递的真相+吐槽  (❤️1426 👀6438 💬440)
+  └ 昨天发支票，今天随着熊猫汇款最后一笔钱汇出去，我出国之前欠的钱就算还完了，债主群我也给解散了，算是告一段落。跟前妻和我妈…
+
+【败家】
+• chewy震惊到我了  (❤️295 👀2462 💬70)
+  └ 前几天把宠物送走了，还有2包粮没开封，就想chewy 退货。客服问why，我说pets gone away.  然后就安…
+
+【玩卡】
+• 撸 Paze: Clover (餐厅pos系统) 地图  (❤️208 👀3169 💬154)
+  └ 【震撼首发】：Clover（餐厅pos系统）支持Paze。很多餐厅都可以网上点单（有12家可以买gc，下面有一个详细li…
+• Sling TV免费(电表倒转)看4K世界杯小技巧 - till 06/23  (❤️110 👀2135 💬122)
+  └ 众所周知amex有sling tv 19.99-15的offer till 06/23，今天开始订阅正好可以cover到…
+• 半夜睡不着有感：Paze的一场闹剧  (❤️165 👀4718 💬92)
+  └ Disclaimer：我自己刷了20多笔，潭友平均水平偏下吧，手打无AI
+
+【信用卡】
+• 比NYT更好的薅Amex/BOA Entertainment/Subscription Credit的方法  (❤️101 👀1883 💬74)
+  └ 之前一直在用大佬分享的方法来薅Amex Entertainment Credit，但是这个方法有一些不便就是损耗较大，浪…
+
+【白金】
+• [DEad]Chartway Credit Union Savings 前 $2.5k 部分 5% 保证半年，可 cc fund  (❤️402 👀3095 💬581)
+  └ https://www.chartway.com/personal/spend-and-save/savings/sma…</description>
+      <pubDate>Mon, 22 Jun 2026 21:42:22 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W26</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W26.mp3" length="14869301" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第22周</title>
+      <description>本期看点：amex商白300K NLL、【长文】485的memo其实不止是个法律、[NLL] 商白300K商金200k……
+
+本期精选 7 个热帖，涵盖信用卡 / 签证与身份（美国） / 旅行 / 白金 / 玩卡 / 房地产。
+本周合计 30,008 次浏览。
+
+【信用卡】
+• amex商白300K NLL  (❤️765 👀13840 💬1045)
+  └ 人传人收到的link，可能白金lounge里已经有了？
+
+【签证与身份（美国）】
+• 【长文】485的memo其实不止是个法律问题，更是一个值得警惕的趋势  (❤️426 👀3851 💬124)
+  └ *disclaimer：这篇可能比较opinionated，在严谨论证上可能有所欠缺，具体个案问题请单独咨询律师，恕我不…
+
+【旅行】
+• 【FN强推】太湖边上的中式园林酒店-涵玉晓筑入住体验  (❤️168 👀1902 💬79)
+  └ 涵玉晓筑在潭里提到过很多次，好像没人写过入住体验，我就斗胆来写一个吧。
+
+【白金】
+• [NLL] 商白300K商金200k  (❤️229 👀3595 💬434)
+  └ 看到一个300K商白的NLL link，我看最近是没法稳定刷出来的吧？
+
+【玩卡】
+• Hilton NLL 7月29/2026 过期  (❤️163 👀4045 💬131)
+  └ Hilton NLL 7月29/2026 过期
+• 【美爷虚拟货币篇】左手倒右手  (❤️85 👀1774 💬40)
+  └ 前言
+
+【房地产】
+• 【长文】湾区“挂壁”买房经历——加州BMR购房项目介绍&amp;记录  (❤️91 👀1001 💬35)
+  └ &lt;div data-theme-toc="true"&gt; &lt;/div&gt;</description>
+      <pubDate>Mon, 25 May 2026 21:09:14 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W22</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W22.mp3" length="15028421" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第21周</title>
+      <description>本期看点：过去一年内回国出差10次的观察和感受、0元撸车体验[CA]、我们这些大撸逼与Amex是共生的……
+
+本期精选 7 个热帖，涵盖汽车 / 玩卡 / 回国or留美 / 信用卡 / 航空常旅客 / 白金。
+本周合计 28,661 次浏览。
+
+【汽车】
+• 0元撸车体验[CA]  (❤️385 👀4376 💬253)
+  └ 感觉现在撸卡越来越难了， 撸卡不如直接撸美国政府。早就注意到各种环保补贴叠加一起足够免费撸辆车了， 最近下决心搞一辆试试…
+
+【玩卡】
+• 回馈泥潭-手把手教你撸paze 10x UR  (❤️238 👀6882 💬280)
+  └ chase最近发了一个新的福利, UR卡通过paze付款可以获得11x / 11.5x (CFU) UR：
+• 【美爷汇钱篇】左手发右手  (❤️280 👀4428 💬124)
+  └ 福禄寿gcp完结，想必大家都异常的空（焦）闲（急）
+
+【回国or留美】
+• 过去一年内回国出差10次的观察和感受  (❤️525 👀5346 💬350)
+  └ 昨天刚回来，算了一下去年12个月内回国往返10次了。一年差不多有三分之一时间也在国内。
+
+【信用卡】
+• 我们这些大撸逼与Amex是共生的  (❤️325 👀4283 💬100)
+  └ 突发奇想，我们总是在思考从Amex上撸到了多少，有一种我血赚他血亏的感觉，但其实Amex也从我们这些人的手上获取了一些价…
+
+【航空常旅客】
+• Delta经济舱里程票的3个小技巧，用好价格直降40%  (❤️150 👀2091 💬62)
+  └ 补更之前提到的DL里程技巧，二编：强调一下以下技巧仅适用DL自家出自家票，伙伴大部分时候用不上。以及有达美自家执飞的航线…
+
+【白金】
+• JAL里程升舱搜索工具  (❤️120 👀1255 💬66)
+  └ 在bilt/c1可以转JL之后，大家都囤积了大量JL里程，目前saver的里程票已经很难找，但日航依然保留了慷慨的固定国…</description>
+      <pubDate>Tue, 19 May 2026 06:15:09 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W21</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W21.mp3" length="12006353" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第20周</title>
+      <description>本期看点：Homeless流浪生活的第五年、在波拉波拉四季求了个婚、免费shakeshack汉堡到5月12……
+
+本期精选 7 个热帖，涵盖旅行 / 玩卡 / 航空常旅客 / 签证与身份（美国） / 败家。
+本周合计 25,494 次浏览。
+
+【旅行】
+• 在波拉波拉四季求了个婚  (❤️523 👀3176 💬172)
+• Homeless流浪生活的第五年  (❤️620 👀4466 💬231)
+  └ 受到[潭友环球旅行](https://www.uscardforum.com/t/topic/504039)的鼓舞也想开…
+• 离开美帝环球旅行的一年（开篇）  (❤️176 👀2136 💬91)
+  └ 去年五月离开美帝开始环球旅行，到这个月算是一年。一年时间里大概9个月在路上，3个月在休息，到访的国家（地区）数量从30+…
+
+【玩卡】
+• 带你「开发 MS 方法」：跨境转账的复盘与逻辑拆解  (❤️387 👀3233 💬83)
+  └ 我写过不少关于支付底层原理的文章，可能有人会觉得这些太理论，离实际玩卡有点远。但其实，这些理解在收益和乐趣上都成为了支持…
+
+【航空常旅客】
+• 一种日航里程的用法，美欧双向的隐藏甜点，商务仅需42k，往返85k惊天价格辐射欧洲大陆  (❤️237 👀2371 💬72)
+  └ 前几天提到了美欧也有个甜点，很多人私信问我，今天终于有空来分享一下。而且干脆一鼓作气，直接分享一个超级甜点+一个中等甜但…
+
+【签证与身份（美国）】
+• 【长文】"移民倾向"大概是被误解最多的四个字  (❤️158 👀3318 💬72)
+  └ ### 前言
+
+【败家】
+• 免费shakeshack汉堡到5月12  (❤️455 👀6794 💬312)
+  └ 一定要搭配随便买一个东西</description>
+      <pubDate>Tue, 12 May 2026 05:46:39 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W20</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W20.mp3" length="12398664" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第19周</title>
+      <description>本期看点：WF新转点伙伴：CX 1:1、我以为公司给我建了个奇怪的event，点、【施工中】决定回国了，单独开个贴分享下心……
+
+本期精选 7 个热帖，涵盖信用卡 / 搬砖 / 情感 / 航空常旅客 / 回国or留美 / 购物折扣 / 理财。
+本周合计 15,684 次浏览。
+
+【信用卡】
+• WF新转点伙伴：CX 1:1  (❤️224 👀3907 💬134)
+
+【搬砖】
+• AI让我想做的那些事  (❤️118 👀2340 💬58)
+
+【情感】
+• 我以为公司给我建了个奇怪的event，点开之后有点破防  (❤️148 👀1967 💬44)
+
+【航空常旅客】
+• The Ultimate Trip｜6天4国：我这辈子最疯狂的一次旅行（JL+ANA+UA商务舱体验）  (❤️115 👀1607 💬74)
+
+【回国or留美】
+• 【施工中】决定回国了，单独开个贴分享下心路历程吧  (❤️134 👀2451 💬86)
+
+【购物折扣】
+• 顶级挂壁 KFC: 1.99两鸡 / 2.95两鸡+一大薯🍟  (❤️68 👀1849 💬52)
+
+【理财】
+• 谁是真股神，谁是反指？不买赚不到钱系列总结  (❤️61 👀1563 💬48)</description>
+      <pubDate>Tue, 05 May 2026 05:25:38 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W19</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W19.mp3" length="11755979" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第18周</title>
+      <description>本期看点：身份，事业，爱情，家庭，身体，财产全崩溃、Homeless shelter入住体验、打工10年, 退休账户终于到 1M 了,……
+
+本期精选 7 个热帖，涵盖旅行 / 情感 / 理财 / 败家。
+本周合计 21,889 次浏览。
+
+【旅行】
+• [beta v0.4.3] 又另一個里程票搜尋系統 - Award Buddy (支援 CX/JL/NH/BR/CI and more)  (❤️184 👀2027 💬103)
+• Homeless shelter入住体验  (❤️563 👀4850 💬245)
+• 4月三峡世纪游轮游记  (❤️162 👀1422 💬66)
+• 无关战争——聊聊伊朗的历史、文化与旅行  (❤️162 👀1252 💬59)
+
+【情感】
+• 身份，事业，爱情，家庭，身体，财产全崩溃。  (❤️667 👀4082 💬159)
+
+【理财】
+• 打工10年, 退休账户终于到 1M 了, 截图纪念一下  (❤️348 👀6342 💬185)
+
+【败家】
+• Marketplace卖掉全家经验贴  (❤️125 👀1914 💬40)</description>
+      <pubDate>Tue, 28 Apr 2026 05:38:33 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W18</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W18.mp3" length="12113926" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第17周</title>
+      <description>本期看点：FIRE这件事，可能没你想的那么重要、F1 NRA PhD的玩卡之路：我是如何、讲述从一个派送员的角度，告诉你关于Wal……
+
+本期精选 7 个热帖，涵盖败家 / 闲聊 / 玩卡 / 回国or留美 / 旅行。
+本周合计 25,493 次浏览。
+
+【败家】
+• 讲述从一个派送员的角度，告诉你关于Walmart，Amazon，Uber配送的背后逻辑以及分析大家的吐槽  (❤️404 👀3674 💬240)
+
+【闲聊】
+• FIRE这件事，可能没你想的那么重要  (❤️484 👀3245 💬178)
+
+【玩卡】
+• 信用卡年费两万多刀之后决定躺平了  (❤️263 👀5132 💬138)
+• F1 NRA PhD的玩卡之路：我是如何四年攒下$60k  (❤️405 👀3649 💬132)
+• 如何低成本在家躺着不飞拿下法航终身白金卡（天合联盟超级精英）（附楼主自身实践）  (❤️203 👀4458 💬255)
+
+【回国or留美】
+• 漂亮国再见le  (❤️182 👀3536 💬109)
+
+【旅行】
+• 第一次带狗住高级酒店，被纽约华尔道夫温暖了  (❤️84 👀1799 💬50)</description>
+      <pubDate>Tue, 21 Apr 2026 04:55:26 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W17</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W17.mp3" length="10576688" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第16周</title>
+      <description>本期看点：打算彻底回国了、发个疯：对于泥潭「风险感知能力缺失」的一、和喜欢的女生的第一次约会后的感觉……
+
+本期精选 7 个热帖，涵盖玩卡 / 回国or留美 / 健康 / 情感 / 生活 / 游记攻略。
+本周合计 21,701 次浏览。
+
+【玩卡】
+• 发个疯：对于泥潭「风险感知能力缺失」的一点感想  (❤️484 👀4106 💬116)
+• 旧世代神卡接连陨落, 我开了这张次世代的泥潭新神卡!!!  (❤️108 👀5093 💬82)
+
+【回国or留美】
+• 打算彻底回国了  (❤️503 👀6612 💬225)
+
+【健康】
+• 健身汇报！来给大家分享一下从肥宅到健身比赛的路途！  (❤️175 👀1375 💬113)
+
+【情感】
+• 和喜欢的女生的第一次约会后的感觉  (❤️191 👀2137 💬85)
+
+【生活】
+• 时间自由才是财务自由的核心吧  (❤️127 👀1668 💬49)
+
+【游记攻略】
+• 京都目前个人吃到的好吃的鳗鱼饭和天妇罗推荐【2026自在独行 特别篇】  (❤️62 👀710 💬40)</description>
+      <pubDate>Tue, 14 Apr 2026 04:54:49 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W16</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W16.mp3" length="11969748" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 专题报道-爱情</title>
+      <description>本期看点：[Chapter 3] 应该怎么爱 可惜、[Chapter 1] 身仍然靠身边 心、[Chapter 2] 拥不拥有也会记住……
+
+本期精选 7 个热帖，涵盖其他。
+
+【其他】
+• [Chapter 3] 应该怎么爱 可惜书里从没记载
+• [Chapter 1] 身仍然靠身边 心潜逃到天边
+• [Chapter 2] 拥不拥有也会记住谁 快不快乐有天总过去
+• （水）看上了个已婚基督徒小姐姐
+• 这个世界永远是对单身的人更友好
+• 飞行男孩分手了吗
+• 我是对这个小妹妹坛友动真情了吗？？</description>
+      <pubDate>Sun, 12 Apr 2026 22:32:11 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-专题报道-爱情</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/special_category_爱情.mp3" length="41788868" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 专题报道-性爱</title>
+      <description>本期看点：[感恩节回馈]日本女性向风俗初体验、老婆好多情趣内衣都穿不了。。。、有厭蠢症怎麼漂？……
+
+本期精选 7 个热帖，涵盖其他。
+
+【其他】
+• [感恩节回馈]日本女性向风俗初体验
+• 老婆好多情趣内衣都穿不了。。。
+• 有厭蠢症怎麼漂？
+• 【2026更新】体验日本风俗的全方位保姆级入门教程【已更新城市测评！】
+• 大家都怎么保养私处的
+• 温哥华寻欢作乐经验分享与指北
+• 有没有人像我一样只操高学历文静妹子？</description>
+      <pubDate>Sun, 12 Apr 2026 21:57:31 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-专题报道-性爱</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/special_category_%E6%80%A7%E7%88%B1.mp3" length="10283733" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第15周</title>
+      <description>本期看点：[V2.4] 更好的 Aspire Re、探索支付(3)：信用卡奖励的全链路价值与、[大撒钱回归] 配合新地铁/蟋蟀手把手教……
+
+本期精选 7 个热帖，涵盖酒店常旅客 / 玩卡 / 航空常旅客 / 败家 / 旅行 / 签证与身份（美国）。
+本周合计 18,867 次浏览。
+
+【酒店常旅客】
+• [V2.4] 更好的 Aspire Resort/FHR/THC/Edit/Hilton/iPrefer Price Map (now support Aspire non-stay credit DP)  (❤️416 👀3192 💬148)
+
+【玩卡】
+• 探索支付(3)：信用卡奖励的全链路价值与成本机制  (❤️353 👀2469 💬78)
+
+【航空常旅客】
+• JAL 日航里程伙伴票讨论 - 4/4/2026 更新各种兑换甜点与无燃油费伙伴航司列表  (❤️176 👀1765 💬82)
+
+【败家】
+• [大撒钱回归] 配合新地铁/蟋蟀手把手教你薅Temu新用户200返300 Cash并叠加Cashback  (❤️181 👀3224 💬269)
+• 711加油站coupon叠加最高可减至$1.36/gallon  (❤️119 👀2018 💬139)
+
+【旅行】
+• 希尔顿FN好去处 —— 东大篇  (❤️116 👀3483 💬76)
+
+【签证与身份（美国）】
+• 为白嫖1万刀工钱，房东竟举报盖世太保抓人！（农夫与蛇）  (❤️114 👀2716 💬56)</description>
+      <pubDate>Tue, 07 Apr 2026 04:39:04 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W15</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W15.mp3" length="10157483" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第14周</title>
+      <description>本期看点：VENTURE X感觉也是被大家低估了、美卡论坛官方AI助手上线、2026 最新美卡 PPS 指南：谁是唯……
+
+本期精选 7 个热帖，涵盖玩卡 / 信用卡 / 闲聊 / 航空常旅客 / 酒店常旅客 / 游记攻略。
+本周合计 18,554 次浏览。
+
+【玩卡】
+• VENTURE X感觉也是被大家低估了  (❤️334 👀5626 💬147)
+• Vibe coding了一个Equinox 实体店购卡 DP 实时追踪地图  (❤️66 👀798 💬19)
+
+【信用卡】
+• 2026 最新美卡 PPS 指南：谁是唯一真神？  (❤️159 👀5376 💬137)
+
+【闲聊】
+• 美卡论坛官方AI助手上线  (❤️192 👀2640 💬173)
+
+【航空常旅客】
+• 纯新手教程：如何订去日本的里程票（转）  (❤️92 👀2705 💬76)
+
+【酒店常旅客】
+• 住店倒贴2510刀的Calala Island测评（入住中，更新到房间餐饮，目前给打4/5分）  (❤️87 👀972 💬49)
+
+【游记攻略】
+• 历史、艺术、与足球 —— 2026年3月伦敦七日游游记  (❤️46 👀437 💬22)</description>
+      <pubDate>Tue, 31 Mar 2026 07:16:37 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W14</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W14.mp3" length="10957910" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>【Nitan Podcast】泥潭播客 · 2026年第13周</title>
+      <description>本期精选 7 个热帖，涵盖玩卡 / 航空常旅客 / 闲聊 / 旅行 / 败家。
+本周合计 14,007 次浏览。
+
+【玩卡】
+• 泥潭应用商店（高赞工具集合帖）  (❤️291 👀2753)
+• Vibe coding了一个Equinox 实体店购卡 DP 实时追踪地图  (❤️63 👀763)
+
+【航空常旅客】
+• 外婆都会出票 | 真的一键就可以的现金、积分票 AI 搜索  (❤️216 👀4103)
+• 纯新手教程：如何订去日本的里程票（转）  (❤️82 👀2406)
+
+【闲聊】
+• 美卡论坛官方AI助手上线  (❤️176 👀2372)
+
+【旅行】
+• 日本北陆地区秋季美食旅  (❤️70 👀577)
+
+【败家】
+• [C1S大赌场]一键抓取你的所有C1 shopping offer  (❤️63 👀1033)</description>
+      <pubDate>Sun, 29 Mar 2026 00:19:32 GMT</pubDate>
+      <guid isPermaLink="false">nitan-podcast-2026-W13</guid>
+      <enclosure url="https://lifan-builds.github.io/nitan-podcast/episodes/weekly_meika_2026-W13.mp3" length="10768793" type="audio/mpeg" />
+      <itunes:duration>00:06:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

@@ -8,6 +8,7 @@
 
 **Staff Engineer @ Google** · local-first products · agent systems · agent evaluation · self-improving agent harnesses
 
+<a href="https://clifan.com"><img src="https://img.shields.io/badge/workshop-clifan.com-0b1220?style=for-the-badge&color=f59e0b" alt="Workshop clifan.com" /></a>
 <a href="https://github.com/lifan-builds"><img src="https://img.shields.io/github/followers/lifan-builds?style=for-the-badge&logo=github&label=followers&labelColor=0b1220&color=5eead4" alt="GitHub followers" /></a>
 <a href="https://github.com/lifan-builds?tab=repositories"><img src="https://img.shields.io/github/stars/lifan-builds?style=for-the-badge&logo=github&label=stars&labelColor=0b1220&color=7dd3fc" alt="GitHub stars" /></a>
 <a href="https://x.com/LifanBuilds"><img src="https://img.shields.io/badge/@LifanBuilds-0b1220?style=for-the-badge&logo=x&logoColor=white" alt="X @LifanBuilds" /></a>
@@ -15,6 +16,7 @@
 </div>
 
 <p align="center">
+  <a href="https://clifan.com">clifan.com</a> ·
   <a href="#main-focuses">Main focuses</a> ·
   <a href="#selected-builds">Selected builds</a> ·
   <a href="#how-i-build">How I build</a>
@@ -38,12 +40,12 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/faster-mac-use"><strong>Faster Mac Use (fmu)</strong></a> <sup>NEW</sup><br />
-      <sub>Background-first, multi-cursor browser &amp; native macOS computer-use engine (0.0 px cursor drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in <code>@playwright/mcp</code>, 1,510 tok / 326 ms 3-agent swarm; <a href="https://lifan-builds.github.io/faster-mac-use/">interactive benchmarks</a>).</sub>
+      <a href="https://clifan.com/faster-mac-use/"><strong>Faster Mac Use (fmu)</strong></a> <sup>NEW</sup><br />
+      <sub>Background-first, multi-cursor browser &amp; native macOS computer-use engine (0.0 px cursor drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in <code>@playwright/mcp</code>, 1,510 tok / 326 ms 3-agent swarm; <a href="https://clifan.com/faster-mac-use/">interactive benchmarks</a> · <a href="https://github.com/lifan-builds/faster-mac-use">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/agent-autofill"><strong>Agent Autofill</strong></a> <sup>NEW</sup><br />
-      <sub>Local-first personal data broker for AI agents with scoped credential/profile access and explicit human approval gates.</sub>
+      <a href="https://clifan.com/agent-autofill/"><strong>Agent Autofill</strong></a> <sup>NEW</sup><br />
+      <sub>Local-first personal data broker for AI agents with scoped credential/profile access and explicit human approval gates (<a href="https://clifan.com/agent-autofill/">overview</a> · <a href="https://clifan.com/agent-autofill/demo/">interactive demo</a> · <a href="https://github.com/lifan-builds/agent-autofill">repo</a>).</sub>
     </td>
   </tr>
   <tr>
@@ -62,8 +64,8 @@
       <sub>Open-source benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations.</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/snow-deal"><strong>FreshPowder</strong></a><br />
-      <sub>Ski and snowboard deal aggregator tracking current and historical deals across North American retailers.</sub>
+      <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
+      <sub>Ski and snowboard deal aggregator tracking current and historical deals across North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://github.com/lifan-builds/snow-deal">repo</a>).</sub>
     </td>
   </tr>
   <tr>
@@ -72,8 +74,8 @@
       <sub>Source-to-podcast automation framework with reusable pipeline stages, audio integrations, publishing, and validation.</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/nitan-podcast"><strong>Nitan Podcast</strong></a><br />
-      <sub>Weekly Chinese podcast generated from USCardForum discussions and shipped through RSS and podcast platforms.</sub>
+      <a href="https://clifan.com/nitan-podcast/"><strong>Nitan Podcast</strong></a><br />
+      <sub>Weekly Chinese podcast generated from USCardForum discussions and shipped through RSS and podcast platforms (<a href="https://clifan.com/nitan-podcast/">listen</a> · <a href="https://github.com/lifan-builds/nitan-podcast">repo</a>).</sub>
     </td>
   </tr>
   <tr>
@@ -92,8 +94,8 @@
       <sub>CLIProxyAPI plugin for igniting fresh Codex accounts and supervising invalid-account recovery through a preserved repair queue.</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/ai-builder-brief"><strong>AI Builder Brief</strong></a> <sup>RECENT</sup><br />
-      <sub>Source-linked AI developments turned into evidence-gated review artifacts, with the public feed held closed while editorial policy is tuned.</sub>
+      <a href="https://clifan.com/ai-builder-brief/"><strong>AI Builder Brief</strong></a> <sup>RECENT</sup><br />
+      <sub>Source-linked AI developments turned into evidence-gated review artifacts, with the public feed held closed while editorial policy is tuned (<a href="https://clifan.com/ai-builder-brief/">overview</a> · <a href="https://clifan.com/journal/ai-builder-brief/">daily briefs</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">repo</a>).</sub>
     </td>
   </tr>
   <tr>
