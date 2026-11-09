@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuotaSwitch — Unified Antigravity &amp; Codex Account Rotator | Lifan Chen</title>
+  <meta name="description" content="Unified multi-account switcher and 30s background quota auto-rotator for Google Antigravity (agy) and OpenAI Codex (codex) without a proxy.">
+  <link rel="canonical" href="https://clifan.com/quotaswitch/">
+  <meta property="og:title" content="QuotaSwitch — Unified Antigravity &amp; Codex Account Rotator">
+  <meta property="og:description" content="Monitor 5-hour and weekly rate limits across Antigravity and Codex, rotate automatically on exhaustion, and resume interrupted sessions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/quotaswitch/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">QuotaSwitch</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://github.com/lifan-builds/quotaswitch">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <p class="eyebrow">Open-Source CLI · npm package (quotaswitch / agy-auth)</p>
+    <h1>Unified quota rotation for <em>Antigravity &amp; Codex.</em></h1>
+    <p class="subpage-lead">Keep personal and work accounts side by side across Google Antigravity (<code>agy</code>) and OpenAI Codex (<code>codex</code>), inspect 5-hour and weekly rate limits in one table, rotate automatically before exhaustion, and auto-continue interrupted agent&nbsp;sessions.</p>
+    <div class="subpage-actions">
+      <a class="button primary" href="https://github.com/lifan-builds/quotaswitch">View source on GitHub ↗</a>
+      <a class="button secondary" href="https://www.npmjs.com/package/quotaswitch">npm: npx quotaswitch ↗</a>
+      <span class="subpage-note">Zero proxy · AES-256-GCM local snapshots · macOS, Linux &amp; Windows</span>
+    </div>
+
+    <section class="subpage-workbench" aria-label="Interactive QuotaSwitch CLI workbench">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select CLI workflow">
+          <button type="button" class="subpage-tab" id="tab-list" role="tab" aria-selected="true" tabindex="0" data-mode="list">1 · Unified Quota Matrix</button>
+          <button type="button" class="subpage-tab" id="tab-rotate" role="tab" aria-selected="false" tabindex="-1" data-mode="rotate">2 · 30s Auto-Rotate &amp; Resume</button>
+          <button type="button" class="subpage-tab" id="tab-batch" role="tab" aria-selected="false" tabindex="-1" data-mode="batch">3 · Batch OAuth Onboarding</button>
+        </div>
+        <span class="subpage-meta" id="qs-meta">--provider=all · Keychain + ~/.codex/auth.json</span>
+      </div>
+      <div class="subpage-stage-box" aria-hidden="true">
+        <div class="subpage-stage-top">
+          <strong id="qs-title">$ npx quotaswitch list --provider=all</strong>
+          <span id="qs-badge">5H + Weekly telemetry · 0 proxy overhead</span>
+        </div>
+        <pre class="subpage-stage-pre" id="qs-pre">PROVIDER   ACCOUNT             PLAN     5H QUOTA     WEEKLY QUOTA   STATUS
+agy        work@example.com    Ultra    84% (3h12m)  91% (5d04h)    ● ACTIVE (Claude)
+agy        dev2@example.com    Pro      100%         88% (4d19h)    ready
+codex      work@example.com    Pro      0%  (1h40m)  72% (6d01h)    exhausted -> rotated
+codex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (swapped)</pre>
+      </div>
+    </section>
+
+    <section class="subpage-features" aria-label="Core QuotaSwitch capabilities">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">ANTIGRAVITY (AGY)</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Keychain + Desktop DB</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">OPENAI CODEX</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">PKCE S256 + wham/usage</text>
+        </svg>
+        <h2>Dual-provider control plane</h2>
+        <p>Manage both Google Antigravity and OpenAI Codex accounts from one binary and one background LaunchAgent, with 100% <code>Codex Switcher.app</code>&nbsp;compatibility.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="128" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="74" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">CLAUDE &gt; 0%</text>
+          <text x="74" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Primary model</text>
+          <line x1="138" y1="38" x2="168" y2="38" stroke="#34d399" stroke-width="1.5"/>
+          <polygon points="166,34 173,38 166,42" fill="#34d399"/>
+          <rect x="174" y="14" width="136" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="242" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">GEMINI 4 ARGON</text>
+          <text x="242" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Same-account waterfall</text>
+        </svg>
+        <h2>Model waterfall &amp; auto-resume</h2>
+        <p>Falls back from Claude to Gemini 4 Argon High before rotating accounts, then automatically resumes interrupted Antigravity Hub and Codex threads&nbsp;mid-turn.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">AES-256-GCM</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Encrypted local store</text>
+          <rect x="162" y="14" width="148" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="236" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">4–8s BATCH LOGIN</text>
+          <text x="236" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">BotGuard-safe Chrome</text>
+        </svg>
+        <h2>Encrypted &amp; BotGuard-safe</h2>
+        <p>Stores account snapshots with AES-256-GCM encryption and batches Google OAuth sign-ins in 4–8 seconds using your existing Chrome session&nbsp;cookies.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://www.npmjs.com/package/quotaswitch">npm ↗</a>
+      <a href="https://github.com/lifan-builds/quotaswitch">Source Code ↗</a>
+      <a href="https://x.com/LifanBuilds">X ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const MODES = {
+        list: {
+          title: "$ npx quotaswitch list --provider=all",
+          badge: "5H + Weekly telemetry · 0 proxy overhead",
+          meta: "--provider=all · Keychain + ~/.codex/auth.json",
+          pre: `PROVIDER   ACCOUNT             PLAN     5H QUOTA     WEEKLY QUOTA   STATUS\nagy        work@example.com    Ultra    84% (3h12m)  91% (5d04h)    ● ACTIVE (Claude)\nagy        dev2@example.com    Pro      100%         88% (4d19h)    ready\ncodex      work@example.com    Pro      0%  (1h40m)  72% (6d01h)    exhausted -> rotated\ncodex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (swapped)`
+        },
+        rotate: {
+          title: "$ quotaswitch rotate --provider=all --watch --interval=30s --relaunch",
+          badge: "Automatic rotation + mid-turn continuation",
+          meta: "LaunchAgent daemon · 30s health & quota poll",
+          pre: `[18:04:00] agy(work): Claude 5H=0% -> waterfall to Gemini 4 Argon High (82% left)\n[18:42:30] codex(work): 5H=0% -> refreshed OAuth token & rotated to team@example.com\n[18:42:32] Reloaded Codex.app & VS Code app-server · queued auto-continue on thread_9f2a`
+        },
+        batch: {
+          title: "$ node scripts/batch-login.mjs user1@gmail.com user2@gmail.com",
+          badge: "4–8s per account · BotGuard-safe off-screen Chrome",
+          meta: "Seeded Chrome session · automatic PKCE callback",
+          pre: `[1/2] user1@gmail.com -> matched existing Chrome session cookie (4.1s) -> saved AES-GCM snapshot\n[2/2] user2@gmail.com -> completed OAuth consent & token exchange (6.8s) -> saved AES-GCM snapshot\n✓ 2 accounts ingested · run 'quotaswitch usage --all' to inspect quota groups`
+        }
+      };
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("qs-title").textContent = m.title;
+        document.getElementById("qs-badge").textContent = m.badge;
+        document.getElementById("qs-meta").textContent = m.meta;
+        document.getElementById("qs-pre").textContent = m.pre;
+      }
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

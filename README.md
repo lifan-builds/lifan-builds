@@ -50,18 +50,18 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/quotaswitch"><strong>QuotaSwitch</strong></a> <sup>NEW</sup><br />
-      <sub>Unified quota-driven multi-account switcher and auto-rotator for Google Antigravity (<code>agy</code>) and OpenAI Codex without a proxy.</sub>
+      <a href="https://clifan.com/quotaswitch/"><strong>QuotaSwitch</strong></a> <sup>NEW</sup><br />
+      <sub>Unified quota-driven multi-account switcher and auto-rotator for Google Antigravity (<code>agy</code>) and OpenAI Codex (<a href="https://clifan.com/quotaswitch/">overview</a> · <a href="https://www.npmjs.com/package/quotaswitch">npm</a> · <a href="https://github.com/lifan-builds/quotaswitch">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/foliofen-cli"><strong>Foliofen CLI</strong></a><br />
-      <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness.</sub>
+      <a href="https://clifan.com/foliofen-cli/"><strong>Foliofen CLI</strong></a><br />
+      <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness (<a href="https://clifan.com/foliofen-cli/">overview</a> · <a href="https://github.com/lifan-builds/foliofen-cli">repo</a>).</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/perks-reminder"><strong>Perks Reminder</strong></a><br />
-      <sub>Open-source benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations.</sub>
+      <a href="https://clifan.com/perks-reminder/"><strong>Perks Reminder</strong></a><br />
+      <sub>Open-source benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations (<a href="https://clifan.com/perks-reminder/">overview</a> · <a href="https://www.perks-reminder.com/">live app</a> · <a href="https://github.com/lifan-builds/perks-reminder">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
@@ -70,8 +70,8 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/castforge"><strong>CastForge</strong></a><br />
-      <sub>Source-to-podcast automation framework with reusable pipeline stages, audio integrations, publishing, and validation.</sub>
+      <a href="https://clifan.com/castforge/"><strong>CastForge</strong></a><br />
+      <sub>Source-to-podcast automation framework with reusable pipeline stages, audio integrations, publishing, and validation (<a href="https://clifan.com/castforge/">overview</a> · <a href="https://pypi.org/project/castforge/">PyPI</a> · <a href="https://github.com/lifan-builds/castforge">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/nitan-podcast/"><strong>Nitan Podcast</strong></a><br />

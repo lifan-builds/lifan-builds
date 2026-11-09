@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CastForge — Source-Transparent Podcast Pipeline Framework | Lifan Chen</title>
+  <meta name="description" content="Open-source Python framework on PyPI for repeatable, source-transparent podcast pipelines with NotebookLM audio, Cloudflare R2, and atomic RSS validation.">
+  <link rel="canonical" href="https://clifan.com/castforge/">
+  <meta property="og:title" content="CastForge — Source-transparent podcast pipeline framework">
+  <meta property="og:description" content="Normalize cited sources, record auditable episode manifests, generate NotebookLM audio, and validate R2 + RSS atomically.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/castforge/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">CastForge</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://github.com/lifan-builds/castforge">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <p class="eyebrow">Open-Source Python Framework · Published on PyPI (castforge 0.1.3)</p>
+    <h1>Source-to-podcast pipelines, <em>fail-closed.</em></h1>
+    <p class="subpage-lead">CastForge separates reusable podcast production mechanics from show-owned editorial policy—normalizing primary citations into an auditable <code>EpisodeManifest</code>, generating NotebookLM audio, verifying Cloudflare R2 byte length, and updating RSS&nbsp;atomically.</p>
+    <div class="subpage-actions">
+      <a class="button primary" href="https://github.com/lifan-builds/castforge">View source on GitHub ↗</a>
+      <a class="button secondary" href="https://pypi.org/project/castforge/">PyPI: pip install castforge ↗</a>
+      <a class="button secondary" href="../nitan-podcast/">Powered show: Nitan Podcast →</a>
+    </div>
+
+    <section class="subpage-workbench" aria-label="Interactive CastForge stage-gate workbench">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select pipeline stage">
+          <button type="button" class="subpage-tab" role="tab" aria-selected="true" tabindex="0" data-mode="contracts">1 · Evidence &amp; Manifest Gate</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="audio">2 · Duration-Gated Audio</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="publish">3 · Atomic R2 + RSS Check</button>
+        </div>
+        <span class="subpage-meta" id="cf-meta">Powers Nitan Podcast &amp; AI Builder Brief</span>
+      </div>
+      <div class="subpage-stage-box" aria-hidden="true">
+        <div class="subpage-stage-top">
+          <strong id="cf-title">$ castforge run --config podcast.yaml --date 2026-11-06 --shadow</strong>
+          <span id="cf-badge">Schema v2 manifest · Primary or 2× independent corroboration</span>
+        </div>
+        <pre class="subpage-stage-pre" id="cf-pre">STAGE 1 [SourceCluster]  14 raw items -> 10 qualified clusters (100% primary artifact linked)
+STAGE 2 [EpisodeManifest] Wrote build/manifests/2026-11-06.json (schema_version=2, min_stories=6 pass)
+STAGE 3 [Shadow Mode]     Verified cited NotebookLM source packet · skipped R2 &amp; RSS mutation</pre>
+      </div>
+    </section>
+
+    <section class="subpage-features" aria-label="CastForge architecture guarantees">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">STORY CLUSTER</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">1× Primary or 2× Indep</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">EPISODE MANIFEST</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Auditable citations</text>
+        </svg>
+        <h2>Evidence-gated clustering</h2>
+        <p><code>StoryCluster</code> deduplicates coverage and refuses to advance a story without a primary artifact or two independent corroborating&nbsp;reports.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">DURATION CEILING</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Auto short-mode retry</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">--SHADOW RUNS</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Zero feed mutation</text>
+        </svg>
+        <h2>Duration &amp; shadow guards</h2>
+        <p>Measures generated MP3 duration, retries NotebookLM in short mode when an episode exceeds its ceiling, and supports offline fixture&nbsp;tests.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">R2 QUOTA + HEAD</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Status + MIME + bytes</text>
+          <rect x="162" y="14" width="148" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="236" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">ATOMIC RSS</text>
+          <text x="236" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Idempotent date key</text>
+        </svg>
+        <h2>Atomic R2 &amp; RSS publishing</h2>
+        <p>Checks Cloudflare R2 bucket capacity before upload and verifies public HTTP <code>200</code>, <code>audio/mpeg</code>, and exact byte length before updating&nbsp;RSS.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://pypi.org/project/castforge/">PyPI ↗</a>
+      <a href="https://github.com/lifan-builds/castforge">GitHub ↗</a>
+      <a href="../nitan-podcast/">Nitan Podcast →</a>
+      <a href="../ai-builder-brief/">AI Builder Brief →</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const MODES = {
+        contracts: {
+          title: "$ castforge run --config podcast.yaml --date 2026-11-06 --shadow",
+          badge: "Schema v2 manifest · Primary or 2× independent corroboration",
+          meta: "Powers Nitan Podcast & AI Builder Brief",
+          pre: `STAGE 1 [SourceCluster]  14 raw items -> 10 qualified clusters (100% primary artifact linked)\nSTAGE 2 [EpisodeManifest] Wrote build/manifests/2026-11-06.json (schema_version=2, min_stories=6 pass)\nSTAGE 3 [Shadow Mode]     Verified cited NotebookLM source packet · skipped R2 & RSS mutation`
+        },
+        audio: {
+          title: "$ castforge run --config podcast.yaml --date 2026-11-06",
+          badge: "NotebookLM synthesis + fail-closed duration ceiling",
+          meta: "audio_length=short · measured MP3 duration check",
+          pre: `[audio] Generated NotebookLM dialogue: build/audio/episode-2026-11-06.mp3\n[check] Measured duration: 00:05:48 (ceiling 00:08:00 -> PASS, 5,568,192 bytes)\n[manifest] Recorded audio SHA-256 & measured duration in EpisodeManifest`
+        },
+        publish: {
+          title: "$ castforge validate --config podcast.yaml --date 2026-11-06 --check-public",
+          badge: "R2 bucket cap check + public HEAD enclosure verification",
+          meta: "Cloudflare R2 + OP3 prefix + idempotent RSS item",
+          pre: `[r2] Bucket usage: 1.42 GB / 9.00 GB max_bucket_bytes -> uploaded audio/mpeg\n[head] GET https://audio.clifan.com/episodes/2026-11-06.mp3 -> 200 OK (5,568,192 bytes)\n[rss] Atomically updated feed.xml item[2026-11-06] · enclosure contract verified`
+        }
+      };
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("cf-title").textContent = m.title;
+        document.getElementById("cf-badge").textContent = m.badge;
+        document.getElementById("cf-meta").textContent = m.meta;
+        document.getElementById("cf-pre").textContent = m.pre;
+      }
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

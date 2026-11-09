@@ -68,6 +68,62 @@ const BUILD_DATA = {
       { val: 'CastForge', lbl: 'Validated TTS pipeline' }
     ],
     trace: `<span class="tok-comment"># End-to-end source-to-audio validation stage</span>\n<span class="tok-cmd">castforge build</span> --source uscardforum --validate-audio\n✓ Episode rendered · source links &amp; chapters verified`
+  },
+  quotaswitch: {
+    name: 'QuotaSwitch',
+    route: 'clifan.com/quotaswitch/',
+    href: 'quotaswitch/',
+    repo: 'https://github.com/lifan-builds/quotaswitch',
+    repoLabel: 'lifan-builds/quotaswitch ↗',
+    summary: 'Unified quota-driven multi-account switcher and 30s background auto-rotator for Google Antigravity (agy) and OpenAI Codex (codex).',
+    metrics: [
+      { val: 'agy + codex', lbl: 'Dual-provider CLI' },
+      { val: '30s watch', lbl: 'Auto-rotate & resume' },
+      { val: 'AES-GCM', lbl: 'Encrypted snapshots' }
+    ],
+    trace: `<span class="tok-comment"># Unified quota matrix + automatic model waterfall</span>\n<span class="tok-cmd">$ npx quotaswitch</span> list --provider=all\n✓ Claude 0% -> Gemini 4 Argon High · Codex rotated &amp; thread resumed`
+  },
+  perks: {
+    name: 'Perks Reminder',
+    route: 'clifan.com/perks-reminder/',
+    href: 'perks-reminder/',
+    repo: 'https://www.perks-reminder.com/',
+    repoLabel: 'Launch perks-reminder.com ↗',
+    summary: 'Free, open-source credit card benefits, welcome bonus, and annual-fee ROI tracker with duplicate physical-card support and zero bank logins.',
+    metrics: [
+      { val: '18★ GitHub', lbl: 'Open-source MIT' },
+      { val: '0 logins', lbl: 'No Plaid or bank auth' },
+      { val: 'JSON export', lbl: 'Portable user data' }
+    ],
+    trace: `<span class="tok-comment"># Physical-card benefit cycle &amp; net annual-fee ROI check</span>\n<span class="tok-cmd">$ npm run</span> card-template:validate\n✓ 4 physical cards tracked · Net ROI +$1,145 · JSON backup exported`
+  },
+  foliofen: {
+    name: 'Foliofen CLI',
+    route: 'clifan.com/foliofen-cli/',
+    href: 'foliofen-cli/',
+    repo: 'https://github.com/lifan-builds/foliofen-cli',
+    repoLabel: 'lifan-builds/foliofen-cli ↗',
+    summary: 'Local-first CLI for exporting patient-owned Epic MyChart health records into deterministic Markdown or JSONL with zero cloud custody.',
+    metrics: [
+      { val: '0 cloud', lbl: 'Local POSIX 0600 store' },
+      { val: 'MD + JSONL', lbl: 'Deterministic chunks' },
+      { val: 'Patient guard', lbl: 'Exact chart-owner check' }
+    ],
+    trace: `<span class="tok-comment"># Patient-scoped sync &amp; PHI-free diagnostic summary</span>\n<span class="tok-cmd">$ npx @lifan-builds/mychart-cli</span> demo\n✓ Verified --require-active-patient · exported Markdown &amp; JSONL`
+  },
+  castforge: {
+    name: 'CastForge',
+    route: 'clifan.com/castforge/',
+    href: 'castforge/',
+    repo: 'https://pypi.org/project/castforge/',
+    repoLabel: 'PyPI: castforge 0.1.3 ↗',
+    summary: 'Open-source Python framework for source-transparent podcast pipelines with StoryCluster evidence gates, NotebookLM audio, and atomic R2 + RSS checks.',
+    metrics: [
+      { val: 'PyPI 0.1.3', lbl: 'Trusted publishing' },
+      { val: 'Schema v2', lbl: 'Cited EpisodeManifest' },
+      { val: 'Atomic RSS', lbl: 'R2 byte-length HEAD gate' }
+    ],
+    trace: `<span class="tok-comment"># Fail-closed source-to-audio validation pipeline</span>\n<span class="tok-cmd">$ castforge validate</span> --config podcast.yaml --check-public\n✓ 10 cited clusters · MP3 duration &lt; ceiling · R2 200 OK verified`
   }
 };
 
@@ -266,7 +322,7 @@ window.addEventListener('keydown', event => {
     return;
   }
 
-  const keys = ['1', '2', '3', '4', '5'];
+  const keys = ['1', '2', '3', '4', '5', '6'];
   const idx = keys.indexOf(event.key);
   if (idx !== -1 && stageTabs[idx]) {
     selectBuild(stageTabs[idx].dataset.build);

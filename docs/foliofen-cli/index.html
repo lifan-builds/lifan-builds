@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foliofen CLI — Local-First MyChart Health Record Exporter | Lifan Chen</title>
+  <meta name="description" content="Export patient-owned Epic MyChart health records locally into Markdown or JSONL using a dedicated Chrome profile with zero cloud custody.">
+  <link rel="canonical" href="https://clifan.com/foliofen-cli/">
+  <meta property="og:title" content="Foliofen CLI — Local-first MyChart record exporter">
+  <meta property="og:description" content="Export patient-owned MyChart records to local Markdown or JSONL through a visible Chrome harness with zero third-party custody.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/foliofen-cli/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">Foliofen CLI</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://github.com/lifan-builds/foliofen-cli">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <p class="eyebrow">Local-First Health Utility · Public Beta for macOS &amp; Chrome</p>
+    <h1>Patient-owned records. <em>Zero cloud custody.</em></h1>
+    <p class="subpage-lead">Foliofen CLI (<code>@lifan-builds/mychart-cli</code>) exports records you can already view in an Epic MyChart portal into deterministic local Markdown or JSONL—keeping login, MFA, cookies, and medical files strictly on your&nbsp;computer.</p>
+    <div class="subpage-actions">
+      <a class="button primary" href="https://github.com/lifan-builds/foliofen-cli">View repository &amp; install ↗</a>
+      <a class="button secondary" href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while">Read Substack build log ↗</a>
+      <a class="button secondary" href="https://news.ycombinator.com/item?id=49253653">Show HN discussion ↗</a>
+    </div>
+
+    <section class="subpage-workbench" aria-label="Interactive Foliofen CLI workflow">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select CLI stage">
+          <button type="button" class="subpage-tab" role="tab" aria-selected="true" tabindex="0" data-mode="demo">1 · Offline Synthetic Demo</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="sync">2 · Patient-Scoped Sync</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="export">3 · Markdown &amp; JSONL Export</button>
+        </div>
+        <span class="subpage-meta" id="ff-meta">POSIX 0600 local store · No hosted backend</span>
+      </div>
+      <div class="subpage-stage-box" aria-hidden="true">
+        <div class="subpage-stage-top">
+          <strong id="ff-title">$ npx @lifan-builds/mychart-cli demo</strong>
+          <span id="ff-badge">Deterministic offline sandbox · 0 network calls</span>
+        </div>
+        <pre class="subpage-stage-pre" id="ff-pre">$ npx @lifan-builds/mychart-cli demo
+✓ Loaded synthetic patient fixture ("Demo Child" · 2 visits, 4 lab panels)
+✓ Verified active-patient guard: --require-active-patient "Demo Child"
+✓ Rendered deterministic Markdown + JSONL chunks with manifest checksums</pre>
+      </div>
+    </section>
+
+    <section class="subpage-features" aria-label="Foliofen CLI safety boundaries">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">VISIBLE CHROME</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Manual MFA &amp; login</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">LOCAL POSIX 0600</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">0 cloud telemetry</text>
+        </svg>
+        <h2>Human-in-the-loop auth</h2>
+        <p>Start a visible Chrome profile, complete portal login and MFA yourself, and keep authenticated cookies and exports on local disk with <code>0600</code>&nbsp;permissions.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">ACTIVE-PATIENT GUARD</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Exact chart-owner check</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">HOST SCOPING</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">--source-host isolation</text>
+        </svg>
+        <h2>Patient &amp; origin guards</h2>
+        <p>Requires <code>--require-active-patient</code> and optional <code>--source-host</code> matching before mutating local state so proxy family charts never&nbsp;collide.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">MARKDOWN + JSONL</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Manifest + text chunks</text>
+          <rect x="162" y="14" width="148" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="236" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">--JSON-SUMMARY</text>
+          <text x="236" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">PHI-free diagnostics</text>
+        </svg>
+        <h2>PHI-free summary mode</h2>
+        <p>Exports human-readable Markdown and chunked JSONL, while <code>--json-summary</code> reports coverage counts and skips without emitting clinical text or&nbsp;names.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://github.com/lifan-builds/foliofen-cli">GitHub ↗</a>
+      <a href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while">Substack Essay ↗</a>
+      <a href="https://news.ycombinator.com/item?id=49253653">Show HN ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const MODES = {
+        demo: {
+          title: "$ npx @lifan-builds/mychart-cli demo",
+          badge: "Deterministic offline sandbox · 0 network calls",
+          meta: "POSIX 0600 local store · No hosted backend",
+          pre: `$ npx @lifan-builds/mychart-cli demo\n✓ Loaded synthetic patient fixture ("Demo Child" · 2 visits, 4 lab panels)\n✓ Verified active-patient guard: --require-active-patient "Demo Child"\n✓ Rendered deterministic Markdown + JSONL chunks with manifest checksums`
+        },
+        sync: {
+          title: "$ mychart-cli sync --categories visits,test-results --require-active-patient \"Demo Child\"",
+          badge: "Visible Chrome session · explicit category scope",
+          meta: "mychart-cli browser validate -> sync",
+          pre: `$ mychart-cli browser start --visible\n$ mychart-cli browser validate\n✓ Authenticated portal session verified · active chart matches "Demo Child"\n✓ Synced visits (12) & test-results (38) · unrequested categories left untouched`
+        },
+        export: {
+          title: "$ mychart-cli export jsonl --latest-day --output ./mychart.jsonl",
+          badge: "Manifest-headed JSONL + human-reviewable Markdown",
+          meta: "Optional pypdf + macOS Vision OCR for attachments",
+          pre: `$ mychart-cli export jsonl --latest-day --output ./mychart.jsonl\n$ mychart-cli export inspect ./mychart.jsonl\n✓ Manifest v1 · 14 records · 42 deterministic text chunks · 0 PHI leaked to stdout`
+        }
+      };
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("ff-title").textContent = m.title;
+        document.getElementById("ff-badge").textContent = m.badge;
+        document.getElementById("ff-meta").textContent = m.meta;
+        document.getElementById("ff-pre").textContent = m.pre;
+      }
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

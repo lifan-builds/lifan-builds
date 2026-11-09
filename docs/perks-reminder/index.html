@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perks Reminder — Open-Source Credit Card Benefits Tracker | Lifan Chen</title>
+  <meta name="description" content="Free, open-source credit card benefits, welcome bonus, and annual-fee ROI tracker with exportable JSON and zero bank logins.">
+  <link rel="canonical" href="https://clifan.com/perks-reminder/">
+  <meta property="og:title" content="Perks Reminder — Track card benefits without bank logins">
+  <meta property="og:description" content="Open-source tracker for monthly/quarterly card credits, duplicate physical cards, annual-fee ROI, and loyalty expirations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/perks-reminder/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">Perks Reminder</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://www.perks-reminder.com/">Launch App ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <p class="eyebrow">Open-Source Web &amp; iOS PWA · 18★ on GitHub</p>
+    <h1>Every card benefit tracked. <em>Zero bank logins.</em></h1>
+    <p class="subpage-lead">Perks Reminder is a free, open-source tracker for recurring credit card credits, welcome bonuses, annual-fee ROI, and loyalty expirations—built with duplicate physical-card support and full JSON import/export instead of Plaid bank&nbsp;connections.</p>
+    <div class="subpage-actions">
+      <a class="button primary" href="https://www.perks-reminder.com/">Open Perks Reminder ↗</a>
+      <a class="button secondary" href="https://github.com/lifan-builds/perks-reminder">GitHub repository (18★) ↗</a>
+      <a class="button secondary" href="https://clifan.substack.com/p/building-perks-reminder-a-small-open">Read Substack build note ↗</a>
+    </div>
+
+    <section class="subpage-workbench" aria-label="Interactive Perks Reminder benefit cycle workbench">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select benefit tracking view">
+          <button type="button" class="subpage-tab" role="tab" aria-selected="true" tabindex="0" data-mode="cycles">1 · Benefit Cycles &amp; ROI</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="duplicates">2 · Duplicate Physical Cards</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="export">3 · Portable JSON &amp; Catalog</button>
+        </div>
+        <span class="subpage-meta" id="pr-meta">No Plaid · User-owned JSON export</span>
+      </div>
+      <div class="subpage-stage-box" aria-hidden="true">
+        <div class="subpage-stage-top">
+          <strong id="pr-title">Active Cycle Ledger · Claimed Value vs. Annual Fee</strong>
+          <span id="pr-badge">Net ROI: +$1,145 across 4 physical cards</span>
+        </div>
+        <pre class="subpage-stage-pre" id="pr-pre">CARD (NICKNAME · ENDING)     CYCLE        BENEFIT                    STATUS          CLAIMED / CAP
+Amex Platinum (P1 · 4009)    2026-Q4      $50 Saks Semiannual        ● Due in 14d    $0 / $50
+Amex Platinum (P1 · 4009)    2026-11      $20 Digital Entertainment  ✓ Completed     $20 / $20
+CSR (Travel · 8821)          Anniversary  $300 Annual Travel Credit  ✓ Completed     $300 / $300
+Hilton Aspire (Resort · 1104) 2026-H2     $200 Hilton Resort Credit  ◐ Partial       $140 / $200</pre>
+      </div>
+    </section>
+
+    <section class="subpage-features" aria-label="Core Perks Reminder design choices">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">CARD #1 · ••4009</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Independent cycle state</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">CARD #2 · ••7102</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Nickname + ending digits</text>
+        </svg>
+        <h2>Physical-card isolation</h2>
+        <p>Tracks each physical card separately—even when a household holds multiple copies of the same card—using nickname and ending-digit&nbsp;labels.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">STATIC CATALOG</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Validated PR templates</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">USAGE GUIDES</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Timing + caveats</text>
+        </svg>
+        <h2>Catalog + usage guides</h2>
+        <p>Pairs monthly, quarterly, semiannual, and anniversary reset logic with practical Benefit Usage Guides covering qualification rules and&nbsp;caveats.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">0 BANK CREDENTIALS</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">No third-party custody</text>
+          <rect x="162" y="14" width="148" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="236" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">JSON EXPORT</text>
+          <text x="236" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Full backup &amp; restore</text>
+        </svg>
+        <h2>No bank login required</h2>
+        <p>Never asks for bank passwords or third-party aggregators. Export or restore your entire card and benefit history as clean JSON at any&nbsp;time.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://www.perks-reminder.com/">Live Web App ↗</a>
+      <a href="https://github.com/lifan-builds/perks-reminder">GitHub ↗</a>
+      <a href="https://clifan.substack.com/p/building-perks-reminder-a-small-open">Substack Note ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const MODES = {
+        cycles: {
+          title: "Active Cycle Ledger · Claimed Value vs. Annual Fee",
+          badge: "Net ROI: +$1,145 across 4 physical cards",
+          meta: "No Plaid · User-owned JSON export",
+          pre: `CARD (NICKNAME · ENDING)     CYCLE        BENEFIT                    STATUS          CLAIMED / CAP\nAmex Platinum (P1 · 4009)    2026-Q4      $50 Saks Semiannual        ● Due in 14d    $0 / $50\nAmex Platinum (P1 · 4009)    2026-11      $20 Digital Entertainment  ✓ Completed     $20 / $20\nCSR (Travel · 8821)          Anniversary  $300 Annual Travel Credit  ✓ Completed     $300 / $300\nHilton Aspire (Resort · 1104) 2026-H2     $200 Hilton Resort Credit  ◐ Partial       $140 / $200`
+        },
+        duplicates: {
+          title: "Multi-Player Household View · Duplicate Card Disambiguation",
+          badge: "Independent BenefitStatus per physical card",
+          meta: "Supports P1/P2 + multiple NLL/upgrade copies",
+          pre: `PHYSICAL CARD ID   PRODUCT                 LABEL             ANNUAL FEE   CLAIMED YTD   NET OFFSET\ncard_01H9X_p1a     Amex Hilton Aspire      P1 Main · 1104    $550         $790          +$240\ncard_01H9X_p1b     Amex Hilton Aspire      P1 Upgrade · 6390 $550         $650          +$100\ncard_01H9X_p2a     Amex Hilton Aspire      P2 Main · 9012    $550         $740          +$190`
+        },
+        export: {
+          title: "$ npm run card-template:validate && perks-export.json",
+          badge: "Schema-checked catalog + 1-click JSON portability",
+          meta: "src/lib/static-catalog.ts · MIT licensed",
+          pre: `{\n  "schemaVersion": 2,\n  "cards": [{ "templateKey": "amex-platinum", "nickname": "P1", "endingDigits": "4009" }],\n  "benefitStatuses": [{ "benefitKey": "uber-cash-monthly", "cycle": "2026-11", "state": "COMPLETED", "claimed": 15 }]\n}`
+        }
+      };
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("pr-title").textContent = m.title;
+        document.getElementById("pr-badge").textContent = m.badge;
+        document.getElementById("pr-meta").textContent = m.meta;
+        document.getElementById("pr-pre").textContent = m.pre;
+      }
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

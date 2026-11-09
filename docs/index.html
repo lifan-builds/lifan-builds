@@ -81,14 +81,15 @@
         <div class="stage-chrome">
           <div class="chrome-dots"><span></span><span></span><span></span></div>
           <span class="chrome-title">clifan.com — live build inspector</span>
-          <span class="chrome-hint">Keys 1–5</span>
+          <span class="chrome-hint">Keys 1–6</span>
         </div>
         <div class="stage-tabs" role="tablist" aria-label="Preview hosted builds">
           <button type="button" class="stage-tab" role="tab" aria-selected="true" data-build="fmu"><span class="stage-tab-key">1</span> fmu</button>
           <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="autofill"><span class="stage-tab-key">2</span> autofill</button>
-          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="freshpowder"><span class="stage-tab-key">3</span> freshpowder</button>
-          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="brief"><span class="stage-tab-key">4</span> brief</button>
-          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="nitan"><span class="stage-tab-key">5</span> nitan</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="quotaswitch"><span class="stage-tab-key">3</span> quotaswitch</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="freshpowder"><span class="stage-tab-key">4</span> freshpowder</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="perks"><span class="stage-tab-key">5</span> perks</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="brief"><span class="stage-tab-key">6</span> brief</button>
         </div>
         <div class="stage-body">
           <div class="stage-header-row">
@@ -201,7 +202,30 @@
           </div>
         </article>
 
-        <!-- 3. FreshPowder -->
+        <!-- 3. QuotaSwitch -->
+        <article class="release-card" data-build="quotaswitch">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="quotaswitch/">QuotaSwitch</a></h3>
+              <span class="release-route" aria-hidden="true">/quotaswitch/</span>
+            </div>
+            <p class="release-desc">
+              Unified multi-account switcher and 30s background quota auto-rotator for Antigravity and OpenAI&nbsp;Codex.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">agy + codex</span>
+              <span class="metric-badge">30s auto-rotate</span>
+              <span class="metric-badge">Auto-continue</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="quotaswitch/">Overview →</a>
+            <a href="https://www.npmjs.com/package/quotaswitch">npm ↗</a>
+            <a href="https://github.com/lifan-builds/quotaswitch">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 4. FreshPowder -->
         <article class="release-card" data-build="freshpowder">
           <div>
             <div class="release-top">
@@ -209,7 +233,7 @@
               <span class="release-route" aria-hidden="true">/freshpowder/</span>
             </div>
             <p class="release-desc">
-              Ski and snowboard deal aggregator across 28 North American shops, filtered by size and budget.
+              Ski and snowboard deal aggregator across 28 North American shops, filtered by size and&nbsp;budget.
             </p>
             <div class="metric-strip" aria-hidden="true">
               <span class="metric-badge">28 shops</span>
@@ -224,7 +248,30 @@
           </div>
         </article>
 
-        <!-- 4. AI Builder Brief -->
+        <!-- 5. Perks Reminder -->
+        <article class="release-card" data-build="perks">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="perks-reminder/">Perks Reminder</a></h3>
+              <span class="release-route" aria-hidden="true">/perks-reminder/</span>
+            </div>
+            <p class="release-desc">
+              Open-source credit card benefits, welcome bonus, and annual-fee ROI tracker with zero bank&nbsp;logins.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">18★ GitHub</span>
+              <span class="metric-badge">0 bank logins</span>
+              <span class="metric-badge">JSON export</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="perks-reminder/">Overview →</a>
+            <a href="https://www.perks-reminder.com/">Live app ↗</a>
+            <a href="https://github.com/lifan-builds/perks-reminder">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 6. AI Builder Brief -->
         <article class="release-card" data-build="brief">
           <div>
             <div class="release-top">
@@ -232,7 +279,7 @@
               <span class="release-route" aria-hidden="true">/ai-builder-brief/</span>
             </div>
             <p class="release-desc">
-              Evidence-gated daily AI brief distilling noisy launches into source-linked Top 10 technical developments.
+              Evidence-gated daily AI brief distilling noisy launches into source-linked Top 10 technical&nbsp;developments.
             </p>
             <div class="metric-strip" aria-hidden="true">
               <span class="metric-badge">59+ briefs</span>
@@ -247,7 +294,7 @@
           </div>
         </article>
 
-        <!-- 5. Nitan Podcast -->
+        <!-- 7. Nitan Podcast -->
         <article class="release-card" data-build="nitan">
           <div>
             <div class="release-top">
@@ -255,7 +302,7 @@
               <span class="release-route" aria-hidden="true">/nitan-podcast/</span>
             </div>
             <p class="release-desc">
-              Weekly six-minute Chinese podcast synthesized from USCardForum threads with source receipts via RSS.
+              Weekly six-minute Chinese podcast synthesized from USCardForum threads with source receipts via&nbsp;RSS.
             </p>
             <div class="metric-strip" aria-hidden="true">
               <span class="metric-badge">Weekly 6-min</span>
@@ -273,30 +320,30 @@
       <!-- Open-Source CLI & Agent Infrastructure Ledger -->
       <h3 class="ledger-subheading">Open-Source CLI Tools &amp; Agent Infrastructure</h3>
       <div class="ledger-list" role="list">
-        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/quotaswitch">
-          <span class="ledger-title">QuotaSwitch ↗</span>
+        <a class="ledger-row" role="listitem" href="foliofen-cli/">
+          <span class="ledger-title">Foliofen CLI →</span>
+          <span class="ledger-summary">Local Chrome harness for patient-owned MyChart health record exports (Markdown &amp; JSONL).</span>
+          <span class="ledger-meta" aria-hidden="true">/foliofen-cli/</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="castforge/">
+          <span class="ledger-title">CastForge →</span>
+          <span class="ledger-summary">Source-transparent Python podcast framework with StoryCluster gates, NotebookLM, and atomic R2 + RSS.</span>
+          <span class="ledger-meta" aria-hidden="true">/castforge/ · PyPI</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="quotaswitch/">
+          <span class="ledger-title">QuotaSwitch →</span>
           <span class="ledger-summary">Unified quota-driven multi-account switcher and auto-rotator for Antigravity and Codex.</span>
-          <span class="ledger-meta" aria-hidden="true">Multi-account CLI</span>
+          <span class="ledger-meta" aria-hidden="true">/quotaswitch/ · npm</span>
         </a>
-        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/foliofen-cli">
-          <span class="ledger-title">Foliofen CLI ↗</span>
-          <span class="ledger-summary">Local Chrome harness for patient-owned MyChart record exports.</span>
-          <span class="ledger-meta" aria-hidden="true">0 cloud custody</span>
-        </a>
-        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/perks-reminder">
-          <span class="ledger-title">Perks Reminder ↗</span>
-          <span class="ledger-summary">Local tracker for card benefits, annual fees, and credits.</span>
-          <span class="ledger-meta" aria-hidden="true">18★ · JSON export</span>
-        </a>
-        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/castforge">
-          <span class="ledger-title">CastForge ↗</span>
-          <span class="ledger-summary">Source-to-podcast automation pipeline with stage validation.</span>
-          <span class="ledger-meta" aria-hidden="true">Audio pipeline</span>
+        <a class="ledger-row" role="listitem" href="perks-reminder/">
+          <span class="ledger-title">Perks Reminder →</span>
+          <span class="ledger-summary">Local-first credit card benefits, welcome bonus, and annual-fee ROI tracker.</span>
+          <span class="ledger-meta" aria-hidden="true">/perks-reminder/ · 18★</span>
         </a>
         <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/context-harness">
           <span class="ledger-title">Context Harness ↗</span>
           <span class="ledger-summary">Filesystem memory layer and companion skills for coding agents.</span>
-          <span class="ledger-meta" aria-hidden="true">Agent memory</span>
+          <span class="ledger-meta" aria-hidden="true">GitHub · Agent memory</span>
         </a>
       </div>
     </section>
