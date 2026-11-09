@@ -45,7 +45,7 @@
       <div class="journal-filter-bar">
         <div class="filter-pills" role="group" aria-label="Filter journal entries">
           <button type="button" class="filter-pill" aria-pressed="true" data-filter="all">All writing</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (4)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (5)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (4)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (59)</button>
         </div>
@@ -55,6 +55,41 @@
     <!-- Track 1: Quick Thoughts & Builder Takes (X / Reddit / RedNote 小红书) -->
     <div id="journal-thoughts-section">
       <section class="journal-list wrap" id="thoughts" aria-label="Quick thoughts and community notes from X, Reddit, and RedNote">
+        <article class="long-note thought-card" id="ios-console-ports" data-thought-card>
+          <div class="journal-meta">
+            <span>Quick Take · X &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-11-09">Nov 2026</time>
+            </div>
+          </div>
+          <img class="thought-art-img" src="../assets/ios-console-vs-balatro.jpg" width="760" height="280" alt="Illustration contrasting an overheating iPhone running an unoptimized SideStore console port against effortless touch-native Balatro cards" loading="lazy">
+          <div data-lang-pane="en">
+            <h2>On running reverse-engineered console games on iOS</h2>
+            <p>
+              Spent part of the weekend sideloading a few reverse-engineered console ports onto my iPhone. As a benchmark for testing AI Agent reverse-engineering and porting capabilities, it’s an interesting direction—but as something you’d actually want to play on a phone, not really.
+            </p>
+            <p>
+              These ports aren’t optimized for iOS: shaky performance, brutal battery drain, awkward touch controls, and just keeping SideStore mounted in the background eats extra battery on its own. Meanwhile, native iOS games like Balatro are already ridiculously good time-sinks built for touch. The real high-leverage direction is iterating faster on games designed natively for mobile.
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>关于在 iOS 上面玩主机游戏这件事</h2>
+            <p>
+              周末花了些时间在手机上装了些被逆向的游戏，觉得这是一个有意思的验证 Agent 能力的方向，但是作为可玩性本身并不高。主要是这些游戏在 iOS 上面普遍没有优化，性能堪忧，电池狂烧，操作方式比较困难；同时，光是挂载 SideStore 都会额外消耗很多电。
+            </p>
+            <p>
+              相比较，这个时代原生的 iOS 游戏就已经足够好玩和杀时间，比如《小丑牌》（Balatro），因此被逆向出来的游戏并不会更好玩。真正有价值的方向还是更高效地迭代出适合手机原生玩的游戏。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="https://x.com/LifanBuilds">X (@LifanBuilds) ↗</a>
+          </div>
+        </article>
+
         <article class="long-note thought-card" id="opus55-vibe-coding" data-thought-card>
           <div class="journal-meta">
             <span>Quick Take · X &amp; RedNote (小红书)</span>
