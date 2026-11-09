@@ -213,7 +213,7 @@ for (const btn of loopBtns) {
   btn.addEventListener('click', () => selectLoopStep(btn.dataset.step));
 }
 
-// 4. Journal Filter Pills (/journal/)
+// 4. Journal Filter Pills (/journal/) & Brief Archive Search (/journal/ai-builder-brief/)
 const filterBtns = [...document.querySelectorAll('.filter-pill[data-filter]')];
 if (filterBtns.length > 0) {
   const essaysSec = document.getElementById('journal-essays-section');
@@ -230,11 +230,36 @@ if (filterBtns.length > 0) {
   }
 }
 
-// 5. Keyboard Shortcuts (1-5 for Build Stage, t for Theme)
+const briefSearch = document.getElementById('brief-search');
+const briefCards = [...document.querySelectorAll('.brief-archive-card[data-search]')];
+const briefCount = document.getElementById('brief-search-count');
+if (briefSearch && briefCards.length > 0) {
+  briefSearch.addEventListener('input', () => {
+    const q = briefSearch.value.trim().toLowerCase();
+    let visible = 0;
+    for (const card of briefCards) {
+      const hay = card.dataset.search || '';
+      const match = !q || hay.includes(q);
+      card.hidden = !match;
+      if (match) visible += 1;
+    }
+    if (briefCount) {
+      briefCount.textContent = `${visible} of ${briefCards.length} editions`;
+    }
+  });
+}
+
+// 5. Keyboard Shortcuts (1-5 for Build Stage, t for Theme, / for Search)
 window.addEventListener('keydown', event => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
   const tag = document.activeElement?.tagName;
   if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+
+  if (event.key === '/' && briefSearch) {
+    event.preventDefault();
+    briefSearch.focus();
+    return;
+  }
 
   if (event.key === 't' || event.key === 'T') {
     if (themeBtn) themeBtn.click();

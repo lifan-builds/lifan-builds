@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lifan Chen (Lifan Builds) — Journal &amp; AI Builder Brief</title>
+  <subtitle>Local-first software, multi-cursor agent systems, engineering essays, and source-linked daily AI field notes.</subtitle>
+  <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://clifan.com/" rel="alternate" type="text/html"/>
+  <id>https://clifan.com/</id>
+  <updated>2026-11-06T08:00:00Z</updated>
+  <author>
+    <name>Lifan Chen</name>
+    <uri>https://clifan.com/</uri>
+  </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-06): METR estimates Anthropic’s capability progress has… · Dropbox explains host-enforced permissions and undo…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-06.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-06.html</id>
+    <updated>2026-11-06T08:00:00Z</updated>
+    <summary>AI-assisted research may be accelerating the frontier, but the most useful engineering lessons concern who controls agent actions, how changes are undone, and what successful work actually costs.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-05): NVIDIA tests short agent contexts and challenges… · OpenAI opens limited GPT-6 Cyber access after…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-05.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-05.html</id>
+    <updated>2026-11-05T08:00:00Z</updated>
+    <summary>Better state management, memory training and behavioral checks matter as much as new models, while autonomous vulnerability research makes verification and patching more urgent.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-04): Mistral explains why saving model memory damaged… · Hugging Face shrinks real model architectures to…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-04.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-04.html</id>
+    <updated>2026-11-04T08:00:00Z</updated>
+    <summary>The strongest developments expose what conventional model tests miss, while new app integrations, API migrations and local votes change the practical boundaries for building with AI.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-03): MIT researchers edit Qwen’s weights to remove loops… · OpenAI explains how Pando removes Git bottlenecks…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-03.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-03.html</id>
+    <updated>2026-11-03T08:00:00Z</updated>
+    <summary>The most consequential work explains how to inspect, orchestrate and constrain AI systems, while Anthropic’s filing exposes the cost and uncertainty behind rapid capability growth.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-02): Bifocal tests expose long-reasoning failures hidden… · Meituan delivers LongCat-2.5 API access while…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-02.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-02.html</id>
+    <updated>2026-11-02T08:00:00Z</updated>
+    <summary>Better measurement beats bigger claims today: eight stories qualify, led by an experiment exposing what short-answer benchmarks miss, alongside LongCat’s delivered API upgrade and concrete agent-workflow corrections.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-01): Jepsen finds 96 ParticleDB failures and challenges… · DeepSeek opens a proactive-agent prototype that…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-01.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-01.html</id>
+    <updated>2026-11-01T08:00:00Z</updated>
+    <summary>The strongest new material explains how agent systems fail, recover and earn trust; seven stories qualify, with no padding from stale releases or yesterday’s news.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-31): Anthropic’s automated researchers find harmful… · Epoch’s Firefox experiments expose the cost of…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-31.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-31.html</id>
+    <updated>2026-10-31T08:00:00Z</updated>
+    <summary>The strongest developments concern what happens between model calls—training-data screening, patch delivery, persistent work, recovery and permissions—rather than another frontier-model launch.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-30): Cursor confirms malicious Claude Code extension… · PostHog shows how shared agent state can invalidate…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-30.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-30.html</id>
+    <updated>2026-10-30T08:00:00Z</updated>
+    <summary>A confirmed coding-extension compromise makes software provenance urgent, while unusually concrete evaluation and memory analyses explain how capable agents can still produce misleading results.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-29): OpenAI details monitoring gaps that can let flagged… · Mistral releases improved Large 4 weights with a…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-29.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-29.html</id>
+    <updated>2026-10-29T08:00:00Z</updated>
+    <summary>Open weights and cheaper reasoning expand deployment choices, while new monitoring disclosures and task-level evaluations expose how much work remains between a capable model and a dependable agent.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-28): Anthropic documents five exploit chains against… · Lambert explains why harder AI rankings can mislead…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-28.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-28.html</id>
+    <updated>2026-10-28T08:00:00Z</updated>
+    <summary>Stronger cyber agents and cheaper model orchestration raise the stakes for evaluating complete workflows, preserving instructions, and checking what a benchmark actually measures.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-27): OpenAI and Anthropic publish ETH disproofs that… · Cloudflare explains how rejected prompts exposed…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-27.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-27.html</id>
+    <updated>2026-10-27T08:00:00Z</updated>
+    <summary>AI-generated research demands better verification, while serving failures and agent workflows make the surrounding system as consequential as the model.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-26): OpenAI launches GPT-6.1 Terra to cut the cost of… · Anthropic’s IPO filing details long agent escapes…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-26.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-26.html</id>
+    <updated>2026-10-26T08:00:00Z</updated>
+    <summary>Cheaper computer use is becoming practical, while identity boundaries, real task costs, and provider disclosures matter as much as benchmark leadership.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-25): Redwood simulates deployment-specific attacks to… · Avalon trains agent organizations that review more…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-25.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-25.html</id>
+    <updated>2026-10-25T08:00:00Z</updated>
+    <summary>The strongest work changes how builders test oversight, organize agent teams, and trade expensive model execution for reusable infrastructure.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-24): OpenAI’s containment tests expose communication… · Raw-RAG challenges memory systems that discard…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-24.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-24.html</id>
+    <updated>2026-10-24T08:00:00Z</updated>
+    <summary>The most useful developments explain how agents fail, what memory should preserve, and which controls make real engineering workflows dependable.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-23): Anthropic and Theorem turn fuzz targets into… · AISI finds harmful-action awareness does not…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-23.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-23.html</id>
+    <updated>2026-10-23T08:00:00Z</updated>
+    <summary>Machine-checked proofs, revealing agent failures and reusable interfaces matter as much as new models today; read availability and license terms as carefully as capability claims.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-22): LiteLLM’s compromised release steals credentials… · PHP’s emergency fixes expose the limits of…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-22.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-22.html</id>
+    <updated>2026-10-22T08:00:00Z</updated>
+    <summary>Compromised AI tooling and internet-scale vulnerability disclosures make operational trust urgent, while new evaluation and small-model experiments expose what headline capability scores miss.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-21): Anthropic shows how agents can shrink attack… · Preference Model’s audit shows Terminal-Bench…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-21.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-21.html</id>
+    <updated>2026-10-21T08:00:00Z</updated>
+    <summary>The most useful advances concern what agents can reach, what their scores actually measure, and which decisions deserve human attention—not just another model’s headline performance.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-20): Husain and Saha show why default judge thresholds… · DeepSeek releases DeepInfer and explains the…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-20.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-20.html</id>
+    <updated>2026-10-20T08:00:00Z</updated>
+    <summary>Better evaluation, cheaper agent models, and more portable compute are expanding builders’ options, while memory fidelity and exposed agent infrastructure reveal the costs that headline benchmarks miss.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-19): OpenCode discloses a Console breach that may expose… · Superlite profiles agent overhead and trades review…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-19.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-19.html</id>
+    <updated>2026-10-19T08:00:00Z</updated>
+    <summary>Agent progress is making credential custody, scheduling overhead, deployment constraints, and inspectable work more consequential than headline benchmark gains.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-10-18): Anthropic documents agent management becoming a… · DeepSeek opens search and page retrieval as…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-18.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-10-18.html</id>
+    <updated>2026-10-18T08:00:00Z</updated>
+    <summary>Human attention, retrieval economics, and reliable access matter more today than another round of model leaderboard claims.</summary>
+  </entry>
+  <entry>
+    <title>Why I built Foliofen CLI while the portal kept changing</title>
+    <link href="https://clifan.com/journal/#mychart-cli" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#mychart-cli</id>
+    <updated>2026-08-15T12:00:00Z</updated>
+    <summary>Exporting patient-owned medical records locally with a Chrome and Puppeteer harness without handing a third party permanent account custody.</summary>
+  </entry>
+  <entry>
+    <title>Show HN: Foliofen CLI — What a technical audience stress-tested first</title>
+    <link href="https://clifan.com/journal/#show-hn" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#show-hn</id>
+    <updated>2026-08-10T12:00:00Z</updated>
+    <summary>Why local control is only a real product feature when recovery paths and scope limits are explicit.</summary>
+  </entry>
+  <entry>
+    <title>Building Perks Reminder: A free, open-source benefits tracker</title>
+    <link href="https://clifan.com/journal/#perks-reminder" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#perks-reminder</id>
+    <updated>2026-07-20T12:00:00Z</updated>
+    <summary>Keeping reminders, exportable JSON, and correction paths local without bank logins.</summary>
+  </entry>
+</feed>

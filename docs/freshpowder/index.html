@@ -1,181 +1,229 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreshPowder — ski and snowboard deals | Lifan Builds</title>
-<meta name="description" content="I built FreshPowder to make ski and snowboard deal hunting easier. Watch a two-minute live demo, then browse gear and compare offers without an account.">
-<meta name="theme-color" content="#171526"><link rel="canonical" href="https://clifan.com/freshpowder/">
-<meta property="og:title" content="FreshPowder — more mountain, less markup">
-<meta property="og:description" content="A two-minute live demo of ski and snowboard deal hunting, built by Lifan.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://clifan.com/freshpowder/">
-<meta property="og:image" content="https://clifan.com/freshpowder/poster.jpg"><meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../dungeon.css"><link rel="stylesheet" href="page.css">
-</head><body data-impeccable-ignore="hard-offset-shadow">
-<header class="site-header"><a class="wordmark" href="../"><span class="pixel-mark" aria-hidden="true">LB</span>LIFAN BUILDS</a><a href="../#quests">← The workshop</a></header>
-<main class="project-page">
-<h1>More mountain.<br>Less markup.</h1>
-<p class="lead">Compare ski and snowboard deals across North American shops—filtered by budget, brand, and reported size in one place.</p>
-<div class="actions"><a class="primary" href="https://freshpowder.clifan.com/">Explore live deals ↗</a><span>Free to browse · no account needed</span></div>
-<figure>
-  <div class="video-frame">
-    <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="FreshPowder two-minute live demo" aria-describedby="video-description">
-      <source src="freshpowder-live-demo-v3.mp4" type="video/mp4">
-      <track kind="captions" src="captions.vtt" srclang="en" label="English">
-    </video>
-  </div>
-  <figcaption id="video-description">
-    <span>2:00 · Actual site footage, recorded Nov 1, 2026 (captions included).</span>
-    <a href="freshpowder-live-demo-v3.mp4" download>Download MP4 ↓</a>
-  </figcaption>
-</figure>
-<section class="deal-workbench" aria-label="Cross-shop price comparison">
-  <div class="deal-toolbar">
-    <div class="deal-tabs" role="tablist" aria-label="Select equipment category">
-      <button type="button" class="deal-tab" id="tab-skis" role="tab" aria-selected="true" aria-controls="deal-stage" tabindex="0" data-cat="skis">Skis · 172–184 cm</button>
-      <button type="button" class="deal-tab" id="tab-boards" role="tab" aria-selected="false" aria-controls="deal-stage" tabindex="-1" data-cat="boards">Boards · 154–162 cm</button>
-      <button type="button" class="deal-tab" id="tab-boots" role="tab" aria-selected="false" aria-controls="deal-stage" tabindex="-1" data-cat="boots">Boots · Mondo 26.5</button>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreshPowder — Ski &amp; Snowboard Deal Finder | Lifan Chen</title>
+  <meta name="description" content="Compare ski and snowboard deals across 28 North American shops, normalized across USD/CAD and filtered by budget, brand, and reported size.">
+  <link rel="canonical" href="https://clifan.com/freshpowder/">
+  <meta property="og:title" content="FreshPowder — More mountain, less markup">
+  <meta property="og:description" content="A two-minute live demo of ski and snowboard deal hunting across 28 North American shops, built by Lifan Chen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/freshpowder/">
+  <meta property="og:image" content="https://clifan.com/freshpowder/poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="page.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">FreshPowder</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://freshpowder.clifan.com/">Live deals ↗</a>
+      </nav>
     </div>
-    <span class="deal-meta" id="deal-meta">28 retailers · USD/CAD normalized</span>
-  </div>
-  <svg id="deal-stage" class="deal-stage" viewBox="0 0 640 124" role="tabpanel" aria-labelledby="tab-skis" aria-hidden="true">
-    <rect x="1" y="1" width="638" height="122" rx="6" fill="#252137" stroke="#514763" stroke-width="2"/>
-    <rect x="1" y="1" width="638" height="28" rx="6" fill="#1d1a2e"/>
-    <line x1="1" y1="29" x2="639" y2="29" stroke="#514763" stroke-width="1"/>
-    <circle cx="14" cy="15" r="3.5" fill="#edc678"/>
-    <circle cx="25" cy="15" r="3.5" fill="#9bc5a2"/>
-    <text x="38" y="18" font-family="DM Mono, monospace" font-size="9.5" font-weight="500" fill="#f1e7cf" id="svg-deal-model">QST 98 Skis · Matched across 3 shops</text>
-    <text x="626" y="18" text-anchor="end" font-family="DM Mono, monospace" font-size="9" font-weight="500" fill="#9bc5a2" id="svg-deal-badge">Best: $449 (-36%)</text>
+  </header>
 
-    <!-- Row 1: Best Offer -->
-    <text x="16" y="50" font-family="DM Mono, monospace" font-size="9.5" font-weight="500" fill="#edc678" id="svg-r1-shop">evo · 172, 178, 184 cm</text>
-    <rect x="210" y="39" width="310" height="14" rx="3" fill="#171526"/>
-    <rect x="210" y="39" width="198" height="14" rx="3" fill="#9bc5a2" id="svg-r1-bar"/>
-    <text x="626" y="50" text-anchor="end" font-family="DM Mono, monospace" font-size="9.5" font-weight="500" fill="#9bc5a2" id="svg-r1-price">$449 · -36%</text>
+  <main class="project-page wrap">
+    <p class="eyebrow">Product Release · 28 North American Retailers</p>
+    <h1>More mountain. <em>Less markup.</em></h1>
+    <p class="lead">Compare ski and snowboard deals across North American shops, normalized across USD and CAD and filtered by budget, brand, and reported size in one place.</p>
+    <div class="actions">
+      <a class="button primary" href="https://freshpowder.clifan.com/">Explore live deals ↗</a>
+      <a class="button secondary" href="https://freshpowder.clifan.com/status">Store status report ↗</a>
+      <span class="action-note">Free to browse · no account needed</span>
+    </div>
 
-    <!-- Row 2: Runner-up -->
-    <text x="16" y="76" font-family="DM Mono, monospace" font-size="9.5" fill="#f1e7cf" id="svg-r2-shop">Backcountry · 178, 184 cm</text>
-    <rect x="210" y="65" width="310" height="14" rx="3" fill="#171526"/>
-    <rect x="210" y="65" width="232" height="14" rx="3" fill="#edc678" id="svg-r2-bar"/>
-    <text x="626" y="76" text-anchor="end" font-family="DM Mono, monospace" font-size="9.5" fill="#edc678" id="svg-r2-price">$524 · -25%</text>
+    <figure class="demo-figure">
+      <div class="video-frame">
+        <video controls playsinline preload="metadata" poster="poster.jpg" width="1920" height="1080" aria-label="FreshPowder two-minute live demo" aria-describedby="video-description">
+          <source src="freshpowder-live-demo-v3.mp4" type="video/mp4">
+          <track kind="captions" src="captions.vtt" srclang="en" label="English">
+        </video>
+      </div>
+      <figcaption id="video-description">
+        <span>2:00 · Actual site footage, recorded Nov 1, 2026 (captions included).</span>
+        <a href="freshpowder-live-demo-v3.mp4" download>Download MP4 ↓</a>
+      </figcaption>
+    </figure>
 
-    <!-- Row 3: Baseline MSRP -->
-    <text x="16" y="102" font-family="DM Mono, monospace" font-size="9.5" fill="#b8b0c0" id="svg-r3-shop">REI · 172 cm only</text>
-    <rect x="210" y="91" width="310" height="14" rx="3" fill="#171526"/>
-    <rect x="210" y="91" width="310" height="14" rx="3" fill="#514763" id="svg-r3-bar"/>
-    <text x="626" y="102" text-anchor="end" font-family="DM Mono, monospace" font-size="9.5" fill="#b8b0c0" id="svg-r3-price">$699 · MSRP</text>
-  </svg>
-</section>
-<section class="features" aria-label="What FreshPowder does">
-  <article>
-    <svg class="feature-schematic" viewBox="0 0 320 76" aria-hidden="true">
-      <rect x="0.5" y="0.5" width="319" height="75" rx="5" fill="#252137" stroke="#514763"/>
-      <rect x="10" y="14" width="186" height="48" rx="4" fill="#171526" stroke="#9bc5a2"/>
-      <text x="103" y="34" text-anchor="middle" font-family="DM Mono, monospace" font-size="8.5" font-weight="500" fill="#9bc5a2">HARDGOODS · DEFAULT ON</text>
-      <text x="103" y="49" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" fill="#f1e7cf">Skis · Boards · Boots</text>
-      <rect x="204" y="14" width="106" height="48" rx="4" fill="#171526" stroke="#514763"/>
-      <text x="257" y="34" text-anchor="middle" font-family="DM Mono, monospace" font-size="8.5" fill="#b8b0c0">APPAREL</text>
-      <text x="257" y="49" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" fill="#edc678">Toggle opt-in</text>
-    </svg>
-    <h2>Equipment first</h2>
-    <p>Browse skis, boards, boots, bindings, helmets, and goggles—toggle apparel on only when you want it.</p>
-  </article>
-  <article>
-    <svg class="feature-schematic" viewBox="0 0 320 76" aria-hidden="true">
-      <rect x="0.5" y="0.5" width="319" height="75" rx="5" fill="#252137" stroke="#514763"/>
-      <rect x="10" y="14" width="96" height="48" rx="4" fill="#171526" stroke="#edc678"/>
-      <text x="58" y="34" text-anchor="middle" font-family="DM Mono, monospace" font-size="8.5" font-weight="500" fill="#edc678">≤ $500</text>
-      <text x="58" y="49" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" fill="#f1e7cf">178 cm · USD</text>
-      <line x1="106" y1="38" x2="132" y2="38" stroke="#edc678" stroke-width="1.5"/>
-      <polygon points="130,34 137,38 130,42" fill="#edc678"/>
-      <rect x="138" y="14" width="172" height="48" rx="4" fill="#171526" stroke="#514763"/>
-      <text x="148" y="34" font-family="DM Mono, monospace" font-size="8.5" fill="#9bc5a2">evo $449 (-36%)</text>
-      <text x="148" y="49" font-family="DM Mono, monospace" font-size="8" fill="#b8b0c0">vs $524 · $699 matched</text>
-    </svg>
-    <h2>A useful shortlist</h2>
-    <p>Filter by budget, brand, store, currency, and reported sizes, then compare matched models side by side.</p>
-  </article>
-  <article>
-    <svg class="feature-schematic" viewBox="0 0 320 76" aria-hidden="true">
-      <rect x="0.5" y="0.5" width="319" height="75" rx="5" fill="#252137" stroke="#514763"/>
-      <rect x="10" y="14" width="144" height="48" rx="4" fill="#171526" stroke="#514763"/>
-      <text x="82" y="34" text-anchor="middle" font-family="DM Mono, monospace" font-size="8.5" fill="#9bc5a2">● 28 SHOPS LIVE</text>
-      <text x="82" y="49" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" fill="#b8b0c0">Public status report</text>
-      <rect x="162" y="14" width="148" height="48" rx="4" fill="#171526" stroke="#514763"/>
-      <text x="236" y="34" text-anchor="middle" font-family="DM Mono, monospace" font-size="8.5" fill="#edc678">CHECKED DAILY</text>
-      <text x="236" y="49" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" fill="#f1e7cf">Timestamp + size log</text>
-    </svg>
-    <h2>Transparent coverage</h2>
-    <p>See listed prices, check dates, and a public source report showing which retailers are live.</p>
-  </article>
-</section>
-<p class="note">Prices and stock change after daily checks—confirm your exact size and currency at the retailer. Optional rare-deal email list is open.</p>
-<details><summary>Read the two-minute video transcript</summary><p>Shopping for ski gear shouldn&#x27;t mean opening twenty sale tabs, then finding out the bargain isn&#x27;t even in your size. Meet FreshPowder. It brings ski and snowboard offers from dozens of retailers into one place. It&#x27;s free to browse, with no account or invite required.</p>
-<p>Here&#x27;s the actual site. The default view focuses on equipment: skis, boards, boots, bindings, helmets, and goggles. Looking for clothing or accessories? Just switch them on. Open the filters, choose skis, and set a budget. You can narrow by brand, store, currency, and reported length to get a shortlist you can actually shop.</p>
-<p>Each card shows the retailer, listed price, discount, available sizes when reported, and when the offer was checked. Use Compare to see matched offers together, and check the public store report to see what sits behind the listings. Find your next setup at FreshPowder. More mountain. Less markup.</p></details>
-<p class="source-links"><a href="https://freshpowder.clifan.com/status">Store status report ↗</a><a href="https://github.com/lifan-builds/snow-deal">Source code ↗</a></p>
-</main><footer><span>© 2026 Lifan Builds</span><span><a href="https://x.com/LifanBuilds">X ↗</a><a href="../">The workshop</a></span></footer>
-<script>
-  (() => {
-    const DEALS = {
-      skis: {
-        model: "QST 98 Skis · Matched across 3 shops",
-        badge: "Best: $449 (-36%)",
-        r1: { shop: "evo · 172, 178, 184 cm", w: 198, price: "$449 · -36%" },
-        r2: { shop: "Backcountry · 178, 184 cm", w: 232, price: "$524 · -25%" },
-        r3: { shop: "REI · 172 cm only", w: 310, price: "$699 · MSRP" }
-      },
-      boards: {
-        model: "Jones Frontier Split · Matched across 3 shops",
-        badge: "Best: $419 (-30%)",
-        r1: { shop: "The House · 156, 159 cm", w: 216, price: "$419 · -30%" },
-        r2: { shop: "evo · 154, 158, 162 cm", w: 248, price: "$479 · -20%" },
-        r3: { shop: "Backcountry · 158 cm", w: 310, price: "$599 · MSRP" }
-      },
-      boots: {
-        model: "Hawx Prime XTD 120 · Matched across 3 shops",
-        badge: "Best: $489 (-35%)",
-        r1: { shop: "Corbetts (CAD→USD) · 26.5, 27.5", w: 202, price: "$489 · -35%" },
-        r2: { shop: "evo · 25.5, 26.5", w: 238, price: "$574 · -23%" },
-        r3: { shop: "Christy Sports · 26.5", w: 310, price: "$749 · MSRP" }
-      }
-    };
-    const tabs = [...document.querySelectorAll(".deal-tab")];
-    const stage = document.getElementById("deal-stage");
-    function selectTab(btn, focus) {
-      tabs.forEach((t) => {
-        const active = t === btn;
-        t.setAttribute("aria-selected", active ? "true" : "false");
-        t.setAttribute("tabindex", active ? "0" : "-1");
-      });
-      if (stage && btn.id) stage.setAttribute("aria-labelledby", btn.id);
-      if (focus) btn.focus();
-      const d = DEALS[btn.dataset.cat];
-      if (!d) return;
-      document.getElementById("svg-deal-model").textContent = d.model;
-      document.getElementById("svg-deal-badge").textContent = d.badge;
-      document.getElementById("svg-r1-shop").textContent = d.r1.shop;
-      document.getElementById("svg-r1-bar").setAttribute("width", String(d.r1.w));
-      document.getElementById("svg-r1-price").textContent = d.r1.price;
-      document.getElementById("svg-r2-shop").textContent = d.r2.shop;
-      document.getElementById("svg-r2-bar").setAttribute("width", String(d.r2.w));
-      document.getElementById("svg-r2-price").textContent = d.r2.price;
-      document.getElementById("svg-r3-shop").textContent = d.r3.shop;
-      document.getElementById("svg-r3-bar").setAttribute("width", String(d.r3.w));
-      document.getElementById("svg-r3-price").textContent = d.r3.price;
-    }
-    tabs.forEach((btn, idx) => {
-      btn.addEventListener("click", () => selectTab(btn, false));
-      btn.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
-          e.preventDefault();
-          selectTab(tabs[(idx + 1) % tabs.length], true);
-        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
-          e.preventDefault();
-          selectTab(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+    <section class="deal-workbench" aria-label="Cross-shop price comparison">
+      <div class="deal-toolbar">
+        <div class="deal-tabs" role="tablist" aria-label="Select equipment category">
+          <button type="button" class="deal-tab" id="tab-skis" role="tab" aria-selected="true" aria-controls="deal-stage" tabindex="0" data-cat="skis">Skis · 172–184 cm</button>
+          <button type="button" class="deal-tab" id="tab-boards" role="tab" aria-selected="false" aria-controls="deal-stage" tabindex="-1" data-cat="boards">Boards · 154–162 cm</button>
+          <button type="button" class="deal-tab" id="tab-boots" role="tab" aria-selected="false" aria-controls="deal-stage" tabindex="-1" data-cat="boots">Boots · Mondo 26.5</button>
+        </div>
+        <span class="deal-meta" id="deal-meta">28 retailers · USD/CAD normalized</span>
+      </div>
+      <svg id="deal-stage" class="deal-stage" viewBox="0 0 640 124" role="tabpanel" aria-labelledby="tab-skis" aria-hidden="true">
+        <rect x="1" y="1" width="638" height="122" rx="8" fill="#0d151d" stroke="#243342" stroke-width="1.5"/>
+        <rect x="1" y="1" width="638" height="28" rx="8" fill="#131d28"/>
+        <line x1="1" y1="29" x2="639" y2="29" stroke="#243342" stroke-width="1"/>
+        <circle cx="14" cy="15" r="3.5" fill="#f59e0b"/>
+        <circle cx="25" cy="15" r="3.5" fill="#34d399"/>
+        <text x="38" y="18" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="500" fill="#eef3f7" id="svg-deal-model">QST 98 Skis · Matched across 3 shops</text>
+        <text x="626" y="18" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#34d399" id="svg-deal-badge">Best: $449 (-36%)</text>
+
+        <!-- Row 1: Best Offer -->
+        <text x="16" y="50" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="500" fill="#eef3f7" id="svg-r1-shop">evo · 172, 178, 184 cm</text>
+        <rect x="210" y="39" width="310" height="14" rx="3" fill="#182534"/>
+        <rect x="210" y="39" width="198" height="14" rx="3" fill="#34d399" id="svg-r1-bar"/>
+        <text x="626" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" fill="#34d399" id="svg-r1-price">$449 · -36%</text>
+
+        <!-- Row 2: Runner-up -->
+        <text x="16" y="76" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#cbd5e1" id="svg-r2-shop">Backcountry · 178, 184 cm</text>
+        <rect x="210" y="65" width="310" height="14" rx="3" fill="#182534"/>
+        <rect x="210" y="65" width="232" height="14" rx="3" fill="#60a5fa" id="svg-r2-bar"/>
+        <text x="626" y="76" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#60a5fa" id="svg-r2-price">$524 · -25%</text>
+
+        <!-- Row 3: Baseline MSRP -->
+        <text x="16" y="102" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#94a8bc" id="svg-r3-shop">REI · 172 cm only</text>
+        <rect x="210" y="91" width="310" height="14" rx="3" fill="#182534"/>
+        <rect x="210" y="91" width="310" height="14" rx="3" fill="#475569" id="svg-r3-bar"/>
+        <text x="626" y="102" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#94a8bc" id="svg-r3-price">$699 · MSRP</text>
+      </svg>
+    </section>
+
+    <section class="features" aria-label="What FreshPowder does">
+      <article class="feature-card">
+        <svg class="feature-schematic" viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="186" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="103" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">HARDGOODS · DEFAULT ON</text>
+          <text x="103" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Skis · Boards · Boots</text>
+          <rect x="204" y="14" width="106" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="257" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#94a8bc">APPAREL</text>
+          <text x="257" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#60a5fa">Toggle opt-in</text>
+        </svg>
+        <h2>Equipment first</h2>
+        <p>Browse skis, boards, boots, bindings, helmets, and goggles. Toggle apparel on only when you want it.</p>
+      </article>
+      <article class="feature-card">
+        <svg class="feature-schematic" viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="96" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="58" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">≤ $500</text>
+          <text x="58" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">178 cm · USD</text>
+          <line x1="106" y1="38" x2="132" y2="38" stroke="#60a5fa" stroke-width="1.5"/>
+          <polygon points="130,34 137,38 130,42" fill="#60a5fa"/>
+          <rect x="138" y="14" width="172" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="148" y="34" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">evo $449 (-36%)</text>
+          <text x="148" y="49" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">vs $524 · $699 matched</text>
+        </svg>
+        <h2>A useful shortlist</h2>
+        <p>Filter by budget, brand, store, currency, and reported sizes, then compare matched models side by side.</p>
+      </article>
+      <article class="feature-card">
+        <svg class="feature-schematic" viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">● 28 SHOPS LIVE</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Public status report</text>
+          <rect x="162" y="14" width="148" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="236" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">CHECKED DAILY</text>
+          <text x="236" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Timestamp + size log</text>
+        </svg>
+        <h2>Transparent coverage</h2>
+        <p>See listed prices, check dates, and a public source report showing which retailers are&nbsp;live.</p>
+      </article>
+    </section>
+
+    <p class="note">Prices and stock change after daily checks. Confirm your exact size and currency at the retailer. Optional rare-deal email list is open.</p>
+
+    <details class="transcript-box">
+      <summary>Read the two-minute video transcript</summary>
+      <p>Shopping for ski gear shouldn’t mean opening twenty sale tabs, then finding out the bargain isn’t even in your size. Meet FreshPowder. It brings ski and snowboard offers from dozens of retailers into one place. It’s free to browse, with no account or invite required.</p>
+      <p>Here’s the actual site. The default view focuses on equipment: skis, boards, boots, bindings, helmets, and goggles. Looking for clothing or accessories? Just switch them on. Open the filters, choose skis, and set a budget. You can narrow by brand, store, currency, and reported length to get a shortlist you can actually shop.</p>
+      <p>Each card shows the retailer, listed price, discount, available sizes when reported, and when the offer was checked. Use Compare to see matched offers together, and check the public store report to see what sits behind the listings. Find your next setup at FreshPowder. More mountain. Less markup.</p>
+    </details>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://freshpowder.clifan.com/">Live App ↗</a>
+      <a href="https://freshpowder.clifan.com/status">Store Status ↗</a>
+      <a href="https://github.com/lifan-builds/snow-deal">Source Code ↗</a>
+      <a href="https://x.com/LifanBuilds">X ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const DEALS = {
+        skis: {
+          model: "QST 98 Skis · Matched across 3 shops",
+          badge: "Best: $449 (-36%)",
+          r1: { shop: "evo · 172, 178, 184 cm", w: 198, price: "$449 · -36%" },
+          r2: { shop: "Backcountry · 178, 184 cm", w: 232, price: "$524 · -25%" },
+          r3: { shop: "REI · 172 cm only", w: 310, price: "$699 · MSRP" }
+        },
+        boards: {
+          model: "Jones Frontier Split · Matched across 3 shops",
+          badge: "Best: $419 (-30%)",
+          r1: { shop: "The House · 156, 159 cm", w: 216, price: "$419 · -30%" },
+          r2: { shop: "evo · 154, 158, 162 cm", w: 248, price: "$479 · -20%" },
+          r3: { shop: "Backcountry · 158 cm", w: 310, price: "$599 · MSRP" }
+        },
+        boots: {
+          model: "Hawx Prime XTD 120 · Matched across 3 shops",
+          badge: "Best: $489 (-35%)",
+          r1: { shop: "Corbetts (CAD→USD) · 26.5, 27.5", w: 202, price: "$489 · -35%" },
+          r2: { shop: "evo · 25.5, 26.5", w: 238, price: "$574 · -23%" },
+          r3: { shop: "Christy Sports · 26.5", w: 310, price: "$749 · MSRP" }
         }
+      };
+      const tabs = [...document.querySelectorAll(".deal-tab")];
+      const stage = document.getElementById("deal-stage");
+      function selectTab(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", active ? "true" : "false");
+          t.setAttribute("tabindex", active ? "0" : "-1");
+        });
+        if (stage && btn.id) stage.setAttribute("aria-labelledby", btn.id);
+        if (focus) btn.focus();
+        const d = DEALS[btn.dataset.cat];
+        if (!d) return;
+        document.getElementById("svg-deal-model").textContent = d.model;
+        document.getElementById("svg-deal-badge").textContent = d.badge;
+        document.getElementById("svg-r1-shop").textContent = d.r1.shop;
+        document.getElementById("svg-r1-bar").setAttribute("width", String(d.r1.w));
+        document.getElementById("svg-r1-price").textContent = d.r1.price;
+        document.getElementById("svg-r2-shop").textContent = d.r2.shop;
+        document.getElementById("svg-r2-bar").setAttribute("width", String(d.r2.w));
+        document.getElementById("svg-r2-price").textContent = d.r2.price;
+        document.getElementById("svg-r3-shop").textContent = d.r3.shop;
+        document.getElementById("svg-r3-bar").setAttribute("width", String(d.r3.w));
+        document.getElementById("svg-r3-price").textContent = d.r3.price;
+      }
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => selectTab(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            selectTab(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            selectTab(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
       });
-    });
-  })();
-</script>
-</body></html>
+    })();
+  </script>
+</body>
+</html>
