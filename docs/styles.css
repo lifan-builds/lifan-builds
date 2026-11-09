@@ -293,6 +293,44 @@ kbd {
   color: var(--ink-muted);
 }
 
+/* Cross-Document & Same-Document View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: vtFadeOut 180ms cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: vtFadeIn 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes vtFadeOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(-6px) scale(0.992); }
+}
+
+@keyframes vtFadeIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.994); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes signalFlow {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+.hero-stagger-1 { animation: heroRise 460ms cubic-bezier(0.16, 1, 0.3, 1) 0ms both; }
+.hero-stagger-2 { animation: heroRise 520ms cubic-bezier(0.16, 1, 0.3, 1) 60ms both; }
+.hero-stagger-3 { animation: heroRise 560ms cubic-bezier(0.16, 1, 0.3, 1) 120ms both; }
+.hero-stagger-4 { animation: heroRise 620ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both; }
+
 .status-indicator {
   width: 8px;
   height: 8px;
@@ -375,22 +413,48 @@ h1, h2, h3 {
 .focus-strip {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px 16px;
   padding-top: 18px;
   border-top: 1px solid var(--border);
 }
 
 .focus-item {
+  appearance: none;
+  border: 0;
+  border-left: 2px solid var(--border-strong);
+  background: transparent;
+  padding: 4px 0 4px 12px;
+  text-align: left;
+  font-family: var(--font-sans);
   font-size: 13px;
   color: var(--ink-secondary);
   line-height: 1.45;
+  cursor: pointer;
+  transition: border-color 160ms ease, transform 160ms cubic-bezier(0.16, 1, 0.3, 1), color 160ms ease;
+}
+
+.focus-item:hover,
+.focus-item.is-active {
+  border-left-color: var(--accent);
+  transform: translateX(3px);
+  color: var(--ink);
+}
+
+.focus-idx {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--emerald);
+  margin-bottom: 2px;
 }
 
 .focus-item strong {
   display: block;
   color: var(--ink);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 
 /* Interactive Build Stage Window (Right Column of Hero) */
@@ -483,6 +547,32 @@ h1, h2, h3 {
 
 .stage-body {
   padding: 18px;
+  transition: opacity 150ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stage-body.is-switching {
+  opacity: 0.72;
+  transform: translateY(3px);
+}
+
+.stage-signal-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 12px;
+}
+
+.signal-flow-line {
+  animation: signalFlow 1.2s linear infinite;
+}
+
+.sig-node rect {
+  transition: stroke 180ms ease, fill 180ms ease;
+}
+
+.sig-node.is-lit rect {
+  stroke: #34d399;
+  fill: #152736;
 }
 
 .stage-header-row {
@@ -627,7 +717,40 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Pillar 1: Portfolio — Flagship Release Cards (clifan.com/<project>/) */
+/* Pillar 1: Portfolio — Concept Filter Bar & Flagship Release Cards */
+.concept-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.concept-chip {
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background-color: var(--surface);
+  color: var(--ink-secondary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.concept-chip:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.concept-chip[aria-pressed="true"] {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .release-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -636,6 +759,7 @@ h1, h2, h3 {
 }
 
 .release-card {
+  position: relative;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -644,13 +768,26 @@ h1, h2, h3 {
   border-radius: 12px;
   border: 1px solid var(--border);
   background-color: var(--surface);
-  transition: border-color 140ms ease, background-color 140ms ease;
+  background-image: radial-gradient(
+    420px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
+    var(--accent-soft),
+    transparent 65%
+  );
+  transition: border-color 160ms ease, background-color 160ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms ease;
 }
 
 .release-card:hover,
 .release-card.is-active {
   border-color: var(--accent);
   background-color: var(--surface-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -14px rgba(8, 71, 196, 0.22);
+}
+
+.release-card.is-dimmed,
+.ledger-row.is-dimmed {
+  opacity: 0.32;
+  transform: scale(0.99);
 }
 
 .release-card.featured-wide {

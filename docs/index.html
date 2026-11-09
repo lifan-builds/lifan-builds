@@ -41,46 +41,50 @@
     <!-- Hero + Live Interactive Build Stage -->
     <section class="personal-hero" aria-label="Introduction">
       <div class="hero-identity">
-        <p class="status-line">
+        <p class="status-line hero-stagger-1">
           <span class="status-indicator" aria-hidden="true"></span>
-          <span>Staff Engineer @ Google · Building local-first agent systems</span>
+          <span>Indie Developer &amp; Staff Engineer @ Google · Local-first AI &amp; ML systems</span>
         </p>
-        <h1>Software that keeps data local, capability measurable, and <em>humans in the loop.</em></h1>
-        <p class="hero-bio">
-          I’m Lifan Chen. I build background computer-use engines, personal-data brokers, and evidence-gated workflows—and document what holds up under real benchmarks.
+        <h1 class="hero-stagger-2">Useful local tools, frontier ML, and AI agents—<em>verified by real evals.</em></h1>
+        <p class="hero-bio hero-stagger-3">
+          I’m Lifan Chen. As an indie builder and engineer, I ship local-first utilities, applied machine learning pipelines, and multi-cursor AI agents backed by deterministic quality&nbsp;harnesses.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions hero-stagger-3">
           <a class="button primary" href="#quests">Explore selected builds ↓</a>
           <a class="button secondary" href="journal/">Read journal &amp; briefs →</a>
           <a class="button secondary" href="https://clifan.substack.com/">Substack ↗</a>
         </div>
-        <div class="focus-strip" aria-label="Core engineering focus areas">
-          <div class="focus-item">
-            <strong>Local-first products</strong>
-            Vaults and exporters with zero cloud custody.
-          </div>
-          <div class="focus-item">
-            <strong>Agent control surfaces</strong>
-            Background browser and macOS automation.
-          </div>
-          <div class="focus-item">
-            <strong>Evaluation loops</strong>
-            Repeatable token, latency, and pass-rate checks.
-          </div>
-          <div class="focus-item">
-            <strong>Self-improving harnesses</strong>
-            Turning agent failures into deterministic guards.
-          </div>
+        <div class="focus-strip hero-stagger-4" role="group" aria-label="Four core builder pillars (click to filter builds)">
+          <button type="button" class="focus-item is-active" data-concept-pill="local">
+            <span class="focus-idx" aria-hidden="true">01 · LOCAL &amp; USEFUL</span>
+            <strong>Indie local-first tools</strong>
+            <span>Zero cloud custody, fast native UX, and user-owned&nbsp;data.</span>
+          </button>
+          <button type="button" class="focus-item" data-concept-pill="ml">
+            <span class="focus-idx" aria-hidden="true">02 · MACHINE LEARNING</span>
+            <strong>Applied ML &amp; model routing</strong>
+            <span>Model waterfalls, audio synthesis, and KV-cache&nbsp;audits.</span>
+          </button>
+          <button type="button" class="focus-item" data-concept-pill="agents">
+            <span class="focus-idx" aria-hidden="true">03 · AI AGENTS</span>
+            <strong>Autonomous agent harnesses</strong>
+            <span>Multi-cursor computer use, MCP brokers, and quota&nbsp;rotation.</span>
+          </button>
+          <button type="button" class="focus-item" data-concept-pill="eval">
+            <span class="focus-idx" aria-hidden="true">04 · EVALUATION &amp; QUALITY</span>
+            <strong>Measurable quality loops</strong>
+            <span>114× token benchmarks, 0.0 px drift, and primary&nbsp;receipts.</span>
+          </button>
         </div>
       </div>
 
       <p class="sr-only">
-        Interactive build inspector for Faster Mac Use, Agent Autofill, FreshPowder, AI Builder Brief, and Nitan Podcast. Full details follow in Selected Builds below.
+        Interactive build inspector for Faster Mac Use, Agent Autofill, QuotaSwitch, FreshPowder, Perks Reminder, and AI Builder Brief. Full details follow in Selected Builds below.
       </p>
-      <div class="workbench-stage" aria-hidden="true">
+      <div class="workbench-stage hero-stagger-4" aria-hidden="true">
         <div class="stage-chrome">
           <div class="chrome-dots"><span></span><span></span><span></span></div>
-          <span class="chrome-title">clifan.com — live build inspector</span>
+          <span class="chrome-title">clifan.com — live architecture &amp; build inspector</span>
           <span class="chrome-hint">Keys 1–6</span>
         </div>
         <div class="stage-tabs" role="tablist" aria-label="Preview hosted builds">
@@ -91,7 +95,7 @@
           <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="perks"><span class="stage-tab-key">5</span> perks</button>
           <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="brief"><span class="stage-tab-key">6</span> brief</button>
         </div>
-        <div class="stage-body">
+        <div class="stage-body" id="stage-body-panel">
           <div class="stage-header-row">
             <span class="stage-project-name" id="stage-project-name">Faster Mac Use (fmu)</span>
             <span class="stage-route-pill" id="stage-route-pill">clifan.com/faster-mac-use/</span>
@@ -99,6 +103,33 @@
           <p class="stage-summary" id="stage-summary">
             Background multi-cursor browser &amp; macOS computer-use engine driving unfocused Chrome tab groups and native apps in parallel.
           </p>
+
+          <!-- Animated 4-Pillar Signal Telemetry Schematic -->
+          <svg class="stage-signal-svg" viewBox="0 0 520 54" id="stage-signal-svg">
+            <line x1="68" y1="27" x2="452" y2="27" stroke="#223242" stroke-width="2"/>
+            <line x1="68" y1="27" x2="452" y2="27" stroke="#34d399" stroke-width="2" stroke-dasharray="6 6" class="signal-flow-line"/>
+            <g class="sig-node is-lit" data-sig="local" transform="translate(8, 7)">
+              <rect width="112" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+              <text x="56" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">01 LOCAL TOOL</text>
+              <text x="56" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-local">macOS AX + CDP</text>
+            </g>
+            <g class="sig-node" data-sig="ml" transform="translate(138, 7)">
+              <rect width="112" height="40" rx="6" fill="#13202c" stroke="#283a4c" stroke-width="1.5"/>
+              <text x="56" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#78b3ff">02 ML COMPACT</text>
+              <text x="56" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-ml">268-tok schema</text>
+            </g>
+            <g class="sig-node is-lit" data-sig="agents" transform="translate(268, 7)">
+              <rect width="112" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+              <text x="56" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">03 AI AGENT</text>
+              <text x="56" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-agents">3-cursor swarm</text>
+            </g>
+            <g class="sig-node is-lit" data-sig="eval" transform="translate(398, 7)">
+              <rect width="114" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+              <text x="57" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">04 EVAL QUALITY</text>
+              <text x="57" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-eval">114× fewer tok</text>
+            </g>
+          </svg>
+
           <div class="stage-metrics" id="stage-metrics">
             <div class="stage-metric-cell">
               <span class="stage-metric-val">114× fewer</span>
@@ -129,14 +160,22 @@
       <div class="section-header">
         <div>
           <h2 id="builds-heading">Selected Builds</h2>
-          <p class="section-sub">Interactive product releases hosted on clifan.com alongside open-source CLI and agent tools.</p>
+          <p class="section-sub">Filter by domain or hover any card to inspect its live telemetry and transition into its showcase.</p>
         </div>
         <a class="section-link" href="https://github.com/lifan-builds?tab=repositories">All GitHub repositories ↗</a>
       </div>
 
-      <div class="release-grid">
+      <div class="concept-filter-bar" role="group" aria-label="Filter builds by engineering pillar">
+        <button type="button" class="concept-chip" aria-pressed="true" data-concept="all">All Builds (9)</button>
+        <button type="button" class="concept-chip" aria-pressed="false" data-concept="local">01 · Indie Local &amp; Useful Tools</button>
+        <button type="button" class="concept-chip" aria-pressed="false" data-concept="ml">02 · Machine Learning</button>
+        <button type="button" class="concept-chip" aria-pressed="false" data-concept="agents">03 · AI Agents</button>
+        <button type="button" class="concept-chip" aria-pressed="false" data-concept="eval">04 · Evaluation &amp; Quality</button>
+      </div>
+
+      <div class="release-grid" id="release-grid">
         <!-- 1. Faster Mac Use -->
-        <article class="release-card featured-wide is-active" data-build="fmu">
+        <article class="release-card featured-wide is-active" data-build="fmu" data-pillars="local agents eval">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="faster-mac-use/">Faster Mac Use (fmu)</a></h3>
@@ -180,7 +219,7 @@
         </article>
 
         <!-- 2. Agent Autofill -->
-        <article class="release-card" data-build="autofill">
+        <article class="release-card" data-build="autofill" data-pillars="local agents eval">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="agent-autofill/">Agent Autofill</a></h3>
@@ -203,7 +242,7 @@
         </article>
 
         <!-- 3. QuotaSwitch -->
-        <article class="release-card" data-build="quotaswitch">
+        <article class="release-card" data-build="quotaswitch" data-pillars="local ml agents">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="quotaswitch/">QuotaSwitch</a></h3>
@@ -226,7 +265,7 @@
         </article>
 
         <!-- 4. FreshPowder -->
-        <article class="release-card" data-build="freshpowder">
+        <article class="release-card" data-build="freshpowder" data-pillars="local eval">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="freshpowder/">FreshPowder</a></h3>
@@ -249,7 +288,7 @@
         </article>
 
         <!-- 5. Perks Reminder -->
-        <article class="release-card" data-build="perks">
+        <article class="release-card" data-build="perks" data-pillars="local">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="perks-reminder/">Perks Reminder</a></h3>
@@ -272,7 +311,7 @@
         </article>
 
         <!-- 6. AI Builder Brief -->
-        <article class="release-card" data-build="brief">
+        <article class="release-card" data-build="brief" data-pillars="ml agents eval">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="ai-builder-brief/">AI Builder Brief</a></h3>
@@ -295,7 +334,7 @@
         </article>
 
         <!-- 7. Nitan Podcast -->
-        <article class="release-card" data-build="nitan">
+        <article class="release-card" data-build="nitan" data-pillars="ml eval">
           <div>
             <div class="release-top">
               <h3 class="release-title"><a href="nitan-podcast/">Nitan Podcast (泥潭播客)</a></h3>
@@ -320,27 +359,27 @@
       <!-- Open-Source CLI & Agent Infrastructure Ledger -->
       <h3 class="ledger-subheading">Open-Source CLI Tools &amp; Agent Infrastructure</h3>
       <div class="ledger-list" role="list">
-        <a class="ledger-row" role="listitem" href="foliofen-cli/">
+        <a class="ledger-row" role="listitem" href="foliofen-cli/" data-build="foliofen" data-pillars="local eval">
           <span class="ledger-title">Foliofen CLI →</span>
           <span class="ledger-summary">Local Chrome harness for patient-owned MyChart health record exports (Markdown &amp; JSONL).</span>
           <span class="ledger-meta" aria-hidden="true">/foliofen-cli/</span>
         </a>
-        <a class="ledger-row" role="listitem" href="castforge/">
+        <a class="ledger-row" role="listitem" href="castforge/" data-build="castforge" data-pillars="ml eval">
           <span class="ledger-title">CastForge →</span>
           <span class="ledger-summary">Source-transparent Python podcast framework with StoryCluster gates, NotebookLM, and atomic R2 + RSS.</span>
           <span class="ledger-meta" aria-hidden="true">/castforge/ · PyPI</span>
         </a>
-        <a class="ledger-row" role="listitem" href="quotaswitch/">
+        <a class="ledger-row" role="listitem" href="quotaswitch/" data-build="quotaswitch" data-pillars="local ml agents">
           <span class="ledger-title">QuotaSwitch →</span>
           <span class="ledger-summary">Unified quota-driven multi-account switcher and auto-rotator for Antigravity and Codex.</span>
           <span class="ledger-meta" aria-hidden="true">/quotaswitch/ · npm</span>
         </a>
-        <a class="ledger-row" role="listitem" href="perks-reminder/">
+        <a class="ledger-row" role="listitem" href="perks-reminder/" data-build="perks" data-pillars="local">
           <span class="ledger-title">Perks Reminder →</span>
           <span class="ledger-summary">Local-first credit card benefits, welcome bonus, and annual-fee ROI tracker.</span>
           <span class="ledger-meta" aria-hidden="true">/perks-reminder/ · 18★</span>
         </a>
-        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/context-harness">
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/context-harness" data-pillars="agents eval">
           <span class="ledger-title">Context Harness ↗</span>
           <span class="ledger-summary">Filesystem memory layer and companion skills for coding agents.</span>
           <span class="ledger-meta" aria-hidden="true">GitHub · Agent memory</span>
