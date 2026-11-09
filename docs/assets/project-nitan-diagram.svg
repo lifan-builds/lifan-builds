@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <rect width="420" height="150" rx="10" fill="#131629" stroke="#2d3354" stroke-width="1.5"/>
+  <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#a5b4fc">NITAN PODCAST (泥潭播客) · THREAD-TO-AUDIO SYNTHESIS</text>
+
+  <rect x="16" y="40" width="102" height="72" rx="7" fill="#1b2038" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="67" y="62" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#c7d2fe">USCARDFORUM</text>
+  <text x="67" y="78" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">Hot Thread Clusters</text>
+  <text x="67" y="93" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">Cited Receipts ✓</text>
+
+  <line x1="118" y1="76" x2="152" y2="76" stroke="#818cf8" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <rect x="152" y="40" width="124" height="72" rx="7" fill="#1b2038" stroke="#34d399" stroke-width="1.5"/>
+  <text x="214" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#5eead4">DUAL-HOST TTS</text>
+  <g stroke="#34d399" stroke-width="3" stroke-linecap="round">
+    <line x1="172" y1="82" x2="172" y2="72"/><line x1="182" y1="88" x2="182" y2="66"/>
+    <line x1="192" y1="92" x2="192" y2="62"/><line x1="202" y1="84" x2="202" y2="70"/>
+    <line x1="212" y1="94" x2="212" y2="60"/><line x1="222" y1="86" x2="222" y2="68"/>
+    <line x1="232" y1="90" x2="232" y2="64"/><line x1="242" y1="82" x2="242" y2="72"/>
+    <line x1="252" y1="85" x2="252" y2="69"/>
+  </g>
+  <text x="214" y="104" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">06:00 Weekly Digest</text>
+
+  <line x1="276" y1="76" x2="308" y2="76" stroke="#34d399" stroke-width="2"/>
+
+  <rect x="308" y="40" width="96" height="72" rx="7" fill="#1b2038" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="356" y="62" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#fcd34d">RSS &amp; WEB</text>
+  <text x="356" y="78" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">Apple Podcasts</text>
+  <text x="356" y="93" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">Spotify + Chapters</text>
+</svg>

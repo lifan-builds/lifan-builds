@@ -163,7 +163,7 @@
           <div class="stage-chrome">
             <div class="chrome-dots"><span></span><span></span><span></span></div>
             <span class="chrome-title">clifan.com — live architecture &amp; build inspector</span>
-            <span class="chrome-hint">Keys 1–6</span>
+            <span class="chrome-hint">Keys 1–9</span>
           </div>
           <div class="stage-tabs" role="tablist" aria-label="Preview hosted builds">
             <button type="button" class="stage-tab" role="tab" aria-selected="true" data-build="fmu"><span class="stage-tab-key">1</span> fmu</button>
@@ -172,6 +172,9 @@
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="freshpowder"><span class="stage-tab-key">4</span> freshpowder</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="perks"><span class="stage-tab-key">5</span> perks</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="brief"><span class="stage-tab-key">6</span> brief</button>
+            <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="nitan"><span class="stage-tab-key">7</span> nitan</button>
+            <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="foliofen"><span class="stage-tab-key">8</span> foliofen</button>
+            <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="castforge"><span class="stage-tab-key">9</span> castforge</button>
           </div>
           <div class="stage-body" id="stage-body-panel">
             <div class="stage-header-row">
@@ -182,30 +185,22 @@
               Background multi-cursor browser &amp; macOS computer-use engine driving unfocused Chrome tab groups and native apps in parallel.
             </p>
 
-            <!-- Animated 4-Pillar Signal Telemetry Schematic -->
-            <svg class="stage-signal-svg" viewBox="0 0 520 54" id="stage-signal-svg">
-              <line x1="68" y1="27" x2="452" y2="27" stroke="#223242" stroke-width="2"/>
-              <line x1="68" y1="27" x2="452" y2="27" stroke="#34d399" stroke-width="2" stroke-dasharray="6 6" class="signal-flow-line"/>
-              <g class="sig-node is-lit" data-sig="local" transform="translate(8, 7)">
-                <rect width="112" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
-                <text x="56" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">01 LOCAL TOOL</text>
-                <text x="56" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-local">macOS AX + CDP</text>
-              </g>
-              <g class="sig-node" data-sig="ml" transform="translate(138, 7)">
-                <rect width="112" height="40" rx="6" fill="#13202c" stroke="#283a4c" stroke-width="1.5"/>
-                <text x="56" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#78b3ff">02 ML COMPACT</text>
-                <text x="56" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-ml">268-tok schema</text>
-              </g>
-              <g class="sig-node is-lit" data-sig="agents" transform="translate(268, 7)">
-                <rect width="112" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
-                <text x="56" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">03 AI AGENT</text>
-                <text x="56" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-agents">3-cursor swarm</text>
-              </g>
-              <g class="sig-node is-lit" data-sig="eval" transform="translate(398, 7)">
-                <rect width="114" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
-                <text x="57" y="17" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">04 EVAL QUALITY</text>
-                <text x="57" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1" id="sig-sub-eval">114× fewer tok</text>
-              </g>
+            <!-- Project-Specific Animated Architecture Schematic -->
+            <svg class="stage-signal-svg" viewBox="0 0 520 68" id="stage-signal-svg">
+              <rect x="6" y="14" width="110" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+              <text x="61" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">AGENT REPL</text>
+              <text x="61" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">3-Cursor Swarm</text>
+              <path d="M116 34 L182 14 M116 34 L182 34 M116 34 L182 54" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+              <rect x="182" y="4" width="142" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+              <text x="253" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#93c5fd">Chrome MV3 Tab #1 (bg)</text>
+              <rect x="182" y="25" width="142" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+              <text x="253" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#93c5fd">Chrome MV3 Tab #2 (bg)</text>
+              <rect x="182" y="46" width="142" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+              <text x="253" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">macOS AX Native (fmu-ax)</text>
+              <path d="M324 14 L388 34 M324 34 L388 34 M324 54 L388 34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+              <rect x="388" y="14" width="126" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+              <text x="451" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">268-TOK DELTA</text>
+              <text x="451" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">114× fewer · 0.0px</text>
             </svg>
 
             <div class="stage-metrics" id="stage-metrics">
@@ -303,7 +298,7 @@
         <!-- 2. Agent Autofill -->
         <article class="release-card" data-build="autofill" data-pillars="local agents eval">
           <div>
-            <img class="release-card-art" src="agent-autofill/poster.jpg" width="360" height="128" alt="" aria-hidden="true">
+            <img class="release-card-art" src="assets/project-autofill-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="agent-autofill/">Agent Autofill</a></h3>
               <span class="release-route" aria-hidden="true">/agent-autofill/</span>
@@ -327,7 +322,7 @@
         <!-- 3. QuotaSwitch -->
         <article class="release-card" data-build="quotaswitch" data-pillars="local ml agents">
           <div>
-            <img class="release-card-art" src="assets/pillar-ml-agents-pixel.jpg" width="360" height="128" alt="" aria-hidden="true">
+            <img class="release-card-art" src="assets/project-quotaswitch-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="quotaswitch/">QuotaSwitch</a></h3>
               <span class="release-route" aria-hidden="true">/quotaswitch/</span>
@@ -351,7 +346,7 @@
         <!-- 4. FreshPowder -->
         <article class="release-card" data-build="freshpowder" data-pillars="local eval">
           <div>
-            <img class="release-card-art" src="freshpowder/poster.jpg" width="360" height="128" alt="" aria-hidden="true">
+            <img class="release-card-art" src="assets/project-freshpowder-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="freshpowder/">FreshPowder</a></h3>
               <span class="release-route" aria-hidden="true">/freshpowder/</span>
@@ -375,7 +370,7 @@
         <!-- 5. Perks Reminder -->
         <article class="release-card" data-build="perks" data-pillars="local">
           <div>
-            <img class="release-card-art" src="assets/workshop-room.svg" width="360" height="128" alt="" aria-hidden="true">
+            <img class="release-card-art" src="assets/project-perks-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="perks-reminder/">Perks Reminder</a></h3>
               <span class="release-route" aria-hidden="true">/perks-reminder/</span>
@@ -399,7 +394,7 @@
         <!-- 6. AI Builder Brief -->
         <article class="release-card" data-build="brief" data-pillars="ml agents eval">
           <div>
-            <img class="release-card-art" src="ai-builder-brief/cover.jpg" width="360" height="128" alt="" aria-hidden="true">
+            <img class="release-card-art" src="assets/project-brief-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="ai-builder-brief/">AI Builder Brief</a></h3>
               <span class="release-route" aria-hidden="true">/ai-builder-brief/</span>
@@ -423,7 +418,7 @@
         <!-- 7. Nitan Podcast -->
         <article class="release-card" data-build="nitan" data-pillars="ml eval">
           <div>
-            <img class="release-card-art" src="assets/jrpg-overworld-pixel.png" width="360" height="128" alt="" aria-hidden="true">
+            <img class="release-card-art" src="assets/project-nitan-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="nitan-podcast/">Nitan Podcast (泥潭播客)</a></h3>
               <span class="release-route" aria-hidden="true">/nitan-podcast/</span>
@@ -440,6 +435,54 @@
           <div class="release-links">
             <a class="primary-action" href="nitan-podcast/">Listen →</a>
             <a href="https://github.com/lifan-builds/nitan-podcast">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 8. Foliofen CLI -->
+        <article class="release-card" data-build="foliofen" data-pillars="local eval">
+          <div>
+            <img class="release-card-art" src="assets/project-foliofen-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
+            <div class="release-top">
+              <h3 class="release-title"><a href="foliofen-cli/">Foliofen CLI</a></h3>
+              <span class="release-route" aria-hidden="true">/foliofen-cli/</span>
+            </div>
+            <p class="release-desc">
+              Local-first Chrome harness for exporting patient-owned Epic MyChart records into Markdown &amp; JSONL with zero cloud&nbsp;custody.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">POSIX 0600</span>
+              <span class="metric-badge">Patient guard</span>
+              <span class="metric-badge">Vision OCR</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="foliofen-cli/">Overview →</a>
+            <a href="https://www.npmjs.com/package/@lifan-builds/mychart-cli">npm ↗</a>
+            <a href="https://github.com/lifan-builds/foliofen-cli">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 9. CastForge -->
+        <article class="release-card" data-build="castforge" data-pillars="ml eval">
+          <div>
+            <img class="release-card-art" src="assets/project-castforge-diagram.svg" width="360" height="128" alt="" aria-hidden="true">
+            <div class="release-top">
+              <h3 class="release-title"><a href="castforge/">CastForge</a></h3>
+              <span class="release-route" aria-hidden="true">/castforge/</span>
+            </div>
+            <p class="release-desc">
+              Fail-closed Python framework for source-transparent podcast pipelines with StoryCluster gates, NotebookLM, and atomic R2 +&nbsp;RSS.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">PyPI 0.1.3</span>
+              <span class="metric-badge">Schema v2</span>
+              <span class="metric-badge">Atomic R2+RSS</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="castforge/">Overview →</a>
+            <a href="https://pypi.org/project/castforge/">PyPI ↗</a>
+            <a href="https://github.com/lifan-builds/castforge">GitHub ↗</a>
           </div>
         </article>
       </div>

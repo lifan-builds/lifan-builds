@@ -8,12 +8,21 @@ const BUILD_DATA = {
     repoLabel: 'lifan-builds/faster-mac-use ↗',
     summary: 'Background multi-cursor browser & macOS computer-use engine driving unfocused Chrome tab groups and native apps in parallel.',
     pillars: ['local', 'agents', 'eval'],
-    signals: {
-      local: 'macOS AX + CDP',
-      ml: '268-tok schema',
-      agents: '3-cursor swarm',
-      eval: '114× fewer tok'
-    },
+    diagram: `
+      <rect x="6" y="14" width="110" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="61" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">AGENT REPL</text>
+      <text x="61" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">3-Cursor Swarm</text>
+      <path d="M116 34 L182 14 M116 34 L182 34 M116 34 L182 54" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="182" y="4" width="142" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="253" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#93c5fd">Chrome MV3 Tab #1 (bg)</text>
+      <rect x="182" y="25" width="142" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="253" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#93c5fd">Chrome MV3 Tab #2 (bg)</text>
+      <rect x="182" y="46" width="142" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="253" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">macOS AX Native (fmu-ax)</text>
+      <path d="M324 14 L388 34 M324 34 L388 34 M324 54 L388 34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="388" y="14" width="126" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="451" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">268-TOK DELTA</text>
+      <text x="451" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">114× fewer · 0.0px</text>`,
     metrics: [
       { val: '114× fewer', lbl: 'Tokens vs @playwright/mcp' },
       { val: '0.0 px', lbl: 'Physical cursor drift' },
@@ -25,17 +34,29 @@ const BUILD_DATA = {
     name: 'Agent Autofill',
     route: 'clifan.com/agent-autofill/',
     href: 'agent-autofill/',
-    art: 'agent-autofill/poster.jpg',
+    art: 'assets/project-autofill-diagram.svg',
     repo: 'agent-autofill/demo/',
     repoLabel: 'Interactive approval demo →',
     summary: 'Local-first personal vault and MCP broker for macOS agents. Share scoped fields, origin-bound logins, and 2FA codes with explicit human approval.',
     pillars: ['local', 'agents', 'eval'],
-    signals: {
-      local: 'AES-GCM vault',
-      ml: 'Field matcher',
-      agents: 'MCP broker',
-      eval: 'Origin gate ✓'
-    },
+    diagram: `
+      <rect x="6" y="14" width="108" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="60" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#5eead4">AES-GCM VAULT</text>
+      <text x="60" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Local Keychain</text>
+      <line x1="114" y1="34" x2="152" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="152" y="22" width="114" height="38" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="209" y="38" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#93c5fd">MCP BROKER</text>
+      <text x="209" y="51" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Scoped Fields</text>
+      <rect x="152" y="2" width="114" height="15" rx="3" fill="#2a1215" stroke="#f87171" stroke-width="1"/>
+      <text x="209" y="12" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#fca5a5">✗ LLM Context (0 Secrets)</text>
+      <line x1="266" y1="41" x2="304" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="304" y="14" width="100" height="40" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="354" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#fcd34d">HUMAN GATE ✓</text>
+      <text x="354" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Origin Verified</text>
+      <line x1="404" y1="34" x2="432" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="432" y="14" width="82" height="40" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="473" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#5eead4">1-TIME FILL</text>
+      <text x="473" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">DOM Injected</text>`,
     metrics: [
       { val: 'AES-GCM', lbl: 'Local encrypted vault' },
       { val: '1-time', lbl: 'Origin-bound handoff' },
@@ -47,17 +68,25 @@ const BUILD_DATA = {
     name: 'QuotaSwitch',
     route: 'clifan.com/quotaswitch/',
     href: 'quotaswitch/',
-    art: 'assets/pillar-ml-agents-pixel.jpg',
+    art: 'assets/project-quotaswitch-diagram.svg',
     repo: 'https://github.com/lifan-builds/quotaswitch',
     repoLabel: 'lifan-builds/quotaswitch ↗',
     summary: 'Unified quota-driven multi-account switcher and 30s background auto-rotator for Google Antigravity (agy) and OpenAI Codex (codex).',
     pillars: ['local', 'ml', 'agents'],
-    signals: {
-      local: 'Keychain store',
-      ml: 'Model waterfall',
-      agents: '30s auto-rotate',
-      eval: 'Mid-turn resume'
-    },
+    diagram: `
+      <rect x="6" y="6" width="128" height="24" rx="5" fill="#13202c" stroke="#f59e0b" stroke-width="1.3"/>
+      <text x="70" y="21" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#fcd34d">agy: Claude 0% (Exhausted)</text>
+      <rect x="6" y="38" width="128" height="24" rx="5" fill="#13202c" stroke="#60a5fa" stroke-width="1.3"/>
+      <text x="70" y="53" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#93c5fd">codex: 5h Quota &lt; 5%</text>
+      <path d="M134 18 L186 34 M134 50 L186 34" stroke="#60a5fa" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="186" y="12" width="144" height="44" rx="7" fill="#13202c" stroke="#34d399" stroke-width="1.6"/>
+      <text x="258" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">30s AUTO-ROTATOR</text>
+      <text x="258" y="45" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">--provider=all daemon</text>
+      <path d="M330 34 L380 18 M330 34 L380 50" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="380" y="6" width="134" height="24" rx="5" fill="#13202c" stroke="#34d399" stroke-width="1.3"/>
+      <text x="447" y="21" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">Waterfall -> Gemini 4 (100%)</text>
+      <rect x="380" y="38" width="134" height="24" rx="5" fill="#13202c" stroke="#34d399" stroke-width="1.3"/>
+      <text x="447" y="53" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">Codex Account #2 Resumed</text>`,
     metrics: [
       { val: 'agy + codex', lbl: 'Dual-provider CLI' },
       { val: '30s watch', lbl: 'Auto-rotate & resume' },
@@ -69,17 +98,26 @@ const BUILD_DATA = {
     name: 'FreshPowder',
     route: 'clifan.com/freshpowder/',
     href: 'freshpowder/',
-    art: 'freshpowder/poster.jpg',
+    art: 'assets/project-freshpowder-diagram.svg',
     repo: 'https://freshpowder.clifan.com/',
     repoLabel: 'Launch live deal finder ↗',
     summary: 'Ski and snowboard deal aggregator across 28 North American retailers, normalized across USD/CAD and filtered by exact size and budget.',
     pillars: ['local', 'eval'],
-    signals: {
-      local: '28 shop feeds',
-      ml: 'Entity match',
-      agents: '6h collector',
-      eval: 'USD/CAD audit'
-    },
+    diagram: `
+      <rect x="6" y="4" width="112" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="62" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#93c5fd">evo · Backcountry</text>
+      <rect x="6" y="25" width="112" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="62" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#93c5fd">Corbetts · Oberson (CAD)</text>
+      <rect x="6" y="46" width="112" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="62" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#93c5fd">+24 Specialty Shops</text>
+      <path d="M118 13 L176 34 M118 34 L176 34 M118 55 L176 34" stroke="#60a5fa" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="176" y="12" width="154" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="253" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#fcd34d">ENTITY + FX ENGINE</text>
+      <text x="253" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">USD/CAD · Exact cm/mondo</text>
+      <line x1="330" y1="34" x2="376" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="376" y="12" width="138" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="445" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">VERIFIED DEALS</text>
+      <text x="445" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">QST 98 · $449 (-36%)</text>`,
     metrics: [
       { val: '28 shops', lbl: 'Live retailer feeds' },
       { val: 'USD / CAD', lbl: 'Normalized pricing' },
@@ -91,17 +129,26 @@ const BUILD_DATA = {
     name: 'Perks Reminder',
     route: 'clifan.com/perks-reminder/',
     href: 'perks-reminder/',
-    art: 'assets/workshop-room.svg',
+    art: 'assets/project-perks-diagram.svg',
     repo: 'https://www.perks-reminder.com/',
     repoLabel: 'Launch perks-reminder.com ↗',
     summary: 'Free, open-source credit card benefits, welcome bonus, and annual-fee ROI tracker with duplicate physical-card support and zero bank logins.',
     pillars: ['local'],
-    signals: {
-      local: '0 bank logins',
-      ml: 'Static catalog',
-      agents: 'Cycle alerts',
-      eval: 'Schema check ✓'
-    },
+    diagram: `
+      <rect x="6" y="12" width="124" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="68" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#93c5fd">PHYSICAL CARDS</text>
+      <text x="68" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Amex #1 · #2 · CSR</text>
+      <path d="M130 34 L176 13 M130 34 L176 34 M130 34 L176 55" stroke="#60a5fa" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="176" y="4" width="148" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="250" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#5eead4">Monthly ($15 Uber · $20 Dining)</text>
+      <rect x="176" y="25" width="148" height="18" rx="4" fill="#13202c" stroke="#f59e0b" stroke-width="1.2"/>
+      <text x="250" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#fcd34d">Quarterly / Semi ($50 Saks)</text>
+      <rect x="176" y="46" width="148" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="250" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#5eead4">Annual ($300 Travel Credit)</text>
+      <path d="M324 13 L372 34 M324 34 L372 34 M324 55 L372 34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="372" y="12" width="142" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="443" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">NET ROI +$1,145</text>
+      <text x="443" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">0 Bank Logins · JSON</text>`,
     metrics: [
       { val: '18★ GitHub', lbl: 'Open-source MIT' },
       { val: '0 logins', lbl: 'No Plaid or bank auth' },
@@ -113,17 +160,23 @@ const BUILD_DATA = {
     name: 'AI Builder Brief',
     route: 'clifan.com/ai-builder-brief/',
     href: 'ai-builder-brief/',
-    art: 'ai-builder-brief/cover.jpg',
+    art: 'assets/project-brief-diagram.svg',
     repo: 'journal/ai-builder-brief/',
     repoLabel: 'Browse 59 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
     pillars: ['ml', 'agents', 'eval'],
-    signals: {
-      local: '59 MD archive',
-      ml: 'Frontier ML',
-      agents: 'Daily collector',
-      eval: 'Primary gate ✓'
-    },
+    diagram: `
+      <polygon points="6,6 138,16 138,52 6,62" fill="#13202c" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="68" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.8" font-weight="600" fill="#93c5fd">140+ RAW SIGNALS</text>
+      <text x="68" y="43" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">Commits · ArXiv · HN</text>
+      <line x1="138" y1="34" x2="184" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="184" y="12" width="150" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="259" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#fcd34d">PRIMARY RECEIPT GATE</text>
+      <text x="259" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">10/10 Links Verified ✓</text>
+      <line x1="334" y1="34" x2="380" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="380" y="12" width="134" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="447" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">TOP 10 DAILY BRIEF</text>
+      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">59+ Published Editions</text>`,
     metrics: [
       { val: '59+ briefs', lbl: 'Published daily archive' },
       { val: '10 stories', lbl: 'Per daily edition' },
@@ -135,17 +188,31 @@ const BUILD_DATA = {
     name: 'Nitan Podcast (泥潭播客)',
     route: 'clifan.com/nitan-podcast/',
     href: 'nitan-podcast/',
-    art: 'assets/jrpg-overworld-pixel.png',
+    art: 'assets/project-nitan-diagram.svg',
     repo: 'https://github.com/lifan-builds/nitan-podcast',
     repoLabel: 'lifan-builds/nitan-podcast ↗',
     summary: 'Weekly six-minute Chinese audio digest synthesized from high-signal USCardForum discussions and shipped with verified thread receipts via RSS.',
     pillars: ['ml', 'eval'],
-    signals: {
-      local: 'Show manifest',
-      ml: 'NotebookLM TTS',
-      agents: 'Nitan MCP',
-      eval: 'Audio HEAD ✓'
-    },
+    diagram: `
+      <rect x="6" y="12" width="128" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="70" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#93c5fd">USCARDFORUM</text>
+      <text x="70" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Cited Thread Clusters</text>
+      <line x1="134" y1="34" x2="176" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="176" y="8" width="164" height="52" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="258" y="23" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.8" font-weight="600" fill="#fcd34d">DUAL-HOST ZH AUDIO (6:00)</text>
+      <g fill="#34d399">
+        <rect x="196" y="36" width="4" height="14" rx="1"/><rect x="206" y="30" width="4" height="22" rx="1"/>
+        <rect x="216" y="34" width="4" height="16" rx="1"/><rect x="226" y="28" width="4" height="26" rx="1"/>
+        <rect x="236" y="35" width="4" height="14" rx="1"/><rect x="246" y="31" width="4" height="20" rx="1"/>
+        <rect x="256" y="27" width="4" height="26" rx="1"/><rect x="266" y="34" width="4" height="16" rx="1"/>
+        <rect x="276" y="30" width="4" height="22" rx="1"/><rect x="286" y="28" width="4" height="25" rx="1"/>
+        <rect x="296" y="35" width="4" height="14" rx="1"/><rect x="306" y="31" width="4" height="20" rx="1"/>
+        <rect x="316" y="36" width="4" height="12" rx="1"/>
+      </g>
+      <line x1="340" y1="34" x2="382" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="382" y="12" width="132" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="448" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#5eead4">RSS + SHOW NOTES</text>
+      <text x="448" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Apple · Spotify · Web</text>`,
     metrics: [
       { val: '6 min', lbl: 'Weekly audio briefing' },
       { val: 'RSS + Web', lbl: 'Apple & Spotify feeds' },
@@ -157,17 +224,25 @@ const BUILD_DATA = {
     name: 'Foliofen CLI',
     route: 'clifan.com/foliofen-cli/',
     href: 'foliofen-cli/',
-    art: 'assets/pillar-eval-forge-pixel.jpg',
+    art: 'assets/project-foliofen-diagram.svg',
     repo: 'https://github.com/lifan-builds/foliofen-cli',
     repoLabel: 'lifan-builds/foliofen-cli ↗',
     summary: 'Local-first CLI for exporting patient-owned Epic MyChart health records into deterministic Markdown or JSONL with zero cloud custody.',
     pillars: ['local', 'eval'],
-    signals: {
-      local: 'POSIX 0600',
-      ml: 'Vision PDF OCR',
-      agents: 'Chrome harness',
-      eval: 'Patient guard ✓'
-    },
+    diagram: `
+      <rect x="6" y="12" width="122" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="67" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#93c5fd">EPIC MYCHART</text>
+      <text x="67" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Authenticated Tab</text>
+      <line x1="128" y1="34" x2="170" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="170" y="22" width="154" height="38" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="247" y="38" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#fcd34d">PATIENT GUARD ✓</text>
+      <text x="247" y="51" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#cbd5e1">--require-active-patient</text>
+      <rect x="170" y="2" width="154" height="15" rx="3" fill="#2a1215" stroke="#f87171" stroke-width="1"/>
+      <text x="247" y="12" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#fca5a5">✗ 0 Cloud Custody · PHI Redacted</text>
+      <line x1="324" y1="41" x2="368" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="368" y="12" width="146" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="441" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#5eead4">POSIX 0600 EXPORT</text>
+      <text x="441" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Deterministic MD + JSONL</text>`,
     metrics: [
       { val: '0 cloud', lbl: 'Local POSIX 0600 store' },
       { val: 'MD + JSONL', lbl: 'Deterministic chunks' },
@@ -179,17 +254,27 @@ const BUILD_DATA = {
     name: 'CastForge',
     route: 'clifan.com/castforge/',
     href: 'castforge/',
-    art: 'assets/pillar-eval-forge-pixel.jpg',
+    art: 'assets/project-castforge-diagram.svg',
     repo: 'https://pypi.org/project/castforge/',
     repoLabel: 'PyPI: castforge 0.1.3 ↗',
     summary: 'Open-source Python framework for source-transparent podcast pipelines with StoryCluster evidence gates, NotebookLM audio, and atomic R2 + RSS checks.',
     pillars: ['ml', 'eval'],
-    signals: {
-      local: 'Offline fixtures',
-      ml: 'NotebookLM API',
-      agents: 'Stage hooks',
-      eval: 'Atomic R2+RSS'
-    },
+    diagram: `
+      <rect x="6" y="12" width="106" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.4"/>
+      <text x="59" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#93c5fd">1. DISCOVER</text>
+      <text x="59" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">StoryCluster Gate</text>
+      <line x1="112" y1="34" x2="138" y2="34" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4 3" class="signal-flow-line"/>
+      <rect x="138" y="12" width="106" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.4"/>
+      <text x="191" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#93c5fd">2. SCRIPT</text>
+      <text x="191" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">Manifest Schema v2</text>
+      <line x1="244" y1="34" x2="270" y2="34" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3" class="signal-flow-line"/>
+      <rect x="270" y="12" width="106" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.4"/>
+      <text x="323" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#fcd34d">3. AUDIO</text>
+      <text x="323" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">MP3 Ceiling Check</text>
+      <line x1="376" y1="34" x2="402" y2="34" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4 3" class="signal-flow-line"/>
+      <rect x="402" y="12" width="112" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="458" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#5eead4">4. PUBLISH ✓</text>
+      <text x="458" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">R2 HEAD -> RSS</text>`,
     metrics: [
       { val: 'PyPI 0.1.3', lbl: 'Trusted publishing' },
       { val: 'Schema v2', lbl: 'Cited EpisodeManifest' },
@@ -268,11 +353,10 @@ if (themeBtn) {
   });
 }
 
-// 2. Interactive Build Stage & 4-Pillar Signal Telemetry
+// 2. Interactive Build Stage & Project-Specific Architecture Schematics
 const stageTabs = [...document.querySelectorAll('.stage-tab[data-build]')];
 const releaseCards = [...document.querySelectorAll('.release-card[data-build]')];
 const ledgerRows = [...document.querySelectorAll('.ledger-row[data-pillars]')];
-const sigNodes = [...document.querySelectorAll('.sig-node[data-sig]')];
 const stageBody = document.getElementById('stage-body-panel');
 
 function selectBuild(key) {
@@ -300,6 +384,7 @@ function selectBuild(key) {
   const nameEl = document.getElementById('stage-project-name');
   const routeEl = document.getElementById('stage-route-pill');
   const summaryEl = document.getElementById('stage-summary');
+  const signalSvgEl = document.getElementById('stage-signal-svg');
   const metricsEl = document.getElementById('stage-metrics');
   const traceEl = document.getElementById('stage-trace');
   const stageArtEl = document.getElementById('stage-art-img');
@@ -309,18 +394,8 @@ function selectBuild(key) {
   if (nameEl) nameEl.textContent = item.name;
   if (routeEl) routeEl.textContent = item.route;
   if (summaryEl) summaryEl.textContent = item.summary;
+  if (signalSvgEl && item.diagram) signalSvgEl.innerHTML = item.diagram;
   if (stageArtEl && item.art) stageArtEl.src = item.art;
-
-  // Update 4-Pillar Signal SVG nodes
-  if (item.signals) {
-    for (const node of sigNodes) {
-      const k = node.dataset.sig;
-      const lit = item.pillars && item.pillars.includes(k);
-      node.classList.toggle('is-lit', Boolean(lit));
-      const sub = document.getElementById(`sig-sub-${k}`);
-      if (sub && item.signals[k]) sub.textContent = item.signals[k];
-    }
-  }
 
   if (metricsEl) {
     metricsEl.innerHTML = item.metrics
@@ -685,7 +760,7 @@ if (briefSearch && briefCards.length > 0) {
   });
 }
 
-// 6. Keyboard Shortcuts (Enter to open cover, 1-6 for Build Stage, t for Theme, / for Search)
+// 6. Keyboard Shortcuts (Enter to open cover, 1-9 for Build Stage, t for Theme, / for Search)
 window.addEventListener('keydown', event => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
   const tag = document.activeElement?.tagName;
@@ -708,7 +783,7 @@ window.addEventListener('keydown', event => {
     return;
   }
 
-  const keys = ['1', '2', '3', '4', '5', '6'];
+  const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const idx = keys.indexOf(event.key);
   if (idx !== -1 && stageTabs[idx]) {
     if (document.body.getAttribute('data-cover') === 'closed') {

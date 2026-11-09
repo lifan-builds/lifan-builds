@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <rect width="420" height="150" rx="10" fill="#0b1922" stroke="#23404e" stroke-width="1.5"/>
+  <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#67e8f9">FRESHPOWDER · 28-RETAILER SKI &amp; SNOWBOARD DEAL ENGINE</text>
+
+  <g fill="#112634" stroke="#38bdf8" stroke-width="1.2">
+    <rect x="16" y="34" width="92" height="28" rx="5"/>
+    <rect x="16" y="68" width="92" height="28" rx="5"/>
+    <rect x="16" y="102" width="92" height="28" rx="5"/>
+  </g>
+  <text x="62" y="52" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#e0f2fe">evo · Backcountry</text>
+  <text x="62" y="86" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#e0f2fe">Corbetts · PRFO</text>
+  <text x="62" y="120" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#7dd3fc">+24 N.A. Retailers</text>
+
+  <path d="M108 48 L152 76 M108 82 L152 82 M108 116 L152 88" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="4 3"/>
+
+  <rect x="152" y="48" width="114" height="68" rx="7" fill="#132a38" stroke="#34d399" stroke-width="1.5"/>
+  <text x="209" y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#5eead4">SPEC &amp; FX ENGINE</text>
+  <text x="209" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">USD / CAD Normalized</text>
+  <text x="209" y="99" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#93c5fd">Length · Waist · Camber</text>
+
+  <line x1="266" y1="82" x2="300" y2="82" stroke="#34d399" stroke-width="2"/>
+  <polygon points="298,78 305,82 298,86" fill="#34d399"/>
+
+  <rect x="306" y="42" width="98" height="80" rx="7" fill="#0f2330" stroke="#34d399" stroke-width="1.5"/>
+  <text x="355" y="63" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#34d399">BEST MATCH</text>
+  <text x="355" y="80" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#ffffff">$449 (-36%)</text>
+  <text x="355" y="96" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">178cm In-Stock ✓</text>
+  <path d="M320 110 Q 345 100, 390 112" fill="none" stroke="#38bdf8" stroke-width="2"/>
+</svg>

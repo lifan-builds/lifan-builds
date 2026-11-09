@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <defs>
+    <linearGradient id="bg-af" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1520"/>
+      <stop offset="100%" stop-color="#132436"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="150" rx="10" fill="url(#bg-af)" stroke="#24384b" stroke-width="1.5"/>
+  <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#78b3ff">AGENT AUTOFILL · ZERO-TRUST LOCAL MCP BROKER</text>
+  <rect x="16" y="38" width="96" height="62" rx="7" fill="#102030" stroke="#34d399" stroke-width="1.5"/>
+  <text x="64" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#5eead4">AES-256-GCM</text>
+  <text x="64" y="75" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1">Local Vault</text>
+  <text x="64" y="89" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#94a3b8">Profile + 2FA OTP</text>
+
+  <line x1="112" y1="69" x2="152" y2="69" stroke="#34d399" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="150,65 157,69 150,73" fill="#34d399"/>
+
+  <rect x="158" y="38" width="108" height="62" rx="7" fill="#16283a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="212" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#fcd34d">HUMAN APPROVAL</text>
+  <rect x="174" y="66" width="76" height="22" rx="4" fill="#065f46" stroke="#34d399" stroke-width="1"/>
+  <text x="212" y="80" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#ecfdf5">✓ Allow Once</text>
+
+  <line x1="266" y1="69" x2="306" y2="69" stroke="#34d399" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="304,65 311,69 304,73" fill="#34d399"/>
+
+  <rect x="312" y="38" width="92" height="62" rx="7" fill="#102030" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="358" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#93c5fd">ORIGIN FILL</text>
+  <text x="358" y="75" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1">DOM Injected</text>
+  <text x="358" y="89" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">0 LLM Leakage</text>
+
+  <rect x="16" y="114" width="388" height="22" rx="5" fill="#091119" stroke="#1e2f40"/>
+  <text x="26" y="128" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a3b8">MODEL CONTEXT: <tspan fill="#f87171">✗ Raw passwords blocked</tspan> · <tspan fill="#5eead4">✓ Scoped handle only</tspan></text>
+</svg>

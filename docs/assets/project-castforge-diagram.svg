@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <rect width="420" height="150" rx="10" fill="#0f1724" stroke="#28384d" stroke-width="1.5"/>
+  <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#78b3ff">CASTFORGE · FAIL-CLOSED SOURCE-TO-PODCAST STATE MACHINE</text>
+
+  <g font-family="JetBrains Mono, monospace">
+    <rect x="16" y="42" width="84" height="68" rx="6" fill="#152336" stroke="#60a5fa" stroke-width="1.4"/>
+    <text x="58" y="65" text-anchor="middle" font-size="8" font-weight="700" fill="#93c5fd">1. CLUSTER</text>
+    <text x="58" y="81" text-anchor="middle" font-size="7.5" fill="#cbd5e1">StoryCluster</text>
+    <text x="58" y="95" text-anchor="middle" font-size="7" fill="#5eead4">Primary URLs</text>
+
+    <line x1="100" y1="76" x2="118" y2="76" stroke="#34d399" stroke-width="1.8"/>
+
+    <rect x="118" y="42" width="88" height="68" rx="6" fill="#152336" stroke="#34d399" stroke-width="1.4"/>
+    <text x="162" y="65" text-anchor="middle" font-size="8" font-weight="700" fill="#5eead4">2. MANIFEST</text>
+    <text x="162" y="81" text-anchor="middle" font-size="7.5" fill="#cbd5e1">Schema v2</text>
+    <text x="162" y="95" text-anchor="middle" font-size="7" fill="#5eead4">Citations ✓</text>
+
+    <line x1="206" y1="76" x2="224" y2="76" stroke="#34d399" stroke-width="1.8"/>
+
+    <rect x="224" y="42" width="84" height="68" rx="6" fill="#152336" stroke="#fbbf24" stroke-width="1.4"/>
+    <text x="266" y="65" text-anchor="middle" font-size="8" font-weight="700" fill="#fcd34d">3. TTS MP3</text>
+    <text x="266" y="81" text-anchor="middle" font-size="7.5" fill="#cbd5e1">NotebookLM</text>
+    <text x="266" y="95" text-anchor="middle" font-size="7" fill="#fcd34d">Duration Gate</text>
+
+    <line x1="308" y1="76" x2="326" y2="76" stroke="#34d399" stroke-width="1.8"/>
+
+    <rect x="326" y="42" width="78" height="68" rx="6" fill="#10262a" stroke="#34d399" stroke-width="1.4"/>
+    <text x="365" y="65" text-anchor="middle" font-size="8" font-weight="700" fill="#34d399">4. R2+RSS</text>
+    <text x="365" y="81" text-anchor="middle" font-size="7.5" fill="#ffffff">HEAD 200 OK</text>
+    <text x="365" y="95" text-anchor="middle" font-size="7" fill="#5eead4">Atomic Feed</text>
+  </g>
+</svg>

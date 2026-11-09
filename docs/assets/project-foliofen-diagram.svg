@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <rect width="420" height="150" rx="10" fill="#0b1820" stroke="#223c4c" stroke-width="1.5"/>
+  <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#5eead4">FOLIOFEN CLI · PATIENT-OWNED MYCHART LOCAL EXPORTER</text>
+
+  <rect x="16" y="40" width="98" height="72" rx="7" fill="#122634" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="65" y="62" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#93c5fd">EPIC MYCHART</text>
+  <text x="65" y="78" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">Local Chrome Session</text>
+  <text x="65" y="93" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">User-Owned Login</text>
+
+  <line x1="114" y1="76" x2="148" y2="76" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <rect x="148" y="40" width="122" height="72" rx="7" fill="#122b2e" stroke="#34d399" stroke-width="1.5"/>
+  <text x="209" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#34d399">IDENTITY GUARD</text>
+  <text x="209" y="76" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#cbd5e1">--require-active-patient</text>
+  <text x="209" y="92" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#fcd34d">+ Vision PDF OCR</text>
+
+  <line x1="270" y1="76" x2="304" y2="76" stroke="#34d399" stroke-width="2"/>
+
+  <rect x="304" y="40" width="100" height="72" rx="7" fill="#122634" stroke="#34d399" stroke-width="1.5"/>
+  <text x="354" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#5eead4">POSIX 0600</text>
+  <text x="354" y="76" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#ffffff">MD + JSONL</text>
+  <text x="354" y="92" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#34d399">0 Cloud Custody</text>
+</svg>
