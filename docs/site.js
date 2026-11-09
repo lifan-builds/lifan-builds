@@ -724,9 +724,10 @@ for (const btn of loopBtns) {
   btn.addEventListener('click', () => selectLoopStep(btn.dataset.step));
 }
 
-// 5. Journal Filter Pills (/journal/) & Brief Archive Search (/journal/ai-builder-brief/)
+// 5. Journal Filter Pills (/journal/), EN/ZH Thought Toggles & Brief Archive Search (/journal/ai-builder-brief/)
 const filterBtns = [...document.querySelectorAll('.filter-pill[data-filter]')];
 if (filterBtns.length > 0) {
+  const thoughtsSec = document.getElementById('journal-thoughts-section');
   const essaysSec = document.getElementById('journal-essays-section');
   const briefsSec = document.getElementById('journal-briefs-section');
   for (const btn of filterBtns) {
@@ -735,8 +736,26 @@ if (filterBtns.length > 0) {
       for (const b of filterBtns) {
         b.setAttribute('aria-pressed', String(b === btn));
       }
-      if (essaysSec) essaysSec.hidden = mode === 'briefs';
-      if (briefsSec) briefsSec.hidden = mode === 'essays';
+      if (thoughtsSec) thoughtsSec.hidden = mode !== 'all' && mode !== 'thoughts';
+      if (essaysSec) essaysSec.hidden = mode !== 'all' && mode !== 'essays';
+      if (briefsSec) briefsSec.hidden = mode !== 'all' && mode !== 'briefs';
+    });
+  }
+}
+
+const thoughtCards = [...document.querySelectorAll('[data-thought-card]')];
+for (const card of thoughtCards) {
+  const langBtns = [...card.querySelectorAll('.lang-btn[data-lang-btn]')];
+  const langPanes = [...card.querySelectorAll('[data-lang-pane]')];
+  for (const btn of langBtns) {
+    btn.addEventListener('click', () => {
+      const targetLang = btn.dataset.langBtn;
+      for (const b of langBtns) {
+        b.setAttribute('aria-pressed', String(b === btn));
+      }
+      for (const pane of langPanes) {
+        pane.hidden = pane.dataset.langPane !== targetLang;
+      }
     });
   }
 }

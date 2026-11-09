@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Field notes, build logs, and daily AI Builder Briefs from Lifan Chen: local-first software, agent systems, and repeatable evaluation loops.">
-  <meta property="og:title" content="Journal &amp; Field Notes — Lifan Chen (Lifan Builds)">
-  <meta property="og:description" content="Engineering essays, Show HN retrospectives, and 59+ source-linked daily AI Builder Briefs.">
+  <meta name="description" content="Quick builder thoughts (X, Reddit, RedNote), long-form essays, and 59+ daily AI Builder Briefs from Lifan Chen: local-first software, AI agents, and repeatable evaluation loops.">
+  <meta property="og:title" content="Journal, Quick Thoughts &amp; Field Notes — Lifan Chen (Lifan Builds)">
+  <meta property="og:description" content="Sharp builder takes from X, Reddit &amp; RedNote (EN/中文), Substack &amp; Show HN retrospectives, and 59+ source-linked daily AI Builder Briefs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clifan.com/journal/">
   <link rel="canonical" href="https://clifan.com/journal/">
   <link rel="alternate" type="application/atom+xml" title="Lifan Chen — Journal &amp; AI Builder Brief" href="https://clifan.com/feed.xml">
-  <title>Journal &amp; Field Notes — Lifan Chen (Lifan Builds)</title>
+  <title>Journal, Quick Thoughts &amp; Field Notes — Lifan Chen (Lifan Builds)</title>
   <link rel="stylesheet" href="../styles.css">
   <script type="module" src="../site.js"></script>
 </head>
@@ -20,10 +20,11 @@
       <a class="wordmark" href="../" aria-label="Back to Lifan Builds home">
         <span class="pixel-mark" aria-hidden="true">LB</span>
         <span>Lifan Chen</span>
-        <span class="wordmark-role">Journal &amp; Field Notes</span>
+        <span class="wordmark-role">Journal &amp; Quick Thoughts</span>
       </a>
       <nav aria-label="Journal navigation">
         <a href="../#quests">Builds</a>
+        <a href="#thoughts">Quick Thoughts</a>
         <a href="ai-builder-brief/">Daily Briefs</a>
         <a href="../#about">About</a>
         <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
@@ -39,19 +40,156 @@
     <section class="journal-hero wrap">
       <h1>Notes from <em>the workbench.</em></h1>
       <p class="hero-lede">
-        Build logs, product retrospectives, and daily source-linked AI field notes on software that keeps a person in the loop.
+        Quick builder takes from X, Reddit, and RedNote (EN / 中文), long-form product retrospectives, and daily source-linked AI field notes.
       </p>
       <div class="journal-filter-bar">
         <div class="filter-pills" role="group" aria-label="Filter journal entries">
           <button type="button" class="filter-pill" aria-pressed="true" data-filter="all">All writing</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (3)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (4)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (4)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (59)</button>
         </div>
       </div>
     </section>
 
+    <!-- Track 1: Quick Thoughts & Builder Takes (X / Reddit / RedNote 小红书) -->
+    <div id="journal-thoughts-section">
+      <section class="journal-list wrap" id="thoughts" aria-label="Quick thoughts and community notes from X, Reddit, and RedNote">
+        <article class="long-note thought-card" id="opus55-vibe-coding" data-thought-card>
+          <div class="journal-meta">
+            <span>Quick Take · X &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-11-07">Nov 2026</time>
+            </div>
+          </div>
+          <img class="thought-art-img" src="../assets/opus55-vs-gpt-anime.jpg" width="760" height="280" alt="Anime illustration contrasting effortless flow-state coding on Opus 5.5 against fighting a wall of defensive code slop" loading="lazy">
+          <div data-lang-pane="en">
+            <h2>Opus 5.5 cured my Vibe Coding burnout</h2>
+            <p>
+              I’ve been vibe coding since the early Cursor days, and lately it just felt exhausting—until I switched back to Opus 5.5 and got that endless flow-state spark back.
+            </p>
+            <p>
+              Looking back, the burnout came from staying on GPT too long. Between Astra and Sol 6.1, every session felt like fighting a wall of defensive slop. Worse, daily quota resets created daily grind FOMO: you feel bad not burning the quota, so you keep pedaling, the slop mountain grows, and eventually you can’t ship a tiny feature without stripping through five layers of defensive armor first. Life is too short to fight your model.
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>Opus 5.5 治好了我的 Vibe Coding 电子 ED</h2>
+            <p>
+              从 Cursor 时代一路 Vibe Coding 到现在，前阵子越来越有种疲惫感，直到切回 Opus 5.5，才重新找回那种查克拉源源不断涌上来的感觉。
+            </p>
+            <p>
+              仔细复盘，电子 ED 的根源还是 GPT 用久了。不管是 Astra 还是 Sol 6.1，每天都在和满屏的“防御性💩”搏斗。偏偏上个月每天 Reset，不蹬觉得亏，蹬得越多💩山越高，到最后随便想加个小功能，不先“破甲”都写不进去。珍爱生命，要用就用最好的 Model——现在还没退订 CloseAI，纯粹是留口气看一眼 Astra 6.2。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="https://x.com/LifanBuilds">X (@LifanBuilds) ↗</a>
+            <a href="../quotaswitch/">QuotaSwitch (agy &amp; codex rotator) →</a>
+          </div>
+        </article>
+
+        <article class="long-note thought-card" id="cloud-bot-vaults">
+          <div class="journal-meta">
+            <span>Security Take · Reddit (r/GrokBot &amp; r/selfhosted) &amp; X</span>
+            <time datetime="2026-11-06">Nov 2026</time>
+          </div>
+          <h2>Why I don’t put primary logins or payment cards into a cloud bot vault</h2>
+          <p>
+            Two practical details worth checking before putting primary logins or cards into a cloud bot vault: vault entries and browser state on the bot VM are shared account-wide across your bots rather than isolated per workflow, and saved payment cards can auto-fill at checkout without a separate per-purchase approval prompt. Importing existing logins also goes through a plaintext CSV export on disk.
+          </p>
+          <p>
+            That gap is why I built Agent Autofill on macOS: AES-GCM SQLite backed by macOS Keychain, local Chrome address &amp; password reconciliation without CSV files, and a one-time origin-bound Chrome extension handle (<code>credential.use</code>) so passwords stay out of LLM context while form submission always pauses for an explicit human gate.
+          </p>
+          <div class="journal-links">
+            <a href="https://www.reddit.com/r/GrokBot/comments/1wgk74j/comment/19s9d50e6h8sh/">Reddit r/GrokBot reply ↗</a>
+            <a href="https://www.reddit.com/r/selfhosted/comments/1xox23i/comment/19s9d0m77zf4w/">Reddit r/selfhosted megathread ↗</a>
+            <a href="https://x.com/LifanBuilds/status/2118913116583108776">X launch thread ↗</a>
+            <a href="../agent-autofill/">clifan.com/agent-autofill/ →</a>
+          </div>
+        </article>
+
+        <article class="long-note thought-card" id="context-harness-eval">
+          <div class="journal-meta">
+            <span>Eval Note · X Thread · Context Harness</span>
+            <time datetime="2026-07-05">Jul 2026</time>
+          </div>
+          <h2>Small context beats broad repo archaeology (Paired eval: 9.1/10 vs 7.0/10)</h2>
+          <p>
+            Does a fresh AI coding agent actually solve repository tasks better with a lightweight context harness? Not vibes—paired evaluations on the exact same repo and task, with vs. without the harness across 32 local repositories.
+          </p>
+          <p>
+            After replacing giant “Rules / Never / Always” prompt walls with four compact files (<code>AGENTS.md</code>, <code>CONTEXT.md</code>, <code>NOW.md</code>, <code>PLAN.md</code>) and progressive card hydration, fresh-agent task scores jumped from 7.0/10 to 9.1/10 (8/10 pairs improved, 2 ties, 0 regressions). The biggest gain was cold resume and knowing which stale docs to ignore.
+          </p>
+          <div class="journal-links">
+            <a href="https://github.com/lifan-builds/context-harness">Context Harness on GitHub ↗</a>
+            <a href="https://github.com/lifan-builds/agent-nexus">Agent Nexus on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="long-note thought-card" id="nicu-mychart-note" data-thought-card>
+          <div class="journal-meta">
+            <span>Builder Story · Reddit (r/selfhosted) &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-08-10">Aug 2026</time>
+            </div>
+          </div>
+          <div data-lang-pane="en">
+            <h2>Why I built a local MyChart exporter while caring for a NICU baby</h2>
+            <p>
+              While our family was caring for a medically complex NICU baby, notes and lab results changed every day. The hard part wasn’t reading a single result—it was making sure the next question we asked used the latest chart without uploading sensitive records to a third-party cloud service.
+            </p>
+            <p>
+              Foliofen CLI (<code>mychart-cli</code>) strictly separates record acquisition from medical interpretation: it drives a dedicated local Chrome profile to export deterministic Markdown and JSONL with POSIX <code>0600</code> permissions, zero cloud backend, and an offline synthetic demo (<code>npx @lifan-builds/mychart-cli demo</code>).
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>我为什么在照顾 NICU 宝宝时写了一个 MyChart 本地工具</h2>
+            <p>
+              家里在照顾一个情况复杂的 NICU 宝宝时，我每天都要跟上新的病历记录和检查结果。难点不只是看懂某一条结果，而是保证下一次查看和提问时用到的资料是最新的，同时绝不把敏感病历上传给第三方云服务。
+            </p>
+            <p>
+              所以我写了 Foliofen CLI（<code>mychart-cli</code>）：通过独立 Chrome 配置读取本机可见的 MyChart 记录，保存在本机（POSIX <code>0600</code> 权限，零云端后台）并导出确定性的 Markdown 或 JSONL。数据提取和解释是严格分开的两个步骤。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="https://www.reddit.com/r/selfhosted/comments/1vhi4mk/comment/p2zbame/">Reddit r/selfhosted comment ↗</a>
+            <a href="../foliofen-cli/">clifan.com/foliofen-cli/ →</a>
+            <a href="https://github.com/lifan-builds/foliofen-cli">GitHub repository ↗</a>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <!-- Track 2: Long-Form Essays & Build Logs -->
     <div id="journal-essays-section">
       <section class="journal-list wrap" aria-label="Long-form essays and build logs">
+        <article class="long-note" id="agent-autofill-vault">
+          <div class="journal-meta">
+            <span>Build Log · Agent Autofill</span>
+            <time datetime="2026-11-07">Nov 2026</time>
+          </div>
+          <h2>Why I built a local personal vault for AI agents on my Mac</h2>
+          <p>
+            Browser and coding agents keep hitting the same friction: retyping home vs. work addresses, pasting secrets into prompts, or getting stuck on 2FA codes. Moving those credentials into a vendor’s cloud bot VM trades convenience for permanent account custody.
+          </p>
+          <p>
+            Agent Autofill keeps personal data in an AES-GCM SQLite vault backed by macOS Keychain and brokers scoped fields, one-time origin-bound Chrome logins, and read-only OTP codes with explicit human approval.
+          </p>
+          <div class="journal-links">
+            <a href="https://clifan.substack.com/p/why-i-built-a-local-personal-vault">Read the full essay on Substack ↗</a>
+            <a href="https://dev.to/lifanbuilds/why-i-built-a-local-personal-vault-for-ai-agents-on-my-mac-32df">Read the DEV edition ↗</a>
+            <a href="https://lifan-builds.hashnode.dev/agent-autofill-a-local-first-personal-vault-and-mcp-broker-for-ai-agents-on-macos">Read on Hashnode ↗</a>
+            <a href="https://github.com/lifan-builds/agent-autofill">Source repository ↗</a>
+          </div>
+        </article>
+
         <article class="long-note" id="mychart-cli">
           <div class="journal-meta">
             <span>Build Log · Foliofen CLI</span>

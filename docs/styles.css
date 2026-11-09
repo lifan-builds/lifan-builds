@@ -1796,6 +1796,59 @@ dd {
   text-decoration: underline;
 }
 
+.thoughts-home-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.thoughts-home-head .ledger-subheading {
+  margin: 0;
+}
+
+.thought-meta-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 0;
+  background-color: transparent;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lang-btn[aria-pressed="true"] {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.thought-art-img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 12px 0 14px;
+}
+
 /* AI Builder Brief Portal & Archive Grid */
 .brief-portal {
   display: flex;
