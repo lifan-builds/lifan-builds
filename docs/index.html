@@ -4,105 +4,493 @@
   <meta charset="utf-8">
   <meta name="google-site-verification" content="mexdRNfhbQ-gewNWybRrWC0XFVT2PE7BsVG9G6QUGts">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lifan builds local-first products, agent systems, and evaluation loops. Step into the workshop to explore projects and writing.">
-  <meta name="theme-color" content="#171526">
-  <title>Lifan Builds — the workshop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dungeon.css">
-  <script type="module" src="dungeon.js"></script>
-  <noscript><style>dialog:not([open]){display:block;position:static;margin:24px auto}dialog .close-dialog{display:none}</style></noscript>
+  <meta name="description" content="Lifan Chen (Lifan Builds) — Staff Engineer at Google building local-first software, multi-cursor agent systems, and repeatable evaluation loops.">
+  <meta property="og:title" content="Lifan Chen — Local-First Software, Agent Systems &amp; Evaluation Loops">
+  <meta property="og:description" content="Selected builds (Faster Mac Use, Agent Autofill, FreshPowder, AI Builder Brief, Nitan Podcast), engineering essays, and daily AI field notes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/">
+  <link rel="canonical" href="https://clifan.com/">
+  <title>Lifan Chen (Lifan Builds) — Portfolio, Writing &amp; Field Notes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="site.js"></script>
 </head>
-<body data-impeccable-ignore="hard-offset-shadow">
+<body>
   <header class="site-header">
-    <a class="wordmark" href="./" aria-label="Lifan Builds home"><span class="pixel-mark" aria-hidden="true">LB</span>LIFAN BUILDS</a>
-    <a href="https://github.com/lifan-builds">GitHub ↗</a>
-  </header>
-  <main>
-    <div class="intro">
-      <h1>Welcome to my workshop.</h1>
-      <p>I’m Lifan. I build useful software. Have a look around.</p>
+    <div class="header-inner">
+      <a class="wordmark" href="./" aria-label="Lifan Builds home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">Staff Engineer · Builder</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#quests">Builds</a>
+        <a href="#journal">Writing</a>
+        <a href="journal/ai-builder-brief/">Daily Briefs</a>
+        <a href="#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://github.com/lifan-builds">GitHub ↗</a>
+      </nav>
     </div>
-    <section class="room" aria-label="The workshop: choose an object to explore">
-      <div class="room-top" aria-hidden="true"><span>THE WORKSHOP</span><span class="room-light">● OPEN</span></div>
-      <div class="room-scene">
-        <img class="room-art" src="assets/workshop-room.svg" width="240" height="144" alt="A pixel-art stone room with a treasure chest, an open book, and a little adventurer by the fire.">
-        <a class="room-object object-projects" href="#quests" aria-haspopup="dialog"><span>Projects</span></a>
-        <a class="room-object object-journal" href="#journal" aria-haspopup="dialog"><span>Journal</span></a>
-        <a class="room-object object-about" href="#about" aria-haspopup="dialog"><span>About me</span></a>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero + Live Interactive Build Stage -->
+    <section class="personal-hero" aria-label="Introduction">
+      <div class="hero-identity">
+        <p class="status-line">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span>Staff Engineer @ Google · Building local-first agent systems</span>
+        </p>
+        <h1>Software that keeps data local, capability measurable, and <em>humans in the loop.</em></h1>
+        <p class="hero-bio">
+          I’m Lifan Chen. I build background computer-use engines, personal-data brokers, and evidence-gated workflows—and document what holds up under real benchmarks.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#quests">Explore selected builds ↓</a>
+          <a class="button secondary" href="journal/">Read journal &amp; briefs →</a>
+          <a class="button secondary" href="https://clifan.substack.com/">Substack ↗</a>
+        </div>
+        <div class="focus-strip" aria-label="Core engineering focus areas">
+          <div class="focus-item">
+            <strong>Local-first products</strong>
+            Vaults and exporters with zero cloud custody.
+          </div>
+          <div class="focus-item">
+            <strong>Agent control surfaces</strong>
+            Background browser and macOS automation.
+          </div>
+          <div class="focus-item">
+            <strong>Evaluation loops</strong>
+            Repeatable token, latency, and pass-rate checks.
+          </div>
+          <div class="focus-item">
+            <strong>Self-improving harnesses</strong>
+            Turning agent failures into deterministic guards.
+          </div>
+        </div>
       </div>
-      <p class="room-hint">Click an object. See what’s inside.</p>
+
+      <p class="sr-only">
+        Interactive build inspector previewing five hosted projects on clifan.com: Faster Mac Use, Agent Autofill, FreshPowder, AI Builder Brief, and Nitan Podcast. All full details and links follow in the Selected Builds section below.
+      </p>
+      <div class="workbench-stage" aria-hidden="true">
+        <div class="stage-chrome">
+          <div class="chrome-dots"><span></span><span></span><span></span></div>
+          <span class="chrome-title">clifan.com — live build inspector</span>
+          <span class="chrome-hint">Keys 1–5</span>
+        </div>
+        <div class="stage-tabs" role="tablist" aria-label="Preview hosted builds">
+          <button type="button" class="stage-tab" role="tab" aria-selected="true" data-build="fmu"><span class="stage-tab-key">1</span> fmu</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="autofill"><span class="stage-tab-key">2</span> autofill</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="freshpowder"><span class="stage-tab-key">3</span> freshpowder</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="brief"><span class="stage-tab-key">4</span> brief</button>
+          <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="nitan"><span class="stage-tab-key">5</span> nitan</button>
+        </div>
+        <div class="stage-body">
+          <div class="stage-header-row">
+            <span class="stage-project-name" id="stage-project-name">Faster Mac Use (fmu)</span>
+            <span class="stage-route-pill" id="stage-route-pill">clifan.com/faster-mac-use/</span>
+          </div>
+          <p class="stage-summary" id="stage-summary">
+            Background multi-cursor browser &amp; macOS computer-use engine driving unfocused Chrome tab groups and native apps in parallel.
+          </p>
+          <div class="stage-metrics" id="stage-metrics">
+            <div class="stage-metric-cell">
+              <span class="stage-metric-val">114× fewer</span>
+              <span class="stage-metric-lbl">Tokens vs @playwright/mcp</span>
+            </div>
+            <div class="stage-metric-cell">
+              <span class="stage-metric-val">0.0 px</span>
+              <span class="stage-metric-lbl">Physical cursor drift</span>
+            </div>
+            <div class="stage-metric-cell">
+              <span class="stage-metric-val">326 ms</span>
+              <span class="stage-metric-lbl">3-agent parallel swarm</span>
+            </div>
+          </div>
+          <pre class="stage-trace" id="stage-trace"><span class="tok-comment"># 3-agent background swarm across Chrome + macOS AX</span>
+<span class="tok-cmd">$ fmu</span> <span class="tok-str">'{"parallel":[{"agent":"a1","surface":"browser"},{"agent":"a2","surface":"app"}]}'</span>
+✓ 1,510 total tokens · 0 focus steals · clipboard intact</pre>
+          <div class="stage-footer-links">
+            <a class="stage-primary-link" id="stage-primary-link" href="faster-mac-use/" tabindex="-1">Open clifan.com/faster-mac-use/ →</a>
+            <a class="stage-secondary-link" id="stage-secondary-link" href="https://github.com/lifan-builds/faster-mac-use" tabindex="-1">lifan-builds/faster-mac-use ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillar 1: Portfolio / Selected Builds -->
+    <section class="site-section" id="quests" aria-labelledby="builds-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="builds-heading">Selected Builds</h2>
+          <p class="section-sub">Interactive product releases hosted on clifan.com alongside open-source CLI and agent tools.</p>
+        </div>
+        <a class="section-link" href="https://github.com/lifan-builds?tab=repositories">All GitHub repositories ↗</a>
+      </div>
+
+      <div class="release-grid">
+        <!-- 1. Faster Mac Use -->
+        <article class="release-card featured-wide is-active" data-build="fmu">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="faster-mac-use/">Faster Mac Use (fmu)</a></h3>
+              <span class="release-route" aria-hidden="true">/faster-mac-use/</span>
+            </div>
+            <p class="release-desc">
+              Background multi-cursor browser and macOS computer-use engine across unfocused Chrome tabs and native apps.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">114× fewer tokens</span>
+              <span class="metric-badge">0.0 px drift</span>
+              <span class="metric-badge">268-tok schema</span>
+              <span class="metric-badge">326 ms 3-agent swarm</span>
+            </div>
+            <div class="release-links">
+              <a class="primary-action" href="faster-mac-use/">Benchmarks &amp; overview →</a>
+              <a href="https://github.com/lifan-builds/faster-mac-use">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="mini-benchmark" aria-hidden="true">
+            <div class="mini-bench-head">
+              <span>Headline workload tokens</span>
+              <strong>114× lower</strong>
+            </div>
+            <div class="mini-bar-row winner">
+              <span class="mini-bar-name">faster-mac-use</span>
+              <div class="mini-bar-track"><div class="mini-bar-fill win"></div></div>
+              <span class="mini-bar-val">750 tok</span>
+            </div>
+            <div class="mini-bar-row">
+              <span class="mini-bar-name">Codex CUA</span>
+              <div class="mini-bar-track"><div class="mini-bar-fill base-a"></div></div>
+              <span class="mini-bar-val">7,560 tok</span>
+            </div>
+            <div class="mini-bar-row">
+              <span class="mini-bar-name">@playwright/mcp</span>
+              <div class="mini-bar-track"><div class="mini-bar-fill base-b"></div></div>
+              <span class="mini-bar-val">85,600 tok</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Agent Autofill -->
+        <article class="release-card" data-build="autofill">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="agent-autofill/">Agent Autofill</a></h3>
+              <span class="release-route" aria-hidden="true">/agent-autofill/</span>
+            </div>
+            <p class="release-desc">
+              Local-first personal vault and MCP broker for macOS agents with scoped credentials and explicit approval gates.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">AES-GCM vault</span>
+              <span class="metric-badge">Origin handoff</span>
+              <span class="metric-badge">0:33 tour</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="agent-autofill/">Overview →</a>
+            <a href="agent-autofill/demo/">Live demo →</a>
+            <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 3. FreshPowder -->
+        <article class="release-card" data-build="freshpowder">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="freshpowder/">FreshPowder</a></h3>
+              <span class="release-route" aria-hidden="true">/freshpowder/</span>
+            </div>
+            <p class="release-desc">
+              Ski and snowboard deal aggregator across 28 North American shops, filtered by size and budget.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">28 shops</span>
+              <span class="metric-badge">USD/CAD</span>
+              <span class="metric-badge">2:00 demo</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="freshpowder/">Overview →</a>
+            <a href="https://freshpowder.clifan.com/">Live deals ↗</a>
+            <a href="https://github.com/lifan-builds/snow-deal">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 4. AI Builder Brief -->
+        <article class="release-card" data-build="brief">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="ai-builder-brief/">AI Builder Brief</a></h3>
+              <span class="release-route" aria-hidden="true">/ai-builder-brief/</span>
+            </div>
+            <p class="release-desc">
+              Evidence-gated daily AI brief distilling noisy launches into source-linked Top 10 technical developments.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">59+ briefs</span>
+              <span class="metric-badge">Source-linked</span>
+              <span class="metric-badge">EN / 中文</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="ai-builder-brief/">Overview →</a>
+            <a href="journal/ai-builder-brief/">Archive →</a>
+            <a href="https://github.com/lifan-builds/ai-builder-brief">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 5. Nitan Podcast -->
+        <article class="release-card" data-build="nitan">
+          <div>
+            <div class="release-top">
+              <h3 class="release-title"><a href="nitan-podcast/">Nitan Podcast (泥潭播客)</a></h3>
+              <span class="release-route" aria-hidden="true">/nitan-podcast/</span>
+            </div>
+            <p class="release-desc">
+              Weekly six-minute Chinese podcast synthesized from USCardForum threads with source receipts via RSS.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">Weekly 6-min</span>
+              <span class="metric-badge">Receipts</span>
+              <span class="metric-badge">RSS &amp; Apple</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="nitan-podcast/">Listen →</a>
+            <a href="https://github.com/lifan-builds/nitan-podcast">GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Open-Source CLI & Agent Infrastructure Ledger -->
+      <h3 class="ledger-subheading">Open-Source CLI Tools &amp; Agent Infrastructure</h3>
+      <div class="ledger-list" role="list">
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/foliofen-cli">
+          <span class="ledger-title">Foliofen CLI ↗</span>
+          <span class="ledger-summary">Local Chrome harness for patient-owned MyChart record exports.</span>
+          <span class="ledger-meta" aria-hidden="true">0 cloud custody</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/perks-reminder">
+          <span class="ledger-title">Perks Reminder ↗</span>
+          <span class="ledger-summary">Local tracker for card benefits, annual fees, and credits.</span>
+          <span class="ledger-meta" aria-hidden="true">JSON export</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/flyingpig">
+          <span class="ledger-title">Flying Pig AI ↗</span>
+          <span class="ledger-summary">Supervised customer-service advocate with human decision checkpoints.</span>
+          <span class="ledger-meta" aria-hidden="true">Human-in-loop</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/castforge">
+          <span class="ledger-title">CastForge ↗</span>
+          <span class="ledger-summary">Source-to-podcast automation pipeline with stage validation.</span>
+          <span class="ledger-meta" aria-hidden="true">Audio pipeline</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/context-harness">
+          <span class="ledger-title">Context Harness ↗</span>
+          <span class="ledger-summary">Filesystem memory layer and companion skills for coding agents.</span>
+          <span class="ledger-meta" aria-hidden="true">Agent memory</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/agent-nexus">
+          <span class="ledger-title">Agent Nexus ↗</span>
+          <span class="ledger-summary">Manifest-driven skill, hook, and MCP sync across agent IDEs.</span>
+          <span class="ledger-meta" aria-hidden="true">Multi-IDE sync</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="https://github.com/lifan-builds/cpa-phoenix">
+          <span class="ledger-title">CPA Phoenix ↗</span>
+          <span class="ledger-summary">CLIProxyAPI plugin for supervising account recovery queues.</span>
+          <span class="ledger-meta" aria-hidden="true">Account repair</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Pillar 2: Writing & Daily Field Notes -->
+    <section class="site-section" id="journal" aria-labelledby="writing-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="writing-heading">Writing &amp; Field Notes</h2>
+          <p class="section-sub">Engineering essays paired with source-linked daily AI Builder Briefs.</p>
+        </div>
+        <a class="section-link" href="journal/">Open full journal →</a>
+      </div>
+
+      <div class="writing-columns">
+        <!-- Left Track: Flagship Essays & Build Logs -->
+        <div class="track-box">
+          <div class="track-head">
+            <h3>Flagship Essays &amp; Build Logs</h3>
+            <span class="track-badge">Deep Dives</span>
+          </div>
+          <div class="essay-list">
+            <a class="essay-item" href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while">
+              <div class="essay-meta-row" aria-hidden="true">
+                <span class="essay-venue">Substack · Build Log</span>
+                <time datetime="2026-08-01">Aug 2026</time>
+              </div>
+              <strong class="essay-item-title">Why I built Foliofen CLI while the portal kept changing ↗</strong>
+              <p>Exporting patient-owned records locally without handing a third party permanent account custody.</p>
+            </a>
+            <a class="essay-item" href="https://news.ycombinator.com/item?id=49253653">
+              <div class="essay-meta-row" aria-hidden="true">
+                <span class="essay-venue">Show HN · Community Notes</span>
+                <time datetime="2026-08-01">Aug 2026</time>
+              </div>
+              <strong class="essay-item-title">Show HN: Foliofen CLI — Technical feedback &amp; failure modes ↗</strong>
+              <p>Why local control is only a real feature when recovery paths and scope limits are explicit.</p>
+            </a>
+            <a class="essay-item" href="https://clifan.substack.com/p/building-perks-reminder-a-small-open">
+              <div class="essay-meta-row" aria-hidden="true">
+                <span class="essay-venue">Substack · Product Note</span>
+                <time datetime="2026-07-01">Jul 2026</time>
+              </div>
+              <strong class="essay-item-title">Building Perks Reminder: A free, open-source benefits tracker ↗</strong>
+              <p>Keeping reminders, exportable JSON, and correction paths local without bank logins.</p>
+            </a>
+          </div>
+          <div class="journal-links">
+            <a href="journal/">Journal summaries →</a>
+            <a href="https://clifan.substack.com/">Substack ↗</a>
+          </div>
+        </div>
+
+        <!-- Right Track: Daily AI Builder Brief Stream -->
+        <div class="track-box">
+          <div class="track-head">
+            <h3>Daily AI Builder Briefs</h3>
+            <span class="track-badge">59+ Editions</span>
+          </div>
+          <p class="brief-stream-intro">
+            Daily field notes on AI developments that change what builders make and evaluate, with primary receipts.
+          </p>
+          <div class="brief-stream-list" role="list">
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-06.html">
+              <span class="brief-row-title">METR R&amp;D pace, Dropbox undo &amp; NeMo evals</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-06">2026.11.06</time>
+            </a>
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-05.html">
+              <span class="brief-row-title">Daily Brief · Nov 5</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-05">2026.11.05</time>
+            </a>
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-04.html">
+              <span class="brief-row-title">Daily Brief · Nov 4</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-04">2026.11.04</time>
+            </a>
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-03.html">
+              <span class="brief-row-title">Daily Brief · Nov 3</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-03">2026.11.03</time>
+            </a>
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-02.html">
+              <span class="brief-row-title">Daily Brief · Nov 2</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-02">2026.11.02</time>
+            </a>
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-01.html">
+              <span class="brief-row-title">Daily Brief · Nov 1</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-01">2026.11.01</time>
+            </a>
+          </div>
+          <div class="journal-links">
+            <a href="journal/ai-builder-brief/">All 59 daily briefs →</a>
+            <a href="ai-builder-brief/">Brief pipeline →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillar 3: About Me & Evaluation-Loop Philosophy -->
+    <section class="site-section" id="about" aria-labelledby="about-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="about-heading">About &amp; Engineering Philosophy</h2>
+          <p class="section-sub">How I design, verify, and ship local-first tools and agent harnesses.</p>
+        </div>
+        <a class="section-link" href="https://x.com/LifanBuilds">Say hello on X (@LifanBuilds) ↗</a>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-prose">
+          <p>
+            I’m a Staff Engineer at Google building local-first software, agent systems, and the evaluation loops that make autonomous workflows trustworthy.
+          </p>
+          <p>
+            I focus on practical automation with clear boundaries: keep personal data on the user’s machine, measure every agent action with token and latency receipts, and require human approval before mutating external state.
+          </p>
+          <div class="stack-pills" aria-hidden="true">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">TypeScript</span>
+            <span class="stack-pill">Next.js</span>
+            <span class="stack-pill">FastAPI</span>
+            <span class="stack-pill">macOS AX / Swift</span>
+            <span class="stack-pill">Chrome MV3 / CDP</span>
+            <span class="stack-pill">Claude Code &amp; Codex</span>
+          </div>
+        </div>
+
+        <div class="loop-card" aria-label="Interactive evaluation loop">
+          <div class="loop-card-head">
+            <h3>The Evaluation Loop</h3>
+            <span>Click a stage to inspect</span>
+          </div>
+          <div class="loop-steps" role="tablist" aria-label="Evaluation loop stages">
+            <button type="button" class="loop-step-btn" role="tab" aria-selected="true" data-step="source">
+              <span class="loop-step-idx">01</span>
+              <span>source</span>
+            </button>
+            <button type="button" class="loop-step-btn" role="tab" aria-selected="false" data-step="build">
+              <span class="loop-step-idx">02</span>
+              <span>build</span>
+            </button>
+            <button type="button" class="loop-step-btn" role="tab" aria-selected="false" data-step="evaluate">
+              <span class="loop-step-idx">03</span>
+              <span>evaluate</span>
+            </button>
+            <button type="button" class="loop-step-btn" role="tab" aria-selected="false" data-step="inspect">
+              <span class="loop-step-idx">04</span>
+              <span>inspect</span>
+            </button>
+            <button type="button" class="loop-step-btn" role="tab" aria-selected="false" data-step="improve">
+              <span class="loop-step-idx">05</span>
+              <span>improve</span>
+            </button>
+            <button type="button" class="loop-step-btn" role="tab" aria-selected="false" data-step="ship">
+              <span class="loop-step-idx">06</span>
+              <span>ship</span>
+            </button>
+          </div>
+          <div class="loop-detail" role="tabpanel">
+            <strong id="loop-detail-title">01 · Source — Anchor on primary artifacts</strong>
+            <p id="loop-detail-desc">
+              Start from raw commits, protocol traces, and DOM snapshots rather than secondary summaries so every claim is reproducible.
+            </p>
+            <span class="loop-detail-proof" id="loop-detail-proof">
+              Applied in: AI Builder Brief &amp; Foliofen CLI
+            </span>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer><span>© 2026 Lifan Builds</span><span><a href="https://x.com/LifanBuilds">X ↗</a><a href="https://clifan.substack.com/">Substack ↗</a></span></footer>
 
-  <dialog id="quests" aria-labelledby="quests-title">
-    <div class="dialog-heading"><h2 id="quests-title">Things I’ve built.</h2><button class="close-dialog" type="button" aria-label="Close projects" autofocus>×</button></div>
-    <div class="item-list">
-      <a href="faster-mac-use/">
-        <strong>Faster Mac Use (fmu) <span>→</span></strong>
-        <p>Background multi-cursor browser &amp; macOS computer-use engine across unfocused Chrome tabs and native apps.</p>
-        <span class="item-pills"><span class="metric-pill">114× fewer tok</span><span class="metric-pill">0.0 px drift</span><span class="metric-pill">1,510 tok / 326 ms 3-agent swarm</span></span>
-      </a>
-      <a href="agent-autofill/">
-        <strong>Agent Autofill <span>→</span></strong>
-        <p>Local-first personal vault and MCP broker for macOS agents. You approve external submissions.</p>
-        <span class="item-pills"><span class="metric-pill">AES-GCM vault</span><span class="metric-pill">1-time origin handoff</span><span class="metric-pill">0:33 tour</span></span>
-      </a>
-      <a href="freshpowder/">
-        <strong>FreshPowder <span>→</span></strong>
-        <p>Ski and snowboard deals across North American shops, filtered by budget and reported size.</p>
-        <span class="item-pills"><span class="metric-pill">28 shops live</span><span class="metric-pill">2:00 live demo</span></span>
-      </a>
-      <a href="ai-builder-brief/">
-        <strong>AI Builder Brief <span>→</span></strong>
-        <p>Source-linked daily AI developments and builder field notes turned into evidence-gated briefs.</p>
-        <span class="item-pills"><span class="metric-pill">59+ briefs</span><span class="metric-pill">Source-linked</span></span>
-      </a>
-      <a href="nitan-podcast/">
-        <strong>Nitan Pod <span>→</span></strong>
-        <p>Weekly Chinese podcast generated from USCardForum discussions and shipped via RSS and podcast apps.</p>
-        <span class="item-pills"><span class="metric-pill">Weekly RSS</span><span class="metric-pill">Automated audio</span></span>
-      </a>
-      <a href="https://github.com/lifan-builds/foliofen-cli">
-        <strong>Foliofen CLI <span>↗</span></strong>
-        <p>Export patient-owned MyChart records through a local browser harness.</p>
-        <span class="item-pills"><span class="metric-pill">Local Chrome</span><span class="metric-pill">0 cloud custody</span></span>
-      </a>
-      <a href="https://github.com/lifan-builds/perks-reminder">
-        <strong>Perks Reminder <span>↗</span></strong>
-        <p>Track card benefits, annual fees, certificates, and loyalty expirations locally.</p>
-        <span class="item-pills"><span class="metric-pill">Local tracker</span><span class="metric-pill">Fee &amp; credit alerts</span></span>
-      </a>
-      <a href="https://github.com/lifan-builds/castforge">
-        <strong>CastForge <span>↗</span></strong>
-        <p>Source-to-podcast automation framework with reusable stages and validation.</p>
-        <span class="item-pills"><span class="metric-pill">Pipeline stages</span><span class="metric-pill">Validated output</span></span>
-      </a>
+  <footer class="site-footer wrap">
+    <span>© 2026 Lifan Chen (Lifan Builds) · Built with local-first HTML, CSS &amp; JS</span>
+    <div class="footer-links">
+      <a href="journal/">Journal</a>
+      <a href="journal/ai-builder-brief/">Daily Briefs</a>
+      <a href="https://github.com/lifan-builds">GitHub ↗</a>
+      <a href="https://clifan.substack.com/">Substack ↗</a>
+      <a href="https://x.com/LifanBuilds">X ↗</a>
     </div>
-    <a class="dialog-footer" href="https://github.com/lifan-builds?tab=repositories">All repositories ↗</a>
-  </dialog>
-
-  <dialog id="journal" aria-labelledby="journal-title">
-    <div class="dialog-heading"><h2 id="journal-title">Notes along the way.</h2><button class="close-dialog" type="button" aria-label="Close journal" autofocus>×</button></div>
-    <div class="item-list">
-      <a href="journal/"><strong>The journal <span>→</span></strong><p>Build logs, experiments, and daily AI Builder Briefs.</p></a>
-      <a href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while"><strong>Why I built Foliofen CLI <span>↗</span></strong><p>Patient-owned exports and a portal that kept changing.</p></a>
-      <a href="https://clifan.substack.com/p/building-perks-reminder-a-small-open"><strong>Building Perks Reminder <span>↗</span></strong><p>Small reminders, useful evidence, and keeping account data local.</p></a>
-      <a href="https://news.ycombinator.com/item?id=49253653"><strong>Show HN: Foliofen CLI <span>↗</span></strong><p>What happened when I shared the tool with a technical audience.</p></a>
-    </div>
-    <a class="dialog-footer" href="https://clifan.substack.com/">More on Substack ↗</a>
-  </dialog>
-
-  <dialog id="about" aria-labelledby="about-title">
-    <div class="dialog-heading"><h2 id="about-title">Hey, I’m Lifan.</h2><button class="close-dialog" type="button" aria-label="Close about" autofocus>×</button></div>
-    <div class="about-copy">
-      <p>I’m a staff engineer building local-first products, agent systems, and the evaluation loops that make them trustworthy.</p>
-      <p>I like useful tools, small experiments, and leaving a clear trail of what worked.</p>
-      <p class="build-loop">Build → test → inspect → improve.</p>
-    </div>
-    <a class="dialog-footer" href="https://github.com/lifan-builds">Find me on GitHub ↗</a>
-  </dialog>
+  </footer>
 </body>
 </html>
