@@ -95,12 +95,12 @@ const LOOP_DATA = {
   improve: {
     title: '05 · Improve — Turn observed failures into harness guards',
     desc: 'Feed real edge cases directly back into tests, prompts, and skill rules so the next run does not repeat the same mistake.',
-    proof: 'Applied in: Agent Nexus & self-improving skill snapshots'
+    proof: 'Applied in: QuotaSwitch auto-rotation & self-improving skill snapshots'
   },
   ship: {
     title: '06 · Ship — Require human approval before external state',
     desc: 'Pause at explicit checkpoints before submitting forms, publishing posts, or mutating external accounts, then verify the live result.',
-    proof: 'Applied in: Agent Autofill approval gates, Flying Pig AI, & clifan.com releases'
+    proof: 'Applied in: Agent Autofill approval gates, Foliofen CLI, & clifan.com releases'
   }
 };
 

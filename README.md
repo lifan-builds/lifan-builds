@@ -50,8 +50,8 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/flyingpig"><strong>Flying Pig AI</strong></a><br />
-      <sub>Supervised AI customer-service advocate that pauses at structured decision checkpoints before consequential actions.</sub>
+      <a href="https://github.com/lifan-builds/quotaswitch"><strong>QuotaSwitch</strong></a> <sup>NEW</sup><br />
+      <sub>Unified quota-driven multi-account switcher and auto-rotator for Google Antigravity (<code>agy</code>) and OpenAI Codex without a proxy.</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/lifan-builds/foliofen-cli"><strong>Foliofen CLI</strong></a><br />
@@ -84,18 +84,8 @@
       <sub>Tiny filesystem memory layer for coding agents: durable context files, companion skills, and local scripts.</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/agent-nexus"><strong>Agent Nexus</strong></a><br />
-      <sub>Manifest-driven deployment of skills, hooks, and MCP servers across modern coding environments.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/cpa-phoenix"><strong>CPA Phoenix</strong></a> <sup>RECENT</sup><br />
-      <sub>CLIProxyAPI plugin for igniting fresh Codex accounts and supervising invalid-account recovery through a preserved repair queue.</sub>
-    </td>
-    <td width="50%" valign="top">
       <a href="https://clifan.com/ai-builder-brief/"><strong>AI Builder Brief</strong></a> <sup>RECENT</sup><br />
-      <sub>Source-linked AI developments turned into evidence-gated review artifacts, with the public feed held closed while editorial policy is tuned (<a href="https://clifan.com/ai-builder-brief/">overview</a> · <a href="https://clifan.com/journal/ai-builder-brief/">daily briefs</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">repo</a>).</sub>
+      <sub>Source-linked AI developments turned into evidence-gated review artifacts (<a href="https://clifan.com/ai-builder-brief/">overview</a> · <a href="https://clifan.com/journal/ai-builder-brief/">daily briefs</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">repo</a>).</sub>
     </td>
   </tr>
   <tr>
