@@ -351,55 +351,267 @@ for (const row of ledgerRows) {
   }
 }
 
-// 3. 4-Pillar Concept Filter & View Transitions (Local Tools, ML, AI Agents, Evaluation)
+// 3. Interactive Cover Portal, Constellation Canvas & Click-to-Open Workbench
+const coverPortal = document.getElementById('cover-portal');
+const fullWorkbench = document.getElementById('full-workbench');
+const coverCards = [...document.querySelectorAll('.cover-card[data-open-pillar]')];
+const coverOpenAllBtn = document.getElementById('cover-open-all');
+const coverBackBtn = document.getElementById('cover-back-btn');
+const coverTickerTag = document.getElementById('cover-ticker-tag');
+const coverTickerText = document.getElementById('cover-ticker-text');
+const wordmarkHome = document.getElementById('wordmark-home');
+const navWorkbenchLinks = [...document.querySelectorAll('[data-open-workbench]')];
 const conceptChips = [...document.querySelectorAll('.concept-chip[data-concept]')];
 const heroConceptPills = [...document.querySelectorAll('.focus-item[data-concept-pill]')];
 
+const COVER_TICKER_DATA = {
+  local: {
+    tag: '01 · LOCAL',
+    text: 'Faster Mac Use · Agent Autofill · QuotaSwitch · Perks Reminder · Foliofen CLI'
+  },
+  ml: {
+    tag: '02 · ML',
+    text: 'AI Builder Brief · FreshPowder · CastForge · Nitan Podcast'
+  },
+  agents: {
+    tag: '03 · AGENTS',
+    text: 'Faster Mac Use · Agent Autofill · QuotaSwitch · CastForge'
+  },
+  eval: {
+    tag: '04 · EVALS',
+    text: '114× token benchmark · 0.0 px cursor drift · Primary-source receipts'
+  }
+};
+
+function updateConceptDOM(concept) {
+  for (const chip of conceptChips) {
+    chip.setAttribute('aria-pressed', String(chip.dataset.concept === concept));
+  }
+  for (const pill of heroConceptPills) {
+    pill.classList.toggle('is-active', concept === 'all' ? pill.dataset.conceptPill === 'local' : pill.dataset.conceptPill === concept);
+  }
+  for (const card of releaseCards) {
+    const pillars = (card.dataset.pillars || '').split(/\s+/);
+    const match = concept === 'all' || pillars.includes(concept);
+    card.classList.toggle('is-dimmed', !match);
+  }
+  for (const row of ledgerRows) {
+    const pillars = (row.dataset.pillars || '').split(/\s+/);
+    const match = concept === 'all' || pillars.includes(concept);
+    row.classList.toggle('is-dimmed', !match);
+  }
+  const leadBuild = CONCEPT_LEAD_BUILD[concept];
+  if (leadBuild) selectBuild(leadBuild);
+}
+
 function applyConceptFilter(concept) {
-  const updateDOM = () => {
-    for (const chip of conceptChips) {
-      chip.setAttribute('aria-pressed', String(chip.dataset.concept === concept));
-    }
-    for (const pill of heroConceptPills) {
-      pill.classList.toggle('is-active', concept === 'all' ? pill.dataset.conceptPill === 'local' : pill.dataset.conceptPill === concept);
-    }
-    for (const card of releaseCards) {
-      const pillars = (card.dataset.pillars || '').split(/\s+/);
-      const match = concept === 'all' || pillars.includes(concept);
-      card.classList.toggle('is-dimmed', !match);
-    }
-    for (const row of ledgerRows) {
-      const pillars = (row.dataset.pillars || '').split(/\s+/);
-      const match = concept === 'all' || pillars.includes(concept);
-      row.classList.toggle('is-dimmed', !match);
-    }
-    const leadBuild = CONCEPT_LEAD_BUILD[concept];
-    if (leadBuild) selectBuild(leadBuild);
+  if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.startViewTransition(() => updateConceptDOM(concept));
+  } else {
+    updateConceptDOM(concept);
+  }
+}
+
+function openWorkbench(concept = 'all', scrollSelector = null) {
+  if (!coverPortal || !fullWorkbench) return;
+  const doOpen = () => {
+    document.body.setAttribute('data-cover', 'open');
+    coverPortal.hidden = true;
+    fullWorkbench.hidden = false;
+    updateConceptDOM(concept);
   };
 
   if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.startViewTransition(updateDOM);
+    const vt = document.startViewTransition(doOpen);
+    vt.finished.then(() => {
+      if (scrollSelector) {
+        const target = document.querySelector(scrollSelector);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
   } else {
-    updateDOM();
+    doOpen();
+    if (scrollSelector) {
+      const target = document.querySelector(scrollSelector);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
+}
+
+function closeWorkbench() {
+  if (!coverPortal || !fullWorkbench) return;
+  const doClose = () => {
+    document.body.setAttribute('data-cover', 'closed');
+    fullWorkbench.hidden = true;
+    coverPortal.hidden = false;
+  };
+  if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.startViewTransition(doClose);
+  } else {
+    doClose();
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+for (const card of coverCards) {
+  const pillar = card.dataset.openPillar;
+  card.addEventListener('mouseenter', () => {
+    for (const c of coverCards) c.classList.toggle('is-focused', c === card);
+    const info = COVER_TICKER_DATA[pillar];
+    if (info && coverTickerTag && coverTickerText) {
+      coverTickerTag.textContent = info.tag;
+      coverTickerText.textContent = info.text;
+    }
+  });
+  card.addEventListener('pointermove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+  });
+  card.addEventListener('click', () => {
+    openWorkbench(pillar, '#quests');
+  });
+}
+
+if (coverOpenAllBtn) {
+  coverOpenAllBtn.addEventListener('click', () => openWorkbench('all'));
+}
+
+if (coverBackBtn) {
+  coverBackBtn.addEventListener('click', () => closeWorkbench());
+}
+
+if (wordmarkHome && coverPortal) {
+  wordmarkHome.addEventListener('click', e => {
+    if (document.body.getAttribute('data-cover') === 'open') {
+      e.preventDefault();
+      closeWorkbench();
+    }
+  });
+}
+
+for (const link of navWorkbenchLinks) {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#') && document.body.getAttribute('data-cover') === 'closed') {
+      e.preventDefault();
+      openWorkbench('all', href);
+    }
+  });
+}
+
+// Auto-open workbench if arriving with a section hash (#quests, #journal, #about) or ?view=full
+if (coverPortal && fullWorkbench) {
+  const hash = window.location.hash;
+  const params = new URLSearchParams(window.location.search);
+  if (hash === '#quests' || hash === '#journal' || hash === '#about' || params.get('view') === 'full') {
+    document.body.setAttribute('data-cover', 'open');
+    coverPortal.hidden = true;
+    fullWorkbench.hidden = false;
+  }
+}
+
+// Interactive Signal Constellation Canvas on Cover Portal
+const coverCanvas = document.getElementById('cover-canvas');
+if (coverCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const ctx = coverCanvas.getContext('2d');
+  let width = 0;
+  let height = 0;
+  const pointer = { x: -999, y: -999 };
+  const nodes = Array.from({ length: 24 }, (_, i) => ({
+    x: ((i * 97) % 100) / 100,
+    y: ((i * 53 + 17) % 100) / 100,
+    vx: ((i % 2 === 0 ? 1 : -1) * (0.08 + (i % 5) * 0.02)),
+    vy: (((i % 3 === 0 ? 1 : -1)) * (0.06 + (i % 4) * 0.02)),
+    r: i % 4 === 0 ? 2.6 : 1.8
+  }));
+
+  function resizeCanvas() {
+    const rect = coverCanvas.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = rect.width;
+    height = rect.height;
+    coverCanvas.width = width * dpr;
+    coverCanvas.height = height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  if (coverPortal) {
+    coverPortal.addEventListener('pointermove', e => {
+      const rect = coverCanvas.getBoundingClientRect();
+      pointer.x = e.clientX - rect.left;
+      pointer.y = e.clientY - rect.top;
+    });
+    coverPortal.addEventListener('pointerleave', () => {
+      pointer.x = -999;
+      pointer.y = -999;
+    });
+  }
+
+  function drawCoverField() {
+    if (!coverPortal || coverPortal.hidden) {
+      requestAnimationFrame(drawCoverField);
+      return;
+    }
+    ctx.clearRect(0, 0, width, height);
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const dotColor = isDark ? 'rgba(102, 166, 255, 0.36)' : 'rgba(8, 71, 196, 0.24)';
+    const lineColor = isDark ? 'rgba(52, 211, 153, 0.14)' : 'rgba(8, 102, 78, 0.11)';
+
+    for (const n of nodes) {
+      n.x += n.vx / Math.max(width, 300);
+      n.y += n.vy / Math.max(height, 300);
+      if (n.x < 0.02 || n.x > 0.98) n.vx *= -1;
+      if (n.y < 0.04 || n.y > 0.96) n.vy *= -1;
+    }
+
+    for (let i = 0; i < nodes.length; i++) {
+      const a = nodes[i];
+      const ax = a.x * width;
+      const ay = a.y * height;
+      for (let j = i + 1; j < nodes.length; j++) {
+        const b = nodes[j];
+        const bx = b.x * width;
+        const by = b.y * height;
+        const dist = Math.hypot(ax - bx, ay - by);
+        if (dist < 155) {
+          ctx.strokeStyle = lineColor;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(ax, ay);
+          ctx.lineTo(bx, by);
+          ctx.stroke();
+        }
+      }
+      if (pointer.x > 0) {
+        const pDist = Math.hypot(ax - pointer.x, ay - pointer.y);
+        if (pDist < 180) {
+          ctx.strokeStyle = dotColor;
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(ax, ay);
+          ctx.lineTo(pointer.x, pointer.y);
+          ctx.stroke();
+        }
+      }
+      ctx.fillStyle = dotColor;
+      ctx.beginPath();
+      ctx.arc(ax, ay, a.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    requestAnimationFrame(drawCoverField);
+  }
+  requestAnimationFrame(drawCoverField);
 }
 
 for (const chip of conceptChips) {
   chip.addEventListener('click', () => applyConceptFilter(chip.dataset.concept));
-}
-
-for (const pill of heroConceptPills) {
-  pill.addEventListener('mouseenter', () => {
-    for (const p of heroConceptPills) p.classList.toggle('is-active', p === pill);
-    const lead = CONCEPT_LEAD_BUILD[pill.dataset.conceptPill];
-    if (lead) selectBuild(lead);
-  });
-  pill.addEventListener('click', () => {
-    const c = pill.dataset.conceptPill;
-    applyConceptFilter(c);
-    const quests = document.getElementById('quests');
-    if (quests) quests.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
 }
 
 // 4. Interactive Evaluation Loop (About Me)
@@ -462,7 +674,7 @@ if (briefSearch && briefCards.length > 0) {
   });
 }
 
-// 6. Keyboard Shortcuts (1-6 for Build Stage, t for Theme, / for Search)
+// 6. Keyboard Shortcuts (Enter to open cover, 1-6 for Build Stage, t for Theme, / for Search)
 window.addEventListener('keydown', event => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
   const tag = document.activeElement?.tagName;
@@ -479,9 +691,18 @@ window.addEventListener('keydown', event => {
     return;
   }
 
+  if (event.key === 'Enter' && tag !== 'BUTTON' && tag !== 'A' && document.body.getAttribute('data-cover') === 'closed') {
+    event.preventDefault();
+    openWorkbench('all');
+    return;
+  }
+
   const keys = ['1', '2', '3', '4', '5', '6'];
   const idx = keys.indexOf(event.key);
   if (idx !== -1 && stageTabs[idx]) {
+    if (document.body.getAttribute('data-cover') === 'closed') {
+      openWorkbench('all');
+    }
     selectBuild(stageTabs[idx].dataset.build);
   }
 });
