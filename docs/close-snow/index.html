@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CloseSnow — Open-Physics Mountain Snow Intelligence | Lifan Chen</title>
+  <meta name="description" content="15-day multi-model mountain snow forecasts across 19 ski resorts using 3D Cobb/Alcott snow ratios, ECMWF AI AIFS + HRRR ensembles, and live USDA SNOTEL telemetry.">
+  <link rel="canonical" href="https://clifan.com/close-snow/">
+  <meta property="og:title" content="CloseSnow — Accurate mountain snow forecasts without the paywall">
+  <meta property="og:description" content="3D Cobb/Alcott snow-to-liquid ratios, 15-day HRRR + NBM + ECMWF IFS + AI AIFS ensembles, and live hourly USDA SNOTEL verification — 1-click free unlock.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/close-snow/">
+  <meta property="og:image" content="https://clifan.com/close-snow/poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="page.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">CloseSnow</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://close-snow.clifan.com/">Live App ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <section class="cs-hero-grid" aria-labelledby="cs-hero-heading">
+      <div>
+        <p class="eyebrow">Open-Source Web App · 19 Resorts · Live NWP + USDA SNOTEL</p>
+        <h1 id="cs-hero-heading">Mountain snow physics. <span class="cs-accent">Zero paywall.</span></h1>
+        <p class="subpage-lead">15-day multi-model snowfall, 240-hour snow-level tables, and live USDA SNOTEL ground-truth across 19 ski resorts—unlocked in one free click.</p>
+
+        <div class="subpage-actions">
+          <a class="button primary" href="https://close-snow.clifan.com/">Launch CloseSnow ↗</a>
+          <a class="button secondary" href="https://github.com/lifan-builds/close-snow">View on GitHub ↗</a>
+        </div>
+
+        <div class="cs-install-bar" aria-label="Clone CloseSnow repository">
+          <span class="cs-install-prompt" aria-hidden="true">$</span>
+          <code class="cs-install-code" id="cs-clone-cmd">git clone https://github.com/lifan-builds/close-snow.git</code>
+          <button type="button" class="cs-copy-btn" id="cs-copy-btn" data-copied="false">Copy</button>
+        </div>
+      </div>
+
+      <aside class="cs-bench-panel" aria-labelledby="cs-bench-heading">
+        <div class="cs-bench-header">
+          <strong class="cs-bench-title" id="cs-bench-heading">48h Storm Snowfall MAE vs. SNOTEL</strong>
+          <span class="cs-bench-pill">2.4× lower error vs. 10:1</span>
+        </div>
+
+        <div class="cs-bars" role="list" aria-label="48-hour storm snowfall mean absolute error across 138 USDA SNOTEL storm cycles">
+          <div class="cs-bar-row is-winner" role="listitem">
+            <span class="cs-bar-label">CloseSnow 3D SLR</span>
+            <div class="cs-bar-track" aria-hidden="true"><div class="cs-bar-fill is-win" style="width: 33%"></div></div>
+            <span class="cs-bar-val">1.81&quot; MAE</span>
+          </div>
+          <div class="cs-bar-row" role="listitem">
+            <span class="cs-bar-label">MonkeySnow (Kuchera)</span>
+            <div class="cs-bar-track" aria-hidden="true"><div class="cs-bar-fill is-second" style="width: 53%"></div></div>
+            <span class="cs-bar-val">2.88&quot; MAE</span>
+          </div>
+          <div class="cs-bar-row" role="listitem">
+            <span class="cs-bar-label">pow.fyi (Fixed 10:1)</span>
+            <div class="cs-bar-track" aria-hidden="true"><div class="cs-bar-fill" style="width: 80%"></div></div>
+            <span class="cs-bar-val">4.36&quot; MAE</span>
+          </div>
+          <div class="cs-bar-row" role="listitem">
+            <span class="cs-bar-label">Raw 7:1 Weather App</span>
+            <div class="cs-bar-track" aria-hidden="true"><div class="cs-bar-fill" style="width: 100%"></div></div>
+            <span class="cs-bar-val">5.42&quot; MAE</span>
+          </div>
+        </div>
+
+        <div class="cs-bench-foot">
+          <span>138 SNOTEL cycles · 1,847 HRRR soundings</span>
+          <a href="https://github.com/lifan-builds/close-snow/tree/main/benchmarks">Reproduce benchmarks ↗</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="subpage-workbench" aria-label="Interactive CloseSnow telemetry workbench">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select CloseSnow telemetry view">
+          <button type="button" class="subpage-tab" id="cs-tab-blend" role="tab" aria-selected="true" tabindex="0" data-mode="blend">1 · 15-Day Live Blend</button>
+          <button type="button" class="subpage-tab" id="cs-tab-unlock" role="tab" aria-selected="false" tabindex="-1" data-mode="unlock">2 · 1-Click Free Unlock</button>
+          <button type="button" class="subpage-tab" id="cs-tab-snotel" role="tab" aria-selected="false" tabindex="-1" data-mode="snotel">3 · USDA SNOTEL Receipts</button>
+        </div>
+        <span class="subpage-meta" id="cs-meta">Alta Mid-Mtn (9,678 ft) · 6 live NWP models</span>
+      </div>
+
+      <div class="subpage-stage-box" aria-hidden="true">
+        <svg class="cs-stage-svg" viewBox="0 0 640 94">
+          <rect x="1" y="1" width="638" height="92" rx="8" fill="#121820" stroke="#243342" stroke-width="1.5"/>
+          <rect x="1" y="1" width="638" height="26" rx="8" fill="#1f2e3d"/>
+          <circle cx="14" cy="14" r="3.5" fill="#f87171"/>
+          <circle cx="25" cy="14" r="3.5" fill="#f59e0b"/>
+          <circle cx="36" cy="14" r="3.5" fill="#34d399"/>
+          <text x="50" y="17" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#ffffff" id="cs-svg-window">close-snow.clifan.com — Alta Ski Area · 15-Day Pro Unlocked ($0.00)</text>
+          <text x="626" y="17" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#5eead4" id="cs-svg-pill">“It’s a guess anyway — why pay?”</text>
+
+          <!-- Simulated 15-Day Snow Summary Bars -->
+          <text x="16" y="47" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#93c5fd">Prev 15d SNOTEL: 19&quot;</text>
+          <rect x="16" y="56" width="128" height="24" rx="4" fill="#18222d"/>
+          <rect x="26" y="68" width="10" height="10" rx="1.5" fill="#297dbb"/>
+          <rect x="44" y="59" width="10" height="19" rx="1.5" fill="#e57700"/>
+          <rect x="62" y="70" width="10" height="8" rx="1.5" fill="#297dbb"/>
+          <rect x="98" y="69" width="10" height="9" rx="1.5" fill="#297dbb"/>
+          <rect x="116" y="67" width="10" height="11" rx="1.5" fill="#297dbb"/>
+
+          <rect x="154" y="38" width="104" height="44" rx="5" fill="#18222d" stroke="#34d399" stroke-width="1"/>
+          <text x="206" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#cbd5e1">LAST 24H</text>
+          <text x="206" y="71" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#ffffff">1&quot; · SNOTEL ✓</text>
+
+          <text x="270" y="47" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#f59e0b">Next 1–5d: 12&quot; · Days 6–10: 17&quot; · Days 11–15 (AI AIFS + IFS): 3&quot;</text>
+          <rect x="270" y="54" width="354" height="26" rx="4" fill="#18222d"/>
+          <rect x="292" y="57" width="14" height="21" rx="1.5" fill="#e57700"/>
+          <rect x="352" y="65" width="14" height="13" rx="1.5" fill="#297dbb"/>
+          <rect x="374" y="65" width="14" height="13" rx="1.5" fill="#297dbb"/>
+          <rect x="396" y="62" width="14" height="16" rx="1.5" fill="#297dbb"/>
+          <rect x="418" y="64" width="14" height="14" rx="1.5" fill="#297dbb"/>
+          <rect x="440" y="67" width="14" height="11" rx="1.5" fill="#297dbb"/>
+          <rect x="484" y="72" width="14" height="6" rx="1.5" fill="#297dbb"/>
+          <rect x="572" y="70" width="14" height="8" rx="1.5" fill="#297dbb"/>
+        </svg>
+
+        <div class="subpage-stage-top">
+          <strong id="cs-title">Live 6-Model Elevation Ensemble · Alta Ski Area (9,678 ft)</strong>
+          <span id="cs-badge">5d: 12&quot; | 15d: 32&quot; · 12.2:1 Cobb/Alcott SLR</span>
+        </div>
+        <pre class="subpage-stage-pre" id="cs-pre">HORIZON          MODELS BLENDED                         SNOW (P50)   SPREAD (P10–P90)   PHYSICS / GROUND TRUTH
+Days 1–2 (48h)   HRRR 3km + NBM v4.2 + IFS + ICON       12.0&quot;        8.4&quot; – 16.2&quot;       DGZ -14°C · NW 700hPa canyon boost
+Days 6–10        NBM v4.2 + ECMWF IFS 9km + AI AIFS     17.1&quot;        9.5&quot; – 26.8&quot;       Unlocked free (240h hourly table)
+Days 11–15       ECMWF IFS 9km + AI AIFS + GFS 16d       3.2&quot;        0.8&quot; –  8.9&quot;       Extended storm-window probability</pre>
+      </div>
+    </section>
+
+    <figure class="cs-shot-figure">
+      <img class="cs-shot-img" src="poster.jpg" width="1440" height="900" alt="CloseSnow live 15-day forecast view for Alta Ski Area showing the 1-Click Free Unlock banner and SNOTEL telemetry">
+      <figcaption class="cs-shot-caption">
+        <span>Live Alta Ski Area forecast with 1-Click Free Unlock (“It’s a guess anyway — why should you pay for it?”).</span>
+        <a href="https://close-snow.clifan.com/">Open live app ↗</a>
+      </figcaption>
+    </figure>
+
+    <section class="subpage-features" aria-label="Core CloseSnow architecture">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">850–500 hPa DGZ</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">-12°C to -18°C dendrites</text>
+          <rect x="164" y="14" width="146" height="48" rx="4" fill="#131d28" stroke="#f59e0b"/>
+          <text x="237" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#fcd34d">18:1 UTAH vs 8:1 PNW</text>
+          <text x="237" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Wet-bulb + wind riming</text>
+        </svg>
+        <h2>3D Cobb/Alcott snow ratios</h2>
+        <p>Computes dendritic-growth-zone snow ratios, ridge-wind riming compaction, and 700 hPa canyon orographics across base, mid, and summit&nbsp;bands.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#131d28" stroke="#f59e0b"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#fcd34d">DAYS 6–15 + 240H</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">IFS · AI AIFS · GFS 16d</text>
+          <rect x="164" y="14" width="146" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="237" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">1-CLICK FREE ($0)</text>
+          <text x="237" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Zero account · 0 ads</text>
+        </svg>
+        <h2>15-day &amp; 240h 1-click unlock</h2>
+        <p>Familiar OpenSnow color coding so switchers adapt instantly—with Days 6–15, 240-hour tables, and 6-model matrices unlocked free in one&nbsp;click.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">USDA NRCS SNOTEL</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">15 live US stations</text>
+          <rect x="164" y="14" width="146" height="48" rx="4" fill="#131d28" stroke="#334155"/>
+          <text x="237" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">SNWD + SWE + TOBS</text>
+          <text x="237" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">16-day hourly receipts</text>
+        </svg>
+        <h2>Live USDA SNOTEL receipts</h2>
+        <p>Verifies past 15-day snowfall and base depth directly against hourly USDA mountain telemetry instead of unverified marketing&nbsp;totals.</p>
+      </article>
+    </section>
+
+    <p class="cs-scope-note">
+      <strong>Scope &amp; limits:</strong> Extended Days 11–15 reflect synoptic storm-window probabilities across ECMWF IFS, AI AIFS, and GFS rather than exact inch counts. USDA SNOTEL ultrasonic sensors measure natural settled snowpack on 15 US resorts; non-US resorts use Open-Meteo historical analysis.
+    </p>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://close-snow.clifan.com/">Live App ↗</a>
+      <a href="https://github.com/lifan-builds/close-snow">Source Code ↗</a>
+      <a href="https://github.com/lifan-builds/close-snow/tree/main/benchmarks">Benchmarks ↗</a>
+      <a href="https://x.com/LifanBuilds">X ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const MODES = {
+        blend: {
+          window: "close-snow.clifan.com — Alta Ski Area · 15-Day Pro Unlocked ($0.00)",
+          pill: "“It’s a guess anyway — why pay?”",
+          title: "Live 6-Model Elevation Ensemble · Alta Ski Area (9,678 ft)",
+          badge: "5d: 12\" | 15d: 32\" · 12.2:1 Cobb/Alcott SLR",
+          meta: "Alta Mid-Mtn (9,678 ft) · 6 live NWP models",
+          pre: `HORIZON          MODELS BLENDED                         SNOW (P50)   SPREAD (P10–P90)   PHYSICS / GROUND TRUTH\nDays 1–2 (48h)   HRRR 3km + NBM v4.2 + IFS + ICON       12.0"        8.4" – 16.2"       DGZ -14°C · NW 700hPa canyon boost\nDays 6–10        NBM v4.2 + ECMWF IFS 9km + AI AIFS     17.1"        9.5" – 26.8"       Unlocked free (240h hourly table)\nDays 11–15       ECMWF IFS 9km + AI AIFS + GFS 16d       3.2"        0.8" –  8.9"       Extended storm-window probability`
+        },
+        unlock: {
+          window: "1-Click Free Unlock — OpenSnow $99/yr Extended Tiers -> $0.00",
+          pill: "0 signup · 0 paywall",
+          title: "“It’s a guess anyway — why should you pay for it?”",
+          badge: "Days 6–15 + 240h Hourly + 6-Model Matrix unlocked",
+          meta: "Instant client-side toggle · zero account required",
+          pre: `TIER UNLOCKED                 COMMERCIAL PAYWALL     CLOSESNOW     LIVE DATA SOURCE\nDays 6–10 + 240h Hourly       $49.99/yr Base         1-Click $0    NBM v4.2 + ECMWF IFS 9km + ICON\nDays 11–15 Extended AI        $99.99/yr Premium      1-Click $0    ECMWF AI AIFS + IFS 9km + GFS 16d\nPast 15-Day Snow Receipts     Gated / Summary        Always Free   USDA NRCS AWDB SNOTEL Hourly`
+        },
+        snotel: {
+          window: "USDA NRCS AWDB Telemetry — Station 366:UT:SNTL (Alta Guard / Collins)",
+          pill: "CORS Direct · Hourly SNWD + WTEQ",
+          title: "Live Hourly SNOTEL Ground-Truth Verification (Past 16 Days)",
+          badge: "0 synthetic or demo fallback rows",
+          meta: "https://wcc.sc.egov.usda.gov/awdbRestApi · Live JSON",
+          pre: `STATION TRIPLET   ELEVATION   24H SNOW   PREV 1–5D   PREV 6–10D   SETTLED BASE   OBSERVED TEMP\n366:UT:SNTL       9,662 ft     1.0"       5.0"       10.0"         5.0"          28°F (-2.2°C)\n784:CA:SNTL       8,010 ft     0.0"       4.0"        9.0"         6.0"          33°F (+0.6°C)\n689:WY:SNTL       8,200 ft     2.0"       7.0"       11.0"        14.0"          21°F (-6.1°C)`
+        }
+      };
+
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("cs-svg-window").textContent = m.window;
+        document.getElementById("cs-svg-pill").textContent = m.pill;
+        document.getElementById("cs-title").textContent = m.title;
+        document.getElementById("cs-badge").textContent = m.badge;
+        document.getElementById("cs-meta").textContent = m.meta;
+        document.getElementById("cs-pre").textContent = m.pre;
+      }
+
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+
+      const copyBtn = document.getElementById("cs-copy-btn");
+      const cmdEl = document.getElementById("cs-clone-cmd");
+      if (copyBtn && cmdEl) {
+        copyBtn.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(cmdEl.textContent.trim());
+            copyBtn.textContent = "✓ Copied";
+            copyBtn.setAttribute("data-copied", "true");
+            setTimeout(() => {
+              copyBtn.textContent = "Copy";
+              copyBtn.setAttribute("data-copied", "false");
+            }, 1800);
+          } catch {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

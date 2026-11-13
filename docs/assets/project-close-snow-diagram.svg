@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150">
+  <rect width="420" height="150" rx="10" fill="#0b1722" stroke="#223b4c" stroke-width="1.5"/>
+  <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#7dd3fc">CLOSESNOW · 3D MICROPHYSICS + 15-DAY NWP &amp; LIVE SNOTEL</text>
+
+  <!-- Left 3 Live Feeds -->
+  <g fill="#112433" stroke="#38bdf8" stroke-width="1.2">
+    <rect x="16" y="34" width="102" height="28" rx="5"/>
+    <rect x="16" y="68" width="102" height="28" rx="5"/>
+  </g>
+  <rect x="16" y="102" width="102" height="28" rx="5" fill="#112433" stroke="#34d399" stroke-width="1.2"/>
+  <text x="67" y="51" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.8" fill="#e0f2fe">HRRR 3km · NBM v4.2</text>
+  <text x="67" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.8" fill="#e0f2fe">IFS 9km · AI AIFS 15d</text>
+  <text x="67" y="119" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.8" fill="#6ee7b7">USDA SNOTEL (Hourly)</text>
+
+  <path d="M118 48 L154 74 M118 82 L154 82 M118 116 L154 90" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="4 3"/>
+
+  <!-- Center 3D Physics Engine -->
+  <rect x="154" y="42" width="120" height="80" rx="7" fill="#132838" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="214" y="62" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="700" fill="#fcd34d">3D COBB / ALCOTT</text>
+  <text x="214" y="77" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.4" fill="#e2e8f0">DGZ -15°C · Riming</text>
+  <text x="214" y="91" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.4" fill="#93c5fd">700hPa Orographics</text>
+  <text x="214" y="108" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" font-weight="600" fill="#5eead4">1.81&quot; Storm MAE ✓</text>
+
+  <line x1="274" y1="82" x2="302" y2="82" stroke="#34d399" stroke-width="2"/>
+  <polygon points="300,78 307,82 300,86" fill="#34d399"/>
+
+  <!-- Right 15-Day OpenSnow-Style Bar Output -->
+  <rect x="308" y="36" width="96" height="92" rx="7" fill="#0f202c" stroke="#34d399" stroke-width="1.5"/>
+  <text x="356" y="53" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#5eead4">15d · $0 UNLOCK</text>
+  <!-- Mini Snowfall Bars (<6" Blue #297dbb, 6"+ Powder Orange #e57700) -->
+  <rect x="320" y="96" width="8" height="14" rx="1.5" fill="#297dbb"/>
+  <rect x="332" y="72" width="8" height="38" rx="1.5" fill="#e57700"/>
+  <rect x="344" y="88" width="8" height="22" rx="1.5" fill="#297dbb"/>
+  <rect x="356" y="82" width="8" height="28" rx="1.5" fill="#297dbb"/>
+  <rect x="368" y="76" width="8" height="34" rx="1.5" fill="#e57700"/>
+  <rect x="380" y="94" width="8" height="16" rx="1.5" fill="#297dbb"/>
+  <line x1="316" y1="110" x2="396" y2="110" stroke="#334155" stroke-width="1"/>
+  <text x="356" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">Alta 32&quot; · 240h</text>
+</svg>

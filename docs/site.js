@@ -281,6 +281,37 @@ const BUILD_DATA = {
       { val: 'Atomic RSS', lbl: 'R2 byte-length HEAD gate' }
     ],
     trace: `<span class="tok-comment"># Fail-closed source-to-audio validation pipeline</span>\n<span class="tok-cmd">$ castforge validate</span> --config podcast.yaml --check-public\n✓ 10 cited clusters · MP3 duration &lt; ceiling · R2 200 OK verified`
+  },
+  closesnow: {
+    name: 'CloseSnow',
+    route: 'clifan.com/close-snow/',
+    href: 'close-snow/',
+    art: 'assets/project-close-snow-diagram.svg',
+    repo: 'https://close-snow.clifan.com/',
+    repoLabel: 'Launch close-snow.clifan.com ↗',
+    summary: 'Open-physics 15-day mountain snow forecaster across 19 ski resorts with 3D Cobb/Alcott SLR, ECMWF AI AIFS + HRRR ensembles, and live hourly USDA SNOTEL verification.',
+    pillars: ['local', 'ml', 'eval'],
+    diagram: `
+      <rect x="6" y="4" width="118" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="65" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#93c5fd">HRRR 3km · NBM v4.2</text>
+      <rect x="6" y="25" width="118" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="65" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#93c5fd">IFS 9km · AI AIFS 15d</text>
+      <rect x="6" y="46" width="118" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="65" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#5eead4">USDA SNOTEL (Hourly)</text>
+      <path d="M124 13 L178 34 M124 34 L178 34 M124 55 L178 34" stroke="#60a5fa" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="178" y="12" width="154" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="255" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#fcd34d">3D COBB / ALCOTT SLR</text>
+      <text x="255" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">DGZ -15°C · 700hPa Lift</text>
+      <line x1="332" y1="34" x2="376" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="376" y="12" width="138" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
+      <text x="445" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">1.81&quot; SNOTEL MAE</text>
+      <text x="445" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">15d + 240h · $0 Unlock</text>`,
+    metrics: [
+      { val: '1.81" MAE', lbl: '138 SNOTEL storm cycles' },
+      { val: '15d + 240h', lbl: '1-click $0 free unlock' },
+      { val: '19 resorts', lbl: 'Live NWP + USDA SNOTEL' }
+    ],
+    trace: `<span class="tok-comment"># Live 15-day multi-model + USDA SNOTEL verification</span>\n<span class="tok-cmd">$ python3</span> benchmarks/run_benchmarks.py\n✓ 1.81" 48h storm MAE · 3.21 SLR MAE · 79.0% P10-P90 coverage`
   }
 };
 
@@ -453,11 +484,11 @@ const heroConceptPills = [...document.querySelectorAll('.focus-item[data-concept
 const COVER_TICKER_DATA = {
   local: {
     tag: '01 · LOCAL',
-    text: 'Faster Mac Use · Agent Autofill · QuotaSwitch · Perks Reminder · Foliofen CLI'
+    text: 'Faster Mac Use · Agent Autofill · CloseSnow · QuotaSwitch · Perks Reminder · Foliofen CLI'
   },
   ml: {
     tag: '02 · ML',
-    text: 'AI Builder Brief · FreshPowder · CastForge · Nitan Podcast'
+    text: 'CloseSnow · AI Builder Brief · FreshPowder · CastForge · Nitan Podcast'
   },
   agents: {
     tag: '03 · AGENTS',
@@ -465,7 +496,7 @@ const COVER_TICKER_DATA = {
   },
   eval: {
     tag: '04 · EVALS',
-    text: '114× token benchmark · 0.0 px cursor drift · Primary-source receipts'
+    text: '114× token benchmark · 1.81" SNOTEL storm MAE · Primary-source receipts'
   }
 };
 
@@ -802,7 +833,7 @@ window.addEventListener('keydown', event => {
     return;
   }
 
-  const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
   const idx = keys.indexOf(event.key);
   if (idx !== -1 && stageTabs[idx]) {
     if (document.body.getAttribute('data-cover') === 'closed') {

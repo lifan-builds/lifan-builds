@@ -54,8 +54,8 @@
       <sub>Unified quota-driven multi-account switcher and auto-rotator for Google Antigravity (<code>agy</code>) and OpenAI Codex (<a href="https://clifan.com/quotaswitch/">overview</a> · <a href="https://www.npmjs.com/package/quotaswitch">npm</a> · <a href="https://github.com/lifan-builds/quotaswitch">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://clifan.com/foliofen-cli/"><strong>Foliofen CLI</strong></a><br />
-      <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness (<a href="https://clifan.com/foliofen-cli/">overview</a> · <a href="https://github.com/lifan-builds/foliofen-cli">repo</a>).</sub>
+      <a href="https://clifan.com/close-snow/"><strong>CloseSnow</strong></a> <sup>NEW</sup><br />
+      <sub>Open-physics 15-day mountain snow forecaster across 19 ski resorts with 3D Cobb/Alcott SLR, ECMWF AI AIFS + HRRR ensembles, and live hourly USDA SNOTEL verification (<a href="https://clifan.com/close-snow/">overview</a> · <a href="https://close-snow.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/close-snow">repo</a>).</sub>
     </td>
   </tr>
   <tr>
@@ -66,6 +66,16 @@
     <td width="50%" valign="top">
       <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
       <sub>Ski and snowboard deal aggregator tracking current and historical deals across North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://github.com/lifan-builds/snow-deal">repo</a>).</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://clifan.com/foliofen-cli/"><strong>Foliofen CLI</strong></a><br />
+      <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness (<a href="https://clifan.com/foliofen-cli/">overview</a> · <a href="https://github.com/lifan-builds/foliofen-cli">repo</a>).</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://clifan.com/ai-builder-brief/"><strong>AI Builder Brief</strong></a> <sup>RECENT</sup><br />
+      <sub>Source-linked AI developments turned into evidence-gated review artifacts (<a href="https://clifan.com/ai-builder-brief/">overview</a> · <a href="https://clifan.com/journal/ai-builder-brief/">daily briefs</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">repo</a>).</sub>
     </td>
   </tr>
   <tr>
@@ -84,18 +94,8 @@
       <sub>Tiny filesystem memory layer for coding agents: durable context files, companion skills, and local scripts.</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://clifan.com/ai-builder-brief/"><strong>AI Builder Brief</strong></a> <sup>RECENT</sup><br />
-      <sub>Source-linked AI developments turned into evidence-gated review artifacts (<a href="https://clifan.com/ai-builder-brief/">overview</a> · <a href="https://clifan.com/journal/ai-builder-brief/">daily briefs</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">repo</a>).</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>Continuity</strong> <sup>LOCAL · IN PROGRESS</sup><br />
-      <sub>Workflow, evaluation, repair, checkpoint, and human-gate control plane for a local agent-first research system.</sub>
-    </td>
-    <td width="50%" valign="top">
-      <strong>OpenMuseCall</strong> <sup>LOCAL · IN PROGRESS</sup><br />
-      <sub>Open, supervised calling agent prototype for authorized Mac-to-iPhone cellular calls, with explicit control and safety gates.</sub>
+      <strong>Continuity &amp; OpenMuseCall</strong> <sup>LOCAL · IN PROGRESS</sup><br />
+      <sub>Local agent-first research control plane and supervised Mac-to-iPhone calling agent prototype with explicit safety gates.</sub>
     </td>
   </tr>
 </table>
