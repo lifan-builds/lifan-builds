@@ -289,7 +289,7 @@ const BUILD_DATA = {
     art: 'close-snow/cover.jpg',
     repo: 'https://close-snow.clifan.com/',
     repoLabel: 'Launch close-snow.clifan.com ↗',
-    summary: 'Open-physics 15-day mountain snow forecaster across 19 ski resorts with 3D Cobb/Alcott SLR, ECMWF AI AIFS + HRRR ensembles, and live hourly USDA SNOTEL verification.',
+    summary: 'Open-physics 15-day mountain snow forecaster across 120 Ikon & Epic ski resorts with calibrated ±1σ error bars, 3D Cobb/Alcott SLR, and live USDA SNOTEL ground-truth.',
     pillars: ['local', 'ml', 'eval'],
     diagram: `
       <rect x="6" y="4" width="118" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
@@ -297,21 +297,21 @@ const BUILD_DATA = {
       <rect x="6" y="25" width="118" height="18" rx="4" fill="#13202c" stroke="#60a5fa" stroke-width="1.2"/>
       <text x="65" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#93c5fd">IFS 9km · AI AIFS 15d</text>
       <rect x="6" y="46" width="118" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
-      <text x="65" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#5eead4">USDA SNOTEL (Hourly)</text>
+      <text x="65" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#5eead4">41 SNOTEL Stations</text>
       <path d="M124 13 L178 34 M124 34 L178 34 M124 55 L178 34" stroke="#60a5fa" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="178" y="12" width="154" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
-      <text x="255" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#fcd34d">3D COBB / ALCOTT SLR</text>
-      <text x="255" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">DGZ -15°C · 700hPa Lift</text>
+      <text x="255" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#fcd34d">3D SLR + ±1σ BARS</text>
+      <text x="255" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">DGZ -15°C · 72.4% Cov</text>
       <line x1="332" y1="34" x2="376" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="376" y="12" width="138" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
-      <text x="445" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">1.81&quot; SNOTEL MAE</text>
-      <text x="445" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">15d + 240h · $0 Unlock</text>`,
+      <text x="445" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">2.37&quot; SNOTEL MAE</text>
+      <text x="445" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">120 Resorts · $0 Free</text>`,
     metrics: [
-      { val: '1.81" MAE', lbl: '138 SNOTEL storm cycles' },
-      { val: '15d + 240h', lbl: '1-click $0 free unlock' },
-      { val: '19 resorts', lbl: 'Live NWP + USDA SNOTEL' }
+      { val: '2.37" MAE', lbl: '221 held-out SNOTEL storms' },
+      { val: '±1σ bars', lbl: '72.4% empirical coverage' },
+      { val: '120 resorts', lbl: 'All Ikon & Epic · $0 free' }
     ],
-    trace: `<span class="tok-comment"># Live 15-day multi-model + USDA SNOTEL verification</span>\n<span class="tok-cmd">$ python3</span> benchmarks/run_benchmarks.py\n✓ 1.81" 48h storm MAE · 3.21 SLR MAE · 79.0% P10-P90 coverage`
+    trace: `<span class="tok-comment"># Out-of-sample 6-model + USDA SNOTEL storm verification</span>\n<span class="tok-cmd">$ python3</span> benchmarks/run_benchmarks.py\n✓ 2.37" storm MAE (vs OpenSnow 4.01") · 3.23 mtn SLR MAE · 72.4% ±1σ`
   }
 };
 
@@ -496,7 +496,7 @@ const COVER_TICKER_DATA = {
   },
   eval: {
     tag: '04 · EVALS',
-    text: '114× token benchmark · 1.81" SNOTEL storm MAE · Primary-source receipts'
+    text: '114× token benchmark · 2.37" SNOTEL storm MAE · Primary-source receipts'
   }
 };
 

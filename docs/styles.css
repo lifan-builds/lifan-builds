@@ -852,6 +852,7 @@ h1, h2, h3 {
   width: 100%;
   height: auto;
   margin: 0 0 12px;
+  overflow: hidden;
 }
 
 .signal-flow-line {

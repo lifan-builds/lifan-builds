@@ -45,7 +45,7 @@
       <div class="journal-filter-bar">
         <div class="filter-pills" role="group" aria-label="Filter journal entries">
           <button type="button" class="filter-pill" aria-pressed="true" data-filter="all">All writing</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (5)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (6)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (4)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (59)</button>
         </div>
@@ -55,6 +55,42 @@
     <!-- Track 1: Quick Thoughts & Builder Takes (X / Reddit / RedNote 小红书) -->
     <div id="journal-thoughts-section">
       <section class="journal-list wrap" id="thoughts" aria-label="Quick thoughts and community notes from X, Reddit, and RedNote">
+        <article class="long-note thought-card" id="open-equals-close-snow" data-thought-card>
+          <div class="journal-meta">
+            <span>Quick Take · X &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-11-14">Nov 2026</time>
+            </div>
+          </div>
+          <img class="thought-art-img" src="../close-snow/poster.jpg" width="760" height="475" alt="CloseSnow live 15-day forecast view for Alta Ski Area showing color-matched ±1σ error bars and USDA SNOTEL telemetry" loading="lazy">
+          <div data-lang-pane="en">
+            <h2>open = close: adding ±1σ error bars to snow forecasts</h2>
+            <p>
+              As everyone knows in AI land, <code>open = close</code>—so <code>close = open</code>. After enough ski friends nudged me, I built CloseSnow, a 100% free, zero-paywall mountain snowfall forecaster across 120 Ikon and Epic resorts. Compared to a certain familiar paid snow app, it puts calibrated <code>±1σ</code> error bars directly on every daily bar so you can see the real uncertainty spread instead of getting burned by an overconfident single number. On my held-out 221-storm SNOTEL backtest, it reached <code>2.37"</code> 48h storm MAE (vs. OpenSnow’s <code>4.01"</code>).
+            </p>
+            <p>
+              It’s a solo, zero-budget public-good build—expect plenty of rough edges and bugs. Feedback is very welcome; fixes ship whenever snow conditions allow.
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>众所周知 open = close，所以手搓了个带 Error Bar 的免费查雪 APP</h2>
+            <p>
+              众所周知，<code>open = close</code>，那么 <code>close</code> 就等于 <code>open</code>。在很多雪友督促下做了个纯免费的降雪量预测 APP，CloseSnow。和你们熟悉的某个 APP 比，加入了 <code>±1σ</code> Error Bar，可以直观看到每天的测量与预测误差，不会再轻易被虚标的单点数字欺骗了。预测准确度在我自己的 221 场 SNOTEL 暴雪独立回测上准确率很高（48h MAE <code>2.37"</code> vs OpenSnow <code>4.01"</code>）。
+            </p>
+            <p>
+              毕竟是一个人纯公益手搓，肯定还有很多 bug，欢迎反馈，随缘修。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="https://close-snow.clifan.com/">Live app (close-snow.clifan.com) ↗</a>
+            <a href="../close-snow/">Architecture &amp; SNOTEL benchmark →</a>
+          </div>
+        </article>
+
         <article class="long-note thought-card" id="ios-console-ports" data-thought-card>
           <div class="journal-meta">
             <span>Quick Take · X &amp; RedNote (小红书)</span>

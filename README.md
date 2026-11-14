@@ -55,7 +55,7 @@
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/close-snow/"><strong>CloseSnow</strong></a> <sup>NEW</sup><br />
-      <sub>Open-physics 15-day mountain snow forecaster across 19 ski resorts with 3D Cobb/Alcott SLR, ECMWF AI AIFS + HRRR ensembles, and live hourly USDA SNOTEL verification (<a href="https://clifan.com/close-snow/">overview</a> · <a href="https://close-snow.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/close-snow">repo</a>).</sub>
+      <sub>Free 15-day mountain snow forecaster across 120 Ikon &amp; Epic ski resorts with calibrated <code>±1σ</code> error bars, 3D Cobb/Alcott SLR, and 41 live USDA SNOTEL stations — <code>2.37&quot;</code> storm MAE vs. OpenSnow <code>4.01&quot;</code> (<a href="https://clifan.com/close-snow/">overview</a> · <a href="https://close-snow.clifan.com/">live app</a> · <a href="https://close-snow.clifan.com/?view=methodology">accuracy lab</a>).</sub>
     </td>
   </tr>
   <tr>

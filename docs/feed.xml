@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-06T08:00:00Z</updated>
+  <updated>2026-11-14T22:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>CloseSnow: Free 15-day mountain snow forecaster with calibrated ±1σ error bars across 120 Ikon &amp; Epic resorts</title>
+    <link href="https://clifan.com/close-snow/" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/close-snow/</id>
+    <updated>2026-11-14T22:00:00Z</updated>
+    <summary>As everyone knows, open = close, so close = open: a 100% free 6-model mountain snow app showing honest ±1σ uncertainty whiskers and 2.37&quot; 48h storm MAE across 221 held-out USDA SNOTEL storms.</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-06): METR estimates Anthropic’s capability progress has… · Dropbox explains host-enforced permissions and undo…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-06.html" rel="alternate" type="text/html"/>
