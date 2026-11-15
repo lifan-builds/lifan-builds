@@ -92,6 +92,27 @@ def _get_current_task(trellis_dir: Path) -> dict | None:
     return _get_current_task_for_input(trellis_dir, {})
 
 
+_WARNED_RESOLVER_ERRORS: set[str] = set()
+
+
+def _is_missing_optional_resolver(exc: BaseException, scripts_dir: Path) -> bool:
+    return (
+        isinstance(exc, ModuleNotFoundError)
+        and exc.name in {"common", "common.active_task"}
+        and not (scripts_dir / "common" / "active_task.py").exists()
+        and not (scripts_dir / "common" / "active_task").exists()
+    )
+
+
+def _warn_resolver_failure(stage: str, exc: BaseException) -> None:
+    detail = " ".join(str(exc).split())
+    suffix = f": {detail}" if detail else ""
+    msg = f"[statusline] active-task {stage} failed ({type(exc).__name__}{suffix})"[:240]
+    if msg not in _WARNED_RESOLVER_ERRORS:
+        _WARNED_RESOLVER_ERRORS.add(msg)
+        print(msg, file=sys.stderr)
+
+
 def _get_current_task_for_input(trellis_dir: Path, cc_data: dict) -> dict | None:
     """Load current task info for the Claude Code session JSON."""
     scripts_dir = trellis_dir / "scripts"
@@ -99,10 +120,16 @@ def _get_current_task_for_input(trellis_dir: Path, cc_data: dict) -> dict | None
         sys.path.insert(0, str(scripts_dir))
     try:
         from common.active_task import resolve_active_task  # type: ignore[import-not-found]
-    except Exception:
+    except Exception as exc:
+        if not _is_missing_optional_resolver(exc, scripts_dir):
+            _warn_resolver_failure("import", exc)
         return None
 
-    active = resolve_active_task(trellis_dir.parent, cc_data, platform="claude")
+    try:
+        active = resolve_active_task(trellis_dir.parent, cc_data, platform="claude")
+    except Exception as exc:
+        _warn_resolver_failure("resolve", exc)
+        return None
     if not active.task_path:
         return None
 

@@ -51,7 +51,7 @@
       <div class="journal-filter-bar">
         <div class="filter-pills" role="group" aria-label="Filter journal entries">
           <button type="button" class="filter-pill" aria-pressed="true" data-filter="all">All writing</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (6)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (7)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (4)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (59)</button>
         </div>
@@ -61,6 +61,42 @@
     <!-- Track 1: Quick Thoughts & Builder Takes (X / Reddit / RedNote 小红书) -->
     <div id="journal-thoughts-section">
       <section class="journal-list wrap" id="thoughts" aria-label="Quick thoughts and community notes from X, Reddit, and RedNote">
+        <article class="long-note thought-card" id="codex-quota-worker" data-thought-card>
+          <div class="journal-meta">
+            <span>Quick Take · X &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-11-15">Nov 2026</time>
+            </div>
+          </div>
+          <div data-lang-pane="en">
+            <h2>The only viable way I’ve found to use my Codex quota</h2>
+            <p>
+              Like I mentioned in my earlier post, the GPT family might be the hardest model lineup to use right now: hyper-defensive, misses requirements, and writes unusable code.
+            </p>
+            <p>
+              The only setup that actually works for me is letting a smarter model own <code>Plan</code>, <code>Design</code>, and <code>Verification</code> while locking GPT (usually <code>Astra</code> or <code>6.1 Sol</code>) strictly into <code>Implementation Only</code>. Thankfully GPT subscriptions don’t block Proxy API routing. My daily driver now is <code>Carbon</code> dispatching GPT models as pure coding labor, and it works pretty well.
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>找到了 Codex Quota 唯一能用上的用法</h2>
+            <p>
+              和前面一个帖子提到的一样，目前 GPT Family 可能是最难用的 Model 了：防御性极高，写出来的东西不可用，需求也理解不清楚。
+            </p>
+            <p>
+              现在找到唯一能用上 GPT Family 的办法，就是用一个更聪明的模型来做 <code>Plan</code>、<code>Design</code> 和 <code>Verification</code>，而 GPT（一般用 <code>Astra</code> 或 <code>6.1 Sol</code>）严格只做 <code>Implementation Only</code>。好在 GPT Subscription 不限制 Proxy API 的使用，我现在个人的主力是 <code>Carbon</code> 调度 GPT 模型来打工，效果还可以。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="https://x.com/LifanBuilds">X (@LifanBuilds) ↗</a>
+            <a href="#opus55-vibe-coding">Earlier take: Opus 5.5 vs. GPT →</a>
+            <a href="../quotaswitch/">QuotaSwitch (:18455/v1 gateway) →</a>
+          </div>
+        </article>
+
         <article class="long-note thought-card" id="open-equals-close-snow" data-thought-card>
           <div class="journal-meta">
             <span>Quick Take · X &amp; RedNote (小红书)</span>
