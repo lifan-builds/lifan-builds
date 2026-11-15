@@ -4,13 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CastForge — Source-Transparent Podcast Pipeline Framework | Lifan Chen</title>
-  <meta name="description" content="Open-source Python framework on PyPI for repeatable, source-transparent podcast pipelines with NotebookLM audio, Cloudflare R2, and atomic RSS validation.">
+  <meta name="description" content="Open-source Python framework on PyPI for repeatable, source-transparent podcast pipelines with StoryCluster evidence gates, NotebookLM audio, Cloudflare R2, and atomic RSS validation.">
   <link rel="canonical" href="https://clifan.com/castforge/">
   <meta property="og:title" content="CastForge — Source-transparent podcast pipeline framework">
   <meta property="og:description" content="Normalize cited sources, record auditable episode manifests, generate NotebookLM audio, and validate R2 + RSS atomically.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clifan.com/castforge/">
+  <meta property="og:image" content="https://clifan.com/castforge/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CastForge — Source-transparent podcast pipeline framework">
+  <meta name="twitter:description" content="Fail-closed Python podcast pipeline on PyPI with StoryCluster gates, duration ceilings, and atomic R2 + RSS checks.">
+  <meta name="twitter:image" content="https://clifan.com/castforge/og.jpg">
+  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="../styles.css">
   <script type="module" src="../site.js"></script>
 </head>
@@ -36,13 +41,75 @@
   </header>
 
   <main class="subpage-main wrap">
-    <p class="eyebrow">Open-Source Python Framework · Published on PyPI (castforge 0.1.3)</p>
-    <h1>Source-to-podcast pipelines, <em>fail-closed.</em></h1>
-    <p class="subpage-lead">CastForge separates reusable podcast production mechanics from show-owned editorial policy—normalizing primary citations into an auditable <code>EpisodeManifest</code>, generating NotebookLM audio, verifying Cloudflare R2 byte length, and updating RSS&nbsp;atomically.</p>
-    <div class="subpage-actions">
-      <a class="button primary" href="https://github.com/lifan-builds/castforge">View source on GitHub ↗</a>
-      <a class="button secondary" href="https://pypi.org/project/castforge/">PyPI: pip install castforge ↗</a>
-      <a class="button secondary" href="../nitan-podcast/">Powered show: Nitan Podcast →</a>
+    <section class="sp-hero-grid" aria-labelledby="cf-hero-heading">
+      <div>
+        <p class="status-line">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span>PYTHON FRAMEWORK · PYPI CASTFORGE 0.1.3 · ATOMIC R2 + RSS</span>
+        </p>
+        <h1 id="cf-hero-heading">Source-to-podcast pipelines, <span class="cover-headline-accent">fail-closed.</span></h1>
+        <p class="subpage-lead">CastForge separates reusable podcast mechanics from show editorial policy—gating primary citations into an auditable <code>EpisodeManifest</code>, verifying MP3 duration ceilings, and updating Cloudflare R2 + RSS&nbsp;atomically.</p>
+
+        <div class="subpage-actions">
+          <a class="button primary" href="https://github.com/lifan-builds/castforge">View source on GitHub ↗</a>
+          <a class="button secondary" href="https://pypi.org/project/castforge/">PyPI: castforge 0.1.3 ↗</a>
+          <a class="button secondary" href="../nitan-podcast/">Show: Nitan Podcast →</a>
+        </div>
+
+        <div class="sp-install-widget" aria-label="Install CastForge from PyPI">
+          <div class="sp-install-bar">
+            <span class="sp-install-prompt" aria-hidden="true">$</span>
+            <code class="sp-install-code" id="cf-install-cmd" aria-live="polite">pip install castforge</code>
+            <button type="button" class="sp-copy-btn" id="cf-copy-btn" data-copied="false">Copy</button>
+          </div>
+          <div class="sp-install-meta">
+            <div class="sp-install-switch" role="group" aria-label="Select CastForge command">
+              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="pip install castforge">pip</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="uv tool install castforge">uv tool</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="castforge validate --config podcast.yaml --check-public">validate</button>
+            </div>
+            <span class="sp-install-guard">Schema v2 · R2 HEAD gate</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sp-bench-panel" aria-labelledby="cf-bench-heading">
+        <div class="sp-bench-header">
+          <strong class="sp-bench-title" id="cf-bench-heading">4-Stage Fail-Closed Pipeline</strong>
+          <span class="sp-bench-pill">0 broken RSS enclosures</span>
+        </div>
+
+        <div class="sp-bars" role="list" aria-label="CastForge 4-stage pipeline verification gates">
+          <div class="sp-bar-row is-winner" role="listitem">
+            <span class="sp-bar-label">1. StoryCluster Gate</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-win" style="width: 100%"></div></div>
+            <span class="sp-bar-val">100% cited</span>
+          </div>
+          <div class="sp-bar-row is-winner" role="listitem">
+            <span class="sp-bar-label">2. Duration Ceiling</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-second" style="width: 73%"></div></div>
+            <span class="sp-bar-val">05:48 / 08:00</span>
+          </div>
+          <div class="sp-bar-row is-winner" role="listitem">
+            <span class="sp-bar-label">3. R2 HEAD -&gt; RSS</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-win" style="width: 100%"></div></div>
+            <span class="sp-bar-val">200 OK · exact</span>
+          </div>
+        </div>
+
+        <div class="sp-bench-foot">
+          <span>18+ weekly runs powering Nitan Podcast</span>
+          <a href="https://pypi.org/project/castforge/">Inspect PyPI package ↗</a>
+        </div>
+      </aside>
+    </section>
+
+    <div class="sp-audio-bar" role="region" aria-label="Sample CastForge synthesized audio briefing">
+      <div class="sp-audio-meta">
+        <strong>Sample Briefing Output · Evidence-Linked Synthesis</strong>
+        <span>castforge audio stage · -16 LUFS · SHA-256 verified enclosure</span>
+      </div>
+      <audio controls preload="metadata" src="assets/sample-briefing.mp3"></audio>
     </div>
 
     <section class="subpage-workbench" aria-label="Interactive CastForge stage-gate workbench">
@@ -54,14 +121,35 @@
         </div>
         <span class="subpage-meta" id="cf-meta">Powers Nitan Podcast &amp; AI Builder Brief</span>
       </div>
-      <div class="subpage-stage-box" aria-hidden="true">
-        <div class="subpage-stage-top">
-          <strong id="cf-title">$ castforge run --config podcast.yaml --date 2026-11-06 --shadow</strong>
-          <span id="cf-badge">Schema v2 manifest · Primary or 2× independent corroboration</span>
+
+      <div class="subpage-stage-box has-chrome" aria-hidden="true">
+        <div class="sp-stage-chrome">
+          <div class="chrome-dots"><span></span><span></span><span></span></div>
+          <span id="cf-window">castforge pipeline — Discover -&gt; Manifest v2 -&gt; Audio -&gt; Atomic R2+RSS</span>
+          <span class="sp-stage-pill" id="cf-pill">● Fail-closed gates active</span>
         </div>
-        <pre class="subpage-stage-pre" id="cf-pre">STAGE 1 [SourceCluster]  14 raw items -> 10 qualified clusters (100% primary artifact linked)
-STAGE 2 [EpisodeManifest] Wrote build/manifests/2026-11-06.json (schema_version=2, min_stories=6 pass)
-STAGE 3 [Shadow Mode]     Verified cited NotebookLM source packet · skipped R2 &amp; RSS mutation</pre>
+
+        <div class="sp-broll-grid">
+          <div class="sp-broll-pane">
+            <div class="subpage-stage-top">
+              <strong id="cf-title">$ castforge run --config podcast.yaml --date 2026-11-06 --shadow</strong>
+              <span id="cf-badge">Schema v2 manifest · Primary or 2× corroboration</span>
+            </div>
+            <pre class="subpage-stage-pre" id="cf-pre"><span class="tok-key">STAGE 1 [SourceCluster]</span>  <span class="tok-num">14</span> raw items -> <span class="tok-num">10</span> qualified clusters (<span class="tok-ok">100% primary linked</span>)
+<span class="tok-key">STAGE 2 [EpisodeManifest]</span> Wrote <span class="tok-str">build/manifests/2026-11-06.json</span> (schema_version=<span class="tok-num">2</span>)
+<span class="tok-key">STAGE 3 [Shadow Mode]</span>     <span class="tok-ok">✓ Verified NotebookLM packet</span> · skipped R2 &amp; RSS mutation</pre>
+          </div>
+
+          <div class="sp-broll-media">
+            <video class="sp-broll-video" autoplay loop muted playsinline poster="assets/broll-pipeline-poster.jpg">
+              <source src="assets/broll-pipeline.mp4" type="video/mp4">
+            </video>
+            <div class="sp-broll-caption">
+              <span>4-stage pipeline loop</span>
+              <span>Schema v2</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -122,24 +210,67 @@ STAGE 3 [Shadow Mode]     Verified cited NotebookLM source packet · skipped R2 
 
   <script>
     (() => {
+      const vid = document.querySelector(".sp-broll-video");
+      if (vid) {
+        const probe = new Image();
+        probe.onerror = () => { vid.poster = "../assets/project-castforge-diagram.svg"; };
+        probe.src = "assets/broll-pipeline-poster.jpg";
+      }
+
+      const pills = [...document.querySelectorAll(".sp-install-pill")];
+      const cmdEl = document.getElementById("cf-install-cmd");
+      const copyBtn = document.getElementById("cf-copy-btn");
+
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          pills.forEach((p) => p.setAttribute("aria-pressed", String(p === pill)));
+          if (cmdEl) cmdEl.textContent = pill.dataset.cmd || "";
+        });
+      });
+
+      if (copyBtn && cmdEl) {
+        copyBtn.addEventListener("click", async () => {
+          const text = cmdEl.textContent.trim();
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (_) {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand("copy"); } catch (_) {}
+            ta.remove();
+          }
+          copyBtn.dataset.copied = "true";
+          copyBtn.textContent = "✓ Copied";
+          clearTimeout(copyBtn._t);
+          copyBtn._t = setTimeout(() => {
+            copyBtn.dataset.copied = "false";
+            copyBtn.textContent = "Copy";
+          }, 1600);
+        });
+      }
+
       const MODES = {
         contracts: {
           title: "$ castforge run --config podcast.yaml --date 2026-11-06 --shadow",
-          badge: "Schema v2 manifest · Primary or 2× independent corroboration",
+          badge: "Schema v2 manifest · Primary or 2× corroboration",
           meta: "Powers Nitan Podcast & AI Builder Brief",
-          pre: `STAGE 1 [SourceCluster]  14 raw items -> 10 qualified clusters (100% primary artifact linked)\nSTAGE 2 [EpisodeManifest] Wrote build/manifests/2026-11-06.json (schema_version=2, min_stories=6 pass)\nSTAGE 3 [Shadow Mode]     Verified cited NotebookLM source packet · skipped R2 & RSS mutation`
+          html: `<span class="tok-key">STAGE 1 [SourceCluster]</span>  <span class="tok-num">14</span> raw items -> <span class="tok-num">10</span> qualified clusters (<span class="tok-ok">100% primary linked</span>)\n<span class="tok-key">STAGE 2 [EpisodeManifest]</span> Wrote <span class="tok-str">build/manifests/2026-11-06.json</span> (schema_version=<span class="tok-num">2</span>)\n<span class="tok-key">STAGE 3 [Shadow Mode]</span>     <span class="tok-ok">✓ Verified NotebookLM packet</span> · skipped R2 &amp; RSS mutation`
         },
         audio: {
           title: "$ castforge run --config podcast.yaml --date 2026-11-06",
           badge: "NotebookLM synthesis + fail-closed duration ceiling",
           meta: "audio_length=short · measured MP3 duration check",
-          pre: `[audio] Generated NotebookLM dialogue: build/audio/episode-2026-11-06.mp3\n[check] Measured duration: 00:05:48 (ceiling 00:08:00 -> PASS, 5,568,192 bytes)\n[manifest] Recorded audio SHA-256 & measured duration in EpisodeManifest`
+          html: `<span class="tok-key">[audio]</span>    Generated dialogue: <span class="tok-str">build/audio/episode-2026-11-06.mp3</span>\n<span class="tok-key">[check]</span>    Measured duration: <span class="tok-num">00:05:48</span> (ceiling 00:08:00 -> <span class="tok-ok">PASS</span>, 5,568,192 B)\n<span class="tok-key">[manifest]</span> <span class="tok-ok">✓ Recorded SHA-256 &amp; measured duration in EpisodeManifest</span>`
         },
         publish: {
           title: "$ castforge validate --config podcast.yaml --date 2026-11-06 --check-public",
           badge: "R2 bucket cap check + public HEAD enclosure verification",
           meta: "Cloudflare R2 + OP3 prefix + idempotent RSS item",
-          pre: `[r2] Bucket usage: 1.42 GB / 9.00 GB max_bucket_bytes -> uploaded audio/mpeg\n[head] GET https://audio.clifan.com/episodes/2026-11-06.mp3 -> 200 OK (5,568,192 bytes)\n[rss] Atomically updated feed.xml item[2026-11-06] · enclosure contract verified`
+          html: `<span class="tok-key">[r2]</span>   Bucket usage: <span class="tok-num">1.42 GB</span> / 9.00 GB max_bucket_bytes -> uploaded audio/mpeg\n<span class="tok-key">[head]</span> GET https://audio.clifan.com/episodes/2026-11-06.mp3 -> <span class="tok-ok">200 OK (exact bytes)</span>\n<span class="tok-key">[rss]</span>  <span class="tok-ok">✓ Atomically updated feed.xml item[2026-11-06]</span> · enclosure verified`
         }
       };
       const tabs = [...document.querySelectorAll(".subpage-tab")];
@@ -155,7 +286,7 @@ STAGE 3 [Shadow Mode]     Verified cited NotebookLM source packet · skipped R2 
         document.getElementById("cf-title").textContent = m.title;
         document.getElementById("cf-badge").textContent = m.badge;
         document.getElementById("cf-meta").textContent = m.meta;
-        document.getElementById("cf-pre").textContent = m.pre;
+        document.getElementById("cf-pre").innerHTML = m.html;
       }
       tabs.forEach((btn, idx) => {
         btn.addEventListener("click", () => select(btn, false));

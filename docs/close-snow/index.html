@@ -12,6 +12,10 @@
   <meta property="og:url" content="https://clifan.com/close-snow/">
   <meta property="og:image" content="https://clifan.com/close-snow/poster.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CloseSnow — Mountain snow forecasts with ±1σ error bars &amp; zero paywall">
+  <meta name="twitter:description" content="120 Ikon &amp; Epic resorts, calibrated ±1σ uncertainty whiskers, 3D Cobb/Alcott SLR, and live USDA SNOTEL ground-truth — 2.37&quot; storm MAE.">
+  <meta name="twitter:image" content="https://clifan.com/close-snow/poster.jpg">
+  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="page.css">
   <script type="module" src="../site.js"></script>
@@ -40,7 +44,10 @@
   <main class="subpage-main wrap">
     <section class="cs-hero-grid" aria-labelledby="cs-hero-heading">
       <div>
-        <p class="eyebrow">100% Free Web App · 120 Ikon &amp; Epic Resorts · ±1σ Error Bars</p>
+        <p class="status-line">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span>100% FREE WEB APP · 120 IKON &amp; EPIC RESORTS · ±1σ ERROR BARS</span>
+        </p>
         <h1 id="cs-hero-heading">Mountain snow physics. <span class="cs-accent">Honest error&nbsp;bars.</span></h1>
         <p class="subpage-lead">15-day 6-model snowfall, calibrated ±1σ uncertainty whiskers, and live USDA SNOTEL ground-truth across 120 ski resorts—free with zero&nbsp;paywall.</p>
 
@@ -153,10 +160,20 @@ Days 11–15       ECMWF IFS 9km + AI AIFS + GFS 16d       6.0&quot; ± 4.1&quot
     </section>
 
     <figure class="cs-shot-figure">
-      <img class="cs-shot-img" src="poster.jpg" width="1440" height="900" alt="CloseSnow live 15-day forecast view for Alta Ski Area showing color-matched ±1σ error bars, Summit/Mid/Base switcher, and SNOTEL telemetry">
+      <div class="cs-media-header">
+        <div class="sp-install-switch" role="group" aria-label="Switch CloseSnow visual view">
+          <button type="button" class="cs-view-pill" aria-pressed="true" data-cs-view="shot">Live Alta Forecast</button>
+          <button type="button" class="cs-view-pill" aria-pressed="false" data-cs-view="loop">Storm Telemetry Loop</button>
+        </div>
+        <a class="section-link" href="https://close-snow.clifan.com/">Open live app ↗</a>
+      </div>
+      <img class="cs-shot-img" id="cs-shot-img" src="poster.jpg" width="1440" height="900" alt="CloseSnow live 15-day forecast view for Alta Ski Area showing color-matched ±1σ error bars, Summit/Mid/Base switcher, and SNOTEL telemetry">
+      <video class="cs-shot-img" id="cs-storm-video" autoplay loop muted playsinline poster="assets/broll-storm-poster.jpg" hidden>
+        <source src="assets/broll-storm.mp4" type="video/mp4">
+      </video>
       <figcaption class="cs-shot-caption">
-        <span>Live Alta Ski Area forecast showing color-matched ±1σ error bars, elevation-band switching, and SNOTEL verification.</span>
-        <a href="https://close-snow.clifan.com/">Open live app ↗</a>
+        <span id="cs-media-caption">Live Alta Ski Area forecast showing color-matched ±1σ error bars, elevation-band switching, and SNOTEL verification.</span>
+        <span>41 paired USDA SNOTEL stations</span>
       </figcaption>
     </figure>
 
@@ -294,6 +311,32 @@ Days 11–15       ECMWF IFS 9km + AI AIFS + GFS 16d       6.0&quot; ± 4.1&quot
           } catch {}
         });
       }
+
+      const shotImg = document.getElementById("cs-shot-img");
+      const stormVideo = document.getElementById("cs-storm-video");
+      const mediaCaption = document.getElementById("cs-media-caption");
+      const viewPills = [...document.querySelectorAll(".cs-view-pill[data-cs-view]")];
+      if (stormVideo) {
+        const probe = new Image();
+        probe.onerror = () => { stormVideo.poster = "poster.jpg"; };
+        probe.src = "assets/broll-storm-poster.jpg";
+      }
+      viewPills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          const isLoop = pill.dataset.csView === "loop";
+          viewPills.forEach((p) => p.setAttribute("aria-pressed", String(p === pill)));
+          if (shotImg) shotImg.hidden = isLoop;
+          if (stormVideo) {
+            stormVideo.hidden = !isLoop;
+            if (isLoop) stormVideo.play().catch(() => {});
+          }
+          if (mediaCaption) {
+            mediaCaption.textContent = isLoop
+              ? "Atmospheric storm telemetry loop with calibrated ±1σ uncertainty whiskers and SNOTEL elevation bands."
+              : "Live Alta Ski Area forecast showing color-matched ±1σ error bars, elevation-band switching, and SNOTEL verification.";
+          }
+        });
+      });
     })();
   </script>
 </body>

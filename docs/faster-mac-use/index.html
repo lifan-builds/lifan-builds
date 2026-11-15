@@ -8,7 +8,21 @@
   <meta property="og:description" content="Drive unfocused Chrome '🤖 Agent' tab groups and native macOS apps in parallel with 0.0 px physical cursor drift and 114x fewer tokens.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clifan.com/faster-mac-use/">
+  <meta property="og:image" content="https://clifan.com/faster-mac-use/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Faster Mac Use (fmu) — Background Multi-Cursor Computer Use for macOS">
+  <meta name="twitter:description" content="Drive unfocused Chrome '🤖 Agent' tab groups and native macOS apps in parallel with 0.0 px physical cursor drift and 114x fewer tokens.">
+  <meta name="twitter:image" content="https://clifan.com/faster-mac-use/og.jpg">
   <link rel="canonical" href="https://clifan.com/faster-mac-use/">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("clifan-theme");
+        const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap">
@@ -19,7 +33,7 @@
   <div class="page-shell">
     <header class="top-bar">
       <div class="brand-trail">
-        <a href="https://clifan.com">Lifan Chen</a>
+        <a href="../">← clifan.com</a>
         <span aria-hidden="true">/</span>
         <a href="https://github.com/lifan-builds/faster-mac-use">faster-mac-use</a>
         <span class="version-pill">v0.1.0 · MIT</span>
@@ -30,6 +44,10 @@
         <a href="#architecture">Architecture</a>
         <a href="#quickstart">Quick Start</a>
         <a href="https://github.com/lifan-builds/faster-mac-use">GitHub</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color theme" title="Toggle theme (T)">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
       </nav>
     </header>
 
@@ -38,7 +56,7 @@
         <div class="hero-copy">
           <h1 id="hero-heading">Background computer use for macOS that never touches your cursor.</h1>
           <p class="hero-lead">
-            Drive unfocused Chrome <strong>"🤖 Agent"</strong> tab groups and native macOS apps in parallel—at <code>0.0 px</code> drift and 114× fewer tokens.
+            Drive unfocused Chrome <strong>"🤖 Agent"</strong> tabs and native macOS apps in parallel at <code>0.0 px</code> drift and 114× fewer&nbsp;tokens.
           </p>
 
           <div class="install-widget" aria-label="Install faster-mac-use">
@@ -54,44 +72,44 @@
               </button>
             </div>
             <div class="install-meta">
-              <div class="install-switch" role="tablist" aria-label="Install method">
-                <button type="button" class="install-tab" id="tab-install-uvx" role="tab" aria-selected="true" aria-controls="hero-cmd" tabindex="0" data-cmd="uvx faster-mac-use mcp">uvx (MCP)</button>
-                <button type="button" class="install-tab" id="tab-install-brew" role="tab" aria-selected="false" aria-controls="hero-cmd" tabindex="-1" data-cmd="brew install --Formula ./Formula/faster-mac-use.rb">brew install</button>
-                <button type="button" class="install-tab" id="tab-install-pip" role="tab" aria-selected="false" aria-controls="hero-cmd" tabindex="-1" data-cmd="pip install git+https://github.com/lifan-builds/faster-mac-use">pip install</button>
+              <div class="install-switch" role="group" aria-label="Install method">
+                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx faster-mac-use mcp">uvx</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="brew install --Formula ./Formula/faster-mac-use.rb">brew</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="pip install git+https://github.com/lifan-builds/faster-mac-use">pip</button>
               </div>
-              <code class="guard-inline">50Hz CoreGraphics guard: 0.0 px drift · 0 focus switches</code>
+              <code class="guard-inline">50Hz guard: 0.0 px drift · 0 focus theft</code>
             </div>
           </div>
 
           <div class="cta-row">
             <a class="btn-primary" href="https://github.com/lifan-builds/faster-mac-use">View on GitHub</a>
-            <a class="btn-secondary" href="https://github.com/lifan-builds/faster-mac-use/blob/main/docs/architecture_and_benchmarks.md">Read Technical Report</a>
+            <a class="btn-secondary" href="https://github.com/lifan-builds/faster-mac-use/blob/main/docs/architecture_and_benchmarks.md">Technical Report</a>
           </div>
         </div>
 
         <aside id="benchmarks" class="hero-bench" aria-labelledby="bench-heading">
           <div class="bench-top">
             <div>
-              <strong id="bench-heading" class="bench-card-title">Cumulative tokens &amp; engine latency</strong>
-              <p class="bench-sub" id="bench-subtitle">Workload A · 10-op enterprise SaaS console (lower is better)</p>
+              <strong id="bench-heading" class="bench-card-title">Cumulative tokens &amp; latency</strong>
+              <p class="bench-sub" id="bench-subtitle">Workload A · 10-op SaaS console</p>
             </div>
             <div class="tab-group" role="tablist" aria-label="Select benchmark workload">
               <button type="button" class="workload-tab" id="tab-workload-a" role="tab" aria-selected="true" aria-controls="bench-bars" tabindex="0" data-workload="A">Web SaaS</button>
-              <button type="button" class="workload-tab" id="tab-workload-d" role="tab" aria-selected="false" aria-controls="bench-bars" tabindex="-1" data-workload="D">3-Agent Swarm</button>
-              <button type="button" class="workload-tab" id="tab-workload-b" role="tab" aria-selected="false" aria-controls="bench-bars" tabindex="-1" data-workload="B">macOS Native</button>
+              <button type="button" class="workload-tab" id="tab-workload-d" role="tab" aria-selected="false" aria-controls="bench-bars" tabindex="-1" data-workload="D">Swarm</button>
+              <button type="button" class="workload-tab" id="tab-workload-b" role="tab" aria-selected="false" aria-controls="bench-bars" tabindex="-1" data-workload="B">macOS</button>
             </div>
           </div>
 
           <div class="bench-win-strip">
             <span class="win-dot" aria-hidden="true"></span>
-            <code class="bench-win-badge" id="bench-win-badge">114× fewer tokens · 13.9× faster vs @playwright/mcp</code>
+            <code class="bench-win-badge" id="bench-win-badge">114× fewer tokens · 13.9× faster</code>
           </div>
 
           <div class="bar-chart" id="bench-bars" role="tabpanel" aria-labelledby="tab-workload-a" aria-live="polite"></div>
 
           <div class="bench-foot">
-            <span><code>√</code>-scaled bars · OpenAI <code>o200k_base</code> tokenizer · 268-token schema</span>
-            <a href="https://github.com/lifan-builds/faster-mac-use/blob/main/benchmarks/results/latest_benchmark.md">Full 15-system benchmark data ↗</a>
+            <span><code>√</code>-scaled · <code>o200k_base</code> · 268-tok schema</span>
+            <a href="https://github.com/lifan-builds/faster-mac-use/blob/main/benchmarks/results/latest_benchmark.md">15-system data ↗</a>
           </div>
         </aside>
       </section>
@@ -101,13 +119,13 @@
           <div>
             <h2 id="workbench-heading">One 268-token tool across Chrome and macOS.</h2>
             <p class="section-intro">
-              Coordinate unfocused browser tabs and background macOS apps in a single stateful <code>cua_repl</code> turn while you keep working in the foreground.
+              Coordinate unfocused tabs and background apps in one stateful <code>cua_repl</code>&nbsp;turn.
             </p>
           </div>
           <div class="tab-group" role="tablist" aria-label="Select execution trace">
             <button type="button" class="trace-tab" id="tab-trace-swarm" role="tab" aria-selected="true" aria-controls="workbench-panel" tabindex="0" data-trace="swarm">3-Cursor Swarm</button>
-            <button type="button" class="trace-tab" id="tab-trace-saas" role="tab" aria-selected="false" aria-controls="workbench-panel" tabindex="-1" data-trace="saas">Chrome + WebMCP</button>
-            <button type="button" class="trace-tab" id="tab-trace-macos" role="tab" aria-selected="false" aria-controls="workbench-panel" tabindex="-1" data-trace="macos">Native macOS AX</button>
+            <button type="button" class="trace-tab" id="tab-trace-saas" role="tab" aria-selected="false" aria-controls="workbench-panel" tabindex="-1" data-trace="saas">WebMCP</button>
+            <button type="button" class="trace-tab" id="tab-trace-macos" role="tab" aria-selected="false" aria-controls="workbench-panel" tabindex="-1" data-trace="macos">macOS AX</button>
           </div>
         </div>
 
@@ -244,12 +262,22 @@
             </div>
           </div>
         </div>
+
+        <figure class="broll-showcase">
+          <video class="broll-video" id="fmu-broll-video" autoplay loop muted playsinline poster="assets/broll-swarm-poster.jpg">
+            <source src="assets/broll-swarm.mp4" type="video/mp4">
+          </video>
+          <figcaption class="broll-caption">
+            <span>3-cursor background swarm across Chrome <code>🤖 Agent</code> + Calculator</span>
+            <code>Δ 0.0 px drift · 1,510 tok</code>
+          </figcaption>
+        </figure>
       </section>
 
       <section id="architecture" class="section-block" aria-labelledby="arch-heading">
-        <h2 id="arch-heading">Built for background isolation and sub-millisecond diffs.</h2>
+        <h2 id="arch-heading">Background isolation and sub-millisecond diffs.</h2>
         <p class="section-intro">
-          Standard MCP loops grow quadratically because every click dumps a full accessibility tree. <code>faster-mac-use</code> collapses turn count and shrinks every observation to a compact UID delta.
+          Batches multi-step REPL turns and shrinks every observation to a compact UID&nbsp;delta.
         </p>
 
         <div class="arch-grid">
@@ -268,13 +296,11 @@
               <text x="148" y="46" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">@u1..@uN WeakMap</text>
               <text x="148" y="57" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">+ WebMCP &amp; Table Fold</text>
             </svg>
-            <h3>Chrome "🤖 Agent" Tab Groups</h3>
-            <p class="arch-lead">Drive logged-in Chrome sessions or headless workers without stealing window focus.</p>
+            <h3>Chrome "🤖 Agent" Tabs</h3>
+            <p class="arch-lead">Logged-in Chrome control without focus theft.</p>
             <ul>
-              <li>Outbound MV3 WebSocket bridge avoids Chrome 144 debug modals.</li>
-              <li>Persistent <code>@u1..@uN</code> UIDs with pre-registered table row folding.</li>
-              <li>Auto-executes W3C WebMCP tools and reusable <code>~/.fmu/macros/</code>.</li>
-              <li>Zero-dialog CDP file uploads and <code>&lt;canvas&gt;</code> Vision OCR.</li>
+              <li>Outbound MV3 WebSocket skips debug modals.</li>
+              <li><code>@u1..@uN</code> UIDs, table folding, and WebMCP macros.</li>
             </ul>
           </article>
 
@@ -293,13 +319,11 @@
               <rect x="144" y="40" width="166" height="24" rx="4" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
               <text x="152" y="55" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#b53f15">Vision OCR · 0 vision tok</text>
             </svg>
-            <h3>Native Swift AXObserver &amp; OCR</h3>
-            <p class="arch-lead">Persistent universal2 Swift daemon (<code>/tmp/fmu-ax.sock</code>) with a 4,000-node LRU cache.</p>
+            <h3>Swift AXObserver &amp; OCR</h3>
+            <p class="arch-lead">Universal2 Swift daemon with a 4k LRU cache.</p>
             <ul>
-              <li>Push-based <code>AXObserver</code> dirty tracking returns diffs in <code>&lt;1 ms</code>.</li>
-              <li>Dispatches <code>AXPress</code> and background PID keys without focus theft.</li>
-              <li>Never overwrites <code>NSPasteboard</code> when setting native text fields.</li>
-              <li>Apple Silicon <code>Vision.framework</code> reads windows at 0 vision tokens.</li>
+              <li><code>&lt;1 ms</code> dirty diffs; <code>NSPasteboard</code> untouched.</li>
+              <li><code>Vision.framework</code> OCR uses 0 vision tokens.</li>
             </ul>
           </article>
 
@@ -322,29 +346,27 @@
               <text x="271" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">50Hz Guard</text>
               <text x="271" y="48" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">0.0 px</text>
             </svg>
-            <h3>3-Cursor Parallel Swarms</h3>
-            <p class="arch-lead">Run concurrent agents inside one runtime with isolated virtual cursors.</p>
+            <h3>3-Cursor Swarms</h3>
+            <p class="arch-lead">Concurrent agents with isolated virtual cursors.</p>
             <ul>
-              <li>Concurrent <code>{"parallel": [...]}</code> swarms span Web and macOS.</li>
-              <li>Per-agent virtual cursors prevent physical click collisions.</li>
-              <li>Stale snapshots compress into 18-token history tombstones.</li>
-              <li>50Hz CoreGraphics guard verifies <code>0.0 px</code> physical cursor drift.</li>
+              <li><code>{"parallel": [...]}</code> spans Web + macOS apps.</li>
+              <li>18-token history tombstones &amp; 50Hz drift guard.</li>
             </ul>
           </article>
         </div>
 
         <dl class="boundary-strip" aria-label="Platform and extension boundaries">
           <div class="boundary-cell">
-            <dt>macOS 14+ &amp; Accessibility</dt>
-            <dd>The compiled Swift <code>fmu-ax</code> daemon and Apple Silicon Vision OCR require macOS with Accessibility permission granted to your terminal or IDE.</dd>
+            <dt>macOS 14+ AX</dt>
+            <dd>Grant Accessibility permission to your terminal or&nbsp;IDE.</dd>
           </div>
           <div class="boundary-cell">
-            <dt>MV3 Extension vs. Headless</dt>
-            <dd>Driving visible Chrome <code>"🤖 Agent"</code> tab groups uses the included MV3 extension (<code>ws://127.0.0.1:19222/ext</code>); without it, <code>fmu</code> runs in a background Chromium worker.</dd>
+            <dt>MV3 vs. Headless</dt>
+            <dd>MV3 (<code>:19222/ext</code>) drives Chrome; headless runs without&nbsp;it.</dd>
           </div>
           <div class="boundary-cell">
-            <dt>Unminimized Window OCR</dt>
-            <dd><code>AXUIElement</code> actions work on any background or minimized window, while <code>app.ocr()</code> requires the target window to be unminimized (it may stay occluded).</dd>
+            <dt>Window OCR</dt>
+            <dd><code>AXUIElement</code> handles minimized apps; <code>ocr()</code> needs unminimized&nbsp;windows.</dd>
           </div>
         </dl>
       </section>
@@ -354,12 +376,12 @@
           <div>
             <h2 id="quickstart-heading">Add to your agent in 30 seconds.</h2>
             <p class="section-intro">
-              Connect <code>fmu</code> to Claude Code, Cursor, OpenAI Codex CLI, or Antigravity via MCP, or invoke it directly from shell scripts.
+              Pair with Claude Code, Cursor, Codex, or Antigravity via&nbsp;MCP.
             </p>
           </div>
           <div class="tab-group" role="tablist" aria-label="Select MCP client or CLI example">
-            <button type="button" class="config-tab" id="tab-config-mcp" role="tab" aria-selected="true" aria-controls="config-panel" tabindex="0" data-config="mcp">MCP JSON (Claude / Cursor)</button>
-            <button type="button" class="config-tab" id="tab-config-codex" role="tab" aria-selected="false" aria-controls="config-panel" tabindex="-1" data-config="codex">OpenAI Codex (config.toml)</button>
+            <button type="button" class="config-tab" id="tab-config-mcp" role="tab" aria-selected="true" aria-controls="config-panel" tabindex="0" data-config="mcp">MCP JSON</button>
+            <button type="button" class="config-tab" id="tab-config-codex" role="tab" aria-selected="false" aria-controls="config-panel" tabindex="-1" data-config="codex">Codex TOML</button>
             <button type="button" class="config-tab" id="tab-config-cli" role="tab" aria-selected="false" aria-controls="config-panel" tabindex="-1" data-config="cli">Shell CLI</button>
           </div>
         </div>
@@ -396,13 +418,13 @@
   <script>
     const WORKLOADS = {
       A: {
-        subtitle: "Workload A · 10-op enterprise SaaS console (lower is better)",
-        winBadge: "114× fewer tokens · 13.9× faster vs @playwright/mcp",
+        subtitle: "Workload A · 10-op SaaS console",
+        winBadge: "114× fewer tokens · 13.9× faster",
         rows: [
-          { name: "faster-mac-use", note: "REPL + UID diff (1,290 w/ WebMCP)", ours: true, tok: 2024, ms: "133 ms" },
-          { name: "OpenAI Codex CUA", note: "cua_repl reference", ours: false, tok: 5732, ms: "359 ms" },
-          { name: "agent-browser", note: "vercel-labs v0.41 CLI", ours: false, tok: 23288, ms: "1,763 ms" },
-          { name: "@playwright/mcp", note: "Microsoft v0.0.84 MCP", ours: false, tok: 231125, ms: "1,850 ms" }
+          { name: "faster-mac-use", note: "REPL + UID diff", ours: true, tok: 2024, ms: "133 ms" },
+          { name: "OpenAI Codex CUA", note: "cua_repl", ours: false, tok: 5732, ms: "359 ms" },
+          { name: "agent-browser", note: "v0.41 CLI", ours: false, tok: 23288, ms: "1,763 ms" },
+          { name: "@playwright/mcp", note: "v0.0.84 MCP", ours: false, tok: 231125, ms: "1,850 ms" }
         ]
       },
       D: {
@@ -760,9 +782,48 @@ fmu '{"surface":"app","app":"Calculator","steps":[
       });
     }
 
-    bindTablist(".install-tab", null, (btn) => {
-      document.getElementById("hero-cmd").textContent = btn.dataset.cmd || "";
+    const installBtns = Array.from(document.querySelectorAll(".install-tab"));
+    installBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        installBtns.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+        document.getElementById("hero-cmd").textContent = btn.dataset.cmd || "";
+      });
     });
+
+    const brollVideo = document.getElementById("fmu-broll-video");
+    if (brollVideo) {
+      const probe = new Image();
+      probe.onerror = () => { brollVideo.poster = "assets/swarm-vs-mcp-demo.svg"; };
+      probe.src = "assets/broll-swarm-poster.jpg";
+    }
+
+    (function initTheme() {
+      const root = document.documentElement;
+      const labelEl = document.querySelector("[data-theme-label]");
+      function applyTheme(theme, persist) {
+        const next = theme === "dark" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        if (labelEl) labelEl.textContent = next === "dark" ? "Dark" : "Light";
+        if (persist) {
+          try { localStorage.setItem("clifan-theme", next); } catch {}
+        }
+      }
+      applyTheme(root.getAttribute("data-theme") || "light", false);
+      const toggleBtn = document.querySelector("[data-theme-toggle]");
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+        });
+      }
+      window.addEventListener("keydown", (e) => {
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        const t = e.target;
+        if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable)) return;
+        if (e.key === "t" || e.key === "T") {
+          applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+        }
+      });
+    })();
 
     bindTablist(".workload-tab", "bench-bars", (btn) => {
       renderBenchmarks(btn.dataset.workload);

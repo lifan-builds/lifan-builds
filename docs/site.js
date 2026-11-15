@@ -3,7 +3,8 @@ const BUILD_DATA = {
     name: 'Faster Mac Use (fmu)',
     route: 'clifan.com/faster-mac-use/',
     href: 'faster-mac-use/',
-    art: 'faster-mac-use/assets/swarm-vs-mcp-demo.svg',
+    art: 'faster-mac-use/cover.jpg',
+    artFallback: 'faster-mac-use/assets/swarm-vs-mcp-demo.svg',
     repo: 'https://github.com/lifan-builds/faster-mac-use',
     repoLabel: 'lifan-builds/faster-mac-use ↗',
     summary: 'Background multi-cursor browser & macOS computer-use engine driving unfocused Chrome tab groups and native apps in parallel.',
@@ -68,10 +69,11 @@ const BUILD_DATA = {
     name: 'QuotaSwitch',
     route: 'clifan.com/quotaswitch/',
     href: 'quotaswitch/',
-    art: 'assets/project-quotaswitch-diagram.svg',
+    art: 'quotaswitch/cover.jpg',
+    artFallback: 'assets/project-quotaswitch-diagram.svg',
     repo: 'https://github.com/lifan-builds/quotaswitch',
     repoLabel: 'lifan-builds/quotaswitch ↗',
-    summary: 'Unified quota-driven multi-account switcher and 30s background auto-rotator for Google Antigravity (agy) and OpenAI Codex (codex).',
+    summary: '30s multi-account rotator and local OpenAI-compatible gateway (127.0.0.1:18455/v1) for Antigravity (agy) and Codex with expiry-first API credit draining.',
     pillars: ['local', 'ml', 'agents'],
     diagram: `
       <rect x="6" y="6" width="128" height="24" rx="5" fill="#13202c" stroke="#f59e0b" stroke-width="1.3"/>
@@ -81,18 +83,18 @@ const BUILD_DATA = {
       <path d="M134 18 L186 34 M134 50 L186 34" stroke="#60a5fa" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="186" y="12" width="144" height="44" rx="7" fill="#13202c" stroke="#34d399" stroke-width="1.6"/>
       <text x="258" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#5eead4">30s AUTO-ROTATOR</text>
-      <text x="258" y="45" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">--provider=all daemon</text>
+      <text x="258" y="45" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">--provider=all · :18455</text>
       <path d="M330 34 L380 18 M330 34 L380 50" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="380" y="6" width="134" height="24" rx="5" fill="#13202c" stroke="#34d399" stroke-width="1.3"/>
       <text x="447" y="21" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">Waterfall -> Gemini 4 (100%)</text>
       <rect x="380" y="38" width="134" height="24" rx="5" fill="#13202c" stroke="#34d399" stroke-width="1.3"/>
       <text x="447" y="53" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5eead4">Codex Account #2 Resumed</text>`,
     metrics: [
-      { val: 'agy + codex', lbl: 'Dual-provider CLI' },
-      { val: '30s watch', lbl: 'Auto-rotate & resume' },
-      { val: 'AES-GCM', lbl: 'Encrypted snapshots' }
+      { val: ':18455/v1', lbl: 'Local OpenAI gateway' },
+      { val: '< 30ms', lbl: 'Expiry-first failover' },
+      { val: '30s watch', lbl: 'Auto-rotate & resume' }
     ],
-    trace: `<span class="tok-comment"># Unified quota matrix + automatic model waterfall</span>\n<span class="tok-cmd">$ npx quotaswitch</span> list --provider=all\n✓ Claude 0% -> Gemini 4 Argon High · Codex rotated &amp; thread resumed`
+    trace: `<span class="tok-comment"># Local :18455/v1 gateway + expiry-first credit draining</span>\n<span class="tok-cmd">$ quotaswitch</span> gateway status\n✓ 127.0.0.1:18455/v1 healthy · draining expiring API credits · &lt;30ms failover`
   },
   freshpowder: {
     name: 'FreshPowder',
@@ -224,7 +226,8 @@ const BUILD_DATA = {
     name: 'Foliofen CLI',
     route: 'clifan.com/foliofen-cli/',
     href: 'foliofen-cli/',
-    art: 'assets/project-foliofen-diagram.svg',
+    art: 'foliofen-cli/cover.jpg',
+    artFallback: 'assets/project-foliofen-diagram.svg',
     repo: 'https://github.com/lifan-builds/foliofen-cli',
     repoLabel: 'lifan-builds/foliofen-cli ↗',
     summary: 'Local-first CLI for exporting patient-owned Epic MyChart health records into deterministic Markdown or JSONL with zero cloud custody.',
@@ -254,7 +257,8 @@ const BUILD_DATA = {
     name: 'CastForge',
     route: 'clifan.com/castforge/',
     href: 'castforge/',
-    art: 'assets/project-castforge-diagram.svg',
+    art: 'castforge/cover.jpg',
+    artFallback: 'assets/project-castforge-diagram.svg',
     repo: 'https://pypi.org/project/castforge/',
     repoLabel: 'PyPI: castforge 0.1.3 ↗',
     summary: 'Open-source Python framework for source-transparent podcast pipelines with StoryCluster evidence gates, NotebookLM audio, and atomic R2 + RSS checks.',
@@ -426,7 +430,15 @@ function selectBuild(key) {
   if (routeEl) routeEl.textContent = item.route;
   if (summaryEl) summaryEl.textContent = item.summary;
   if (signalSvgEl && item.diagram) signalSvgEl.innerHTML = item.diagram;
-  if (stageArtEl && item.art) stageArtEl.src = item.art;
+  if (stageArtEl && item.art) {
+    stageArtEl.onerror = item.artFallback
+      ? () => {
+          stageArtEl.onerror = null;
+          stageArtEl.src = item.artFallback;
+        }
+      : null;
+    stageArtEl.src = item.art;
+  }
 
   if (metricsEl) {
     metricsEl.innerHTML = item.metrics
@@ -814,7 +826,7 @@ if (briefSearch && briefCards.length > 0) {
 window.addEventListener('keydown', event => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
   const tag = document.activeElement?.tagName;
-  if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
 
   if (event.key === '/' && briefSearch) {
     event.preventDefault();

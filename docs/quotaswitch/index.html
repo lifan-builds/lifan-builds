@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QuotaSwitch — Unified Antigravity &amp; Codex Account Rotator | Lifan Chen</title>
-  <meta name="description" content="Unified multi-account switcher and 30s background quota auto-rotator for Google Antigravity (agy) and OpenAI Codex (codex) without a proxy.">
+  <title>QuotaSwitch — 30s Multi-Account Rotator &amp; Local :18455 Gateway | Lifan Chen</title>
+  <meta name="description" content="30s multi-account rotator and local OpenAI-compatible gateway (127.0.0.1:18455/v1) for Google Antigravity (agy) and OpenAI Codex with expiry-first API credit draining and sub-30ms failover.">
   <link rel="canonical" href="https://clifan.com/quotaswitch/">
-  <meta property="og:title" content="QuotaSwitch — Unified Antigravity &amp; Codex Account Rotator">
-  <meta property="og:description" content="Monitor 5-hour and weekly rate limits across Antigravity and Codex, rotate automatically on exhaustion, and resume interrupted sessions.">
+  <meta property="og:title" content="QuotaSwitch — 30s Rotator &amp; Local :18455/v1 Gateway for Antigravity &amp; Codex">
+  <meta property="og:description" content="Pool Antigravity and Codex seats behind 127.0.0.1:18455/v1, drain expiring API credits first, fail over in under 30ms, and auto-resume agent threads.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clifan.com/quotaswitch/">
+  <meta property="og:image" content="https://clifan.com/quotaswitch/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QuotaSwitch — 30s Rotator &amp; Local :18455/v1 Gateway">
+  <meta name="twitter:description" content="Multi-account quota rotator + local OpenAI-compatible gateway for Antigravity and Codex with expiry-first credit draining.">
+  <meta name="twitter:image" content="https://clifan.com/quotaswitch/og.jpg">
+  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="../styles.css">
   <script type="module" src="../site.js"></script>
 </head>
@@ -36,34 +41,110 @@
   </header>
 
   <main class="subpage-main wrap">
-    <p class="eyebrow">Open-Source CLI · npm package (quotaswitch / agy-auth)</p>
-    <h1>Unified quota rotation for <em>Antigravity &amp; Codex.</em></h1>
-    <p class="subpage-lead">Keep personal and work accounts side by side across Google Antigravity (<code>agy</code>) and OpenAI Codex (<code>codex</code>), inspect 5-hour and weekly rate limits in one table, rotate automatically before exhaustion, and auto-continue interrupted agent&nbsp;sessions.</p>
-    <div class="subpage-actions">
-      <a class="button primary" href="https://github.com/lifan-builds/quotaswitch">View source on GitHub ↗</a>
-      <a class="button secondary" href="https://www.npmjs.com/package/quotaswitch">npm: npx quotaswitch ↗</a>
-      <span class="subpage-note">Zero proxy · AES-256-GCM local snapshots · macOS, Linux &amp; Windows</span>
-    </div>
+    <section class="sp-hero-grid" aria-labelledby="qs-hero-heading">
+      <div>
+        <p class="status-line">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span>GO + NPM CLI · 127.0.0.1:18455/V1 GATEWAY · AGY + CODEX</span>
+        </p>
+        <h1 id="qs-hero-heading">Zero-downtime quota routing for <span class="cover-headline-accent">Antigravity &amp; Codex.</span></h1>
+        <p class="subpage-lead">Pool personal, team, and API-key seats behind a local OpenAI-compatible gateway (<code>127.0.0.1:18455/v1</code>) and 30s rotator—draining expiring credits first with <code>&lt; 30ms</code> automatic&nbsp;failover.</p>
 
-    <section class="subpage-workbench" aria-label="Interactive QuotaSwitch CLI workbench">
-      <div class="subpage-toolbar">
-        <div class="subpage-tabs" role="tablist" aria-label="Select CLI workflow">
-          <button type="button" class="subpage-tab" id="tab-list" role="tab" aria-selected="true" tabindex="0" data-mode="list">1 · Unified Quota Matrix</button>
-          <button type="button" class="subpage-tab" id="tab-rotate" role="tab" aria-selected="false" tabindex="-1" data-mode="rotate">2 · 30s Auto-Rotate &amp; Resume</button>
-          <button type="button" class="subpage-tab" id="tab-batch" role="tab" aria-selected="false" tabindex="-1" data-mode="batch">3 · Batch OAuth Onboarding</button>
+        <div class="subpage-actions">
+          <a class="button primary" href="https://github.com/lifan-builds/quotaswitch">View on GitHub ↗</a>
+          <a class="button secondary" href="https://www.npmjs.com/package/quotaswitch">npm: quotaswitch ↗</a>
         </div>
-        <span class="subpage-meta" id="qs-meta">--provider=all · Keychain + ~/.codex/auth.json</span>
+
+        <div class="sp-install-widget" aria-label="Install and inspect QuotaSwitch">
+          <div class="sp-install-bar">
+            <span class="sp-install-prompt" aria-hidden="true">$</span>
+            <code class="sp-install-code" id="qs-install-cmd" aria-live="polite">quotaswitch gateway status</code>
+            <button type="button" class="sp-copy-btn" id="qs-copy-btn" data-copied="false">Copy</button>
+          </div>
+          <div class="sp-install-meta">
+            <div class="sp-install-switch" role="group" aria-label="Select install or gateway command">
+              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="quotaswitch gateway status">gateway status</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="brew tap lifan-builds/tap &amp;&amp; brew install quotaswitch">brew tap</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="go install github.com/lifan-builds/quotaswitch/cmd/quotaswitch@latest">go install</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="npx quotaswitch list --provider=all">npx</button>
+            </div>
+            <span class="sp-install-guard">AES-256-GCM local store</span>
+          </div>
+        </div>
       </div>
-      <div class="subpage-stage-box" aria-hidden="true">
-        <div class="subpage-stage-top">
-          <strong id="qs-title">$ npx quotaswitch list --provider=all</strong>
-          <span id="qs-badge">5H + Weekly telemetry · 0 proxy overhead</span>
+
+      <aside class="sp-bench-panel" aria-labelledby="qs-bench-heading">
+        <div class="sp-bench-header">
+          <strong class="sp-bench-title" id="qs-bench-heading">Seat Exhaustion Recovery Latency</strong>
+          <span class="sp-bench-pill">&lt; 30ms gateway failover</span>
         </div>
-        <pre class="subpage-stage-pre" id="qs-pre">PROVIDER   ACCOUNT             PLAN     5H QUOTA     WEEKLY QUOTA   STATUS
-agy        work@example.com    Ultra    84% (3h12m)  91% (5d04h)    ● ACTIVE (Claude)
-agy        dev2@example.com    Pro      100%         88% (4d19h)    ready
-codex      work@example.com    Pro      0%  (1h40m)  72% (6d01h)    exhausted -> rotated
-codex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (swapped)</pre>
+
+        <div class="sp-bars" role="list" aria-label="Recovery time when an active AI coding account hits a 5-hour rate limit">
+          <div class="sp-bar-row is-winner" role="listitem">
+            <span class="sp-bar-label">Gateway (:18455/v1)</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-win" style="width: 11%"></div></div>
+            <span class="sp-bar-val">&lt; 30 ms</span>
+          </div>
+          <div class="sp-bar-row" role="listitem">
+            <span class="sp-bar-label">30s Watch Rotator</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-second" style="width: 38%"></div></div>
+            <span class="sp-bar-val">≤ 30 s</span>
+          </div>
+          <div class="sp-bar-row" role="listitem">
+            <span class="sp-bar-label">Manual Re-Auth</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill" style="width: 100%"></div></div>
+            <span class="sp-bar-val">45,000+ ms</span>
+          </div>
+        </div>
+
+        <div class="sp-bench-foot">
+          <span>Drains expiring API grants before OAuth seats</span>
+          <a href="https://github.com/lifan-builds/quotaswitch">Inspect gateway docs ↗</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="subpage-workbench" aria-label="Interactive QuotaSwitch gateway and rotator workbench">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select QuotaSwitch runtime view">
+          <button type="button" class="subpage-tab" id="tab-gw" role="tab" aria-selected="true" tabindex="0" data-mode="gateway">1 · Local :18455 Gateway</button>
+          <button type="button" class="subpage-tab" id="tab-drain" role="tab" aria-selected="false" tabindex="-1" data-mode="drain">2 · Expiry-First Credit Drain</button>
+          <button type="button" class="subpage-tab" id="tab-rotate" role="tab" aria-selected="false" tabindex="-1" data-mode="rotate">3 · 30s Rotator &amp; Resume</button>
+        </div>
+        <span class="subpage-meta" id="qs-meta">http://127.0.0.1:18455/v1 · 0 cloud proxy</span>
+      </div>
+
+      <div class="subpage-stage-box has-chrome" aria-hidden="true">
+        <div class="sp-stage-chrome">
+          <div class="chrome-dots"><span></span><span></span><span></span></div>
+          <span id="qs-window">quotaswitch gateway — 127.0.0.1:18455/v1 · Antigravity + Codex Pool</span>
+          <span class="sp-stage-pill" id="qs-pill">● 6 seats healthy · 18ms failover</span>
+        </div>
+
+        <div class="sp-broll-grid">
+          <div class="sp-broll-pane">
+            <div class="subpage-stage-top">
+              <strong id="qs-title">$ quotaswitch gateway status</strong>
+              <span id="qs-badge">Expiry-first credit order · OpenAI /v1 compatible</span>
+            </div>
+            <pre class="subpage-stage-pre" id="qs-pre"><span class="tok-comment"># Pooled local gateway inside ~/.antigravity/settings.json</span>
+<span class="tok-key">ENDPOINT</span>   http://127.0.0.1:18455/v1   <span class="tok-ok">● LISTENING</span> (LaunchAgent)
+<span class="tok-key">PRIORITY</span>   1. promo_api_nov30 ($42.10, exp 14d) <span class="tok-ok">-> DRAINING FIRST</span>
+           2. codex:work@co   (5H 94% · Wk 96%) <span class="tok-str">standby OAuth</span>
+           3. agy:work@co     (Claude -> Argon)  <span class="tok-str">waterfall ready</span>
+<span class="tok-ok">✓ Last 429 failover:</span> seat_01 -> seat_02 in <span class="tok-num">18.4 ms</span> (0 dropped streams)</pre>
+          </div>
+
+          <div class="sp-broll-media">
+            <video class="sp-broll-video" autoplay loop muted playsinline poster="assets/broll-gateway-poster.jpg">
+              <source src="assets/broll-gateway.mp4" type="video/mp4">
+            </video>
+            <div class="sp-broll-caption">
+              <span>Live :18455/v1 seat router</span>
+              <span>&lt; 30ms swap</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -72,46 +153,50 @@ codex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (
         <svg viewBox="0 0 320 76" aria-hidden="true">
           <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
           <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
-          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">ANTIGRAVITY (AGY)</text>
-          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Keychain + Desktop DB</text>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">127.0.0.1:18455/V1</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">OpenAI-compatible</text>
           <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
-          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">OPENAI CODEX</text>
-          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">PKCE S256 + wham/usage</text>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">&lt; 30MS FAILOVER</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">In-picker GPT + Claude</text>
         </svg>
-        <h2>Dual-provider control plane</h2>
-        <p>Manage both Google Antigravity and OpenAI Codex accounts from one binary and one background LaunchAgent, with 100% <code>Codex Switcher.app</code>&nbsp;compatibility.</p>
+        <h2>Local :18455/v1 gateway</h2>
+        <p>Exposes pooled Codex GPT and Antigravity seats on <code>127.0.0.1:18455/v1</code> directly inside Antigravity’s picker with sub-30ms 429&nbsp;failover.</p>
       </article>
 
       <article class="subpage-feature-card">
         <svg viewBox="0 0 320 76" aria-hidden="true">
           <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
-          <rect x="10" y="14" width="128" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
-          <text x="74" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">CLAUDE &gt; 0%</text>
-          <text x="74" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Primary model</text>
-          <line x1="138" y1="38" x2="168" y2="38" stroke="#34d399" stroke-width="1.5"/>
-          <polygon points="166,34 173,38 166,42" fill="#34d399"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#131d28" stroke="#f59e0b"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#fcd34d">EXPIRING CREDITS</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Earliest-expiry first</text>
+          <line x1="152" y1="38" x2="168" y2="38" stroke="#34d399" stroke-width="1.5"/>
+          <polygon points="165,34 172,38 165,42" fill="#34d399"/>
           <rect x="174" y="14" width="136" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
-          <text x="242" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">GEMINI 4 ARGON</text>
-          <text x="242" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Same-account waterfall</text>
+          <text x="242" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">OAUTH SEATS</text>
+          <text x="242" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">5H + weekly preserved</text>
         </svg>
-        <h2>Model waterfall &amp; auto-resume</h2>
-        <p>Falls back from Claude to Gemini 4 Argon High before rotating accounts, then automatically resumes interrupted Antigravity Hub and Codex threads&nbsp;mid-turn.</p>
+        <h2>Expiry-first credit draining</h2>
+        <p>Drains promotional and expiring API-key grants ordered by earliest expiration date before spending interactive Plus, Pro, or Ultra&nbsp;quotas.</p>
       </article>
 
       <article class="subpage-feature-card">
         <svg viewBox="0 0 320 76" aria-hidden="true">
           <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
-          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#334155"/>
-          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">AES-256-GCM</text>
-          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#94a8bc">Encrypted local store</text>
-          <rect x="162" y="14" width="148" height="48" rx="4" fill="#131d28" stroke="#334155"/>
-          <text x="236" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">4–8s BATCH LOGIN</text>
-          <text x="236" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">BotGuard-safe Chrome</text>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#60a5fa">30S WATCH DAEMON</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Claude -&gt; Gemini 4</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">AES-256-GCM</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Mid-turn resume</text>
         </svg>
-        <h2>Encrypted &amp; BotGuard-safe</h2>
-        <p>Stores account snapshots with AES-256-GCM encryption and batches Google OAuth sign-ins in 4–8 seconds using your existing Chrome session&nbsp;cookies.</p>
+        <h2>30s rotator &amp; thread resume</h2>
+        <p>Monitors <code>agy</code> and <code>codex</code> every 30s, waterfalls Claude to Gemini 4 Argon High, swaps AES-GCM snapshots, and auto-continues stalled&nbsp;threads.</p>
       </article>
     </section>
+
+    <p class="sp-scope-note">
+      <strong>Local boundary:</strong> All OAuth tokens, Keychain items, and AES-256-GCM account snapshots stay strictly on your machine; the gateway binds exclusively to loopback <code>127.0.0.1:18455</code>.
+    </p>
   </main>
 
   <footer class="site-footer wrap">
@@ -125,26 +210,76 @@ codex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (
 
   <script>
     (() => {
+      const vid = document.querySelector(".sp-broll-video");
+      if (vid) {
+        const probe = new Image();
+        probe.onerror = () => { vid.poster = "../assets/project-quotaswitch-diagram.svg"; };
+        probe.src = "assets/broll-gateway-poster.jpg";
+      }
+
+      const pills = [...document.querySelectorAll(".sp-install-pill")];
+      const cmdEl = document.getElementById("qs-install-cmd");
+      const copyBtn = document.getElementById("qs-copy-btn");
+
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          pills.forEach((p) => p.setAttribute("aria-pressed", String(p === pill)));
+          if (cmdEl) cmdEl.textContent = pill.dataset.cmd || "";
+        });
+      });
+
+      if (copyBtn && cmdEl) {
+        copyBtn.addEventListener("click", async () => {
+          const text = cmdEl.textContent.trim();
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (_) {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand("copy"); } catch (_) {}
+            ta.remove();
+          }
+          copyBtn.dataset.copied = "true";
+          copyBtn.textContent = "✓ Copied";
+          clearTimeout(copyBtn._t);
+          copyBtn._t = setTimeout(() => {
+            copyBtn.dataset.copied = "false";
+            copyBtn.textContent = "Copy";
+          }, 1600);
+        });
+      }
+
       const MODES = {
-        list: {
-          title: "$ npx quotaswitch list --provider=all",
-          badge: "5H + Weekly telemetry · 0 proxy overhead",
-          meta: "--provider=all · Keychain + ~/.codex/auth.json",
-          pre: `PROVIDER   ACCOUNT             PLAN     5H QUOTA     WEEKLY QUOTA   STATUS\nagy        work@example.com    Ultra    84% (3h12m)  91% (5d04h)    ● ACTIVE (Claude)\nagy        dev2@example.com    Pro      100%         88% (4d19h)    ready\ncodex      work@example.com    Pro      0%  (1h40m)  72% (6d01h)    exhausted -> rotated\ncodex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (swapped)`
+        gateway: {
+          window: "quotaswitch gateway — 127.0.0.1:18455/v1 · Antigravity + Codex Pool",
+          pill: "● 6 seats healthy · 18ms failover",
+          title: "$ quotaswitch gateway status",
+          badge: "Expiry-first credit order · OpenAI /v1 compatible",
+          meta: "http://127.0.0.1:18455/v1 · 0 cloud proxy",
+          html: `<span class="tok-comment"># Pooled local gateway inside ~/.antigravity/settings.json</span>\n<span class="tok-key">ENDPOINT</span>   http://127.0.0.1:18455/v1   <span class="tok-ok">● LISTENING</span> (LaunchAgent)\n<span class="tok-key">PRIORITY</span>   1. promo_api_nov30 ($42.10, exp 14d) <span class="tok-ok">-> DRAINING FIRST</span>\n           2. codex:work@co   (5H 94% · Wk 96%) <span class="tok-str">standby OAuth</span>\n           3. agy:work@co     (Claude -> Argon)  <span class="tok-str">waterfall ready</span>\n<span class="tok-ok">✓ Last 429 failover:</span> seat_01 -> seat_02 in <span class="tok-num">18.4 ms</span> (0 dropped streams)`
+        },
+        drain: {
+          window: "quotaswitch list --provider=all — Expiry-First Credit & Seat Matrix",
+          pill: "2 API grants + 4 OAuth seats",
+          title: "$ quotaswitch list --provider=all",
+          badge: "Earliest-expiry API credits drained before OAuth",
+          meta: "AES-256-GCM snapshots · PKCE S256 + Keychain",
+          html: `<span class="tok-key">PROVIDER   SEAT / GRANT        MODE     BALANCE / 5H   EXPIRY / WK    STATE</span>\ncodex      grant_nov_promo     APIKey   <span class="tok-num">$42.10 left</span>    exp 2026-11-30 <span class="tok-ok">● ACTIVE #1</span>\ncodex      grant_q4_credits    APIKey   <span class="tok-num">$120.00 left</span>   exp 2026-12-31 <span class="tok-str">queued #2</span>\nagy        work@example.com    Ultra    84% (3h12m)    91% (5d04h)    <span class="tok-ok">● ACTIVE (Claude)</span>\ncodex      team@example.com    Pro      96% (4h48m)    94% (6d11h)    <span class="tok-str">preserved</span>`
         },
         rotate: {
+          window: "quotaswitch rotate --provider=all --watch --interval=30s --relaunch",
+          pill: "Mid-turn thread auto-continue",
           title: "$ quotaswitch rotate --provider=all --watch --interval=30s --relaunch",
-          badge: "Automatic rotation + mid-turn continuation",
+          badge: "Same-account waterfall + mid-turn session resume",
           meta: "LaunchAgent daemon · 30s health & quota poll",
-          pre: `[18:04:00] agy(work): Claude 5H=0% -> waterfall to Gemini 4 Argon High (82% left)\n[18:42:30] codex(work): 5H=0% -> refreshed OAuth token & rotated to team@example.com\n[18:42:32] Reloaded Codex.app & VS Code app-server · queued auto-continue on thread_9f2a`
-        },
-        batch: {
-          title: "$ node scripts/batch-login.mjs user1@gmail.com user2@gmail.com",
-          badge: "4–8s per account · BotGuard-safe off-screen Chrome",
-          meta: "Seeded Chrome session · automatic PKCE callback",
-          pre: `[1/2] user1@gmail.com -> matched existing Chrome session cookie (4.1s) -> saved AES-GCM snapshot\n[2/2] user2@gmail.com -> completed OAuth consent & token exchange (6.8s) -> saved AES-GCM snapshot\n✓ 2 accounts ingested · run 'quotaswitch usage --all' to inspect quota groups`
+          html: `[18:04:00] <span class="tok-warn">agy(work): Claude 5H=0%</span> -> waterfall to <span class="tok-ok">Gemini 4 Argon High (82%)</span>\n[18:42:30] <span class="tok-warn">codex(grant_nov): $0.00</span> -> swapped to <span class="tok-ok">team@example.com</span> in <span class="tok-num">21 ms</span>\n[18:42:31] <span class="tok-ok">✓ Resumed Codex &amp; Antigravity thread_9f2a mid-turn without prompt loss</span>`
         }
       };
+
       const tabs = [...document.querySelectorAll(".subpage-tab")];
       function select(btn, focus) {
         tabs.forEach((t) => {
@@ -155,11 +290,14 @@ codex      team@example.com    Plus     94% (4h55m)  96% (6d18h)    ● ACTIVE (
         if (focus) btn.focus();
         const m = MODES[btn.dataset.mode];
         if (!m) return;
+        document.getElementById("qs-window").textContent = m.window;
+        document.getElementById("qs-pill").textContent = m.pill;
         document.getElementById("qs-title").textContent = m.title;
         document.getElementById("qs-badge").textContent = m.badge;
         document.getElementById("qs-meta").textContent = m.meta;
-        document.getElementById("qs-pre").textContent = m.pre;
+        document.getElementById("qs-pre").innerHTML = m.html;
       }
+
       tabs.forEach((btn, idx) => {
         btn.addEventListener("click", () => select(btn, false));
         btn.addEventListener("keydown", (e) => {

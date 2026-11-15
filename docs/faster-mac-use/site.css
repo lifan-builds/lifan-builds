@@ -14,6 +14,7 @@
   --bar-neutral: #7c93a6;
   --accent: #095c49;
   --accent-hover: #064436;
+  --accent-ink: #ffffff;
   --accent-soft: #d7efe8;
   --signal: #b53f15;
   --signal-soft: #fae6de;
@@ -27,13 +28,41 @@
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
 }
 
+[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #0a1017;
+  --surface: #101923;
+  --surface-strong: #15202d;
+  --code-bg: #0c141d;
+  --code-sub: #080e15;
+  --code-ink: #e6f0f7;
+  --code-control: #1c2d3e;
+  --code-control-hover: #263d54;
+  --code-border: #2c4359;
+  --ink: #eef4f8;
+  --muted: #9db0c2;
+  --bar-neutral: #5c748a;
+  --accent: #4ee2b8;
+  --accent-hover: #7df0cf;
+  --accent-ink: #041a14;
+  --accent-soft: #102e28;
+  --signal: #ff9468;
+  --signal-soft: #2e1912;
+  --ocean: #6bb5ff;
+  --ocean-soft: #12263d;
+  --tok-fn: #7cc4fa;
+  --tok-num: #f7c873;
+  --rule: #223244;
+  --rule-strong: #31475e;
+}
+
 * {
   box-sizing: border-box;
 }
 
 ::selection {
   background: var(--accent);
-  color: var(--surface-strong);
+  color: var(--accent-ink);
 }
 
 html {
@@ -135,6 +164,37 @@ code {
 .site-nav a:hover {
   color: var(--ink);
   text-decoration: underline;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.theme-toggle kbd {
+  padding: 0.08rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+  background: var(--ground);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 
 /* Hero Section */
@@ -250,9 +310,10 @@ h1 {
   background: var(--code-control-hover);
 }
 
+.install-tab[aria-pressed="true"],
 .install-tab[aria-selected="true"] {
   background: var(--accent);
-  color: var(--surface-strong);
+  color: var(--accent-ink);
 }
 
 .guard-inline {
@@ -285,13 +346,14 @@ h1 {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--surface-strong);
+  color: var(--accent-ink);
   border: 1px solid var(--accent);
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
-  color: var(--surface-strong);
+  border-color: var(--accent-hover);
+  color: var(--accent-ink);
 }
 
 .btn-secondary {
@@ -380,7 +442,7 @@ h1 {
 .trace-tab[aria-selected="true"],
 .config-tab[aria-selected="true"] {
   background: var(--accent);
-  color: var(--surface-strong);
+  color: var(--accent-ink);
 }
 
 /* Hero Benchmark Ledger */
@@ -656,7 +718,7 @@ dd {
   display: block;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  padding: 0.04rem 1.1rem 0.04rem 2.65rem;
+  padding: 0.18rem 1.1rem 0.18rem 2.65rem;
   position: relative;
   border-left: 2px solid transparent;
   transition: background-color 120ms ease;
@@ -668,7 +730,7 @@ dd {
   left: 0.55rem;
   width: 1.45rem;
   text-align: right;
-  color: var(--bar-neutral);
+  color: #8fa6ba;
   font-size: 0.8125rem;
   user-select: none;
 }
@@ -680,7 +742,7 @@ dd {
 
 /* Syntax Highlighting Tokens on #101c26 */
 .tok-comment {
-  color: var(--rule-strong);
+  color: #8fa6ba;
   font-style: italic;
 }
 
@@ -860,6 +922,40 @@ dd {
   font-weight: 700;
 }
 
+.broll-showcase {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--rule-strong);
+  border-radius: 14px;
+}
+
+.broll-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--code-bg);
+}
+
+.broll-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.broll-caption code {
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Section 3: Architectural Pillars & Material Boundaries */
 .arch-grid {
   display: grid;
@@ -1000,7 +1096,7 @@ dd {
   }
 
   .code-line {
-    padding: 0.04rem 0.65rem 0.04rem 2.15rem;
+    padding: 0.18rem 0.75rem 0.18rem 2.2rem;
   }
 
   .code-line::before {

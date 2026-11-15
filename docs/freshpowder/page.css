@@ -112,7 +112,7 @@ figcaption a {
 
 .deal-tab[aria-selected="true"] {
   background-color: var(--accent);
-  color: #ffffff;
+  color: var(--accent-ink, #ffffff);
 }
 
 .deal-meta {

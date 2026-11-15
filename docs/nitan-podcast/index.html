@@ -4,8 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Nitan Podcast（泥潭播客）：每周六分钟，把美卡论坛热门讨论整理成有来源可查的中文短播客。" />
+    <meta property="og:title" content="泥潭播客 · Nitan Podcast — 每周六分钟美卡论坛精选播客" />
+    <meta property="og:description" content="每周六分钟，把美卡论坛热门讨论整理成事实清晰、原帖可查的双人中文短播客。" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://clifan.com/nitan-podcast/" />
+    <meta property="og:image" content="https://clifan.com/nitan-podcast/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="泥潭播客 · Nitan Podcast — 每周六分钟美卡论坛精选播客" />
+    <meta name="twitter:description" content="每周六分钟，把美卡论坛热门讨论整理成事实清晰、原帖可查的双人中文短播客。" />
+    <meta name="twitter:image" content="https://clifan.com/nitan-podcast/og.jpg" />
     <link rel="canonical" href="https://clifan.com/nitan-podcast/" />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("clifan-theme");
+          const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        } catch {}
+      })();
+    </script>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c2410c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='18' font-weight='700' fill='%23fff'%3EN%3C/text%3E%3C/svg%3E" />
     <title>泥潭播客 · Nitan Podcast</title>
     <style>
@@ -24,21 +41,47 @@
         --muted: #344b5c;
         --accent: #c2410c;
         --accent-hover: #9a3412;
+        --accent-ink: #ffffff;
         --accent-soft: #fff7ed;
+        --badge-border: #fdba74;
         --line: #c4d1dc;
         --line-strong: #9fb2c2;
         --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
         --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
       }
 
+      [data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #0a1017;
+        --surface: #101923;
+        --panel: #15202d;
+        --code-bg: #0c141d;
+        --code-sub: #080e15;
+        --code-ink: #e6f0f7;
+        --code-control: #1c2d3e;
+        --code-control-hover: #263d54;
+        --code-border: #2c4359;
+        --text: #eef4f8;
+        --muted: #9db0c2;
+        --accent: #fb923c;
+        --accent-hover: #fdba74;
+        --accent-ink: #1f0a00;
+        --accent-soft: #2b1608;
+        --badge-border: #9a3412;
+        --line: #223244;
+        --line-strong: #31475e;
+      }
+
       * { box-sizing: border-box; }
-      ::selection { background: var(--accent); color: var(--panel); }
+      html { scrollbar-color: var(--line-strong) var(--bg); }
+      ::selection { background: var(--accent); color: var(--accent-ink); }
 
       body {
         margin: 0;
         background-color: var(--bg);
         color: var(--text);
         font: 16px/1.65 var(--font-sans);
+        caret-color: var(--accent);
         -webkit-font-smoothing: antialiased;
       }
 
@@ -51,7 +94,7 @@
         border-radius: 6px;
       }
 
-      main {
+      .shell {
         width: min(960px, calc(100% - 2.5rem));
         margin: 0 auto;
         padding: 24px 0 64px;
@@ -87,7 +130,7 @@
         padding: 3px 10px;
         border-radius: 6px;
         background-color: var(--accent-soft);
-        border: 1px solid #fdba74;
+        border: 1px solid var(--badge-border);
         color: var(--accent);
         font-family: var(--font-mono);
         font-variant-numeric: tabular-nums;
@@ -97,19 +140,47 @@
 
       .topnav {
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         gap: 16px;
         font-size: 14px;
         font-weight: 600;
       }
 
-      .topnav a { color: var(--muted); text-decoration: none; }
-      .topnav a:hover { color: var(--text); text-decoration: underline; }
+      .topnav a, .back-link { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+      .topnav a:hover, .back-link:hover { color: var(--text); text-decoration: underline; }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 10px;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        background-color: var(--panel);
+        color: var(--text);
+        font-family: var(--font-sans);
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 140ms ease, border-color 140ms ease;
+      }
+
+      .theme-toggle:hover { background-color: var(--surface); border-color: var(--accent); }
+      .theme-toggle kbd {
+        padding: 1px 5px;
+        border-radius: 4px;
+        border: 1px solid var(--line);
+        background-color: var(--bg);
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        color: var(--muted);
+      }
 
       .hero {
         display: grid;
-        grid-template-columns: 112px 1fr;
-        gap: 24px;
+        grid-template-columns: 140px 1fr;
+        gap: 28px;
         align-items: start;
         padding: 40px 0 32px;
       }
@@ -117,9 +188,9 @@
       .hero > div { min-width: 0; }
 
       .cover {
-        width: 112px;
-        height: 112px;
-        border-radius: 16px;
+        width: 140px;
+        height: 140px;
+        border-radius: 18px;
         border: 1px solid var(--line-strong);
         object-fit: cover;
       }
@@ -209,12 +280,12 @@
       .button:hover { background-color: var(--surface); color: var(--text); }
 
       .button.primary {
-        color: #ffffff;
+        color: var(--accent-ink);
         background-color: var(--accent);
         border-color: var(--accent);
       }
 
-      .button.primary:hover { background-color: var(--accent-hover); color: #ffffff; }
+      .button.primary:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); color: var(--accent-ink); }
 
       /* Waveform & Episode Telemetry Schematic Header */
       .telemetry-banner {
@@ -248,6 +319,7 @@
         flex-wrap: wrap;
       }
 
+      h1, h2, h3 { text-wrap: balance; }
       h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; }
 
       #episode-count {
@@ -284,7 +356,8 @@
       }
 
       .speed-btn:hover { color: var(--text); }
-      .speed-btn[aria-selected="true"] { background: var(--accent); color: #ffffff; }
+      .speed-btn[aria-pressed="true"],
+      .speed-btn[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); }
       .speed-btn:active { transform: translateY(1px); }
 
       #episodes { display: grid; gap: 12px; padding: 18px 0 32px; }
@@ -334,14 +407,14 @@
         border: 1px solid var(--accent);
         border-radius: 7px;
         background: var(--accent);
-        color: #ffffff;
+        color: var(--accent-ink);
         font-family: var(--font-sans);
         font-size: 13px;
         font-weight: 600;
         cursor: pointer;
       }
 
-      .play-toggle:hover { background: var(--accent-hover); }
+      .play-toggle:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
       .play-toggle:active { transform: translateY(1px); }
 
       .ep-timecode {
@@ -444,9 +517,11 @@
     </style>
   </head>
   <body>
-    <main>
+    <div class="shell">
       <header class="topbar">
         <div class="brand-wrap">
+          <a class="back-link" href="../">← clifan.com</a>
+          <span aria-hidden="true">/</span>
           <a class="brand" href="./">泥潭播客 · Nitan Podcast</a>
           <span class="badge">每周更新 · 06:00 中文短播客</span>
         </div>
@@ -454,11 +529,16 @@
           <a href="#episodes-title">节目归档</a>
           <a href="https://github.com/lifan-builds/nitan-podcast/blob/main/RETROSPECTIVE.md">18 期复盘 ↗</a>
           <a href="https://github.com/lifan-builds/castforge">CastForge ↗</a>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="切换主题" title="Toggle theme (T)">
+            <span data-theme-label>Light</span>
+            <kbd aria-hidden="true">T</kbd>
+          </button>
         </nav>
       </header>
 
+      <main>
       <section class="hero">
-        <img class="cover" src="https://github.com/lifan-builds/nitan-podcast/raw/main/assets/cover.png" alt="Nitan Podcast 封面" width="112" height="112" />
+        <img class="cover" src="cover.jpg" alt="Nitan Podcast 封面" width="140" height="140" />
         <div>
           <h1>泥潭播客</h1>
           <p class="lede">把美卡论坛一周的热门讨论整理成六分钟短播客：事实先讲清，再听社区里的实测经验、分歧与意外发现。</p>
@@ -546,10 +626,10 @@
             <h2 id="episodes-title">最新节目</h2>
             <p id="episode-count" aria-live="polite">读取 RSS…</p>
           </div>
-          <div class="speed-group" role="tablist" aria-label="播放倍速">
-            <button type="button" class="speed-btn" role="tab" aria-selected="true" data-rate="1">1.00×</button>
-            <button type="button" class="speed-btn" role="tab" aria-selected="false" data-rate="1.25">1.25×</button>
-            <button type="button" class="speed-btn" role="tab" aria-selected="false" data-rate="1.5">1.50×</button>
+          <div class="speed-group" role="group" aria-label="播放倍速">
+            <button type="button" class="speed-btn" aria-pressed="true" data-rate="1">1.00×</button>
+            <button type="button" class="speed-btn" aria-pressed="false" data-rate="1.25">1.25×</button>
+            <button type="button" class="speed-btn" aria-pressed="false" data-rate="1.5">1.50×</button>
           </div>
         </header>
         <div id="episodes"></div>
@@ -568,14 +648,42 @@
           <p><a href="https://github.com/lifan-builds/castforge">在 GitHub 查看 CastForge →</a></p>
         </div>
       </section>
+      </main>
 
       <footer>
         <span>Nitan Podcast 是独立社区项目，与美卡论坛官方无隶属关系。节目内容请以原帖链接为准。</span>
-        <span><a href="https://clifan.com">Lifan Builds</a> · <a href="https://github.com/lifan-builds/nitan-podcast">GitHub</a></span>
+        <span><a href="../">← Lifan Builds</a> · <a href="https://github.com/lifan-builds/nitan-podcast">GitHub</a></span>
       </footer>
-    </main>
+    </div>
 
     <script>
+      (function initTheme() {
+        const root = document.documentElement;
+        const labelEl = document.querySelector("[data-theme-label]");
+        function applyTheme(theme, persist) {
+          const next = theme === "dark" ? "dark" : "light";
+          root.setAttribute("data-theme", next);
+          if (labelEl) labelEl.textContent = next === "dark" ? "Dark" : "Light";
+          if (persist) {
+            try { localStorage.setItem("clifan-theme", next); } catch {}
+          }
+        }
+        applyTheme(root.getAttribute("data-theme") || "light", false);
+        const toggleBtn = document.querySelector("[data-theme-toggle]");
+        if (toggleBtn) {
+          toggleBtn.addEventListener("click", () => {
+            applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+          });
+        }
+        window.addEventListener("keydown", (e) => {
+          if (e.metaKey || e.ctrlKey || e.altKey) return;
+          const t = e.target;
+          if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable)) return;
+          if (e.key === "t" || e.key === "T") {
+            applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+          }
+        });
+      })();
       const episodes = document.querySelector("#episodes");
       const count = document.querySelector("#episode-count");
       const copyBtn = document.querySelector("#copyRss");
@@ -617,7 +725,7 @@
         btn.addEventListener("click", () => {
           currentRate = Number(btn.dataset.rate) || 1;
           document.querySelectorAll(".speed-btn").forEach((b) => {
-            b.setAttribute("aria-selected", b === btn ? "true" : "false");
+            b.setAttribute("aria-pressed", b === btn ? "true" : "false");
           });
           for (const p of allPlayers) {
             p.playbackRate = currentRate;

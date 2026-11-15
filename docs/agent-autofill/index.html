@@ -7,8 +7,22 @@
   <meta property="og:title" content="Agent Autofill — Give your agent the exact information it needs">
   <meta property="og:description" content="Local-first personal vault and MCP broker for AI agents on macOS. Share selected fields, origin-bound logins, and 2FA codes with explicit approval.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/agent-autofill-tour.jpg">
+  <meta property="og:url" content="https://clifan.com/agent-autofill/">
+  <meta property="og:image" content="https://clifan.com/agent-autofill/assets/agent-autofill-tour.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agent Autofill — Give your agent the exact information it needs">
+  <meta name="twitter:description" content="Local-first personal vault and MCP broker for AI agents on macOS. Share selected fields, origin-bound logins, and 2FA codes with explicit approval.">
+  <meta name="twitter:image" content="https://clifan.com/agent-autofill/assets/agent-autofill-tour.jpg">
+  <link rel="canonical" href="https://clifan.com/agent-autofill/">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("clifan-theme");
+        const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch {}
+    })();
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='18' font-weight='700' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
   <title>Agent Autofill — Local personal-data broker for AI agents</title>
   <style>
@@ -30,6 +44,7 @@
       --line-strong: #9fb2c2;
       --accent: #1d4ed8;
       --accent-hover: #1e40af;
+      --accent-ink: #ffffff;
       --accent-soft: #eff6ff;
       --teal: #095c49;
       --teal-soft: #d7efe8;
@@ -40,13 +55,44 @@
       --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
     }
 
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0a1017;
+      --surface: #101923;
+      --surface-strong: #15202d;
+      --code-bg: #0c141d;
+      --code-sub: #080e15;
+      --code-ink: #e6f0f7;
+      --code-control: #1c2d3e;
+      --code-control-hover: #263d54;
+      --code-border: #2c4359;
+      --ink: #eef4f8;
+      --muted: #9db0c2;
+      --bar-neutral: #5c748a;
+      --line: #223244;
+      --line-strong: #31475e;
+      --accent: #68a8ff;
+      --accent-hover: #90c0ff;
+      --accent-ink: #051326;
+      --accent-soft: #11233b;
+      --teal: #4ee2b8;
+      --teal-soft: #102e28;
+      --signal: #ff9468;
+      --tok-fn: #7cc4fa;
+      --tok-num: #f7c873;
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scrollbar-color: var(--line-strong) var(--bg);
+    }
+
     ::selection {
       background: var(--accent);
-      color: var(--surface-strong);
+      color: var(--accent-ink);
     }
 
     body {
@@ -56,6 +102,7 @@
       font-family: var(--font-sans);
       font-size: 16px;
       line-height: 1.6;
+      caret-color: var(--accent);
       -webkit-font-smoothing: antialiased;
     }
 
@@ -120,9 +167,52 @@
       height: 28px;
       border-radius: 7px;
       background-color: var(--accent);
-      color: #ffffff;
+      color: var(--accent-ink);
       font-size: 13px;
       font-weight: 700;
+    }
+
+    .back-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background-color: var(--surface-strong);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 140ms ease, border-color 140ms ease;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--surface);
+      border-color: var(--accent);
+    }
+
+    .theme-toggle kbd {
+      padding: 1px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background-color: var(--bg);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--muted);
     }
 
     .badge {
@@ -254,9 +344,10 @@
       background: var(--code-control-hover);
     }
 
+    .install-tab[aria-pressed="true"],
     .install-tab[aria-selected="true"] {
       background: var(--accent);
-      color: var(--surface-strong);
+      color: var(--accent-ink);
     }
 
     .guard-inline {
@@ -333,13 +424,14 @@
 
     .btn-primary {
       background-color: var(--accent);
-      color: #ffffff;
+      color: var(--accent-ink);
       border: 1px solid var(--accent);
     }
 
     .btn-primary:hover {
       background-color: var(--accent-hover);
-      color: #ffffff;
+      border-color: var(--accent-hover);
+      color: var(--accent-ink);
     }
 
     .btn-secondary {
@@ -354,7 +446,7 @@
     }
 
     .media-frame {
-      margin: 4px 0 44px;
+      margin: 4px 0 0;
       padding: 12px;
       background-color: var(--surface-strong);
       border: 1px solid var(--line-strong);
@@ -381,9 +473,10 @@
     }
 
     details.transcript {
-      margin-top: 8px;
+      margin: 10px 0 44px;
       padding: 10px 14px;
       background-color: var(--surface);
+      border: 1px solid var(--line);
       border-radius: 8px;
       font-size: 14px;
       color: var(--muted);
@@ -425,6 +518,7 @@
       color: var(--muted);
       max-width: 60ch;
       font-size: 15px;
+      text-wrap: pretty;
     }
 
     /* Recessed Segmented Pill Controls */
@@ -458,7 +552,7 @@
 
     .config-tab[aria-selected="true"] {
       background: var(--accent);
-      color: var(--surface-strong);
+      color: var(--accent-ink);
     }
 
     /* 3 Architecture / Workflow Pillars with Inline SVG Schematics */
@@ -561,13 +655,13 @@
       left: 10px;
       width: 22px;
       text-align: right;
-      color: var(--bar-neutral);
+      color: #8fa6ba;
       font-size: 12.5px;
       user-select: none;
     }
 
     .tok-comment {
-      color: var(--line-strong);
+      color: #8fa6ba;
       font-style: italic;
     }
 
@@ -688,9 +782,11 @@
   </style>
 </head>
 <body>
-  <main class="shell">
+  <div class="shell">
     <header class="topbar">
       <div class="brand-group">
+        <a class="back-link" href="../">← clifan.com</a>
+        <span aria-hidden="true">/</span>
         <a class="brand" href="./">
           <span class="brand-mark" aria-hidden="true">A</span>
           <span>Agent Autofill</span>
@@ -703,9 +799,14 @@
         <a href="getting-started.md">Docs</a>
         <a href="cli.md">CLI</a>
         <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color theme" title="Toggle theme (T)">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
       </nav>
     </header>
 
+    <main>
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title">Give your agent the exact information it needs.</h1>
       <p class="lede">
@@ -725,10 +826,10 @@
           </button>
         </div>
         <div class="install-meta">
-          <div class="install-switch" role="tablist" aria-label="Install and setup commands">
-            <button type="button" class="install-tab" id="tab-install-uv" role="tab" aria-selected="true" aria-controls="installCmd" tabindex="0" data-cmd="uv tool install git+https://github.com/lifan-builds/agent-autofill.git">uv tool</button>
-            <button type="button" class="install-tab" id="tab-install-mcp" role="tab" aria-selected="false" aria-controls="installCmd" tabindex="-1" data-cmd="agent-autofill mcp-install --client all">mcp-install</button>
-            <button type="button" class="install-tab" id="tab-install-seed" role="tab" aria-selected="false" aria-controls="installCmd" tabindex="-1" data-cmd="agent-autofill chrome-seed --import">chrome-seed</button>
+          <div class="install-switch" role="group" aria-label="Install and setup commands">
+            <button type="button" class="install-tab" aria-pressed="true" data-cmd="uv tool install git+https://github.com/lifan-builds/agent-autofill.git">uv tool</button>
+            <button type="button" class="install-tab" aria-pressed="false" data-cmd="agent-autofill mcp-install --client all">mcp-install</button>
+            <button type="button" class="install-tab" aria-pressed="false" data-cmd="agent-autofill chrome-seed --import">chrome-seed</button>
           </div>
           <code class="guard-inline">AES-GCM SQLite · macOS Keychain · 0 chat secrets</code>
         </div>
@@ -750,18 +851,18 @@
           <span>0:33 synthetic walkthrough · Chrome intake, origin-bound credential handoff, and 2FA retrieval</span>
           <a href="demo/">Step through interactively →</a>
         </div>
-        <details class="transcript">
-          <summary>Read the video transcript</summary>
-          <p>Every time an AI agent hits a form, you end up retyping your address, pasting a password into chat, or hunting down a verification code. Agent Autofill is a local-first personal vault for AI agents on your Mac. Start from Chrome: it organizes saved addresses, confirms Home versus Work, and remembers those meanings across tasks. When a site needs a login or a two-factor code, it hands off a one-time, origin-bound token and pulls the code from connected email or Messages so your raw password never enters model context. And before anything is submitted, you stay in control.</p>
-        </details>
       </div>
+      <details class="transcript">
+        <summary>Read the video transcript</summary>
+        <p>Every time an AI agent hits a form, you end up retyping your address, pasting a password into chat, or hunting down a verification code. Agent Autofill is a local-first personal vault for AI agents on your Mac. Start from Chrome: it organizes saved addresses, confirms Home versus Work, and remembers those meanings across tasks. When a site needs a login or a two-factor code, it hands off a one-time, origin-bound token and pulls the code from connected email or Messages so your raw password never enters model context. And before anything is submitted, you stay in control.</p>
+      </details>
     </section>
 
     <section class="section" aria-labelledby="how-title">
       <div class="section-head">
         <div>
           <h2 id="how-title">How it works</h2>
-          <p class="section-intro">Three local boundaries keep credentials out of chat logs and keep form submissions human-approved.</p>
+          <p class="section-intro">Three local boundaries keep credentials out of chat logs and keep form submissions&nbsp;human&#8209;approved.</p>
         </div>
       </div>
       <div class="arch-grid">
@@ -828,7 +929,7 @@
       <div class="section-head">
         <div>
           <h2 id="quickstart-title">Scoped MCP &amp; CLI Quick Start</h2>
-          <p class="section-intro">Pair your coding agent with origin-bound credential handoff and recipient-scoped 2FA retrieval.</p>
+          <p class="section-intro">Pair your coding agent with origin-bound credential handoff and recipient-scoped&nbsp;2FA&nbsp;retrieval.</p>
         </div>
         <div class="tab-group" role="tablist" aria-label="Select workflow snippet">
           <button type="button" class="config-tab" id="tab-cfg-cred" role="tab" aria-selected="true" aria-controls="config-panel" tabindex="0" data-config="cred">Origin-Bound Login</button>
@@ -889,9 +990,10 @@
         <strong>Privacy boundary:</strong> Saved records stay encrypted in local SQLite on your Mac, and vault keys live in the macOS Keychain. Using the Chrome extension handoff (<code>credential.use</code>) keeps website passwords out of model context.
       </div>
     </section>
+    </main>
 
     <footer class="footer">
-      <span>Agent Autofill · Built by <a href="https://clifan.com">Lifan Chen</a></span>
+      <span><a href="../">← Back to Lifan Chen (clifan.com)</a> · Agent Autofill</span>
       <div class="footer-links">
         <a href="demo/">Interactive Demo</a>
         <a href="index.md">Docs Index</a>
@@ -899,7 +1001,7 @@
         <a href="https://github.com/lifan-builds/agent-autofill">GitHub</a>
       </div>
     </footer>
-  </main>
+  </div>
 
   <script>
     (() => {
@@ -1005,8 +1107,38 @@ agent-autofill verification-code --recipient "dev@example.com" --sender "github.
         });
       }
 
-      bindTablist(".install-tab", null, (btn) => {
-        document.getElementById("installCmd").textContent = btn.dataset.cmd || "";
+      const installBtns = Array.from(document.querySelectorAll(".install-tab"));
+      installBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          installBtns.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+          document.getElementById("installCmd").textContent = btn.dataset.cmd || "";
+        });
+      });
+
+      const root = document.documentElement;
+      const themeLabel = document.querySelector("[data-theme-label]");
+      function applyTheme(theme, persist) {
+        const next = theme === "dark" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        if (themeLabel) themeLabel.textContent = next === "dark" ? "Dark" : "Light";
+        if (persist) {
+          try { localStorage.setItem("clifan-theme", next); } catch {}
+        }
+      }
+      applyTheme(root.getAttribute("data-theme") || "light", false);
+      const themeBtn = document.querySelector("[data-theme-toggle]");
+      if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+          applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+        });
+      }
+      window.addEventListener("keydown", (e) => {
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        const t = e.target;
+        if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable)) return;
+        if (e.key === "t" || e.key === "T") {
+          applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+        }
       });
 
       bindTablist(".config-tab", "config-panel", (btn) => {

@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Lifan Chen (Lifan Builds) — Staff Engineer at Google building local-first software, multi-cursor agent systems, and repeatable evaluation loops.">
   <meta property="og:title" content="Lifan Chen — Local-First Software, Agent Systems &amp; Evaluation Loops">
-  <meta property="og:description" content="Selected builds (Faster Mac Use, Agent Autofill, FreshPowder, AI Builder Brief, Nitan Podcast), engineering essays, and daily AI field notes.">
+  <meta property="og:description" content="Selected builds (Faster Mac Use, Agent Autofill, QuotaSwitch, CloseSnow, FreshPowder, AI Builder Brief, Nitan Podcast), engineering essays, and daily AI field notes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clifan.com/">
+  <meta property="og:image" content="https://clifan.com/assets/og-clifan.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lifan Chen — Local-First Software, Agent Systems &amp; Evaluation Loops">
+  <meta name="twitter:description" content="Selected builds, multi-cursor agent systems, local-first software, and daily source-linked AI field notes.">
+  <meta name="twitter:image" content="https://clifan.com/assets/og-clifan.jpg">
   <link rel="canonical" href="https://clifan.com/">
   <link rel="alternate" type="application/atom+xml" title="Lifan Chen — Journal &amp; AI Builder Brief" href="https://clifan.com/feed.xml">
   <title>Lifan Chen (Lifan Builds) — Portfolio, Writing &amp; Field Notes</title>
+  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="site.js"></script>
 </head>
@@ -222,7 +228,7 @@
               <pre class="stage-trace" id="stage-trace"><span class="tok-comment"># 3-agent background swarm across Chrome + macOS AX</span>
 <span class="tok-cmd">$ fmu</span> <span class="tok-str">'{"parallel":[{"agent":"a1","surface":"browser"},{"agent":"a2","surface":"app"}]}'</span>
 ✓ 1,510 total tokens · 0 focus steals · clipboard intact</pre>
-              <img class="stage-art-img" id="stage-art-img" src="faster-mac-use/assets/swarm-vs-mcp-demo.svg" width="220" height="110" alt="">
+              <img class="stage-art-img" id="stage-art-img" src="faster-mac-use/cover.jpg" onerror="this.onerror=null;this.src='faster-mac-use/assets/swarm-vs-mcp-demo.svg'" width="220" height="88" alt="">
             </div>
             <div class="stage-footer-links">
               <a class="stage-primary-link" id="stage-primary-link" href="faster-mac-use/" tabindex="-1">Open clifan.com/faster-mac-use/ →</a>
@@ -273,7 +279,7 @@
             </div>
           </div>
           <div class="mini-benchmark" aria-hidden="true">
-            <img class="release-card-art wide-art" src="faster-mac-use/assets/swarm-vs-mcp-demo.svg" width="380" height="176" alt="">
+            <img class="release-card-art wide-art" src="faster-mac-use/cover.jpg" onerror="this.onerror=null;this.src='faster-mac-use/assets/swarm-vs-mcp-demo.svg'" width="380" height="152" alt="">
             <div class="mini-bench-head">
               <span>Headline workload tokens</span>
               <strong>114× lower</strong>
@@ -323,18 +329,18 @@
         <!-- 3. QuotaSwitch -->
         <article class="release-card" data-build="quotaswitch" data-pillars="local ml agents">
           <div>
-            <img class="release-card-art" src="assets/project-quotaswitch-diagram.svg" width="360" height="144" alt="" aria-hidden="true">
+            <img class="release-card-art" src="quotaswitch/cover.jpg" onerror="this.onerror=null;this.src='assets/project-quotaswitch-diagram.svg'" width="360" height="144" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="quotaswitch/">QuotaSwitch</a></h3>
               <span class="release-route" aria-hidden="true">/quotaswitch/</span>
             </div>
             <p class="release-desc">
-              Unified multi-account switcher and 30s background quota auto-rotator for Antigravity and OpenAI&nbsp;Codex.
+              30s multi-account rotator and local OpenAI-compatible gateway (<code>:18455/v1</code>) for Antigravity &amp; Codex with expiry-first credit&nbsp;drain.
             </p>
             <div class="metric-strip" aria-hidden="true">
-              <span class="metric-badge">agy + codex</span>
+              <span class="metric-badge">:18455/v1 gateway</span>
+              <span class="metric-badge">&lt; 30ms failover</span>
               <span class="metric-badge">30s auto-rotate</span>
-              <span class="metric-badge">Auto-continue</span>
             </div>
           </div>
           <div class="release-links">
@@ -466,7 +472,7 @@
         <!-- 8. Foliofen CLI -->
         <article class="release-card" data-build="foliofen" data-pillars="local eval">
           <div>
-            <img class="release-card-art" src="assets/project-foliofen-diagram.svg" width="360" height="144" alt="" aria-hidden="true">
+            <img class="release-card-art" src="foliofen-cli/cover.jpg" onerror="this.onerror=null;this.src='assets/project-foliofen-diagram.svg'" width="360" height="144" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="foliofen-cli/">Foliofen CLI</a></h3>
               <span class="release-route" aria-hidden="true">/foliofen-cli/</span>
@@ -490,7 +496,7 @@
         <!-- 9. CastForge -->
         <article class="release-card" data-build="castforge" data-pillars="ml eval">
           <div>
-            <img class="release-card-art" src="assets/project-castforge-diagram.svg" width="360" height="144" alt="" aria-hidden="true">
+            <img class="release-card-art" src="castforge/cover.jpg" onerror="this.onerror=null;this.src='assets/project-castforge-diagram.svg'" width="360" height="144" alt="" aria-hidden="true">
             <div class="release-top">
               <h3 class="release-title"><a href="castforge/">CastForge</a></h3>
               <span class="release-route" aria-hidden="true">/castforge/</span>
@@ -532,8 +538,8 @@
         </a>
         <a class="ledger-row" role="listitem" href="quotaswitch/" data-build="quotaswitch" data-pillars="local ml agents">
           <span class="ledger-title">QuotaSwitch →</span>
-          <span class="ledger-summary">Unified quota-driven multi-account switcher and auto-rotator for Antigravity and Codex.</span>
-          <span class="ledger-meta" aria-hidden="true">/quotaswitch/ · npm</span>
+          <span class="ledger-summary">30s multi-account rotator and local OpenAI-compatible gateway (:18455/v1) for Antigravity and Codex.</span>
+          <span class="ledger-meta" aria-hidden="true">/quotaswitch/ · :18455</span>
         </a>
         <a class="ledger-row" role="listitem" href="perks-reminder/" data-build="perks" data-pillars="local">
           <span class="ledger-title">Perks Reminder →</span>
