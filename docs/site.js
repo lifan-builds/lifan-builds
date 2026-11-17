@@ -164,7 +164,7 @@ const BUILD_DATA = {
     href: 'ai-builder-brief/',
     art: 'ai-builder-brief/cover-wide.jpg',
     repo: 'journal/ai-builder-brief/',
-    repoLabel: 'Browse 59 daily briefs →',
+    repoLabel: 'Browse 64 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
     pillars: ['ml', 'agents', 'eval'],
     diagram: `
@@ -178,13 +178,13 @@ const BUILD_DATA = {
       <line x1="334" y1="34" x2="380" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="380" y="12" width="134" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
       <text x="447" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">TOP 10 DAILY BRIEF</text>
-      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">59+ Published Editions</text>`,
+      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">64 Published Editions</text>`,
     metrics: [
-      { val: '59+ briefs', lbl: 'Published daily archive' },
+      { val: '64 briefs', lbl: 'Published daily archive' },
       { val: '10 stories', lbl: 'Per daily edition' },
       { val: '100% linked', lbl: 'Primary commits & papers' }
     ],
-    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-06.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-06.html`
+    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-17.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-17.html`
   },
   nitan: {
     name: 'Nitan Podcast (泥潭播客)',
@@ -251,7 +251,7 @@ const BUILD_DATA = {
       { val: 'MD + JSONL', lbl: 'Deterministic chunks' },
       { val: 'Patient guard', lbl: 'Exact chart-owner check' }
     ],
-    trace: `<span class="tok-comment"># Patient-scoped sync &amp; PHI-free diagnostic summary</span>\n<span class="tok-cmd">$ npx @lifan-builds/mychart-cli</span> demo\n✓ Verified --require-active-patient · exported Markdown &amp; JSONL`
+    trace: `<span class="tok-comment"># Patient-scoped sync &amp; PHI-free diagnostic summary</span>\n<span class="tok-cmd">$ npx @lifan-builds/foliofen-cli</span> demo\n✓ Verified --require-active-patient · exported Markdown &amp; JSONL`
   },
   castforge: {
     name: 'CastForge',
@@ -496,19 +496,41 @@ const heroConceptPills = [...document.querySelectorAll('.focus-item[data-concept
 const COVER_TICKER_DATA = {
   local: {
     tag: '01 · LOCAL',
-    text: 'Faster Mac Use · Agent Autofill · CloseSnow · QuotaSwitch · Perks Reminder · Foliofen CLI'
+    links: [
+      ['faster-mac-use/', 'Faster Mac Use'],
+      ['agent-autofill/', 'Agent Autofill'],
+      ['close-snow/', 'CloseSnow'],
+      ['quotaswitch/', 'QuotaSwitch'],
+      ['perks-reminder/', 'Perks Reminder'],
+      ['foliofen-cli/', 'Foliofen CLI']
+    ]
   },
   ml: {
     tag: '02 · ML',
-    text: 'CloseSnow · AI Builder Brief · FreshPowder · CastForge · Nitan Podcast'
+    links: [
+      ['close-snow/', 'CloseSnow'],
+      ['ai-builder-brief/', 'AI Builder Brief'],
+      ['freshpowder/', 'FreshPowder'],
+      ['castforge/', 'CastForge'],
+      ['nitan-podcast/', 'Nitan Podcast']
+    ]
   },
   agents: {
     tag: '03 · AGENTS',
-    text: 'Faster Mac Use · Agent Autofill · QuotaSwitch · CastForge'
+    links: [
+      ['faster-mac-use/', 'Faster Mac Use'],
+      ['agent-autofill/', 'Agent Autofill'],
+      ['quotaswitch/', 'QuotaSwitch'],
+      ['castforge/', 'CastForge']
+    ]
   },
   eval: {
     tag: '04 · EVALS',
-    text: '114× token benchmark · 2.37" SNOTEL storm MAE · Primary-source receipts'
+    links: [
+      ['faster-mac-use/', '114× token benchmark'],
+      ['close-snow/', '2.37" SNOTEL MAE'],
+      ['journal/ai-builder-brief/', '64 primary-source briefs']
+    ]
   }
 };
 
@@ -541,6 +563,22 @@ function applyConceptFilter(concept) {
   }
 }
 
+let startCoverLoop = null;
+
+function syncWorkbenchUrl(isOpen, concept = 'all', hash = '') {
+  const url = new URL(window.location.href);
+  if (isOpen) {
+    url.searchParams.set('view', 'full');
+    if (concept && concept !== 'all') url.searchParams.set('pillar', concept);
+    else url.searchParams.delete('pillar');
+  } else {
+    url.searchParams.delete('view');
+    url.searchParams.delete('pillar');
+  }
+  url.hash = hash || '';
+  history.replaceState(null, '', url.pathname + url.search + url.hash);
+}
+
 function openWorkbench(concept = 'all', scrollSelector = null) {
   if (!coverPortal || !fullWorkbench) return;
   const doOpen = () => {
@@ -548,26 +586,19 @@ function openWorkbench(concept = 'all', scrollSelector = null) {
     coverPortal.hidden = true;
     fullWorkbench.hidden = false;
     updateConceptDOM(concept);
+    syncWorkbenchUrl(true, concept, scrollSelector && scrollSelector.startsWith('#') ? scrollSelector : '');
+  };
+  const scrollAfterOpen = () => {
+    const target = scrollSelector && document.querySelector(scrollSelector);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const vt = document.startViewTransition(doOpen);
-    vt.finished.then(() => {
-      if (scrollSelector) {
-        const target = document.querySelector(scrollSelector);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
+    document.startViewTransition(doOpen).finished.then(scrollAfterOpen);
   } else {
     doOpen();
-    if (scrollSelector) {
-      const target = document.querySelector(scrollSelector);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    scrollAfterOpen();
   }
 }
 
@@ -577,6 +608,8 @@ function closeWorkbench() {
     document.body.setAttribute('data-cover', 'closed');
     fullWorkbench.hidden = true;
     coverPortal.hidden = false;
+    syncWorkbenchUrl(false);
+    if (startCoverLoop) startCoverLoop();
   };
   if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.startViewTransition(doClose);
@@ -588,14 +621,18 @@ function closeWorkbench() {
 
 for (const card of coverCards) {
   const pillar = card.dataset.openPillar;
-  card.addEventListener('mouseenter', () => {
+  const syncTicker = () => {
     for (const c of coverCards) c.classList.toggle('is-focused', c === card);
     const info = COVER_TICKER_DATA[pillar];
     if (info && coverTickerTag && coverTickerText) {
       coverTickerTag.textContent = info.tag;
-      coverTickerText.textContent = info.text;
+      coverTickerText.innerHTML = info.links
+        .map(([href, label]) => `<a href="${href}">${label}</a>`)
+        .join('');
     }
-  });
+  };
+  card.addEventListener('mouseenter', syncTicker);
+  card.addEventListener('focus', syncTicker);
   card.addEventListener('pointermove', e => {
     const rect = card.getBoundingClientRect();
     card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
@@ -637,11 +674,23 @@ for (const link of navWorkbenchLinks) {
 if (coverPortal && fullWorkbench) {
   const hash = window.location.hash;
   const params = new URLSearchParams(window.location.search);
-  if (hash === '#quests' || hash === '#journal' || hash === '#about' || params.get('view') === 'full') {
+  const pillar = params.get('pillar');
+  if (hash === '#quests' || hash === '#journal' || hash === '#about' || params.get('view') === 'full' || pillar) {
     document.body.setAttribute('data-cover', 'open');
     coverPortal.hidden = true;
     fullWorkbench.hidden = false;
+    if (pillar && CONCEPT_LEAD_BUILD[pillar]) {
+      updateConceptDOM(pillar);
+    }
   }
+}
+
+for (const chip of conceptChips) {
+  chip.addEventListener('click', () => {
+    const concept = chip.dataset.concept;
+    applyConceptFilter(concept);
+    syncWorkbenchUrl(true, concept, window.location.hash);
+  });
 }
 
 // Interactive Signal Constellation Canvas on Cover Portal
@@ -683,11 +732,11 @@ if (coverCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
     });
   }
 
+  let coverRafId = 0;
+
   function drawCoverField() {
-    if (!coverPortal || coverPortal.hidden) {
-      requestAnimationFrame(drawCoverField);
-      return;
-    }
+    coverRafId = 0;
+    if (!coverPortal || coverPortal.hidden) return;
     ctx.clearRect(0, 0, width, height);
     const isDark = root.getAttribute('data-theme') === 'dark';
     const dotColor = isDark ? 'rgba(102, 166, 255, 0.36)' : 'rgba(8, 71, 196, 0.24)';
@@ -734,13 +783,15 @@ if (coverCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
       ctx.arc(ax, ay, a.r, 0, Math.PI * 2);
       ctx.fill();
     }
-    requestAnimationFrame(drawCoverField);
+    coverRafId = requestAnimationFrame(drawCoverField);
   }
-  requestAnimationFrame(drawCoverField);
-}
-
-for (const chip of conceptChips) {
-  chip.addEventListener('click', () => applyConceptFilter(chip.dataset.concept));
+  startCoverLoop = () => {
+    if (!coverRafId && coverPortal && !coverPortal.hidden) {
+      resizeCanvas();
+      coverRafId = requestAnimationFrame(drawCoverField);
+    }
+  };
+  startCoverLoop();
 }
 
 // 4. Interactive Evaluation Loop (About Me)

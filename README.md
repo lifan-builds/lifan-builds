@@ -19,6 +19,7 @@
   <a href="https://clifan.com">clifan.com</a> ·
   <a href="#main-focuses">Main focuses</a> ·
   <a href="#selected-builds">Selected builds</a> ·
+  <a href="https://clifan.com/journal/">Writing &amp; 64 daily briefs</a> ·
   <a href="#how-i-build">How I build</a>
 </p>
 
@@ -51,7 +52,7 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://clifan.com/quotaswitch/"><strong>QuotaSwitch</strong></a> <sup>NEW</sup><br />
-      <sub>Unified quota-driven multi-account switcher and auto-rotator for Google Antigravity (<code>agy</code>) and OpenAI Codex (<a href="https://clifan.com/quotaswitch/">overview</a> · <a href="https://www.npmjs.com/package/quotaswitch">npm</a> · <a href="https://github.com/lifan-builds/quotaswitch">repo</a>).</sub>
+      <sub>Unified quota-driven multi-account switcher, 30s rotator, and local <code>:18455/v1</code> gateway for Google Antigravity (<code>agy</code>) and OpenAI Codex (<a href="https://clifan.com/quotaswitch/">overview</a> · <a href="https://clifan.com/journal/#codex-quota-worker">workflow note</a> · <a href="https://github.com/lifan-builds/quotaswitch">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/close-snow/"><strong>CloseSnow</strong></a> <sup>NEW</sup><br />
@@ -65,13 +66,13 @@
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
-      <sub>Ski and snowboard deal aggregator tracking current and historical deals across North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://github.com/lifan-builds/snow-deal">repo</a>).</sub>
+      <sub>Ski and snowboard deal aggregator tracking current and historical deals across 28 North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://freshpowder.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/snow-deal">repo</a>).</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <a href="https://clifan.com/foliofen-cli/"><strong>Foliofen CLI</strong></a><br />
-      <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness (<a href="https://clifan.com/foliofen-cli/">overview</a> · <a href="https://github.com/lifan-builds/foliofen-cli">repo</a>).</sub>
+      <sub>Public local-first CLI for exporting patient-owned MyChart records through a Chrome/Puppeteer harness (<a href="https://clifan.com/foliofen-cli/">overview</a> · <a href="https://www.npmjs.com/package/@lifan-builds/foliofen-cli">npm</a> · <a href="https://github.com/lifan-builds/foliofen-cli">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/ai-builder-brief/"><strong>AI Builder Brief</strong></a> <sup>RECENT</sup><br />
