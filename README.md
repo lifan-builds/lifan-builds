@@ -108,7 +108,7 @@
 
 <p align="center"><sub>I run an evaluation loop: turn the goal into a repeatable check, inspect failures and evidence, improve the system, then run the check again before shipping.</sub></p>
 
-<p align="center"><sub>Claude Code and Codex are my primary agent tools. I use shell, browser, test, and review tools around them, with Trellis as the primary framework for my agent harnesses.</sub></p>
+<p align="center"><sub>Antigravity, Codex, and Claude Code are my primary agent surfaces, wired through portable skills, background computer-use, and deterministic evaluation gates.</sub></p>
 
 <p align="center"><sub>I care about systems that leave a trail: what happened, what was proposed, what a person approved, and what finally shipped.</sub></p>
 
