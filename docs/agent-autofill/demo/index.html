@@ -4,6 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Synthetic macOS-first Agent Autofill interactive product walkthrough">
+  <link rel="canonical" href="https://clifan.com/agent-autofill/demo/">
+  <meta property="og:title" content="Agent Autofill — Interactive Approval &amp; Revocation Demo">
+  <meta property="og:description" content="Step through Agent Autofill's 6-stage consent boundary: metadata inventory, exact grant approval, origin-bound handoff, and instant revocation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/agent-autofill/demo/">
+  <meta property="og:image" content="https://clifan.com/agent-autofill/assets/agent-autofill-tour.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agent Autofill — Interactive Approval &amp; Revocation Demo">
+  <meta name="twitter:description" content="Step through Agent Autofill's 6-stage consent boundary in the browser with synthetic values.">
+  <meta name="twitter:image" content="https://clifan.com/agent-autofill/assets/agent-autofill-tour.jpg">
+  <script>try{const s=localStorage.getItem('clifan-theme');if(s==='dark'||(!s&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='18' font-weight='700' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
   <title>Agent Autofill · Interactive Walkthrough</title>
   <style>
@@ -24,6 +35,7 @@
       --code-control-hover: #2b4559;
       --code-border: #38556b;
       --blue: #1d4ed8;
+      --blue-ink: #ffffff;
       --blue-dark: #1e3a8a;
       --blue-soft: #eff6ff;
       --green: #095c49;
@@ -36,8 +48,57 @@
       --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
     }
 
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --ink: #eef4f8;
+      --muted: #9db0c2;
+      --bar-neutral: #6b849b;
+      --line: #223244;
+      --line-strong: #31475e;
+      --paper: #0a1017;
+      --surface: #101923;
+      --white: #15202d;
+      --code-bg: #0c141d;
+      --code-sub: #080e15;
+      --code-ink: #e6f0f7;
+      --code-control: #1c2d3e;
+      --code-control-hover: #263d54;
+      --code-border: #2c4359;
+      --blue: #68a8ff;
+      --blue-ink: #051326;
+      --blue-dark: #90c0ff;
+      --blue-soft: #11233b;
+      --green: #4ee2b8;
+      --green-soft: #102e28;
+      --amber: #fbbf24;
+      --signal: #ff9468;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background-color: var(--white);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .theme-toggle kbd {
+      padding: 1px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background-color: var(--paper);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
     * { box-sizing: border-box; }
-    ::selection { background: var(--blue); color: var(--white); }
+    ::selection { background: var(--blue); color: var(--blue-ink); }
 
     body {
       margin: 0;
@@ -68,7 +129,7 @@
     }
 
     .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; }
-    .mark { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 7px; color: #ffffff; background-color: var(--blue); font-size: 13px; font-weight: 700; }
+    .mark { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 7px; color: var(--blue-ink); background-color: var(--blue); font-size: 13px; font-weight: 700; }
     .toplinks { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 14px; font-weight: 600; }
     .toplinks a { color: var(--muted); text-decoration: none; }
     .toplinks a:hover { color: var(--ink); text-decoration: underline; }
@@ -82,8 +143,9 @@
       margin-bottom: 28px;
     }
 
+    h1, h2, h3 { text-wrap: balance; }
     h1 { margin: 0 0 10px; font-size: clamp(28px, 3.8vw, 38px); line-height: 1.12; letter-spacing: -0.03em; font-weight: 800; }
-    .lede { margin: 0; color: var(--muted); font-size: 16px; max-width: 58ch; }
+    .lede { margin: 0; color: var(--muted); font-size: 16px; max-width: 58ch; text-wrap: pretty; }
 
     /* Install Command Bar */
     .install-bar {
@@ -151,7 +213,7 @@
     }
 
     .mode-tab:hover { color: var(--ink); }
-    .mode-tab[aria-selected="true"] { background: var(--blue); color: var(--white); }
+    .mode-tab[aria-selected="true"] { background: var(--blue); color: var(--blue-ink); }
     .copy-btn:active, .mode-tab:active, .choice:active, .primary:active, .quiet:active { transform: translateY(1px); }
 
     .demo {
@@ -177,12 +239,12 @@
     .step-number { display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid var(--line-strong); border-radius: 6px; font-family: var(--font-mono); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
     .step-label { padding-top: 2px; font-size: 13.5px; font-weight: 600; }
     .step.active { color: var(--blue-dark); }
-    .step.active .step-number { color: #ffffff; background-color: var(--blue); border-color: var(--blue); }
+    .step.active .step-number { color: var(--blue-ink); background-color: var(--blue); border-color: var(--blue); }
     .step.done .step-number { color: var(--green); border-color: #26997f; background-color: var(--green-soft); font-size: 0; }
     .step.done .step-number::before { content: "✓"; font-size: 12px; }
     .progress { height: 5px; margin: 14px 0 12px; overflow: hidden; border-radius: 6px; background-color: var(--paper); }
     .progress-bar { height: 100%; width: 20%; border-radius: inherit; background-color: var(--blue); transition: width .2s ease; }
-    .steps-note { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+    .steps-note { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; text-wrap: pretty; }
 
     /* Unified Stage Ledger (Zero Nested Card-in-Card Boxes) */
     .stage {
@@ -272,12 +334,12 @@
       left: 8px;
       width: 20px;
       text-align: right;
-      color: var(--bar-neutral);
+      color: #8fa6ba;
       font-size: 11.5px;
       user-select: none;
     }
 
-    .tok-comment { color: var(--line-strong); font-style: italic; }
+    .tok-comment { color: #8fa6ba; font-style: italic; }
     .tok-kw { color: #f0a68b; font-weight: 600; }
     .tok-fn { color: var(--tok-fn); }
     .tok-str { color: #6bc2ad; }
@@ -359,8 +421,8 @@
 
     .stage-actions .hint { color: var(--muted); font-size: 13px; }
     .primary, .quiet { cursor: pointer; border-radius: 8px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; }
-    .primary { color: #ffffff; background-color: var(--blue); border: 1px solid var(--blue); }
-    .primary:hover { background-color: var(--blue-dark); }
+    .primary { color: var(--blue-ink); background-color: var(--blue); border: 1px solid var(--blue); }
+    .primary:hover { background-color: var(--blue-dark); border-color: var(--blue-dark); color: var(--blue-ink); }
     .quiet { color: var(--ink); background-color: var(--white); border: 1px solid var(--line-strong); }
     .quiet:hover { background-color: var(--paper); }
 
@@ -421,12 +483,22 @@
         grid-template-columns: 1fr;
       }
 
-      .steps { position: static; }
-      .step { display: inline-grid; width: auto; margin-right: 12px; }
+      .steps {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 10px;
+        padding: 14px 16px;
+      }
+      .step { padding: 4px 0; }
       .steps-heading, .steps-note { display: none; }
-      .steps .progress { margin-top: 4px; }
+      .steps .progress { grid-column: 1 / -1; margin: 6px 0 0; }
       .stage-code-col { border-left: none; border-top: 1px solid var(--line); }
       .arch-col + .arch-col { border-left: none; border-top: 1px solid var(--line); }
+    }
+
+    @media (max-width: 640px) {
+      .theme-toggle kbd { display: none; }
     }
   </style>
 </head>
@@ -436,8 +508,12 @@
       <a class="brand" href="../"><span class="mark" aria-hidden="true">A</span> Agent Autofill</a>
       <nav class="toplinks" aria-label="Walkthrough navigation">
         <a href="../">← Product overview</a>
-        <a href="../getting-started.md">Docs</a>
+        <a href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/getting-started.md">Docs ↗</a>
         <span class="platform">Synthetic walkthrough · offline</span>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color theme" title="Toggle theme (T)">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
       </nav>
     </header>
 
@@ -469,7 +545,7 @@
         <button class="step" data-step="4"><span class="step-number">5</span><span class="step-label">Deliver selected data</span></button>
         <button class="step" data-step="5"><span class="step-number">6</span><span class="step-label">Revoke access</span></button>
         <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
-        <p class="steps-note">Synthetic values only. Nothing reads your files or leaves this page.</p>
+        <p class="steps-note">Synthetic values only. Nothing reads your files or leaves this&nbsp;page.</p>
       </nav>
 
       <article class="stage" aria-live="polite">
@@ -519,45 +595,45 @@
       <div class="arch-grid">
         <article class="arch-col">
           <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-            <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+            <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/>
             <rect x="10" y="14" width="88" height="48" rx="5" fill="#101c26"/>
             <text x="54" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#6bc2ad">status --json</text>
             <text x="54" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">0 raw values</text>
-            <line x1="98" y1="38" x2="126" y2="38" stroke="#095c49" stroke-width="1.5"/>
-            <polygon points="126,34 133,38 126,42" fill="#095c49"/>
-            <rect x="134" y="14" width="176" height="48" rx="5" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-            <text x="144" y="34" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">12 profile · 2 site records</text>
-            <text x="144" y="49" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">Metadata inventory only</text>
+            <line x1="98" y1="38" x2="126" y2="38" stroke="var(--green)" stroke-width="1.5"/>
+            <polygon points="126,34 133,38 126,42" fill="var(--green)"/>
+            <rect x="134" y="14" width="176" height="48" rx="5" fill="var(--white)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="144" y="34" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--green)">12 profile · 2 site records</text>
+            <text x="144" y="49" font-family="JetBrains Mono, monospace" font-size="7.5" fill="var(--muted)">Metadata inventory only</text>
           </svg>
           <h3>1. Value-free readiness</h3>
           <p>Inspect field counts and source health before any secret or profile value is unlocked.</p>
         </article>
         <article class="arch-col">
           <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-            <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+            <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/>
             <rect x="10" y="14" width="88" height="48" rx="5" fill="#101c26"/>
             <text x="54" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#7cc4fa">credential.use</text>
             <text x="54" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">10m TTL</text>
-            <line x1="98" y1="38" x2="126" y2="38" stroke="#1d4ed8" stroke-width="1.5"/>
-            <polygon points="126,34 133,38 126,42" fill="#1d4ed8"/>
-            <rect x="134" y="14" width="176" height="48" rx="5" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-            <text x="144" y="34" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#1d4ed8">Origin: example.test</text>
-            <text x="144" y="49" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">1-time extension handle</text>
+            <line x1="98" y1="38" x2="126" y2="38" stroke="var(--blue)" stroke-width="1.5"/>
+            <polygon points="126,34 133,38 126,42" fill="var(--blue)"/>
+            <rect x="134" y="14" width="176" height="48" rx="5" fill="var(--white)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="144" y="34" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--blue)">Origin: example.test</text>
+            <text x="144" y="49" font-family="JetBrains Mono, monospace" font-size="7.5" fill="var(--muted)">1-time extension handle</text>
           </svg>
           <h3>2. Origin-bound handoff</h3>
           <p>Bind each grant to a single target origin and purpose with a short expiration window.</p>
         </article>
         <article class="arch-col">
           <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-            <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+            <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/>
             <rect x="10" y="14" width="88" height="48" rx="5" fill="#101c26"/>
             <text x="54" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#f7c873">grant.revoke</text>
             <text x="54" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">Instant block</text>
-            <line x1="98" y1="38" x2="126" y2="38" stroke="#095c49" stroke-width="1.5"/>
-            <polygon points="126,34 133,38 126,42" fill="#095c49"/>
-            <rect x="134" y="14" width="176" height="48" rx="5" fill="#ffffff" stroke="#095c49" stroke-width="1"/>
-            <text x="144" y="34" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">Human Submit Gate</text>
-            <text x="144" y="49" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">Broker never clicks submit</text>
+            <line x1="98" y1="38" x2="126" y2="38" stroke="var(--green)" stroke-width="1.5"/>
+            <polygon points="126,34 133,38 126,42" fill="var(--green)"/>
+            <rect x="134" y="14" width="176" height="48" rx="5" fill="var(--white)" stroke="var(--green)" stroke-width="1"/>
+            <text x="144" y="34" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--green)">Human Submit Gate</text>
+            <text x="144" y="49" font-family="JetBrains Mono, monospace" font-size="7.5" fill="var(--muted)">Broker never clicks submit</text>
           </svg>
           <h3>3. Revocable &amp; non-acting</h3>
           <p>Revoke grants immediately after task completion; final form submission always stays with you.</p>
@@ -567,13 +643,31 @@
 
     <footer class="footer">
       <span>Agent Autofill · Local personal-data broker for macOS</span>
-      <span><a href="../">Product page</a> · <a href="../getting-started.md">Getting started</a> · <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a></span>
+      <span><a href="../">Product page</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/getting-started.md">Getting started ↗</a> · <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a></span>
     </footer>
   </main>
 
   <script>
     (() => {
       "use strict";
+      const root = document.documentElement;
+      const themeLabel = document.querySelector("[data-theme-label]");
+      const themeBtn = document.querySelector("[data-theme-toggle]");
+      function applyTheme(t, persist) {
+        const next = t === "dark" ? "dark" : "light";
+        if (next === "dark") root.setAttribute("data-theme", "dark");
+        else root.removeAttribute("data-theme");
+        if (themeLabel) themeLabel.textContent = next === "dark" ? "Dark" : "Light";
+        if (persist) { try { localStorage.setItem("clifan-theme", next); } catch (_) {} }
+      }
+      applyTheme(root.getAttribute("data-theme") || "light", false);
+      if (themeBtn) themeBtn.addEventListener("click", () => applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true));
+      window.addEventListener("keydown", (e) => {
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        const t = e.target;
+        if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable)) return;
+        if (e.key === "t" || e.key === "T") applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+      });
       const state = { step: 0, maxVisited: 0, delivery: "extension", approved: false, missingChoice: "pending", delivered: false, revoked: false };
       const $ = (selector) => document.querySelector(selector);
       const body = $("#stageBody");

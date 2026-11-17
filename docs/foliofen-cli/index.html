@@ -48,7 +48,7 @@
           <span>LOCAL-FIRST HEALTH CLI · POSIX 0600 · 0 CLOUD CUSTODY</span>
         </p>
         <h1 id="ff-hero-heading">Patient-owned records. <span class="cover-headline-accent">Zero cloud custody.</span></h1>
-        <p class="subpage-lead">Foliofen CLI (<code>@lifan-builds/mychart-cli</code>) exports Epic MyChart records you can already view into deterministic local Markdown and JSONL, keeping login, MFA, cookies, and PHI strictly on your&nbsp;Mac.</p>
+        <p class="subpage-lead">Foliofen CLI (<code>@lifan-builds/foliofen-cli</code>) exports Epic MyChart records you can already view into deterministic local Markdown and JSONL, keeping login, MFA, cookies, and PHI strictly on your&nbsp;Mac.</p>
 
         <div class="subpage-actions">
           <a class="button primary" href="https://github.com/lifan-builds/foliofen-cli">View repository &amp; install ↗</a>
@@ -59,14 +59,14 @@
         <div class="sp-install-widget" aria-label="Run Foliofen CLI offline demo or sync">
           <div class="sp-install-bar">
             <span class="sp-install-prompt" aria-hidden="true">$</span>
-            <code class="sp-install-code" id="ff-install-cmd" aria-live="polite">npx @lifan-builds/mychart-cli demo</code>
+            <code class="sp-install-code" id="ff-install-cmd" aria-live="polite">npx @lifan-builds/foliofen-cli demo</code>
             <button type="button" class="sp-copy-btn" id="ff-copy-btn" data-copied="false">Copy</button>
           </div>
           <div class="sp-install-meta">
             <div class="sp-install-switch" role="group" aria-label="Select Foliofen CLI command">
-              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="npx @lifan-builds/mychart-cli demo">offline demo</button>
-              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="npm install -g @lifan-builds/mychart-cli">npm install</button>
-              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="mychart-cli export jsonl --latest-day --output ./mychart.jsonl">export jsonl</button>
+              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="npx @lifan-builds/foliofen-cli demo">offline demo</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="npm install -g @lifan-builds/foliofen-cli">npm install</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="foliofen-cli export jsonl --latest-day --output ./mychart.jsonl">export jsonl</button>
             </div>
             <span class="sp-install-guard">POSIX 0600 · 0 cloud bytes</span>
           </div>
@@ -124,10 +124,10 @@
         <div class="sp-broll-grid">
           <div class="sp-broll-pane">
             <div class="subpage-stage-top">
-              <strong id="ff-title">$ npx @lifan-builds/mychart-cli demo</strong>
+              <strong id="ff-title">$ npx @lifan-builds/foliofen-cli demo</strong>
               <span id="ff-badge">Deterministic offline sandbox · 0 network calls</span>
             </div>
-            <pre class="subpage-stage-pre" id="ff-pre"><span class="tok-cmd">$ npx</span> @lifan-builds/mychart-cli demo
+            <pre class="subpage-stage-pre" id="ff-pre"><span class="tok-cmd">$ npx</span> @lifan-builds/foliofen-cli demo
 <span class="tok-ok">✓</span> Loaded synthetic fixture (<span class="tok-str">"Demo Child"</span> · <span class="tok-num">2</span> visits, <span class="tok-num">4</span> lab panels)
 <span class="tok-ok">✓</span> Active-patient guard: <span class="tok-key">--require-active-patient</span> <span class="tok-str">"Demo Child"</span>
 <span class="tok-ok">✓</span> Wrote <span class="tok-num">POSIX 0600</span> Markdown + JSONL chunks with SHA-256 manifest</pre>
@@ -192,9 +192,10 @@
   <footer class="site-footer wrap">
     <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
     <div class="footer-links">
+      <a href="../agent-autofill/">Agent Autofill →</a>
+      <a href="../journal/#nicu-mychart-note">NICU Build Story →</a>
       <a href="https://github.com/lifan-builds/foliofen-cli">GitHub ↗</a>
       <a href="https://clifan.substack.com/p/why-i-built-a-local-mychart-cli-while">Substack Essay ↗</a>
-      <a href="https://news.ycombinator.com/item?id=49253653">Show HN ↗</a>
     </div>
   </footer>
 
@@ -238,22 +239,22 @@
 
       const MODES = {
         demo: {
-          title: "$ npx @lifan-builds/mychart-cli demo",
+          title: "$ npx @lifan-builds/foliofen-cli demo",
           badge: "Deterministic offline sandbox · 0 network calls",
           meta: "POSIX 0600 local store · No hosted backend",
-          html: `<span class="tok-cmd">$ npx</span> @lifan-builds/mychart-cli demo\n<span class="tok-ok">✓</span> Loaded synthetic fixture (<span class="tok-str">"Demo Child"</span> · <span class="tok-num">2</span> visits, <span class="tok-num">4</span> lab panels)\n<span class="tok-ok">✓</span> Active-patient guard: <span class="tok-key">--require-active-patient</span> <span class="tok-str">"Demo Child"</span>\n<span class="tok-ok">✓</span> Wrote <span class="tok-num">POSIX 0600</span> Markdown + JSONL chunks with SHA-256 manifest`
+          html: `<span class="tok-cmd">$ npx</span> @lifan-builds/foliofen-cli demo\n<span class="tok-ok">✓</span> Loaded synthetic fixture (<span class="tok-str">"Demo Child"</span> · <span class="tok-num">2</span> visits, <span class="tok-num">4</span> lab panels)\n<span class="tok-ok">✓</span> Active-patient guard: <span class="tok-key">--require-active-patient</span> <span class="tok-str">"Demo Child"</span>\n<span class="tok-ok">✓</span> Wrote <span class="tok-num">POSIX 0600</span> Markdown + JSONL chunks with SHA-256 manifest`
         },
         sync: {
-          title: "$ mychart-cli sync --categories visits,test-results --require-active-patient \"Demo Child\"",
+          title: "$ foliofen-cli sync --categories visits,test-results --require-active-patient \"Demo Child\"",
           badge: "Visible Chrome session · explicit category scope",
-          meta: "mychart-cli browser validate -> sync",
-          html: `<span class="tok-cmd">$ mychart-cli</span> browser start --visible &amp;&amp; mychart-cli browser validate\n<span class="tok-ok">✓</span> Portal session verified · active chart matches <span class="tok-str">"Demo Child"</span>\n<span class="tok-ok">✓</span> Synced visits (<span class="tok-num">12</span>) &amp; test-results (<span class="tok-num">38</span>) · unrequested categories untouched`
+          meta: "foliofen-cli browser validate -> sync",
+          html: `<span class="tok-cmd">$ foliofen-cli</span> browser start --visible &amp;&amp; foliofen-cli browser validate\n<span class="tok-ok">✓</span> Portal session verified · active chart matches <span class="tok-str">"Demo Child"</span>\n<span class="tok-ok">✓</span> Synced visits (<span class="tok-num">12</span>) &amp; test-results (<span class="tok-num">38</span>) · unrequested categories untouched`
         },
         export: {
-          title: "$ mychart-cli export jsonl --latest-day --output ./mychart.jsonl",
+          title: "$ foliofen-cli export jsonl --latest-day --output ./mychart.jsonl",
           badge: "Manifest-headed JSONL + human-reviewable Markdown",
           meta: "Optional pypdf + macOS Vision OCR for attachments",
-          html: `<span class="tok-cmd">$ mychart-cli</span> export jsonl --latest-day --output ./mychart.jsonl\n<span class="tok-cmd">$ mychart-cli</span> export inspect ./mychart.jsonl --json-summary\n<span class="tok-ok">✓</span> Manifest v1 · <span class="tok-num">14</span> records · <span class="tok-num">42</span> chunks · <span class="tok-ok">0 PHI leaked to stdout</span>`
+          html: `<span class="tok-cmd">$ foliofen-cli</span> export jsonl --latest-day --output ./mychart.jsonl\n<span class="tok-cmd">$ foliofen-cli</span> export inspect ./mychart.jsonl --json-summary\n<span class="tok-ok">✓</span> Manifest v1 · <span class="tok-num">14</span> records · <span class="tok-num">42</span> chunks · <span class="tok-ok">0 PHI leaked to stdout</span>`
         }
       };
       const tabs = [...document.querySelectorAll(".subpage-tab")];

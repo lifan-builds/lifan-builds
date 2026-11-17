@@ -45,28 +45,27 @@
       <div>
         <p class="status-line">
           <span class="status-indicator" aria-hidden="true"></span>
-          <span>GO + NPM CLI · 127.0.0.1:18455/V1 GATEWAY · AGY + CODEX</span>
+          <span>GO CLI · 127.0.0.1:18455/V1 GATEWAY · AGY + CODEX</span>
         </p>
         <h1 id="qs-hero-heading">Zero-downtime quota routing for <span class="cover-headline-accent">Antigravity &amp; Codex.</span></h1>
         <p class="subpage-lead">Pool personal, team, and API-key seats behind a local OpenAI-compatible gateway (<code>127.0.0.1:18455/v1</code>) and 30s rotator—draining expiring credits first with <code>&lt; 30ms</code> automatic&nbsp;failover.</p>
 
         <div class="subpage-actions">
           <a class="button primary" href="https://github.com/lifan-builds/quotaswitch">View on GitHub ↗</a>
-          <a class="button secondary" href="https://www.npmjs.com/package/quotaswitch">npm: quotaswitch ↗</a>
+          <a class="button secondary" href="../journal/#codex-quota-worker">Workflow Note: Carbon + GPT →</a>
         </div>
 
         <div class="sp-install-widget" aria-label="Install and inspect QuotaSwitch">
           <div class="sp-install-bar">
             <span class="sp-install-prompt" aria-hidden="true">$</span>
-            <code class="sp-install-code" id="qs-install-cmd" aria-live="polite">quotaswitch gateway status</code>
+            <code class="sp-install-code" id="qs-install-cmd" aria-live="polite">go install github.com/lifan-builds/quotaswitch/cmd/quotaswitch@latest</code>
             <button type="button" class="sp-copy-btn" id="qs-copy-btn" data-copied="false">Copy</button>
           </div>
           <div class="sp-install-meta">
             <div class="sp-install-switch" role="group" aria-label="Select install or gateway command">
-              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="quotaswitch gateway status">gateway status</button>
-              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="brew tap lifan-builds/tap &amp;&amp; brew install quotaswitch">brew tap</button>
-              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="go install github.com/lifan-builds/quotaswitch/cmd/quotaswitch@latest">go install</button>
-              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="npx quotaswitch list --provider=all">npx</button>
+              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="go install github.com/lifan-builds/quotaswitch/cmd/quotaswitch@latest">go install</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="quotaswitch gateway status">gateway status</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="quotaswitch rotate --provider=all --watch --interval=30s">30s rotator</button>
             </div>
             <span class="sp-install-guard">AES-256-GCM local store</span>
           </div>
@@ -202,7 +201,8 @@
   <footer class="site-footer wrap">
     <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
     <div class="footer-links">
-      <a href="https://www.npmjs.com/package/quotaswitch">npm ↗</a>
+      <a href="../faster-mac-use/">Faster Mac Use →</a>
+      <a href="../journal/#codex-quota-worker">Codex Quota Note →</a>
       <a href="https://github.com/lifan-builds/quotaswitch">Source Code ↗</a>
       <a href="https://x.com/LifanBuilds">X ↗</a>
     </div>

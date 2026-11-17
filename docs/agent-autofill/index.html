@@ -779,6 +779,11 @@
         text-align: left;
       }
     }
+    @media (max-width: 640px) {
+      .theme-toggle kbd {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -796,8 +801,8 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="demo/">Interactive demo</a>
         <a href="#quickstart">Quick Start</a>
-        <a href="getting-started.md">Docs</a>
-        <a href="cli.md">CLI</a>
+        <a href="#docs-title">Docs</a>
+        <a href="privacy.html">Privacy</a>
         <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a>
         <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color theme" title="Toggle theme (T)">
           <span data-theme-label>Light</span>
@@ -868,56 +873,56 @@
       <div class="arch-grid">
         <article class="arch-col">
           <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-            <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+            <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/>
             <rect x="10" y="14" width="88" height="48" rx="5" fill="#101c26"/>
             <text x="54" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#6bc2ad">Chrome Seed</text>
             <text x="54" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">Saved Profile</text>
-            <line x1="98" y1="38" x2="130" y2="38" stroke="#095c49" stroke-width="1.5" stroke-dasharray="3 2"/>
-            <polygon points="130,34 137,38 130,42" fill="#095c49"/>
-            <rect x="138" y="12" width="172" height="52" rx="5" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
+            <line x1="98" y1="38" x2="130" y2="38" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <polygon points="130,34 137,38 130,42" fill="var(--teal)"/>
+            <rect x="138" y="12" width="172" height="52" rx="5" fill="var(--surface-strong)" stroke="var(--line-strong)" stroke-width="1"/>
             <rect x="146" y="19" width="82" height="14" rx="3" fill="#095c49"/>
             <text x="187" y="29" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#ffffff">AES-GCM SQLite</text>
-            <text x="234" y="29" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="600" fill="#344b5c">Keychain</text>
-            <text x="146" y="46" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">Home vs Work Memory</text>
-            <text x="146" y="57" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">0 plaintext CSV exports</text>
+            <text x="234" y="29" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="600" fill="var(--muted)">Keychain</text>
+            <text x="146" y="46" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--teal)">Home vs Work Memory</text>
+            <text x="146" y="57" font-family="JetBrains Mono, monospace" font-size="7.5" fill="var(--muted)">0 plaintext CSV exports</text>
           </svg>
           <h3>1. Import locally from Chrome</h3>
           <p>Bootstrap saved addresses and logins into an AES-GCM encrypted SQLite vault with keys stored in the macOS Keychain—no plaintext CSV exports.</p>
         </article>
         <article class="arch-col">
           <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-            <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+            <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/>
             <rect x="10" y="14" width="88" height="48" rx="5" fill="#101c26"/>
             <text x="54" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#7cc4fa">MCP Broker</text>
             <text x="54" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">Scoped Grants</text>
-            <line x1="98" y1="26" x2="132" y2="26" stroke="#1d4ed8" stroke-width="1.5"/>
-            <polygon points="132,22 139,26 132,30" fill="#1d4ed8"/>
-            <line x1="98" y1="50" x2="132" y2="50" stroke="#095c49" stroke-width="1.5"/>
-            <polygon points="132,46 139,50 132,54" fill="#095c49"/>
-            <rect x="140" y="12" width="170" height="24" rx="4" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-            <text x="148" y="27" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#1d4ed8">profile.get · exact fields</text>
-            <rect x="140" y="40" width="170" height="24" rx="4" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-            <text x="148" y="55" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">credential.use · 1-time</text>
+            <line x1="98" y1="26" x2="132" y2="26" stroke="var(--accent)" stroke-width="1.5"/>
+            <polygon points="132,22 139,26 132,30" fill="var(--accent)"/>
+            <line x1="98" y1="50" x2="132" y2="50" stroke="var(--teal)" stroke-width="1.5"/>
+            <polygon points="132,46 139,50 132,54" fill="var(--teal)"/>
+            <rect x="140" y="12" width="170" height="24" rx="4" fill="var(--surface-strong)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="148" y="27" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--accent)">profile.get · exact fields</text>
+            <rect x="140" y="40" width="170" height="24" rx="4" fill="var(--surface-strong)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="148" y="55" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--teal)">credential.use · 1-time</text>
           </svg>
           <h3>2. Pair MCP with scoped grants</h3>
           <p>Run <code>agent-autofill mcp-install</code> for Claude, Codex, Cursor, or Antigravity. Approve only the requested fields or use <code>credential.use</code> for an origin-bound fill.</p>
         </article>
         <article class="arch-col">
           <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-            <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+            <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/>
             <rect x="10" y="14" width="78" height="48" rx="5" fill="#101c26"/>
             <text x="49" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#f7c873">2FA Inbox</text>
             <text x="49" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">Gmail · SMS</text>
-            <line x1="88" y1="38" x2="105" y2="38" stroke="#1d4ed8" stroke-width="1.5"/>
-            <polygon points="105,34 112,38 105,42" fill="#1d4ed8"/>
-            <rect x="113" y="14" width="94" height="48" rx="5" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1"/>
-            <text x="160" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#1d4ed8">Origin Fill</text>
-            <text x="160" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">example.test</text>
-            <line x1="207" y1="38" x2="224" y2="38" stroke="#095c49" stroke-width="1.5"/>
-            <polygon points="224,34 231,38 224,42" fill="#095c49"/>
-            <rect x="232" y="14" width="78" height="48" rx="5" fill="#ffffff" stroke="#095c49" stroke-width="1"/>
-            <text x="271" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">Human Gate</text>
-            <text x="271" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#0c1720">Confirm</text>
+            <line x1="88" y1="38" x2="105" y2="38" stroke="var(--accent)" stroke-width="1.5"/>
+            <polygon points="105,34 112,38 105,42" fill="var(--accent)"/>
+            <rect x="113" y="14" width="94" height="48" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/>
+            <text x="160" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--accent)">Origin Fill</text>
+            <text x="160" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="var(--muted)">example.test</text>
+            <line x1="207" y1="38" x2="224" y2="38" stroke="var(--teal)" stroke-width="1.5"/>
+            <polygon points="224,34 231,38 224,42" fill="var(--teal)"/>
+            <rect x="232" y="14" width="78" height="48" rx="5" fill="var(--surface-strong)" stroke="var(--teal)" stroke-width="1"/>
+            <text x="271" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--teal)">Human Gate</text>
+            <text x="271" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--ink)">Confirm</text>
           </svg>
           <h3>3. Confirm before submission</h3>
           <p>The broker is strictly information-only: it never navigates, submits forms, or makes purchases. Your acting agent pauses for confirmation before clicking submit.</p>
@@ -961,24 +966,24 @@
         </div>
       </div>
       <div class="docs-grid">
-        <a class="doc-link" href="getting-started.md">
-          <strong>Getting started</strong>
+        <a class="doc-link" href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/getting-started.md">
+          <strong>Getting started ↗</strong>
           <span>First install, inbox check, and vault unlock →</span>
         </a>
-        <a class="doc-link" href="chrome-seed-onboarding.md">
-          <strong>Chrome seed onboarding</strong>
+        <a class="doc-link" href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/chrome-seed-onboarding.md">
+          <strong>Chrome seed onboarding ↗</strong>
           <span>Import addresses and saved passwords locally →</span>
         </a>
-        <a class="doc-link" href="access-modes.md">
-          <strong>Access modes</strong>
+        <a class="doc-link" href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/access-modes.md">
+          <strong>Access modes ↗</strong>
           <span>Direct field delivery vs. extension handoff →</span>
         </a>
-        <a class="doc-link" href="cli.md">
-          <strong>CLI cookbook</strong>
+        <a class="doc-link" href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/cli.md">
+          <strong>CLI cookbook ↗</strong>
           <span>Copy-paste commands for daily operation →</span>
         </a>
-        <a class="doc-link" href="agent-autofill.md">
-          <strong>Operator &amp; MCP reference</strong>
+        <a class="doc-link" href="https://github.com/lifan-builds/agent-autofill/blob/main/docs/agent-autofill.md">
+          <strong>Operator &amp; MCP reference ↗</strong>
           <span>Read-only Gmail (<code>gmail.readonly</code>), Messages, and scopes →</span>
         </a>
         <a class="doc-link" href="demo/">
@@ -996,9 +1001,10 @@
       <span><a href="../">← Back to Lifan Chen (clifan.com)</a> · Agent Autofill</span>
       <div class="footer-links">
         <a href="demo/">Interactive Demo</a>
-        <a href="index.md">Docs Index</a>
-        <a href="gtm.md">GTM Brief</a>
-        <a href="https://github.com/lifan-builds/agent-autofill">GitHub</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="../faster-mac-use/">Faster Mac Use →</a>
+        <a href="../foliofen-cli/">Foliofen CLI →</a>
+        <a href="https://github.com/lifan-builds/agent-autofill">GitHub ↗</a>
       </div>
     </footer>
   </div>

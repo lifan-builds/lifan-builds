@@ -46,6 +46,7 @@
         --badge-border: #fdba74;
         --line: #c4d1dc;
         --line-strong: #9fb2c2;
+        --wave-idle: #c4d1dc;
         --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
         --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
       }
@@ -70,6 +71,7 @@
         --badge-border: #9a3412;
         --line: #223244;
         --line-strong: #31475e;
+        --wave-idle: #2c4359;
       }
 
       * { box-sizing: border-box; }
@@ -513,6 +515,9 @@
         .meta-grid { grid-template-columns: 1fr; }
         .meta-card + .meta-card { border-left: none; border-top: 1px solid var(--line); }
         .topbar { flex-direction: column; align-items: flex-start; }
+        .theme-toggle kbd { display: none; }
+        .telemetry-banner { overflow-x: auto; }
+        .telemetry-svg { min-width: 560px; }
       }
     </style>
   </head>
@@ -555,7 +560,7 @@
           <nav class="actions" aria-label="订阅与项目链接">
             <a class="button primary" href="https://podcasts.apple.com/us/podcast/nitan-podcast/id1888784962">Apple Podcasts</a>
             <a class="button" href="https://open.spotify.com/show/3jjd0ozToYgW7yje7mfYCg">Spotify</a>
-            <a class="button" href="feed.xml">RSS 订阅</a>
+            <a class="button" href="https://lifan-builds.github.io/nitan-podcast/feed.xml">RSS 订阅</a>
             <a class="button" href="https://www.uscardforum.com/t/topic/494521">美卡论坛讨论帖 ↗</a>
           </nav>
         </div>
@@ -563,7 +568,7 @@
 
       <div class="telemetry-banner" aria-hidden="true">
         <svg class="telemetry-svg" viewBox="0 0 880 100" aria-hidden="true">
-          <rect x="0" y="0" width="880" height="100" rx="8" fill="#eaf0f4" />
+          <rect x="0" y="0" width="880" height="100" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1" />
 
           <!-- Left Episode Telemetry Readout -->
           <rect x="10" y="10" width="214" height="80" rx="6" fill="#101c26" />
@@ -572,51 +577,51 @@
           <text x="22" y="74" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="700" fill="#6bc2ad" id="svg-time-readout">00:00 / 06:00 · 1.00×</text>
 
           <!-- Center Waveform Stage -->
-          <rect x="234" y="10" width="422" height="80" rx="6" fill="#ffffff" stroke="#9fb2c2" stroke-width="1" />
-          <text x="248" y="28" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#c2410c">双人对话声纹 · -16 LUFS</text>
-          <text x="642" y="28" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#344b5c">00:00 · 01:30 · 04:15 · 06:00</text>
+          <rect x="234" y="10" width="422" height="80" rx="6" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="1" />
+          <text x="248" y="28" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="var(--accent)">双人对话声纹 · -16 LUFS</text>
+          <text x="642" y="28" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" fill="var(--muted)">00:00 · 01:30 · 04:15 · 06:00</text>
 
           <g id="svg-wave-bars">
-            <rect x="250" y="54" width="6" height="18" rx="2" fill="#c2410c" />
-            <rect x="262" y="44" width="6" height="34" rx="2" fill="#c2410c" />
-            <rect x="274" y="38" width="6" height="42" rx="2" fill="#c2410c" />
-            <rect x="286" y="48" width="6" height="28" rx="2" fill="#c2410c" />
-            <rect x="298" y="40" width="6" height="38" rx="2" fill="#c2410c" />
-            <rect x="310" y="52" width="6" height="22" rx="2" fill="#c2410c" />
-            <rect x="322" y="36" width="6" height="44" rx="2" fill="#c2410c" />
-            <rect x="334" y="46" width="6" height="30" rx="2" fill="#c2410c" />
-            <rect x="346" y="42" width="6" height="36" rx="2" fill="#c4d1dc" />
-            <rect x="358" y="50" width="6" height="24" rx="2" fill="#c4d1dc" />
-            <rect x="370" y="38" width="6" height="42" rx="2" fill="#c4d1dc" />
-            <rect x="382" y="45" width="6" height="32" rx="2" fill="#c4d1dc" />
-            <rect x="394" y="53" width="6" height="20" rx="2" fill="#c4d1dc" />
-            <rect x="406" y="39" width="6" height="40" rx="2" fill="#c4d1dc" />
-            <rect x="418" y="43" width="6" height="35" rx="2" fill="#c4d1dc" />
-            <rect x="430" y="51" width="6" height="23" rx="2" fill="#c4d1dc" />
-            <rect x="442" y="37" width="6" height="43" rx="2" fill="#c4d1dc" />
-            <rect x="454" y="46" width="6" height="30" rx="2" fill="#c4d1dc" />
-            <rect x="466" y="41" width="6" height="37" rx="2" fill="#c4d1dc" />
-            <rect x="478" y="52" width="6" height="21" rx="2" fill="#c4d1dc" />
-            <rect x="490" y="38" width="6" height="41" rx="2" fill="#c4d1dc" />
-            <rect x="502" y="45" width="6" height="31" rx="2" fill="#c4d1dc" />
-            <rect x="514" y="49" width="6" height="25" rx="2" fill="#c4d1dc" />
-            <rect x="526" y="37" width="6" height="43" rx="2" fill="#c4d1dc" />
-            <rect x="538" y="44" width="6" height="33" rx="2" fill="#c4d1dc" />
-            <rect x="550" y="51" width="6" height="22" rx="2" fill="#c4d1dc" />
-            <rect x="562" y="40" width="6" height="38" rx="2" fill="#c4d1dc" />
-            <rect x="574" y="47" width="6" height="28" rx="2" fill="#c4d1dc" />
-            <rect x="586" y="39" width="6" height="40" rx="2" fill="#c4d1dc" />
-            <rect x="598" y="48" width="6" height="27" rx="2" fill="#c4d1dc" />
-            <rect x="610" y="43" width="6" height="34" rx="2" fill="#c4d1dc" />
-            <rect x="622" y="53" width="6" height="19" rx="2" fill="#c4d1dc" />
-            <rect x="634" y="56" width="6" height="15" rx="2" fill="#c4d1dc" />
+            <rect x="250" y="54" width="6" height="18" rx="2" fill="var(--accent)" />
+            <rect x="262" y="44" width="6" height="34" rx="2" fill="var(--accent)" />
+            <rect x="274" y="38" width="6" height="42" rx="2" fill="var(--accent)" />
+            <rect x="286" y="48" width="6" height="28" rx="2" fill="var(--accent)" />
+            <rect x="298" y="40" width="6" height="38" rx="2" fill="var(--accent)" />
+            <rect x="310" y="52" width="6" height="22" rx="2" fill="var(--accent)" />
+            <rect x="322" y="36" width="6" height="44" rx="2" fill="var(--accent)" />
+            <rect x="334" y="46" width="6" height="30" rx="2" fill="var(--accent)" />
+            <rect x="346" y="42" width="6" height="36" rx="2" fill="var(--wave-idle)" />
+            <rect x="358" y="50" width="6" height="24" rx="2" fill="var(--wave-idle)" />
+            <rect x="370" y="38" width="6" height="42" rx="2" fill="var(--wave-idle)" />
+            <rect x="382" y="45" width="6" height="32" rx="2" fill="var(--wave-idle)" />
+            <rect x="394" y="53" width="6" height="20" rx="2" fill="var(--wave-idle)" />
+            <rect x="406" y="39" width="6" height="40" rx="2" fill="var(--wave-idle)" />
+            <rect x="418" y="43" width="6" height="35" rx="2" fill="var(--wave-idle)" />
+            <rect x="430" y="51" width="6" height="23" rx="2" fill="var(--wave-idle)" />
+            <rect x="442" y="37" width="6" height="43" rx="2" fill="var(--wave-idle)" />
+            <rect x="454" y="46" width="6" height="30" rx="2" fill="var(--wave-idle)" />
+            <rect x="466" y="41" width="6" height="37" rx="2" fill="var(--wave-idle)" />
+            <rect x="478" y="52" width="6" height="21" rx="2" fill="var(--wave-idle)" />
+            <rect x="490" y="38" width="6" height="41" rx="2" fill="var(--wave-idle)" />
+            <rect x="502" y="45" width="6" height="31" rx="2" fill="var(--wave-idle)" />
+            <rect x="514" y="49" width="6" height="25" rx="2" fill="var(--wave-idle)" />
+            <rect x="526" y="37" width="6" height="43" rx="2" fill="var(--wave-idle)" />
+            <rect x="538" y="44" width="6" height="33" rx="2" fill="var(--wave-idle)" />
+            <rect x="550" y="51" width="6" height="22" rx="2" fill="var(--wave-idle)" />
+            <rect x="562" y="40" width="6" height="38" rx="2" fill="var(--wave-idle)" />
+            <rect x="574" y="47" width="6" height="28" rx="2" fill="var(--wave-idle)" />
+            <rect x="586" y="39" width="6" height="40" rx="2" fill="var(--wave-idle)" />
+            <rect x="598" y="48" width="6" height="27" rx="2" fill="var(--wave-idle)" />
+            <rect x="610" y="43" width="6" height="34" rx="2" fill="var(--wave-idle)" />
+            <rect x="622" y="53" width="6" height="19" rx="2" fill="var(--wave-idle)" />
+            <rect x="634" y="56" width="6" height="15" rx="2" fill="var(--wave-idle)" />
           </g>
 
           <!-- Right CastForge Pipeline Box -->
-          <rect x="666" y="10" width="204" height="80" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1" />
-          <text x="680" y="32" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#c2410c">CastForge 自动编排</text>
-          <text x="680" y="53" font-family="JetBrains Mono, monospace" font-size="9" fill="#0c1720">热帖抓取 → 原帖核验</text>
-          <text x="680" y="74" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#344b5c">双声道合成 · RSS 归档</text>
+          <rect x="666" y="10" width="204" height="80" rx="6" fill="var(--accent-soft)" stroke="var(--badge-border)" stroke-width="1" />
+          <text x="680" y="32" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="var(--accent)">CastForge 自动编排</text>
+          <text x="680" y="53" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text)">热帖抓取 → 原帖核验</text>
+          <text x="680" y="74" font-family="JetBrains Mono, monospace" font-size="8.5" fill="var(--muted)">双声道合成 · RSS 归档</text>
         </svg>
       </div>
 
@@ -652,7 +657,7 @@
 
       <footer>
         <span>Nitan Podcast 是独立社区项目，与美卡论坛官方无隶属关系。节目内容请以原帖链接为准。</span>
-        <span><a href="../">← Lifan Builds</a> · <a href="https://github.com/lifan-builds/nitan-podcast">GitHub</a></span>
+        <span><a href="../">← Lifan Builds</a> · <a href="../perks-reminder/">Perks Reminder →</a> · <a href="../castforge/">CastForge →</a> · <a href="https://github.com/lifan-builds/nitan-podcast">GitHub</a></span>
       </footer>
     </div>
 
@@ -714,7 +719,7 @@
         const ratio = Math.min(1, Math.max(0, curSec / total));
         const activeCount = Math.max(1, Math.round(ratio * svgWaveBars.length));
         svgWaveBars.forEach((bar, idx) => {
-          bar.setAttribute("fill", idx < activeCount ? "#c2410c" : "#c4d1dc");
+          bar.setAttribute("fill", idx < activeCount ? "var(--accent)" : "var(--wave-idle)");
         });
         if (svgTimeReadout) {
           svgTimeReadout.textContent = `${formatTimecode(curSec)} / ${formatTimecode(total)} · ${currentRate.toFixed(2)}×`;

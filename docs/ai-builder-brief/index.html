@@ -14,6 +14,7 @@
   <meta name="twitter:description" content="Daily ranked Top-10 AI developments and audio briefings for engineers building with models, agents, and open-source tools.">
   <meta name="twitter:image" content="https://clifan.com/ai-builder-brief/og.jpg">
   <link rel="canonical" href="https://clifan.com/ai-builder-brief/">
+  <link rel="alternate" type="application/atom+xml" title="AI Builder Brief — Daily Editions" href="https://clifan.com/journal/ai-builder-brief/feed.xml">
   <script>
     (() => {
       try {
@@ -212,6 +213,7 @@
     .cover-wide {
       display: block;
       width: 100%;
+      height: auto;
       aspect-ratio: 5 / 2;
       object-fit: cover;
       border-bottom: 1px solid var(--line);
@@ -565,6 +567,11 @@
       .hero { grid-template-columns: 1fr; gap: 20px; padding: 28px 0; }
       .topbar { flex-direction: column; align-items: flex-start; }
     }
+    @media (max-width: 640px) {
+      .theme-toggle kbd { display: none; }
+      .pipeline-svg-wrap { overflow-x: auto; }
+      .pipeline-svg { min-width: 560px; }
+    }
   </style>
 </head>
 <body>
@@ -578,7 +585,7 @@
     </div>
     <nav class="topnav" aria-label="Primary">
       <a href="#pipeline-heading">Pipeline</a>
-      <a href="feed.xml">RSS Feed</a>
+      <a href="../journal/ai-builder-brief/feed.xml">RSS Feed</a>
       <a href="../journal/ai-builder-brief/">Written Archive</a>
       <a href="https://github.com/lifan-builds/ai-builder-brief">GitHub ↗</a>
       <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color theme" title="Toggle theme (T)">
@@ -593,8 +600,8 @@
     <div>
       <h1 id="hero-heading">AI Builder Brief</h1>
       <p class="lede">Decision-changing AI developments for engineers shipping with models, agents, and open-source tools. Every ranked item links its primary artifact or 2× independent&nbsp;corroboration.</p>
-      <div class="feed-bar" role="region" aria-label="Podcast RSS feed URL">
-        <code id="feedUrl" aria-live="polite">https://clifan.com/ai-builder-brief/feed.xml</code>
+      <div class="feed-bar" role="region" aria-label="Daily brief Atom feed URL">
+        <code id="feedUrl" aria-live="polite">https://clifan.com/journal/ai-builder-brief/feed.xml</code>
         <button type="button" class="copy-btn" id="copyFeed" data-copy-target="feedUrl" aria-live="polite">
           <svg class="copy-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
             <path class="icon-clip" fill="currentColor" d="M5.75 1a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-3a.75.75 0 0 0-.75-.75h-4.5Zm.75 3V2.5h3V4h-3Zm-2.874-.467a.75.75 0 0 0-.752-1.298A1.75 1.75 0 0 0 2 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 13.25v-9.5a1.75 1.75 0 0 0-.874-1.515.75.75 0 1 0-.752 1.298.25.25 0 0 1 .126.217v9.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-9.5a.25.25 0 0 1 .126-.217Z"/>
@@ -605,7 +612,7 @@
       </div>
       <nav class="actions" aria-label="Actions">
         <a class="button primary" href="../journal/ai-builder-brief/">Read daily Top 10 briefs →</a>
-        <a class="button" href="feed.xml">Subscribe via RSS</a>
+        <a class="button" href="../journal/ai-builder-brief/feed.xml">Subscribe via RSS</a>
         <a class="button" href="https://github.com/lifan-builds/ai-builder-brief">Source &amp; manifests ↗</a>
       </nav>
     </div>
@@ -638,7 +645,7 @@
     <div class="pipeline-ledger">
       <div class="pipeline-svg-wrap" aria-hidden="true">
         <svg class="pipeline-svg" viewBox="0 0 860 108" aria-hidden="true">
-          <rect x="0" y="0" width="860" height="108" rx="8" fill="#eaf0f4"/>
+          <rect x="0" y="0" width="860" height="108" rx="8" fill="var(--bg)" stroke="var(--line)" stroke-width="1"/>
 
           <!-- Stage 1: Sources -->
           <rect x="12" y="12" width="256" height="84" rx="6" fill="#101c26"/>
@@ -647,24 +654,24 @@
           <text x="26" y="76" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#9fb2c2">72h window · 24h/7d snapshot deltas</text>
 
           <!-- Connector 1 -->
-          <line x1="268" y1="54" x2="302" y2="54" stroke="#095c49" stroke-width="1.8" stroke-dasharray="4 3"/>
-          <polygon points="302,49 311,54 302,59" fill="#095c49"/>
+          <line x1="268" y1="54" x2="302" y2="54" stroke="var(--accent)" stroke-width="1.8" stroke-dasharray="4 3"/>
+          <polygon points="302,49 311,54 302,59" fill="var(--accent)"/>
 
           <!-- Stage 2: Signal Scorer & Dedup -->
-          <rect x="312" y="12" width="248" height="84" rx="6" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-          <text x="326" y="35" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#095c49">Signal Scorer &amp; Dedup</text>
-          <text x="326" y="56" font-family="JetBrains Mono, monospace" font-size="9" fill="#0c1720">Primary artifact or 2× reports</text>
-          <text x="326" y="76" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#344b5c">Canonical event registry · 0 repeats</text>
+          <rect x="312" y="12" width="248" height="84" rx="6" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="1"/>
+          <text x="326" y="35" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="var(--accent)">Signal Scorer &amp; Dedup</text>
+          <text x="326" y="56" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text)">Primary artifact or 2× reports</text>
+          <text x="326" y="76" font-family="JetBrains Mono, monospace" font-size="8.5" fill="var(--muted)">Canonical event registry · 0 repeats</text>
 
           <!-- Connector 2 -->
-          <line x1="560" y1="54" x2="594" y2="54" stroke="#095c49" stroke-width="1.8" stroke-dasharray="4 3"/>
-          <polygon points="594,49 603,54 594,59" fill="#095c49"/>
+          <line x1="560" y1="54" x2="594" y2="54" stroke="var(--accent)" stroke-width="1.8" stroke-dasharray="4 3"/>
+          <polygon points="594,49 603,54 594,59" fill="var(--accent)"/>
 
           <!-- Stage 3: Bilingual Daily Brief -->
-          <rect x="604" y="12" width="244" height="84" rx="6" fill="#ffffff" stroke="#095c49" stroke-width="1.4"/>
-          <text x="618" y="35" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#095c49">Bilingual Daily Brief</text>
-          <text x="618" y="56" font-family="JetBrains Mono, monospace" font-size="9" fill="#0c1720" id="svg-brief-mode">EN / 中文 Top-10 builder ledger</text>
-          <text x="618" y="76" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#344b5c">CastForge audio · VTT · chapters</text>
+          <rect x="604" y="12" width="244" height="84" rx="6" fill="var(--panel)" stroke="var(--accent)" stroke-width="1.4"/>
+          <text x="618" y="35" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="var(--accent)">Bilingual Daily Brief</text>
+          <text x="618" y="56" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text)" id="svg-brief-mode">EN / 中文 Top-10 builder ledger</text>
+          <text x="618" y="76" font-family="JetBrains Mono, monospace" font-size="8.5" fill="var(--muted)">CastForge audio · VTT · chapters</text>
         </svg>
       </div>
 
@@ -680,7 +687,7 @@
     <div id="episodes"></div>
     <div class="docs-row" aria-label="Documentation links">
       <a class="doc-pill" href="https://github.com/lifan-builds/ai-builder-brief/blob/main/SOURCE_POLICY.md">Source Policy →</a>
-      <a class="doc-pill" href="https://github.com/lifan-builds/ai-builder-brief/blob/main/DAILY_BRIEF.md">Daily Brief Spec →</a>
+      <a class="doc-pill" href="https://github.com/lifan-builds/ai-builder-brief/blob/main/OPERATIONS.md">Operations &amp; Gates →</a>
       <a class="doc-pill" href="https://github.com/lifan-builds/ai-builder-brief/blob/main/ARCHITECTURE.md">Architecture →</a>
       <a class="doc-pill" href="https://github.com/lifan-builds/castforge">Powered by CastForge →</a>
     </div>
@@ -689,7 +696,7 @@
 
   <footer>
     <span>Automated briefing. Verify claims against linked primary sources; Reddit and newsletter summaries are never used as factual inputs.</span>
-    <span><a href="../">← Lifan Builds</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">MIT License</a></span>
+    <span><a href="../">← Lifan Builds</a> · <a href="../castforge/">CastForge →</a> · <a href="../nitan-podcast/">Nitan Podcast →</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">MIT License</a></span>
   </footer>
 </div>
 
@@ -894,7 +901,7 @@ fetch("feed.xml")
     if (items.length === 0) {
       const empty = document.createElement("div");
       empty.className = "empty-state";
-      empty.innerHTML = '<h3>Audio feed paused for calibration</h3><p>Scheduled runs publish ranked daily Top-10 builder briefs and source ledgers while audio episode thresholds are&nbsp;tuned.</p><div class="actions"><a class="button primary" href="../journal/ai-builder-brief/">Read daily briefs in the Journal →</a><a class="button" href="https://github.com/lifan-builds/ai-builder-brief/tree/main/history">Browse Markdown history on GitHub ↗</a></div>';
+      empty.innerHTML = '<h3>Audio feed paused for calibration</h3><p>Scheduled runs publish ranked daily Top-10 builder briefs and source ledgers while audio episode thresholds are&nbsp;tuned.</p><div class="actions"><a class="button primary" href="../journal/ai-builder-brief/">Read daily briefs in the Journal →</a><a class="button" href="https://github.com/lifan-builds/ai-builder-brief">View pipeline source on GitHub ↗</a></div>';
       episodes.append(empty);
       return;
     }

@@ -5,24 +5,108 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-14T22:00:00Z</updated>
+  <updated>2026-11-17T08:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
   <entry>
+    <title>AI Builder Brief (2026-11-17): Benchleaking finds memorized test answers that… · OpenAI releases GPT-6.2 with cheaper Astra tokens…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-17.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-17.html</id>
+    <updated>2026-11-17T08:00:00Z</updated>
+    <summary>New models lower the cost of ambitious agent workloads, while the strongest technical work challenges how we measure capability, preserve requirements, and verify completion.</summary>
+  </entry>
+  <entry>
+    <title>The only viable way I’ve found to use my Codex quota</title>
+    <link href="https://clifan.com/journal/#codex-quota-worker" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#codex-quota-worker</id>
+    <updated>2026-11-15T20:30:00Z</updated>
+    <summary>Like I mentioned in my earlier post, the GPT family might be the hardest model lineup to use right now: hyper-defensive, misses requirements, and writes unusable code.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-15): Cursor traces its extension breach to credentials… · Deepnote tests whether workplace agents know when…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-15.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-15.html</id>
+    <updated>2026-11-15T08:00:00Z</updated>
+    <summary>The most useful advances concern what agents should do, what they should remember, and how their tools expose state; a new breach investigation shows…</summary>
+  </entry>
+  <entry>
+    <title>open = close: adding ±1σ error bars to snow forecasts</title>
+    <link href="https://clifan.com/journal/#open-equals-close-snow" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#open-equals-close-snow</id>
+    <updated>2026-11-14T22:30:00Z</updated>
+    <summary>As everyone knows in AI land, open = close—so close = open. After enough ski friends nudged me, I built CloseSnow, a 100% free, zero-paywall mountain snowfall forecaster across 120 Ikon and Epic resorts. Compared to a certain familiar paid snow app, it puts calibrated ±1σ error bars directly on every daily bar so you can see the real uncertainty spread instead of getting burned by an overconfident single number. On my held-out 221-storm SNOTEL backtest, it reached 2.37&quot; 48h storm MAE (vs. OpenSnow’s 4.01&quot;).</summary>
+  </entry>
+  <entry>
     <title>CloseSnow: Free 15-day mountain snow forecaster with calibrated ±1σ error bars across 120 Ikon &amp; Epic resorts</title>
     <link href="https://clifan.com/close-snow/" rel="alternate" type="text/html"/>
     <id>https://clifan.com/close-snow/</id>
     <updated>2026-11-14T22:00:00Z</updated>
-    <summary>As everyone knows, open = close, so close = open: a 100% free 6-model mountain snow app showing honest ±1σ uncertainty whiskers and 2.37&quot; 48h storm MAE across 221 held-out USDA SNOTEL storms.</summary>
+    <summary>A 100% free 6-model mountain snow app showing calibrated ±1σ uncertainty whiskers and 2.37&quot; 48h storm MAE across 221 held-out USDA SNOTEL storms.</summary>
+  </entry>
+  <entry>
+    <title>As an NVDA shareholder: still waiting for Jensen’s next world tour</title>
+    <link href="https://clifan.com/journal/#stand-with-jensen" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#stand-with-jensen</id>
+    <updated>2026-11-14T21:00:00Z</updated>
+    <summary>Watching Silicon Valley’s latest boardroom drama as a retail NVDA shareholder gives strong flashbacks to the week everyone rallied for Sam Altman’s return at OpenAI. Thirty-three years from grinding on CUDA to powering the global AI compute stack—replacing the leather-jacket founder who knows how to build shovels for the entire industry makes zero sense on the math.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-14): Anthropic shows why safety scores change with… · Singularity-Bench tests full-stack AI engineering…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-14.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-14.html</id>
+    <updated>2026-11-14T08:00:00Z</updated>
+    <summary>Better evaluation boundaries and explicit agent control flow matter as much as new capabilities, while local inference and agent commerce gain concrete integration paths.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-13): OpenRouter measures which agent checks improve… · Thinking Machines releases Inkling weights with…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-13.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-13.html</id>
+    <updated>2026-11-13T08:00:00Z</updated>
+    <summary>The most useful advances show how to measure agent scaffolding, deploy models under your own controls, and test defenses against persistent automated adversaries.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-12): AWS makes real service behavior the test oracle for… · AlphaProof Code verifies Signal properties while…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-12.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-12.html</id>
+    <updated>2026-11-12T08:00:00Z</updated>
+    <summary>The strongest advances put independent specifications, realistic feedback and explicit control around agents; Google&#x27;s new execution models make those architectural choices more immediately useful.</summary>
+  </entry>
+  <entry>
+    <title>On running reverse-engineered console games on iOS</title>
+    <link href="https://clifan.com/journal/#ios-console-ports" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#ios-console-ports</id>
+    <updated>2026-11-09T18:00:00Z</updated>
+    <summary>Spent part of the weekend sideloading a few reverse-engineered console ports onto my iPhone. As a benchmark for testing AI Agent reverse-engineering and porting capabilities, it’s an interesting direction—but as something you’d actually want to play on a phone, not really.</summary>
+  </entry>
+  <entry>
+    <title>Why I built a local personal vault for AI agents on my Mac</title>
+    <link href="https://clifan.com/journal/#agent-autofill-vault" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#agent-autofill-vault</id>
+    <updated>2026-11-07T23:00:00Z</updated>
+    <summary>Browser and coding agents keep hitting the same friction: retyping home vs. work addresses, pasting secrets into prompts, or getting stuck on 2FA codes. Moving those credentials into a vendor’s cloud bot VM trades convenience for permanent account custody.</summary>
+  </entry>
+  <entry>
+    <title>Opus 5.5 cured my Vibe Coding burnout</title>
+    <link href="https://clifan.com/journal/#opus55-vibe-coding" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#opus55-vibe-coding</id>
+    <updated>2026-11-07T18:00:00Z</updated>
+    <summary>I’ve been vibe coding since the early Cursor days, and lately it just felt exhausting—until I switched back to Opus 5.5 and got that endless flow-state spark back.</summary>
+  </entry>
+  <entry>
+    <title>Why I don’t put primary logins or payment cards into a cloud bot vault</title>
+    <link href="https://clifan.com/journal/#cloud-bot-vaults" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#cloud-bot-vaults</id>
+    <updated>2026-11-06T20:30:00Z</updated>
+    <summary>Two practical details worth checking before putting primary logins or cards into a cloud bot vault: vault entries and browser state on the bot VM are shared account-wide across your bots rather than isolated per workflow, and saved payment cards can auto-fill at checkout without a separate per-purchase approval prompt. Importing existing logins also goes through a plaintext CSV export on disk.</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-06): METR estimates Anthropic’s capability progress has… · Dropbox explains host-enforced permissions and undo…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-06.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-06.html</id>
     <updated>2026-11-06T08:00:00Z</updated>
-    <summary>AI-assisted research may be accelerating the frontier, but the most useful engineering lessons concern who controls agent actions, how changes are undone, and what successful work actually costs.</summary>
+    <summary>AI-assisted research may be accelerating the frontier, but the most useful engineering lessons concern who controls agent actions, how changes are undone, and what…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-05): NVIDIA tests short agent contexts and challenges… · OpenAI opens limited GPT-6 Cyber access after…</title>
@@ -36,35 +120,35 @@
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-04.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-04.html</id>
     <updated>2026-11-04T08:00:00Z</updated>
-    <summary>The strongest developments expose what conventional model tests miss, while new app integrations, API migrations and local votes change the practical boundaries for building with AI.</summary>
+    <summary>The strongest developments expose what conventional model tests miss, while new app integrations, API migrations and local votes change the practical boundaries for building…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-03): MIT researchers edit Qwen’s weights to remove loops… · OpenAI explains how Pando removes Git bottlenecks…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-03.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-03.html</id>
     <updated>2026-11-03T08:00:00Z</updated>
-    <summary>The most consequential work explains how to inspect, orchestrate and constrain AI systems, while Anthropic’s filing exposes the cost and uncertainty behind rapid capability growth.</summary>
+    <summary>The most consequential work explains how to inspect, orchestrate and constrain AI systems, while Anthropic’s filing exposes the cost and uncertainty behind rapid capability…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-02): Bifocal tests expose long-reasoning failures hidden… · Meituan delivers LongCat-2.5 API access while…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-02.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-02.html</id>
     <updated>2026-11-02T08:00:00Z</updated>
-    <summary>Better measurement beats bigger claims today: eight stories qualify, led by an experiment exposing what short-answer benchmarks miss, alongside LongCat’s delivered API upgrade and concrete agent-workflow corrections.</summary>
+    <summary>Better measurement beats bigger claims today: eight stories qualify, led by an experiment exposing what short-answer benchmarks miss, alongside LongCat’s delivered API upgrade and…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-01): Jepsen finds 96 ParticleDB failures and challenges… · DeepSeek opens a proactive-agent prototype that…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-01.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-01.html</id>
     <updated>2026-11-01T08:00:00Z</updated>
-    <summary>The strongest new material explains how agent systems fail, recover and earn trust; seven stories qualify, with no padding from stale releases or yesterday’s news.</summary>
+    <summary>The strongest new material explains how agent systems fail, recover and earn trust; seven stories qualify, with no padding from stale releases or yesterday’s…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-10-31): Anthropic’s automated researchers find harmful… · Epoch’s Firefox experiments expose the cost of…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-10-31.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-31.html</id>
     <updated>2026-10-31T08:00:00Z</updated>
-    <summary>The strongest developments concern what happens between model calls—training-data screening, patch delivery, persistent work, recovery and permissions—rather than another frontier-model launch.</summary>
+    <summary>The strongest developments concern what happens between model calls · training-data screening, patch delivery, persistent work, recovery and permissions · rather than another frontier-model launch.</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-10-30): Cursor confirms malicious Claude Code extension… · PostHog shows how shared agent state can invalidate…</title>
@@ -78,7 +162,7 @@
     <link href="https://clifan.com/journal/ai-builder-brief/2026-10-29.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-29.html</id>
     <updated>2026-10-29T08:00:00Z</updated>
-    <summary>Open weights and cheaper reasoning expand deployment choices, while new monitoring disclosures and task-level evaluations expose how much work remains between a capable model and a dependable agent.</summary>
+    <summary>Open weights and cheaper reasoning expand deployment choices, while new monitoring disclosures and task-level evaluations expose how much work remains between a capable model…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-10-28): Anthropic documents five exploit chains against… · Lambert explains why harder AI rankings can mislead…</title>
@@ -109,73 +193,38 @@
     <summary>The strongest work changes how builders test oversight, organize agent teams, and trade expensive model execution for reusable infrastructure.</summary>
   </entry>
   <entry>
-    <title>AI Builder Brief (2026-10-24): OpenAI’s containment tests expose communication… · Raw-RAG challenges memory systems that discard…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-24.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-24.html</id>
-    <updated>2026-10-24T08:00:00Z</updated>
-    <summary>The most useful developments explain how agents fail, what memory should preserve, and which controls make real engineering workflows dependable.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-23): Anthropic and Theorem turn fuzz targets into… · AISI finds harmful-action awareness does not…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-23.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-23.html</id>
-    <updated>2026-10-23T08:00:00Z</updated>
-    <summary>Machine-checked proofs, revealing agent failures and reusable interfaces matter as much as new models today; read availability and license terms as carefully as capability claims.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-22): LiteLLM’s compromised release steals credentials… · PHP’s emergency fixes expose the limits of…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-22.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-22.html</id>
-    <updated>2026-10-22T08:00:00Z</updated>
-    <summary>Compromised AI tooling and internet-scale vulnerability disclosures make operational trust urgent, while new evaluation and small-model experiments expose what headline capability scores miss.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-21): Anthropic shows how agents can shrink attack… · Preference Model’s audit shows Terminal-Bench…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-21.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-21.html</id>
-    <updated>2026-10-21T08:00:00Z</updated>
-    <summary>The most useful advances concern what agents can reach, what their scores actually measure, and which decisions deserve human attention—not just another model’s headline performance.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-20): Husain and Saha show why default judge thresholds… · DeepSeek releases DeepInfer and explains the…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-20.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-20.html</id>
-    <updated>2026-10-20T08:00:00Z</updated>
-    <summary>Better evaluation, cheaper agent models, and more portable compute are expanding builders’ options, while memory fidelity and exposed agent infrastructure reveal the costs that headline benchmarks miss.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-19): OpenCode discloses a Console breach that may expose… · Superlite profiles agent overhead and trades review…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-19.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-19.html</id>
-    <updated>2026-10-19T08:00:00Z</updated>
-    <summary>Agent progress is making credential custody, scheduling overhead, deployment constraints, and inspectable work more consequential than headline benchmark gains.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-18): Anthropic documents agent management becoming a… · DeepSeek opens search and page retrieval as…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-18.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-18.html</id>
-    <updated>2026-10-18T08:00:00Z</updated>
-    <summary>Human attention, retrieval economics, and reliable access matter more today than another round of model leaderboard claims.</summary>
-  </entry>
-  <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>
     <link href="https://clifan.com/journal/#mychart-cli" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/#mychart-cli</id>
     <updated>2026-08-15T12:00:00Z</updated>
-    <summary>Exporting patient-owned medical records locally with a Chrome and Puppeteer harness without handing a third party permanent account custody.</summary>
+    <summary>Patient-owned records should be exportable without handing a third party a permanent view of the account. This build uses a local Chrome and Puppeteer harness, keeps credentials in the user’s browser, and treats every export as a visible, reviewable step.</summary>
+  </entry>
+  <entry>
+    <title>Why I built a local MyChart exporter while caring for a NICU baby</title>
+    <link href="https://clifan.com/journal/#nicu-mychart-note" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#nicu-mychart-note</id>
+    <updated>2026-08-10T18:00:00Z</updated>
+    <summary>While our family was caring for a medically complex NICU baby, notes and lab results changed every day. The hard part wasn’t reading a single result—it was making sure the next question we asked used the latest chart without uploading sensitive records to a third-party cloud service.</summary>
   </entry>
   <entry>
     <title>Show HN: Foliofen CLI — What a technical audience stress-tested first</title>
     <link href="https://clifan.com/journal/#show-hn" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/#show-hn</id>
     <updated>2026-08-10T12:00:00Z</updated>
-    <summary>Why local control is only a real product feature when recovery paths and scope limits are explicit.</summary>
+    <summary>Putting a privacy-first export tool in front of a technical audience sharpened the message: local control is a product feature, but only when the recovery path and the limits are clear too.</summary>
   </entry>
   <entry>
-    <title>Building Perks Reminder: A free, open-source benefits tracker</title>
+    <title>Building a free, open-source tracker for credit-card benefits</title>
     <link href="https://clifan.com/journal/#perks-reminder" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/#perks-reminder</id>
     <updated>2026-07-20T12:00:00Z</updated>
-    <summary>Keeping reminders, exportable JSON, and correction paths local without bank logins.</summary>
+    <summary>Perks Reminder started as a small answer to a recurring problem: benefits expire quietly, and the data needed to remember them should not require a bank login. The product keeps reminders, evidence, and correction paths close to the person using it.</summary>
+  </entry>
+  <entry>
+    <title>Small context beats broad repo archaeology (Paired eval: 9.1/10 vs 7.0/10)</title>
+    <link href="https://clifan.com/journal/#context-harness-eval" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#context-harness-eval</id>
+    <updated>2026-07-05T12:00:00Z</updated>
+    <summary>Does a fresh AI coding agent actually solve repository tasks better with a lightweight context harness? Not vibes—paired evaluations on the exact same repo and task, with vs. without the harness across 32 local repositories.</summary>
   </entry>
 </feed>

@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Quick builder thoughts (X, Reddit, RedNote), long-form essays, and 59+ daily AI Builder Briefs from Lifan Chen: local-first software, AI agents, and repeatable evaluation loops.">
+  <meta name="description" content="Quick builder thoughts (X, Reddit, RedNote), long-form essays, and 64 daily AI Builder Briefs from Lifan Chen: local-first software, AI agents, and repeatable evaluation loops.">
   <meta property="og:title" content="Journal, Quick Thoughts &amp; Field Notes — Lifan Chen (Lifan Builds)">
-  <meta property="og:description" content="Sharp builder takes from X, Reddit &amp; RedNote (EN/中文), Substack &amp; Show HN retrospectives, and 59+ source-linked daily AI Builder Briefs.">
+  <meta property="og:description" content="Sharp builder takes from X, Reddit &amp; RedNote (EN/中文), Substack &amp; Show HN retrospectives, and 64 source-linked daily AI Builder Briefs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clifan.com/journal/">
   <meta property="og:image" content="https://clifan.com/assets/og-journal.jpg">
@@ -51,9 +51,9 @@
       <div class="journal-filter-bar">
         <div class="filter-pills" role="group" aria-label="Filter journal entries">
           <button type="button" class="filter-pill" aria-pressed="true" data-filter="all">All writing</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (7)</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (4)</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (59)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (<span data-thoughts-count>8</span>)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (<span data-essays-count>4</span>)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (<span data-brief-count>64</span>)</button>
         </div>
       </div>
     </section>
@@ -131,6 +131,40 @@
             <a href="https://x.com/LifanBuilds/status/2121747455247360276">X (@LifanBuilds) ↗</a>
             <a href="https://close-snow.clifan.com/">Live app (close-snow.clifan.com) ↗</a>
             <a href="../close-snow/">Architecture &amp; SNOTEL benchmark →</a>
+          </div>
+        </article>
+
+        <article class="long-note thought-card" id="stand-with-jensen" data-thought-card>
+          <div class="journal-meta">
+            <span>Quick Take · X &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-11-14">Nov 2026</time>
+            </div>
+          </div>
+          <div data-lang-pane="en">
+            <h2>As an NVDA shareholder: still waiting for Jensen’s next world tour</h2>
+            <p>
+              Watching Silicon Valley’s latest boardroom drama as a retail NVDA shareholder gives strong flashbacks to the week everyone rallied for Sam Altman’s return at OpenAI. Thirty-three years from grinding on CUDA to powering the global AI compute stack—replacing the leather-jacket founder who knows how to build shovels for the entire industry makes zero sense on the math.
+            </p>
+            <p>
+              Besides, GTC and Computex without Jensen touring the world telling jokes in a leather jacket would lose half their tech-New-Year soul. Same message as before: Jensen, I’m still waiting for your next world tour.
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>作为 NV 股东：老黄我还等你继续世界巡演呢</h2>
+            <p>
+              作为 NVDA 小股东，这两天看硅谷这出大戏，真有点当年 OpenAI 全员喊奥特曼回来的既视感。一手带了 33 年的公司，从当年死磕 CUDA 到今天撑起整个 AI 算力底座，这时候换掉最懂怎么给全球造铲子的皮衣掌门人，这笔账怎么算都不划算。
+            </p>
+            <p>
+              更何况，以后 GTC 和 Computex 没了皮衣老黄到处世界巡演讲段子，科技春晚真少一半灵魂。还是那句话：老黄，我还等着你继续世界巡演呢。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="https://x.com/LifanBuilds/status/2121428451924341177">X (@LifanBuilds) ↗</a>
           </div>
         </article>
 
@@ -239,7 +273,6 @@
           </p>
           <div class="journal-links">
             <a href="https://github.com/lifan-builds/context-harness">Context Harness on GitHub ↗</a>
-            <a href="https://github.com/lifan-builds/agent-nexus">Agent Nexus on GitHub ↗</a>
           </div>
         </article>
 
@@ -260,7 +293,7 @@
               While our family was caring for a medically complex NICU baby, notes and lab results changed every day. The hard part wasn’t reading a single result—it was making sure the next question we asked used the latest chart without uploading sensitive records to a third-party cloud service.
             </p>
             <p>
-              Foliofen CLI (<code>mychart-cli</code>) strictly separates record acquisition from medical interpretation: it drives a dedicated local Chrome profile to export deterministic Markdown and JSONL with POSIX <code>0600</code> permissions, zero cloud backend, and an offline synthetic demo (<code>npx @lifan-builds/mychart-cli demo</code>).
+              Foliofen CLI (<code>@lifan-builds/foliofen-cli</code>) strictly separates record acquisition from medical interpretation: it drives a dedicated local Chrome profile to export deterministic Markdown and JSONL with POSIX <code>0600</code> permissions, zero cloud backend, and an offline synthetic demo (<code>npx @lifan-builds/foliofen-cli demo</code>).
             </p>
           </div>
           <div data-lang-pane="zh" hidden>
@@ -269,7 +302,7 @@
               家里在照顾一个情况复杂的 NICU 宝宝时，我每天都要跟上新的病历记录和检查结果。难点不只是看懂某一条结果，而是保证下一次查看和提问时用到的资料是最新的，同时绝不把敏感病历上传给第三方云服务。
             </p>
             <p>
-              所以我写了 Foliofen CLI（<code>mychart-cli</code>）：通过独立 Chrome 配置读取本机可见的 MyChart 记录，保存在本机（POSIX <code>0600</code> 权限，零云端后台）并导出确定性的 Markdown 或 JSONL。数据提取和解释是严格分开的两个步骤。
+              所以我写了 Foliofen CLI（<code>@lifan-builds/foliofen-cli</code>）：通过独立 Chrome 配置读取本机可见的 MyChart 记录，保存在本机（POSIX <code>0600</code> 权限，零云端后台）并导出确定性的 Markdown 或 JSONL。数据提取和解释是严格分开的两个步骤。
             </p>
           </div>
           <div class="journal-links">
@@ -298,7 +331,7 @@
           </p>
           <div class="journal-links">
             <a href="https://clifan.substack.com/p/why-i-built-a-local-personal-vault">Read the full essay on Substack ↗</a>
-            <a href="https://dev.to/lifanbuilds/why-i-built-a-local-personal-vault-for-ai-agents-on-my-mac-32df">Read the DEV edition ↗</a>
+            <a href="https://dev.to/lifanbuilds/why-your-ai-browser-agent-needs-a-local-vault-not-a-cloud-bot-vault-or-plaintext-env-5198">Read the DEV edition ↗</a>
             <a href="https://lifan-builds.hashnode.dev/agent-autofill-a-local-first-personal-vault-and-mcp-broker-for-ai-agents-on-macos">Read on Hashnode ↗</a>
             <a href="https://github.com/lifan-builds/agent-autofill">Source repository ↗</a>
           </div>

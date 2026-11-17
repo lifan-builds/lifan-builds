@@ -1087,6 +1087,10 @@ dd {
     padding-top: 1.25rem;
   }
 
+  .theme-toggle kbd {
+    display: none;
+  }
+
   .top-bar {
     margin-bottom: 2.25rem;
   }

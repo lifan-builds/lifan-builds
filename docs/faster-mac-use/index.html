@@ -62,7 +62,7 @@
           <div class="install-widget" aria-label="Install faster-mac-use">
             <div class="install-bar">
               <span class="prompt-char" aria-hidden="true">$</span>
-              <code id="hero-cmd" aria-live="polite">uvx faster-mac-use mcp</code>
+              <code id="hero-cmd" aria-live="polite">uvx --from git+https://github.com/lifan-builds/faster-mac-use.git fmu mcp</code>
               <button type="button" class="copy-btn" data-copy-target="hero-cmd">
                 <svg class="copy-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
                   <path class="icon-clip" fill="currentColor" d="M5.75 1a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-3a.75.75 0 0 0-.75-.75h-4.5Zm.75 3V2.5h3V4h-3Zm-2.874-.467a.75.75 0 0 0-.752-1.298A1.75 1.75 0 0 0 2 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 13.25v-9.5a1.75 1.75 0 0 0-.874-1.515.75.75 0 1 0-.752 1.298.25.25 0 0 1 .126.217v9.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-9.5a.25.25 0 0 1 .126-.217Z"/>
@@ -73,9 +73,9 @@
             </div>
             <div class="install-meta">
               <div class="install-switch" role="group" aria-label="Install method">
-                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx faster-mac-use mcp">uvx</button>
-                <button type="button" class="install-tab" aria-pressed="false" data-cmd="brew install --Formula ./Formula/faster-mac-use.rb">brew</button>
-                <button type="button" class="install-tab" aria-pressed="false" data-cmd="pip install git+https://github.com/lifan-builds/faster-mac-use">pip</button>
+                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx --from git+https://github.com/lifan-builds/faster-mac-use.git fmu mcp">uvx</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="uv tool install git+https://github.com/lifan-builds/faster-mac-use.git">uv tool</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="pip install git+https://github.com/lifan-builds/faster-mac-use.git">pip</button>
               </div>
               <code class="guard-inline">50Hz guard: 0.0 px drift · 0 focus theft</code>
             </div>
@@ -153,46 +153,46 @@
             <div class="mission-stage" aria-hidden="true">
               <svg id="mission-svg" class="mission-svg" viewBox="0 0 460 186" aria-hidden="true">
                 <!-- Background Workspace Grid -->
-                <rect x="0" y="0" width="460" height="186" rx="8" fill="#eaf0f4"/>
-                <line x1="0" y1="154" x2="460" y2="154" stroke="#c4d1dc" stroke-width="1"/>
+                <rect x="0" y="0" width="460" height="186" rx="8" fill="var(--ground)"/>
+                <line x1="0" y1="154" x2="460" y2="154" stroke="var(--rule)" stroke-width="1"/>
 
                 <!-- Left Window: Unfocused Chrome "🤖 Agent" Tab Group -->
                 <g class="stage-window stage-chrome">
-                  <rect x="8" y="8" width="274" height="138" rx="6" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-                  <rect x="8" y="8" width="274" height="24" rx="6" fill="#f7fafc"/>
-                  <line x1="8" y1="32" x2="282" y2="32" stroke="#c4d1dc" stroke-width="1"/>
-                  <circle cx="18" cy="20" r="3" fill="#c4d1dc"/>
-                  <circle cx="27" cy="20" r="3" fill="#c4d1dc"/>
-                  <circle cx="36" cy="20" r="3" fill="#c4d1dc"/>
+                  <rect x="8" y="8" width="274" height="138" rx="6" fill="var(--surface-strong)" stroke="var(--rule-strong)" stroke-width="1"/>
+                  <rect x="8" y="8" width="274" height="24" rx="6" fill="var(--surface)"/>
+                  <line x1="8" y1="32" x2="282" y2="32" stroke="var(--rule)" stroke-width="1"/>
+                  <circle cx="18" cy="20" r="3" fill="var(--rule-strong)"/>
+                  <circle cx="27" cy="20" r="3" fill="var(--rule-strong)"/>
+                  <circle cx="36" cy="20" r="3" fill="var(--rule-strong)"/>
                   <rect x="46" y="13" width="64" height="14" rx="4" fill="#095c49"/>
                   <text x="52" y="23" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#ffffff">🤖 Agent</text>
-                  <rect x="114" y="13" width="76" height="14" rx="3" fill="#d7efe8"/>
-                  <text x="119" y="23" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#095c49">Tab 1 · @u14</text>
-                  <rect x="194" y="13" width="80" height="14" rx="3" fill="#e3effa"/>
-                  <text x="199" y="23" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#0b6bcb">Tab 2 · @u19</text>
+                  <rect x="114" y="13" width="76" height="14" rx="3" fill="var(--accent-soft)"/>
+                  <text x="119" y="23" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="var(--accent)">Tab 1 · @u14</text>
+                  <rect x="194" y="13" width="80" height="14" rx="3" fill="var(--ocean-soft)"/>
+                  <text x="199" y="23" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="var(--ocean)">Tab 2 · @u19</text>
 
                   <!-- Simulated Web Console Rows -->
-                  <rect x="16" y="40" width="258" height="44" rx="4" fill="#f7fafc" stroke="#c4d1dc" stroke-width="1"/>
-                  <text x="23" y="54" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#344b5c">#ORD-403 · Enterprise Payout</text>
-                  <text x="267" y="54" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#095c49" id="svg-u14-diff">~ "Approved"</text>
-                  <rect x="23" y="60" width="82" height="18" rx="3" fill="#d7efe8" stroke="#095c49" stroke-width="1"/>
-                  <text x="64" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">@u14 Approve</text>
+                  <rect x="16" y="40" width="258" height="44" rx="4" fill="var(--surface)" stroke="var(--rule)" stroke-width="1"/>
+                  <text x="23" y="54" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="var(--muted)">#ORD-403 · Enterprise Payout</text>
+                  <text x="267" y="54" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="var(--accent)" id="svg-u14-diff">~ "Approved"</text>
+                  <rect x="23" y="60" width="82" height="18" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/>
+                  <text x="64" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--accent)">@u14 Approve</text>
 
-                  <rect x="16" y="92" width="258" height="46" rx="4" fill="#f7fafc" stroke="#c4d1dc" stroke-width="1"/>
-                  <text x="23" y="106" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#344b5c">#ORD-412 · Regional Filter</text>
-                  <text x="267" y="106" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#0b6bcb" id="svg-u19-diff">~ "EU Region"</text>
-                  <rect x="23" y="113" width="82" height="18" rx="3" fill="#e3effa" stroke="#0b6bcb" stroke-width="1"/>
-                  <text x="64" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#0b6bcb">@u19 Region</text>
+                  <rect x="16" y="92" width="258" height="46" rx="4" fill="var(--surface)" stroke="var(--rule)" stroke-width="1"/>
+                  <text x="23" y="106" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="var(--muted)">#ORD-412 · Regional Filter</text>
+                  <text x="267" y="106" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="var(--ocean)" id="svg-u19-diff">~ "EU Region"</text>
+                  <rect x="23" y="113" width="82" height="18" rx="3" fill="var(--ocean-soft)" stroke="var(--ocean)" stroke-width="1"/>
+                  <text x="64" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--ocean)">@u19 Region</text>
                 </g>
 
                 <!-- Right Window: Background macOS Calculator.app -->
                 <g class="stage-window stage-calc">
-                  <rect x="290" y="8" width="162" height="138" rx="6" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-                  <rect x="290" y="8" width="162" height="24" rx="6" fill="#f7fafc"/>
-                  <line x1="290" y1="32" x2="452" y2="32" stroke="#c4d1dc" stroke-width="1"/>
-                  <circle cx="300" cy="20" r="3" fill="#c4d1dc"/>
-                  <circle cx="309" cy="20" r="3" fill="#c4d1dc"/>
-                  <text x="320" y="23" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">Calculator · PID 48120</text>
+                  <rect x="290" y="8" width="162" height="138" rx="6" fill="var(--surface-strong)" stroke="var(--rule-strong)" stroke-width="1"/>
+                  <rect x="290" y="8" width="162" height="24" rx="6" fill="var(--surface)"/>
+                  <line x1="290" y1="32" x2="452" y2="32" stroke="var(--rule)" stroke-width="1"/>
+                  <circle cx="300" cy="20" r="3" fill="var(--rule-strong)"/>
+                  <circle cx="309" cy="20" r="3" fill="var(--rule-strong)"/>
+                  <text x="320" y="23" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">Calculator · PID 48120</text>
 
                   <!-- Calculator LCD Screen -->
                   <rect x="298" y="38" width="146" height="30" rx="4" fill="#101c26"/>
@@ -200,28 +200,28 @@
                   <text x="436" y="62" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="700" fill="#ffffff" id="svg-calc-val">81</text>
 
                   <!-- Calculator Keypad Grid -->
-                  <rect x="298" y="73" width="33" height="18" rx="3" fill="#eaf0f4"/>
-                  <text x="314" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">7</text>
-                  <rect x="335" y="73" width="33" height="18" rx="3" fill="#eaf0f4"/>
-                  <text x="351" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">8</text>
-                  <rect x="372" y="73" width="33" height="18" rx="3" fill="#fae6de" stroke="#b53f15" stroke-width="1"/>
-                  <text x="388" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#b53f15">9</text>
-                  <rect x="410" y="73" width="34" height="18" rx="3" fill="#fae6de" stroke="#b53f15" stroke-width="1"/>
-                  <text x="427" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#b53f15">×</text>
+                  <rect x="298" y="73" width="33" height="18" rx="3" fill="var(--ground)"/>
+                  <text x="314" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">7</text>
+                  <rect x="335" y="73" width="33" height="18" rx="3" fill="var(--ground)"/>
+                  <text x="351" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">8</text>
+                  <rect x="372" y="73" width="33" height="18" rx="3" fill="var(--signal-soft)" stroke="var(--signal)" stroke-width="1"/>
+                  <text x="388" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--signal)">9</text>
+                  <rect x="410" y="73" width="34" height="18" rx="3" fill="var(--signal-soft)" stroke="var(--signal)" stroke-width="1"/>
+                  <text x="427" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--signal)">×</text>
 
-                  <rect x="298" y="95" width="33" height="18" rx="3" fill="#eaf0f4"/>
-                  <text x="314" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">4</text>
-                  <rect x="335" y="95" width="33" height="18" rx="3" fill="#eaf0f4"/>
-                  <text x="351" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">5</text>
-                  <rect x="372" y="95" width="33" height="18" rx="3" fill="#eaf0f4"/>
-                  <text x="388" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">6</text>
+                  <rect x="298" y="95" width="33" height="18" rx="3" fill="var(--ground)"/>
+                  <text x="314" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">4</text>
+                  <rect x="335" y="95" width="33" height="18" rx="3" fill="var(--ground)"/>
+                  <text x="351" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">5</text>
+                  <rect x="372" y="95" width="33" height="18" rx="3" fill="var(--ground)"/>
+                  <text x="388" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">6</text>
                   <rect x="410" y="95" width="34" height="18" rx="3" fill="#b53f15"/>
                   <text x="427" y="107" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#ffffff">=</text>
                 </g>
 
                 <!-- Virtual Cursor 1: agent-1 (Emerald) -->
                 <g class="stage-cursor is-active" data-stage-agent="0">
-                  <circle class="cursor-ring" cx="109" cy="69" r="8" fill="none" stroke="#095c49" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <circle class="cursor-ring" cx="109" cy="69" r="8" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 2"/>
                   <path d="M109 68 L114 80 L117 75 L123 75 Z" fill="#095c49" stroke="#ffffff" stroke-width="1"/>
                   <rect x="128" y="61" width="106" height="16" rx="4" fill="#095c49"/>
                   <text x="181" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#ffffff" id="svg-c1-label">agent-1 (368,224)</text>
@@ -229,7 +229,7 @@
 
                 <!-- Virtual Cursor 2: agent-2 (Ocean Blue) -->
                 <g class="stage-cursor" data-stage-agent="1">
-                  <circle class="cursor-ring" cx="109" cy="122" r="8" fill="none" stroke="#0b6bcb" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <circle class="cursor-ring" cx="109" cy="122" r="8" fill="none" stroke="var(--ocean)" stroke-width="1.5" stroke-dasharray="3 2"/>
                   <path d="M109 121 L114 133 L117 128 L123 128 Z" fill="#0b6bcb" stroke="#ffffff" stroke-width="1"/>
                   <rect x="128" y="114" width="106" height="16" rx="4" fill="#0b6bcb"/>
                   <text x="181" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#ffffff" id="svg-c2-label">agent-2 (512,310)</text>
@@ -237,7 +237,7 @@
 
                 <!-- Virtual Cursor 3: agent-3 (Copper Signal) -->
                 <g class="stage-cursor" data-stage-agent="2">
-                  <circle class="cursor-ring" cx="427" cy="117" r="7" fill="none" stroke="#b53f15" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <circle class="cursor-ring" cx="427" cy="117" r="7" fill="none" stroke="var(--signal)" stroke-width="1.5" stroke-dasharray="3 2"/>
                   <path d="M427 115 L432 127 L435 122 L441 122 Z" fill="#b53f15" stroke="#ffffff" stroke-width="1"/>
                   <rect x="298" y="122" width="114" height="16" rx="4" fill="#b53f15"/>
                   <text x="355" y="133" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#ffffff" id="svg-c3-label">agent-3 (184,260)</text>
@@ -245,12 +245,12 @@
 
                 <!-- Bottom Bar: Physical OS Cursor Hardware Lock -->
                 <g class="stage-cursor stage-guard-bar" data-stage-agent="3">
-                  <rect class="guard-bar-rect" x="8" y="159" width="444" height="21" rx="4" fill="#f7fafc" stroke="#c4d1dc" stroke-width="1"/>
-                  <circle class="cursor-ring" cx="20" cy="169.5" r="7.5" fill="none" stroke="#095c49" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <rect class="guard-bar-rect" x="8" y="159" width="444" height="21" rx="4" fill="var(--surface)" stroke="var(--rule)" stroke-width="1"/>
+                  <circle class="cursor-ring" cx="20" cy="169.5" r="7.5" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 2"/>
                   <circle cx="20" cy="169.5" r="4" fill="#095c49"/>
                   <path d="M18 169.5 L22 169.5 M20 167.5 L20 171.5" stroke="#ffffff" stroke-width="1.2"/>
-                  <text x="32" y="173" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">Physical OS Cursor Locked:</text>
-                  <text x="174" y="173" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#095c49">Δ 0.0 px drift · 0 focus switches (50Hz Guard)</text>
+                  <text x="32" y="173" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">Physical OS Cursor Locked:</text>
+                  <text x="174" y="173" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--accent)">Δ 0.0 px drift · 0 focus switches (50Hz Guard)</text>
                 </g>
               </svg>
             </div>
@@ -283,18 +283,18 @@
         <div class="arch-grid">
           <article class="arch-col">
             <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-              <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+              <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--rule)" stroke-width="1"/>
               <rect x="10" y="16" width="84" height="44" rx="5" fill="#101c26"/>
               <text x="52" y="35" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#6bc2ad">MV3 Bridge</text>
               <text x="52" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">:19222/ext</text>
-              <line x1="94" y1="38" x2="132" y2="38" stroke="#095c49" stroke-width="1.5" stroke-dasharray="3 2"/>
-              <polygon points="132,34 139,38 132,42" fill="#095c49"/>
-              <rect x="140" y="12" width="170" height="52" rx="5" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
+              <line x1="94" y1="38" x2="132" y2="38" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <polygon points="132,34 139,38 132,42" fill="var(--accent)"/>
+              <rect x="140" y="12" width="170" height="52" rx="5" fill="var(--surface-strong)" stroke="var(--rule-strong)" stroke-width="1"/>
               <rect x="148" y="19" width="58" height="14" rx="3" fill="#095c49"/>
               <text x="177" y="29" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#ffffff">🤖 Agent</text>
-              <text x="212" y="29" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#344b5c">active:false</text>
-              <text x="148" y="46" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">@u1..@uN WeakMap</text>
-              <text x="148" y="57" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#344b5c">+ WebMCP &amp; Table Fold</text>
+              <text x="212" y="29" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="var(--muted)">active:false</text>
+              <text x="148" y="46" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--accent)">@u1..@uN WeakMap</text>
+              <text x="148" y="57" font-family="JetBrains Mono, monospace" font-size="7.5" fill="var(--muted)">+ WebMCP &amp; Table Fold</text>
             </svg>
             <h3>Chrome "🤖 Agent" Tabs</h3>
             <p class="arch-lead">Logged-in Chrome control without focus theft.</p>
@@ -306,18 +306,18 @@
 
           <article class="arch-col">
             <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-              <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+              <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--rule)" stroke-width="1"/>
               <rect x="10" y="16" width="90" height="44" rx="5" fill="#101c26"/>
               <text x="55" y="35" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#6bc2ad">fmu-ax.sock</text>
               <text x="55" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">4k LRU Cache</text>
-              <line x1="100" y1="28" x2="136" y2="28" stroke="#095c49" stroke-width="1.5"/>
-              <polygon points="136,24 143,28 136,32" fill="#095c49"/>
-              <line x1="100" y1="48" x2="136" y2="48" stroke="#b53f15" stroke-width="1.5"/>
-              <polygon points="136,44 143,48 136,52" fill="#b53f15"/>
-              <rect x="144" y="12" width="166" height="24" rx="4" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-              <text x="152" y="27" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">AXObserver · &lt;1ms ~@a4</text>
-              <rect x="144" y="40" width="166" height="24" rx="4" fill="#ffffff" stroke="#9fb2c2" stroke-width="1"/>
-              <text x="152" y="55" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#b53f15">Vision OCR · 0 vision tok</text>
+              <line x1="100" y1="28" x2="136" y2="28" stroke="var(--accent)" stroke-width="1.5"/>
+              <polygon points="136,24 143,28 136,32" fill="var(--accent)"/>
+              <line x1="100" y1="48" x2="136" y2="48" stroke="var(--signal)" stroke-width="1.5"/>
+              <polygon points="136,44 143,48 136,52" fill="var(--signal)"/>
+              <rect x="144" y="12" width="166" height="24" rx="4" fill="var(--surface-strong)" stroke="var(--rule-strong)" stroke-width="1"/>
+              <text x="152" y="27" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--accent)">AXObserver · &lt;1ms ~@a4</text>
+              <rect x="144" y="40" width="166" height="24" rx="4" fill="var(--surface-strong)" stroke="var(--rule-strong)" stroke-width="1"/>
+              <text x="152" y="55" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--signal)">Vision OCR · 0 vision tok</text>
             </svg>
             <h3>Swift AXObserver &amp; OCR</h3>
             <p class="arch-lead">Universal2 Swift daemon with a 4k LRU cache.</p>
@@ -329,22 +329,22 @@
 
           <article class="arch-col">
             <svg class="arch-schematic" viewBox="0 0 320 76" aria-hidden="true">
-              <rect x="0" y="0" width="320" height="76" rx="6" fill="#eaf0f4"/>
+              <rect x="0" y="0" width="320" height="76" rx="6" fill="var(--surface)" stroke="var(--rule)" stroke-width="1"/>
               <rect x="10" y="16" width="78" height="44" rx="5" fill="#101c26"/>
               <text x="49" y="35" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#ff9e7d">parallel</text>
               <text x="49" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#e6f0f7">268-tok REPL</text>
-              <line x1="88" y1="22" x2="122" y2="22" stroke="#095c49" stroke-width="1.5"/>
-              <line x1="88" y1="38" x2="122" y2="38" stroke="#0b6bcb" stroke-width="1.5"/>
-              <line x1="88" y1="54" x2="122" y2="54" stroke="#b53f15" stroke-width="1.5"/>
-              <rect x="122" y="12" width="104" height="16" rx="3" fill="#d7efe8"/>
-              <text x="128" y="23" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#095c49">vCursor-1 · Tab 1</text>
-              <rect x="122" y="30" width="104" height="16" rx="3" fill="#e3effa"/>
-              <text x="128" y="41" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#0b6bcb">vCursor-2 · Tab 2</text>
-              <rect x="122" y="48" width="104" height="16" rx="3" fill="#fae6de"/>
-              <text x="128" y="59" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="#b53f15">vCursor-3 · macOS</text>
-              <rect x="232" y="12" width="78" height="52" rx="5" fill="#ffffff" stroke="#095c49" stroke-width="1"/>
-              <text x="271" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="#095c49">50Hz Guard</text>
-              <text x="271" y="48" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#0c1720">0.0 px</text>
+              <line x1="88" y1="22" x2="122" y2="22" stroke="var(--accent)" stroke-width="1.5"/>
+              <line x1="88" y1="38" x2="122" y2="38" stroke="var(--ocean)" stroke-width="1.5"/>
+              <line x1="88" y1="54" x2="122" y2="54" stroke="var(--signal)" stroke-width="1.5"/>
+              <rect x="122" y="12" width="104" height="16" rx="3" fill="var(--accent-soft)"/>
+              <text x="128" y="23" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="var(--accent)">vCursor-1 · Tab 1</text>
+              <rect x="122" y="30" width="104" height="16" rx="3" fill="var(--ocean-soft)"/>
+              <text x="128" y="41" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="var(--ocean)">vCursor-2 · Tab 2</text>
+              <rect x="122" y="48" width="104" height="16" rx="3" fill="var(--signal-soft)"/>
+              <text x="128" y="59" font-family="JetBrains Mono, monospace" font-size="7.5" font-weight="700" fill="var(--signal)">vCursor-3 · macOS</text>
+              <rect x="232" y="12" width="78" height="52" rx="5" fill="var(--surface-strong)" stroke="var(--accent)" stroke-width="1"/>
+              <text x="271" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="700" fill="var(--accent)">50Hz Guard</text>
+              <text x="271" y="48" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="var(--ink)">0.0 px</text>
             </svg>
             <h3>3-Cursor Swarms</h3>
             <p class="arch-lead">Concurrent agents with isolated virtual cursors.</p>
@@ -409,8 +409,8 @@
       <div class="footer-links">
         <a href="https://github.com/lifan-builds/faster-mac-use">GitHub</a>
         <a href="https://github.com/lifan-builds/faster-mac-use/blob/main/docs/architecture_and_benchmarks.md">Architecture &amp; Benchmarks</a>
-        <a href="https://github.com/lifan-builds/faster-mac-use/blob/main/benchmarks/results/latest_benchmark.md">Raw 15-System Dataset</a>
-        <a href="https://github.com/lifan-builds/faster-mac-use/blob/main/docs/gtm.md">Market Brief</a>
+        <a href="../agent-autofill/">Agent Autofill →</a>
+        <a href="../quotaswitch/">QuotaSwitch →</a>
       </div>
     </footer>
   </div>
