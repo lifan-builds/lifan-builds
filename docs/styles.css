@@ -2859,12 +2859,23 @@ dd {
     padding: 10px 0;
   }
   .site-header nav {
-    gap: 4px;
-    font-size: 12.5px;
+    width: 100%;
+    gap: 2px;
+    font-size: 12px;
   }
-  .site-header nav a,
+  .site-header nav a {
+    padding: 5px 5px;
+  }
+  .site-header .nav-button,
   .theme-toggle {
     padding: 5px 7px;
+    font-size: 11.5px;
+  }
+  .site-header .nav-button {
+    margin-left: auto;
+  }
+  .cover-title-col {
+    flex-basis: 100%;
   }
   .cover-portal {
     min-height: auto;
