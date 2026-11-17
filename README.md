@@ -128,7 +128,7 @@
 </p>
 
 <details>
-  <summary><strong>More about the portfolio (<a href="https://clifan.com">clifan.com</a>)</strong></summary>
+  <summary><strong>More about the portfolio (clifan.com)</strong></summary>
   <br />
   The through-line across all 10 hosted builds on <a href="https://clifan.com">clifan.com</a> is practical automation with visible boundaries: local data when it should stay local, repeatable evaluation harnesses before claims ship, and human checkpoints before consequential external actions.
 </details>

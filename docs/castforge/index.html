@@ -138,9 +138,9 @@
               <strong id="cf-title">$ castforge run --config podcast.yaml --date 2026-11-06 --shadow</strong>
               <span id="cf-badge">Schema v2 manifest · Primary or 2× corroboration</span>
             </div>
-            <pre class="subpage-stage-pre" id="cf-pre"><span class="tok-key">STAGE 1 [SourceCluster]</span>  <span class="tok-num">14</span> raw items -> <span class="tok-num">10</span> qualified clusters (<span class="tok-ok">100% primary linked</span>)
-<span class="tok-key">STAGE 2 [EpisodeManifest]</span> Wrote <span class="tok-str">build/manifests/2026-11-06.json</span> (schema_version=<span class="tok-num">2</span>)
-<span class="tok-key">STAGE 3 [Shadow Mode]</span>     <span class="tok-ok">✓ Verified NotebookLM packet</span> · skipped R2 &amp; RSS mutation</pre>
+            <pre class="subpage-stage-pre" id="cf-pre"><span class="tok-key">STAGE 1 [SourceCluster]</span>   <span class="tok-num">14</span> raw -> <span class="tok-num">10</span> clusters (<span class="tok-ok">100% primary linked</span>)
+<span class="tok-key">STAGE 2 [EpisodeManifest]</span> Wrote <span class="tok-str">build/manifests/2026-11-06.json</span> (v<span class="tok-num">2</span>)
+<span class="tok-key">STAGE 3 [Shadow Mode]</span>     <span class="tok-ok">✓ Verified NotebookLM packet</span> · 0 RSS writes</pre>
           </div>
 
           <div class="sp-broll-media">
@@ -261,19 +261,19 @@
           title: "$ castforge run --config podcast.yaml --date 2026-11-06 --shadow",
           badge: "Schema v2 manifest · Primary or 2× corroboration",
           meta: "Powers Nitan Podcast & AI Builder Brief",
-          html: `<span class="tok-key">STAGE 1 [SourceCluster]</span>  <span class="tok-num">14</span> raw items -> <span class="tok-num">10</span> qualified clusters (<span class="tok-ok">100% primary linked</span>)\n<span class="tok-key">STAGE 2 [EpisodeManifest]</span> Wrote <span class="tok-str">build/manifests/2026-11-06.json</span> (schema_version=<span class="tok-num">2</span>)\n<span class="tok-key">STAGE 3 [Shadow Mode]</span>     <span class="tok-ok">✓ Verified NotebookLM packet</span> · skipped R2 &amp; RSS mutation`
+          html: `<span class="tok-key">STAGE 1 [SourceCluster]</span>   <span class="tok-num">14</span> raw -> <span class="tok-num">10</span> clusters (<span class="tok-ok">100% primary linked</span>)\n<span class="tok-key">STAGE 2 [EpisodeManifest]</span> Wrote <span class="tok-str">build/manifests/2026-11-06.json</span> (v<span class="tok-num">2</span>)\n<span class="tok-key">STAGE 3 [Shadow Mode]</span>     <span class="tok-ok">✓ Verified NotebookLM packet</span> · 0 RSS writes`
         },
         audio: {
           title: "$ castforge run --config podcast.yaml --date 2026-11-06",
           badge: "NotebookLM synthesis + fail-closed duration ceiling",
           meta: "audio_length=short · measured MP3 duration check",
-          html: `<span class="tok-key">[audio]</span>    Generated dialogue: <span class="tok-str">build/audio/episode-2026-11-06.mp3</span>\n<span class="tok-key">[check]</span>    Measured duration: <span class="tok-num">00:05:48</span> (ceiling 00:08:00 -> <span class="tok-ok">PASS</span>, 5,568,192 B)\n<span class="tok-key">[manifest]</span> <span class="tok-ok">✓ Recorded SHA-256 &amp; measured duration in EpisodeManifest</span>`
+          html: `<span class="tok-key">[audio]</span>    Generated: <span class="tok-str">build/audio/episode-2026-11-06.mp3</span>\n<span class="tok-key">[check]</span>    Measured: <span class="tok-num">00:05:48</span> (ceiling 00:08:00 -> <span class="tok-ok">PASS</span>, 5.57 MB)\n<span class="tok-key">[manifest]</span> <span class="tok-ok">✓ Recorded SHA-256 &amp; duration in EpisodeManifest</span>`
         },
         publish: {
           title: "$ castforge validate --config podcast.yaml --date 2026-11-06 --check-public",
           badge: "R2 bucket cap check + public HEAD enclosure verification",
           meta: "Cloudflare R2 + OP3 prefix + idempotent RSS item",
-          html: `<span class="tok-key">[r2]</span>   Bucket usage: <span class="tok-num">1.42 GB</span> / 9.00 GB max_bucket_bytes -> uploaded audio/mpeg\n<span class="tok-key">[head]</span> GET https://audio.clifan.com/episodes/2026-11-06.mp3 -> <span class="tok-ok">200 OK (exact bytes)</span>\n<span class="tok-key">[rss]</span>  <span class="tok-ok">✓ Atomically updated feed.xml item[2026-11-06]</span> · enclosure verified`
+          html: `<span class="tok-key">[r2]</span>   Bucket: <span class="tok-num">1.42 GB</span> / 9.00 GB cap -> uploaded audio/mpeg\n<span class="tok-key">[head]</span> GET https://audio.clifan.com/episodes/2026-11-06.mp3 -> <span class="tok-ok">200 OK</span>\n<span class="tok-key">[rss]</span>  <span class="tok-ok">✓ Atomically updated feed.xml item[2026-11-06]</span> · verified`
         }
       };
       const tabs = [...document.querySelectorAll(".subpage-tab")];
