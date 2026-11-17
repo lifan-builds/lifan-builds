@@ -117,19 +117,24 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
+  <img src="https://img.shields.io/badge/Swift_%26_macOS_AX-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift and macOS Accessibility" />
   <img src="https://img.shields.io/badge/TypeScript-1f6feb?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Next.js-0d1117?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/MCP_%26_CDP-0b1220?style=for-the-badge&color=10b981" alt="MCP and Chrome DevTools Protocol" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Puppeteer-40B5A4?style=for-the-badge&logo=puppeteer&logoColor=white" alt="Puppeteer" />
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Playwright_%26_Puppeteer-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright and Puppeteer" />
 </p>
 
 <details>
-  <summary><strong>More about the portfolio</strong></summary>
+  <summary><strong>More about the portfolio (<a href="https://clifan.com">clifan.com</a>)</strong></summary>
   <br />
-  The through-line is practical automation with visible boundaries: local data when it should stay local, source trails when decisions matter, and human checkpoints before consequential actions.
+  The through-line across all 10 hosted builds on <a href="https://clifan.com">clifan.com</a> is practical automation with visible boundaries: local data when it should stay local, repeatable evaluation harnesses before claims ship, and human checkpoints before consequential external actions.
 </details>
 
 <p align="center">
+  <a href="https://clifan.com">Visit clifan.com</a> ·
   <a href="https://x.com/LifanBuilds">Say hello on X</a> ·
   <a href="https://github.com/lifan-builds?tab=repositories">Browse all repositories</a>
 </p>
