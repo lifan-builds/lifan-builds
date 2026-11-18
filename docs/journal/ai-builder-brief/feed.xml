@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-17T08:00:00Z</updated>
+  <updated>2026-11-18T08:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-18): Harvard empirical study finds AI coding agents… · Reverse engineering Windows 11 reveals ETW…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-18.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-18.html</id>
+    <updated>2026-11-18T08:00:00Z</updated>
+    <summary>Builder attention pivots from raw foundation model releases toward execution boundaries, as empirical studies expose code review bottlenecks, diagnostic agent telemetry, and the steep…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-17): Benchleaking finds memorized test answers that… · OpenAI releases GPT-6.2 with cheaper Astra tokens…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-17.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-14.html</id>
     <updated>2026-10-14T08:00:00Z</updated>
     <summary>Anthropic’s engineering team says merges rose from about 2,500 per day in May to more than 30,000 in September, while CI performs roughly 25 million checkouts per day. It…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-13): New research makes the agent harness a learnable… · Anthropic shows a small-model path to AI worms…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-13.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-13.html</id>
-    <updated>2026-10-13T08:00:00Z</updated>
-    <summary>the center of gravity moved from larger models to systems that can improve, persist, verify, and defend themselves. A cluster of new harness-learning papers…</summary>
   </entry>
 </feed>
