@@ -66,7 +66,7 @@
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
-      <sub>Ski and snowboard deal aggregator tracking current and historical deals across 28 North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://freshpowder.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/snow-deal">repo</a>).</sub>
+      <sub>Ski and snowboard deal aggregator tracking current and historical deals across 28 North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://freshpowder.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/clearcut">repo</a>).</sub>
     </td>
   </tr>
   <tr>
