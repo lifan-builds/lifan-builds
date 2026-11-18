@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-17T08:00:00Z</updated>
+  <updated>2026-11-18T08:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-18): Harvard empirical study finds AI coding agents… · Reverse engineering Windows 11 reveals ETW…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-18.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-18.html</id>
+    <updated>2026-11-18T08:00:00Z</updated>
+    <summary>Builder attention pivots from raw foundation model releases toward execution boundaries, as empirical studies expose code review bottlenecks, diagnostic agent telemetry, and the steep…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-17): Benchleaking finds memorized test answers that… · OpenAI releases GPT-6.2 with cheaper Astra tokens…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-17.html" rel="alternate" type="text/html"/>
@@ -184,13 +191,6 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-26.html</id>
     <updated>2026-10-26T08:00:00Z</updated>
     <summary>Cheaper computer use is becoming practical, while identity boundaries, real task costs, and provider disclosures matter as much as benchmark leadership.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-25): Redwood simulates deployment-specific attacks to… · Avalon trains agent organizations that review more…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-25.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-25.html</id>
-    <updated>2026-10-25T08:00:00Z</updated>
-    <summary>The strongest work changes how builders test oversight, organize agent teams, and trade expensive model execution for reusable infrastructure.</summary>
   </entry>
   <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>
