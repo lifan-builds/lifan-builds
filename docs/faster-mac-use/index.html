@@ -65,7 +65,7 @@
           <div class="install-widget" aria-label="Install faster-mac-use">
             <div class="install-bar">
               <span class="prompt-char" aria-hidden="true">$</span>
-              <code id="hero-cmd" aria-live="polite">uvx --from git+https://github.com/lifan-builds/faster-mac-use.git fmu mcp</code>
+              <code id="hero-cmd" aria-live="polite">uvx --from faster-mac-use fmu mcp</code>
               <button type="button" class="copy-btn" data-copy-target="hero-cmd">
                 <svg class="copy-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
                   <path class="icon-clip" fill="currentColor" d="M5.75 1a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-3a.75.75 0 0 0-.75-.75h-4.5Zm.75 3V2.5h3V4h-3Zm-2.874-.467a.75.75 0 0 0-.752-1.298A1.75 1.75 0 0 0 2 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 13.25v-9.5a1.75 1.75 0 0 0-.874-1.515.75.75 0 1 0-.752 1.298.25.25 0 0 1 .126.217v9.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-9.5a.25.25 0 0 1 .126-.217Z"/>
@@ -76,9 +76,9 @@
             </div>
             <div class="install-meta">
               <div class="install-switch" role="group" aria-label="Install method">
-                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx --from git+https://github.com/lifan-builds/faster-mac-use.git fmu mcp">uvx</button>
-                <button type="button" class="install-tab" aria-pressed="false" data-cmd="uv tool install git+https://github.com/lifan-builds/faster-mac-use.git">uv tool</button>
-                <button type="button" class="install-tab" aria-pressed="false" data-cmd="pip install git+https://github.com/lifan-builds/faster-mac-use.git">pip</button>
+                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx --from faster-mac-use fmu mcp">uvx</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="uv tool install faster-mac-use">uv tool</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="pip install faster-mac-use">pip</button>
               </div>
               <code class="guard-inline">50Hz guard: 0.0 px drift · 0 focus theft</code>
             </div>
@@ -561,7 +561,7 @@ args = ["mcp"]`
       cli: {
         label: "Direct shell invocation",
         code: `# 1. Install CLI + universal2 Swift AX daemon
-pip install git+https://github.com/lifan-builds/faster-mac-use.git
+pip install faster-mac-use
 
 # 2. Drive macOS Calculator in the background (0.0 px drift)
 fmu '{"surface":"app","app":"Calculator","steps":[

@@ -42,11 +42,11 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://clifan.com/faster-mac-use/"><strong>Faster Mac Use (fmu)</strong></a> <sup>NEW</sup><br />
-      <sub>Background-first, multi-cursor browser &amp; native macOS computer-use engine (0.0 px cursor drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in <code>@playwright/mcp</code>, 1,510 tok / 326 ms 3-agent swarm; <a href="https://clifan.com/faster-mac-use/">interactive benchmarks</a> · <a href="https://github.com/lifan-builds/faster-mac-use">repo</a>).</sub>
+      <sub>Background-first, multi-cursor browser &amp; native macOS computer-use engine (0.0 px cursor drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in <code>@playwright/mcp</code>, 1,510 tok / 326 ms 3-agent swarm; <a href="https://clifan.com/faster-mac-use/">interactive benchmarks</a> · <a href="https://pypi.org/project/faster-mac-use/">PyPI</a> · <a href="https://github.com/lifan-builds/faster-mac-use">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/agent-autofill/"><strong>Agent Autofill</strong></a> <sup>NEW</sup><br />
-      <sub>Local-first personal data broker for AI agents with scoped credential/profile access and explicit human approval gates (<a href="https://clifan.com/agent-autofill/">overview</a> · <a href="https://clifan.com/agent-autofill/demo/">interactive demo</a> · <a href="https://github.com/lifan-builds/agent-autofill">repo</a>).</sub>
+      <sub>Local-first personal data broker for AI agents with scoped credential/profile access and explicit human approval gates (<a href="https://clifan.com/agent-autofill/">overview</a> · <a href="https://clifan.com/agent-autofill/demo/">interactive demo</a> · <a href="https://pypi.org/project/agent-autofill/">PyPI</a> · <a href="https://github.com/lifan-builds/agent-autofill">repo</a>).</sub>
     </td>
   </tr>
   <tr>
