@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-18T08:00:00Z</updated>
+  <updated>2026-11-19T08:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-19): Google DeepMind ships Gemini 4 Neon with faster… · Microsoft launches MAI Code 2 and Flash with…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-19.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-19.html</id>
+    <updated>2026-11-19T08:00:00Z</updated>
+    <summary>Frontier releases shift toward throughput and unit economics as Google ships Gemini 4 Neon at 127 tok/s, Microsoft prices MAI Code 2 at $0.50/$2.50…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-18): Harvard empirical study finds AI coding agents… · Reverse engineering Windows 11 reveals ETW…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-18.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-15.html</id>
     <updated>2026-10-15T08:00:00Z</updated>
     <summary>OpenAI’s Core Experimentation team says five engineers used GPT-6 Astra and GPT-6.1 Sol to merge more than 1,400 maintenance pull requests, delete over 800,000 lines, cut one…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-14): Anthropic rebuilt source control after agent-driven… · Gemini 4 Argon reaches developers globally and…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-14.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-14.html</id>
-    <updated>2026-10-14T08:00:00Z</updated>
-    <summary>Anthropic’s engineering team says merges rose from about 2,500 per day in May to more than 30,000 in September, while CI performs roughly 25 million checkouts per day. It…</summary>
   </entry>
 </feed>

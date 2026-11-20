@@ -62,8 +62,11 @@
           </h1>
         </div>
         <div class="cover-hero-art hero-stagger-2" aria-hidden="true">
-          <img class="cover-avatar-img" src="assets/lifan-avatar-pixel.png" width="76" height="76" alt="">
-          <img class="cover-party-img" src="assets/party-sprites-pixel.png" width="152" height="76" alt="">
+          <div class="pixel-studio-dock">
+            <img class="cover-avatar-img" src="assets/lifan-avatar-pixel.png" width="72" height="72" alt="">
+            <span class="pixel-dock-sep"></span>
+            <img class="cover-party-img" src="assets/party-sprites-pixel.png" width="118" height="72" alt="">
+          </div>
         </div>
       </div>
 
@@ -82,7 +85,7 @@
           <span class="cover-card-idx">02 · MACHINE LEARNING</span>
           <img class="cover-card-img" src="assets/jrpg-overworld-pixel.png" width="320" height="120" alt="" aria-hidden="true">
           <strong class="cover-card-title">Applied ML</strong>
-          <span class="cover-card-stat"><span data-brief-count>65</span> briefs · TTS &amp; NWP</span>
+          <span class="cover-card-stat"><span data-brief-count>66</span> briefs · TTS &amp; NWP</span>
           <span class="cover-card-cta">Explore ML pipelines&nbsp;→</span>
         </button>
 
@@ -123,7 +126,7 @@
             <kbd aria-hidden="true">↵</kbd>
           </button>
           <a class="button secondary" href="journal/">Journal &amp; Essays →</a>
-          <a class="button secondary" href="journal/ai-builder-brief/"><span><span data-brief-count>65</span> Daily Briefs →</span></a>
+          <a class="button secondary" href="journal/ai-builder-brief/"><span><span data-brief-count>66</span> Daily Briefs →</span></a>
         </div>
       </div>
     </section>
@@ -435,7 +438,7 @@
               Evidence-gated daily AI brief distilling noisy launches into source-linked Top 10 technical&nbsp;developments.
             </p>
             <div class="metric-strip" aria-hidden="true">
-              <span class="metric-badge"><span data-brief-count>65</span> briefs</span>
+              <span class="metric-badge"><span data-brief-count>66</span> briefs</span>
               <span class="metric-badge">Source-linked</span>
               <span class="metric-badge">EN / 中文</span>
             </div>
@@ -545,7 +548,7 @@
       <div class="section-header">
         <div>
           <h2 id="writing-heading">Writing, Quick Thoughts &amp; Field Notes</h2>
-          <p class="section-sub">Sharp builder takes (X, Reddit, RedNote), long-form essays, and <span data-brief-count>65</span> daily AI Builder Briefs.</p>
+          <p class="section-sub">Sharp builder takes (X, Reddit, RedNote), long-form essays, and <span data-brief-count>66</span> daily AI Builder Briefs.</p>
         </div>
         <a class="section-link" href="journal/">Open full journal →</a>
       </div>
@@ -601,13 +604,18 @@
         <div class="track-box">
           <div class="track-head">
             <h3>Daily AI Builder Briefs</h3>
-            <span class="track-badge"><span data-brief-count>65</span> Editions</span>
+            <span class="track-badge"><span data-brief-count>66</span> Editions</span>
           </div>
           <p class="brief-stream-intro">
             Daily field notes on AI developments that change what builders make and evaluate, with primary receipts.
           </p>
           <!-- HOME-BRIEF-STREAM:START -->
           <div class="brief-stream-list" role="list">
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-19.html">
+              <span class="brief-row-title">Google DeepMind ships Gemini 4 Neon with…</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-19">2026.11.19</time>
+            </a>
             <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-18.html">
               <span class="brief-row-title">Harvard empirical study finds AI coding agents…</span>
               <span class="leader-dots" aria-hidden="true"></span>
@@ -633,15 +641,10 @@
               <span class="leader-dots" aria-hidden="true"></span>
               <time class="brief-row-date" datetime="2026-11-13">2026.11.13</time>
             </a>
-            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-12.html">
-              <span class="brief-row-title">AWS makes real service behavior the test…</span>
-              <span class="leader-dots" aria-hidden="true"></span>
-              <time class="brief-row-date" datetime="2026-11-12">2026.11.12</time>
-            </a>
           </div>
           <!-- HOME-BRIEF-STREAM:END -->
           <div class="journal-links">
-            <a href="journal/ai-builder-brief/">All <span data-brief-count>65</span> daily briefs →</a>
+            <a href="journal/ai-builder-brief/">All <span data-brief-count>66</span> daily briefs →</a>
             <a href="ai-builder-brief/">Brief pipeline →</a>
           </div>
         </div>
@@ -760,7 +763,10 @@
               <span>ship</span>
             </button>
           </div>
-          <div class="loop-detail" role="tabpanel">
+          <div class="loop-progress-track" aria-hidden="true">
+            <div class="loop-progress-fill" id="loop-progress-fill"></div>
+          </div>
+          <div class="loop-detail" id="loop-detail-panel" role="tabpanel">
             <strong id="loop-detail-title">01 · Source — Anchor on primary artifacts</strong>
             <p id="loop-detail-desc">
               Start from raw commits, protocol traces, and DOM snapshots rather than secondary summaries so every claim is reproducible.
@@ -776,14 +782,64 @@
   </main>
 
   <footer class="site-footer wrap">
-    <span>© 2026 Lifan Chen (Lifan Builds) · Built with local-first HTML, CSS &amp; JS</span>
-    <div class="footer-links">
-      <a href="journal/">Journal</a>
-      <a href="journal/ai-builder-brief/">Daily Briefs</a>
-      <a href="feed.xml">RSS / Atom</a>
-      <a href="https://github.com/lifan-builds">GitHub ↗</a>
-      <a href="https://clifan.substack.com/">Substack ↗</a>
-      <a href="https://x.com/LifanBuilds">X ↗</a>
+    <div class="footer-colophon-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand-head">
+          <span class="pixel-mark" aria-hidden="true">LB</span>
+          <strong>Lifan Chen · Lifan Builds</strong>
+        </div>
+        <p class="footer-brand-note">
+          Local-first software, multi-cursor agent harnesses, and source-linked engineering field notes—verified by repeatable evals.
+        </p>
+        <div class="footer-key-legend" aria-hidden="true">
+          <span><kbd>↵</kbd> Workbench</span>
+          <span><kbd>1</kbd>–<kbd>0</kbd> Stage</span>
+          <span><kbd>T</kbd> Theme</span>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <p class="footer-col-title">Flagship Builds</p>
+        <ul class="footer-nav-list">
+          <li><a href="faster-mac-use/">Faster Mac Use (fmu)</a></li>
+          <li><a href="agent-autofill/">Agent Autofill</a></li>
+          <li><a href="close-snow/">CloseSnow</a></li>
+          <li><a href="quotaswitch/">QuotaSwitch</a></li>
+          <li><a href="ai-builder-brief/">AI Builder Brief</a></li>
+          <li><a href="castforge/">CastForge</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <p class="footer-col-title">Writing &amp; Channels</p>
+        <ul class="footer-nav-list">
+          <li><a href="journal/">Builder Journal &amp; Quick Takes</a></li>
+          <li><a href="journal/ai-builder-brief/"><span><span data-brief-count>66</span> Daily AI Briefs</span></a></li>
+          <li><a href="feed.xml">Atom / RSS Feed</a></li>
+          <li><a href="https://github.com/lifan-builds">GitHub (@lifan-builds) ↗</a></li>
+          <li><a href="https://clifan.substack.com/">Substack ↗</a></li>
+          <li><a href="https://x.com/LifanBuilds">X (@LifanBuilds) ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base-bar">
+      <span class="footer-copy">© 2026 Lifan Chen (Lifan Builds) · 0 trackers · local-first HTML, CSS &amp; JS</span>
+      <div class="footer-compact-links">
+        <a href="journal/">Journal</a>
+        <a href="journal/ai-builder-brief/">Daily Briefs</a>
+        <a href="feed.xml">RSS / Atom</a>
+        <a href="https://github.com/lifan-builds">GitHub ↗</a>
+        <a href="https://clifan.substack.com/">Substack ↗</a>
+        <a href="https://x.com/LifanBuilds">X ↗</a>
+      </div>
+      <button type="button" class="back-up-btn" data-back-to-top aria-label="Scroll back to top">
+        <svg class="pixel-up-icon" viewBox="0 0 9 9" width="11" height="11" aria-hidden="true">
+          <path fill="currentColor" d="M4 1h1v1H4zM3 2h3v1H3zM2 3h1v1H2zm2 0h1v5H4zm2 0h1v1H6zM1 4h1v1H1zm6 0h1v1H7z"/>
+        </svg>
+        <span>Back up</span>
+        <span class="back-up-pct" data-scroll-pct>TOP</span>
+      </button>
     </div>
   </footer>
 </body>

@@ -164,7 +164,7 @@ const BUILD_DATA = {
     href: 'ai-builder-brief/',
     art: 'ai-builder-brief/cover-wide.jpg',
     repo: 'journal/ai-builder-brief/',
-    repoLabel: 'Browse 65 daily briefs →',
+    repoLabel: 'Browse 66 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
     pillars: ['ml', 'agents', 'eval'],
     diagram: `
@@ -178,13 +178,13 @@ const BUILD_DATA = {
       <line x1="334" y1="34" x2="380" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="380" y="12" width="134" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
       <text x="447" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">TOP 10 DAILY BRIEF</text>
-      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">65 Published Editions</text>`,
+      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">66 Published Editions</text>`,
     metrics: [
-      { val: '65 briefs', lbl: 'Published daily archive' },
+      { val: '66 briefs', lbl: 'Published daily archive' },
       { val: '10 stories', lbl: 'Per daily edition' },
       { val: '100% linked', lbl: 'Primary commits & papers' }
     ],
-    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-18.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-18.html`
+    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-19.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-19.html`
   },
   nitan: {
     name: 'Nitan Podcast (泥潭播客)',
@@ -388,27 +388,110 @@ if (themeBtn) {
   });
 }
 
-// 2. Interactive Build Stage & Project-Specific Architecture Schematics
+// 2. Interactive Build Stage, Sliding Glider & Project-Specific Architecture Schematics
+const stageTabsContainer = document.querySelector('.stage-tabs');
 const stageTabs = [...document.querySelectorAll('.stage-tab[data-build]')];
 const releaseCards = [...document.querySelectorAll('.release-card[data-build]')];
 const ledgerRows = [...document.querySelectorAll('.ledger-row[data-pillars]')];
 const stageBody = document.getElementById('stage-body-panel');
+const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function createTabGlider(container, buttons, isActive) {
+  if (!container || buttons.length === 0) return () => {};
+  const glider = document.createElement('span');
+  glider.className = 'tab-glider';
+  glider.setAttribute('aria-hidden', 'true');
+  container.prepend(glider);
+  let ready = false;
+
+  const sync = (instant = false) => {
+    const activeBtn = buttons.find(isActive) || buttons[0];
+    if (!activeBtn || activeBtn.offsetWidth === 0) {
+      container.classList.remove('has-glider');
+      glider.style.opacity = '0';
+      ready = false;
+      return;
+    }
+    if (instant || !ready) {
+      glider.style.transition = 'none';
+    } else {
+      glider.style.transition = '';
+    }
+    glider.style.width = `${activeBtn.offsetWidth}px`;
+    glider.style.height = `${activeBtn.offsetHeight}px`;
+    glider.style.transform = `translate3d(${activeBtn.offsetLeft}px, ${activeBtn.offsetTop}px, 0)`;
+    glider.style.opacity = '1';
+    container.classList.add('has-glider');
+    if (instant || !ready) {
+      void glider.offsetWidth;
+      glider.style.transition = '';
+      ready = true;
+    }
+  };
+
+  sync(true);
+  window.addEventListener('resize', () => sync(true), { passive: true });
+  return sync;
+}
+
+const syncStageGlider = createTabGlider(
+  stageTabsContainer,
+  stageTabs,
+  tab => tab.getAttribute('aria-selected') === 'true'
+);
+
+function animateStageMetrics(metricsEl) {
+  if (!metricsEl || prefersReducedMotion()) return;
+  const valEls = [...metricsEl.querySelectorAll('.stage-metric-val')];
+  for (const el of valEls) {
+    const raw = el.dataset.finalVal || el.textContent || '';
+    if (raw.includes(':')) continue;
+    const match = raw.match(/^([<>±\s]*)(\d+(?:\.\d+)?)(.*)$/);
+    if (!match) continue;
+    const [, prefix, numStr, suffix] = match;
+    const target = Number.parseFloat(numStr);
+    if (!Number.isFinite(target) || target === 0) continue;
+    const decimals = numStr.includes('.') ? numStr.split('.')[1].length : 0;
+    const start = performance.now();
+    const duration = 260;
+
+    const tick = now => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const cur = target * (0.35 + 0.65 * eased);
+      const formatted = decimals > 0 ? cur.toFixed(decimals) : String(Math.round(cur));
+      el.textContent = `${prefix}${formatted}${suffix}`;
+      if (t < 1) {
+        el._rafId = requestAnimationFrame(tick);
+      } else {
+        el.textContent = raw;
+      }
+    };
+    if (el._rafId) cancelAnimationFrame(el._rafId);
+    el._rafId = requestAnimationFrame(tick);
+  }
+}
+
+let currentBuildKey = 'fmu';
 
 function selectBuild(key) {
   const item = BUILD_DATA[key];
   if (!item) return;
+  const changed = currentBuildKey !== key;
+  currentBuildKey = key;
 
   for (const tab of stageTabs) {
     const active = tab.dataset.build === key;
     tab.setAttribute('aria-selected', String(active));
     tab.tabIndex = active ? 0 : -1;
   }
+  syncStageGlider();
 
   for (const card of releaseCards) {
     card.classList.toggle('is-active', card.dataset.build === key);
   }
 
-  if (stageBody) {
+  if (stageBody && changed) {
     stageBody.classList.add('is-switching');
     window.clearTimeout(stageBody._switchTimer);
     stageBody._switchTimer = window.setTimeout(() => {
@@ -444,9 +527,10 @@ function selectBuild(key) {
     metricsEl.innerHTML = item.metrics
       .map(
         m =>
-          `<div class="stage-metric-cell"><span class="stage-metric-val">${m.val}</span><span class="stage-metric-lbl">${m.lbl}</span></div>`
+          `<div class="stage-metric-cell"><span class="stage-metric-val" data-final-val="${m.val.replace(/"/g, '&quot;')}">${m.val}</span><span class="stage-metric-lbl">${m.lbl}</span></div>`
       )
       .join('');
+    if (changed) animateStageMetrics(metricsEl);
   }
   if (traceEl) traceEl.innerHTML = item.trace;
   if (primaryLink) {
@@ -529,7 +613,7 @@ const COVER_TICKER_DATA = {
     links: [
       ['faster-mac-use/', '114× token benchmark'],
       ['close-snow/', '2.37" SNOTEL MAE'],
-      ['journal/ai-builder-brief/', '65 primary-source briefs']
+      ['journal/ai-builder-brief/', '66 primary-source briefs']
     ]
   }
 };
@@ -586,7 +670,9 @@ function openWorkbench(concept = 'all', scrollSelector = null) {
     coverPortal.hidden = true;
     fullWorkbench.hidden = false;
     updateConceptDOM(concept);
+    syncStageGlider(true);
     syncWorkbenchUrl(true, concept, scrollSelector && scrollSelector.startsWith('#') ? scrollSelector : '');
+    if (typeof updateScrollTelemetry === 'function') updateScrollTelemetry();
   };
   const scrollAfterOpen = () => {
     const target = scrollSelector && document.querySelector(scrollSelector);
@@ -610,6 +696,7 @@ function closeWorkbench() {
     coverPortal.hidden = false;
     syncWorkbenchUrl(false);
     if (startCoverLoop) startCoverLoop();
+    if (typeof updateScrollTelemetry === 'function') updateScrollTelemetry();
   };
   if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.startViewTransition(doClose);
@@ -624,11 +711,16 @@ for (const card of coverCards) {
   const syncTicker = () => {
     for (const c of coverCards) c.classList.toggle('is-focused', c === card);
     const info = COVER_TICKER_DATA[pillar];
-    if (info && coverTickerTag && coverTickerText) {
+    if (info && coverTickerTag && coverTickerText && coverTickerTag.textContent !== info.tag) {
       coverTickerTag.textContent = info.tag;
-      coverTickerText.innerHTML = info.links
-        .map(([href, label]) => `<a href="${href}">${label}</a>`)
-        .join('');
+      coverTickerText.classList.add('is-swapping');
+      window.clearTimeout(coverTickerText._swapTimer);
+      coverTickerText._swapTimer = window.setTimeout(() => {
+        coverTickerText.innerHTML = info.links
+          .map(([href, label]) => `<a href="${href}">${label}</a>`)
+          .join('');
+        coverTickerText.classList.remove('is-swapping');
+      }, 85);
     }
   };
   card.addEventListener('mouseenter', syncTicker);
@@ -682,6 +774,7 @@ if (coverPortal && fullWorkbench) {
     if (pillar && CONCEPT_LEAD_BUILD[pillar]) {
       updateConceptDOM(pillar);
     }
+    requestAnimationFrame(() => syncStageGlider(true));
   }
 }
 
@@ -796,14 +889,33 @@ if (coverCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
 
 // 4. Interactive Evaluation Loop (About Me)
 const loopBtns = [...document.querySelectorAll('.loop-step-btn[data-step]')];
+const loopProgressFill = document.getElementById('loop-progress-fill');
+const loopDetailPanel = document.getElementById('loop-detail-panel');
 
 function selectLoopStep(stepKey) {
   const info = LOOP_DATA[stepKey];
   if (!info) return;
 
-  for (const btn of loopBtns) {
+  let activeIdx = 0;
+  for (let i = 0; i < loopBtns.length; i++) {
+    const btn = loopBtns[i];
     const active = btn.dataset.step === stepKey;
     btn.setAttribute('aria-selected', String(active));
+    btn.tabIndex = active ? 0 : -1;
+    if (active) activeIdx = i;
+  }
+
+  if (loopProgressFill && loopBtns.length > 0) {
+    const pct = ((activeIdx + 1) / loopBtns.length) * 100;
+    loopProgressFill.style.setProperty('--loop-progress', `${pct.toFixed(2)}%`);
+  }
+
+  if (loopDetailPanel) {
+    loopDetailPanel.classList.add('is-switching');
+    window.clearTimeout(loopDetailPanel._timer);
+    loopDetailPanel._timer = window.setTimeout(() => {
+      loopDetailPanel.classList.remove('is-switching');
+    }, 130);
   }
 
   const titleEl = document.getElementById('loop-detail-title');
@@ -814,12 +926,28 @@ function selectLoopStep(stepKey) {
   if (proofEl) proofEl.textContent = info.proof;
 }
 
-for (const btn of loopBtns) {
+for (let i = 0; i < loopBtns.length; i++) {
+  const btn = loopBtns[i];
   btn.addEventListener('click', () => selectLoopStep(btn.dataset.step));
+  btn.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    e.preventDefault();
+    const nextIdx = (i + (e.key === 'ArrowRight' ? 1 : -1) + loopBtns.length) % loopBtns.length;
+    const nextBtn = loopBtns[nextIdx];
+    nextBtn.focus();
+    selectLoopStep(nextBtn.dataset.step);
+  });
 }
 
 // 5. Journal Filter Pills (/journal/), EN/ZH Thought Toggles & Brief Archive Search (/journal/ai-builder-brief/)
+const filterPillsContainer = document.querySelector('.filter-pills');
 const filterBtns = [...document.querySelectorAll('.filter-pill[data-filter]')];
+const syncJournalGlider = createTabGlider(
+  filterPillsContainer,
+  filterBtns,
+  btn => btn.getAttribute('aria-pressed') === 'true'
+);
+
 if (filterBtns.length > 0) {
   const thoughtsSec = document.getElementById('journal-thoughts-section');
   const essaysSec = document.getElementById('journal-essays-section');
@@ -830,9 +958,11 @@ if (filterBtns.length > 0) {
       for (const b of filterBtns) {
         b.setAttribute('aria-pressed', String(b === btn));
       }
+      syncJournalGlider();
       if (thoughtsSec) thoughtsSec.hidden = mode !== 'all' && mode !== 'thoughts';
       if (essaysSec) essaysSec.hidden = mode !== 'all' && mode !== 'essays';
       if (briefsSec) briefsSec.hidden = mode !== 'all' && mode !== 'briefs';
+      if (typeof updateScrollTelemetry === 'function') updateScrollTelemetry();
     });
   }
 }
@@ -905,3 +1035,64 @@ window.addEventListener('keydown', event => {
     selectBuild(stageTabs[idx].dataset.build);
   }
 });
+
+// 7. Scroll Telemetry, Sticky Navbar Section Spy & Tactile "Back up ↑" Control
+const backUpBtns = [...document.querySelectorAll('[data-back-to-top]')];
+const scrollPctEls = [...document.querySelectorAll('[data-scroll-pct]')];
+const sectionSpyLinks = [...document.querySelectorAll('.site-header nav a[href^="#"]')];
+const spySections = sectionSpyLinks
+  .map(link => {
+    const id = link.getAttribute('href')?.slice(1);
+    const sec = id ? document.getElementById(id) : null;
+    return sec ? { link, sec } : null;
+  })
+  .filter(Boolean);
+
+function updateScrollTelemetry() {
+  const scrollY = window.scrollY || window.pageYOffset || 0;
+  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  const ratio = maxScroll > 24 ? Math.min(1, Math.max(0, scrollY / maxScroll)) : 0;
+  const coverClosed = document.body.getAttribute('data-cover') === 'closed';
+
+  root.classList.toggle('is-scrolled', scrollY > 12);
+  root.style.setProperty('--scroll-progress', ratio.toFixed(4));
+  root.style.setProperty('--scroll-progress-alpha', !coverClosed && maxScroll > 60 && scrollY > 8 ? '1' : '0');
+
+  const pctLabel = scrollY < 24 || maxScroll <= 24 ? 'TOP' : `${Math.round(ratio * 100)}%`;
+  for (const el of scrollPctEls) {
+    el.textContent = pctLabel;
+  }
+
+  if (spySections.length > 0) {
+    if (coverClosed || scrollY < 100) {
+      for (const { link } of spySections) {
+        link.classList.remove('is-current');
+        link.removeAttribute('aria-current');
+      }
+    } else {
+      const probeY = scrollY + window.innerHeight * 0.28;
+      let current = spySections[0];
+      for (const entry of spySections) {
+        if (entry.sec.offsetTop <= probeY) current = entry;
+      }
+      for (const entry of spySections) {
+        const active = entry === current;
+        entry.link.classList.toggle('is-current', active);
+        if (active) entry.link.setAttribute('aria-current', 'location');
+        else entry.link.removeAttribute('aria-current');
+      }
+    }
+  }
+}
+
+window.addEventListener('scroll', updateScrollTelemetry, { passive: true });
+window.addEventListener('resize', updateScrollTelemetry, { passive: true });
+updateScrollTelemetry();
+
+for (const btn of backUpBtns) {
+  btn.addEventListener('click', () => {
+    btn.classList.add('is-launching');
+    window.setTimeout(() => btn.classList.remove('is-launching'), 360);
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+  });
+}
