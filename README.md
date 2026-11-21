@@ -19,7 +19,7 @@
   <a href="https://clifan.com">clifan.com</a> ·
   <a href="#main-focuses">Main focuses</a> ·
   <a href="#selected-builds">Selected builds</a> ·
-  <a href="https://clifan.com/journal/">Writing &amp; 66 daily briefs</a> ·
+  <a href="https://clifan.com/journal/">Writing &amp; 68 daily briefs</a> ·
   <a href="#how-i-build">How I build</a>
 </p>
 
@@ -91,12 +91,12 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/context-harness"><strong>Context Harness</strong></a><br />
-      <sub>Tiny filesystem memory layer for coding agents: durable context files, companion skills, and local scripts.</sub>
+      <a href="https://clifan.com/echoframe/"><strong>EchoFrame</strong></a> <sup>NEW</sup><br />
+      <sub>Turn an Amazon Echo Show (Vega OS &amp; Fire OS) into an ad-free, zero-crop AI-curated iPhone photo frame with <code>1600×960</code> portrait diptychs and Juno DNS sinkholing (<a href="https://clifan.com/echoframe/">overview</a> · <a href="https://github.com/lifan-builds/echoframe">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
-      <strong>Continuity &amp; OpenMuseCall</strong> <sup>LOCAL · IN PROGRESS</sup><br />
-      <sub>Local agent-first research control plane and supervised Mac-to-iPhone calling agent prototype with explicit safety gates.</sub>
+      <a href="https://github.com/lifan-builds/context-harness"><strong>Context Harness</strong></a><br />
+      <sub>Tiny filesystem memory layer for coding agents: durable context files, companion skills, and local scripts.</sub>
     </td>
   </tr>
 </table>

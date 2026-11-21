@@ -96,6 +96,66 @@ const BUILD_DATA = {
     ],
     trace: `<span class="tok-comment"># Local :18455/v1 gateway + expiry-first credit draining</span>\n<span class="tok-cmd">$ quotaswitch</span> gateway status\n✓ 127.0.0.1:18455/v1 healthy · draining expiring API credits · &lt;30ms failover`
   },
+  clearcut: {
+    name: 'Clearcut',
+    route: 'clifan.com/clearcut/',
+    href: 'clearcut/',
+    art: 'clearcut/cover.jpg',
+    repo: 'https://clearcut.clifan.com/',
+    repoLabel: 'Launch Clearcut Hub ↗',
+    summary: 'Multi-catalog specialist gear deal engine powering 5 worlds—Snow, Cycling, Tools, Camp, and Water—across 91 retailers.',
+    pillars: ['local', 'eval'],
+    diagram: `
+      <rect x="6" y="12" width="114" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.4"/>
+      <text x="63" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#93c5fd">91 SPECIALISTS</text>
+      <text x="63" y="43" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">Shopify · WC · XO</text>
+      <line x1="120" y1="34" x2="164" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="164" y="12" width="154" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="241" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#fcd34d">VARIANT + JUNK GATE</text>
+      <text x="241" y="43" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.9" fill="#cbd5e1">My Locker · Exact Size</text>
+      <path d="M318 34 L368 13 M318 34 L368 34 M318 34 L368 55" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="368" y="4" width="146" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="441" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#5eead4">Snow · Bikes · Tools</text>
+      <rect x="368" y="25" width="146" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="441" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#5eead4">Highline (Camp · 12)</text>
+      <rect x="368" y="46" width="146" height="18" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.2"/>
+      <text x="441" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#5eead4">Tideline (Water · 11)</text>`,
+    metrics: [
+      { val: '5 worlds', lbl: 'Snow · Bike · Tool · Camp · Water' },
+      { val: '91 shops', lbl: 'Daily retailer snapshots' },
+      { val: '1,409 tests', lbl: 'Variant & junk gates' }
+    ],
+    trace: `<span class="tok-comment"># Multi-catalog variant-bound clearance query</span>\n<span class="tok-cmd">$ clearcut-hub</span> serve --port 8760\n✓ 1,409 offline checks passed · 5 gear worlds ready`
+  },
+  echoframe: {
+    name: 'EchoFrame',
+    route: 'clifan.com/echoframe/',
+    href: 'echoframe/',
+    art: 'echoframe/cover.jpg',
+    repo: 'https://github.com/lifan-builds/echoframe',
+    repoLabel: 'lifan-builds/echoframe ↗',
+    summary: 'Turn Amazon Echo Show (Vega OS & Fire OS) into an ad-free, zero-crop AI-curated iPhone photo frame with 1600×960 portrait diptychs and Juno DNS sinkholing.',
+    pillars: ['local', 'ml', 'eval'],
+    diagram: `
+      <rect x="6" y="12" width="110" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.4"/>
+      <text x="61" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#93c5fd">IPHONE USB / DIR</text>
+      <text x="61" y="43" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.9" fill="#cbd5e1">ImageCaptureCore</text>
+      <line x1="116" y1="34" x2="156" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="156" y="12" width="152" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="232" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.8" font-weight="600" fill="#fcd34d">VISION + 16:10 DIPTYCH</text>
+      <text x="232" y="43" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.9" fill="#cbd5e1">dHash · focal_xy · sRGB</text>
+      <path d="M308 34 L354 15 M308 34 L354 53" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="354" y="4" width="160" height="22" rx="4" fill="#2a1215" stroke="#f87171" stroke-width="1.2"/>
+      <text x="434" y="18" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.0" fill="#fca5a5">✗ Juno trck.ahs / jet -&gt; 0.0.0.0</text>
+      <rect x="354" y="42" width="160" height="22" rx="4" fill="#13202c" stroke="#34d399" stroke-width="1.3"/>
+      <text x="434" y="56" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#5eead4">✓ 24/7 Echo Show (Mac Off)</text>`,
+    metrics: [
+      { val: '1600×960', lbl: 'Focal-safe portrait diptychs' },
+      { val: '0 ads', lbl: 'Juno DNS + 3h Photo Frame' },
+      { val: '0 daemons', lbl: 'Runs 24/7 with Mac closed' }
+    ],
+    trace: `<span class="tok-comment"># Curate iPhone library + verify Vega OS Juno ad sinkhole</span>\n<span class="tok-cmd">$ python3</span> scripts/configure_alexa_ad_free.py --verify-dns 192.168.1.1\n✓ trck.ahs &amp; prod.na.jet.amazon -&gt; 0.0.0.0 · 390 16:10 slides live`
+  },
   freshpowder: {
     name: 'FreshPowder',
     route: 'clifan.com/freshpowder/',
@@ -164,7 +224,7 @@ const BUILD_DATA = {
     href: 'ai-builder-brief/',
     art: 'ai-builder-brief/cover-wide.jpg',
     repo: 'journal/ai-builder-brief/',
-    repoLabel: 'Browse 66 daily briefs →',
+    repoLabel: 'Browse 68 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
     pillars: ['ml', 'agents', 'eval'],
     diagram: `
@@ -178,13 +238,13 @@ const BUILD_DATA = {
       <line x1="334" y1="34" x2="380" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="380" y="12" width="134" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
       <text x="447" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">TOP 10 DAILY BRIEF</text>
-      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">66 Published Editions</text>`,
+      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">68 Published Editions</text>`,
     metrics: [
-      { val: '66 briefs', lbl: 'Published daily archive' },
+      { val: '68 briefs', lbl: 'Published daily archive' },
       { val: '10 stories', lbl: 'Per daily edition' },
       { val: '100% linked', lbl: 'Primary commits & papers' }
     ],
-    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-19.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-19.html`
+    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-21.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-21.html`
   },
   nitan: {
     name: 'Nitan Podcast (泥潭播客)',
@@ -613,7 +673,7 @@ const COVER_TICKER_DATA = {
     links: [
       ['faster-mac-use/', '114× token benchmark'],
       ['close-snow/', '2.37" SNOTEL MAE'],
-      ['journal/ai-builder-brief/', '66 primary-source briefs']
+      ['journal/ai-builder-brief/', '68 primary-source briefs']
     ]
   }
 };

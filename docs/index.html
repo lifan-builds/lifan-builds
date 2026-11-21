@@ -85,7 +85,7 @@
           <span class="cover-card-idx">02 · MACHINE LEARNING</span>
           <img class="cover-card-img" src="assets/jrpg-overworld-pixel.png" width="320" height="120" alt="" aria-hidden="true">
           <strong class="cover-card-title">Applied ML</strong>
-          <span class="cover-card-stat"><span data-brief-count>66</span> briefs · TTS &amp; NWP</span>
+          <span class="cover-card-stat"><span data-brief-count>68</span> briefs · TTS &amp; NWP</span>
           <span class="cover-card-cta">Explore ML pipelines&nbsp;→</span>
         </button>
 
@@ -118,15 +118,16 @@
             <a href="quotaswitch/">QuotaSwitch</a>
             <a href="perks-reminder/">Perks Reminder</a>
             <a href="foliofen-cli/">Foliofen&nbsp;CLI</a>
+            <a href="echoframe/">EchoFrame</a>
           </div>
         </div>
         <div class="cover-actions">
           <button type="button" class="button primary cover-open-btn" id="cover-open-all">
-            <span>Open Full Workbench (10 Builds)</span>
+            <span>Open Full Workbench (12 Builds)</span>
             <kbd aria-hidden="true">↵</kbd>
           </button>
           <a class="button secondary" href="journal/">Journal &amp; Essays →</a>
-          <a class="button secondary" href="journal/ai-builder-brief/"><span><span data-brief-count>66</span> Daily Briefs →</span></a>
+          <a class="button secondary" href="journal/ai-builder-brief/"><span><span data-brief-count>68</span> Daily Briefs →</span></a>
         </div>
       </div>
     </section>
@@ -158,6 +159,8 @@
             <button type="button" class="stage-tab" role="tab" aria-selected="true" data-build="fmu"><span class="stage-tab-key">1</span> fmu</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="autofill"><span class="stage-tab-key">2</span> autofill</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="quotaswitch"><span class="stage-tab-key">3</span> quotaswitch</button>
+            <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="echoframe"><span class="stage-tab-key">·</span> echoframe</button>
+            <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="clearcut"><span class="stage-tab-key">·</span> clearcut</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="freshpowder"><span class="stage-tab-key">4</span> freshpowder</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="perks"><span class="stage-tab-key">5</span> perks</button>
             <button type="button" class="stage-tab" role="tab" aria-selected="false" tabindex="-1" data-build="brief"><span class="stage-tab-key">6</span> brief</button>
@@ -232,7 +235,7 @@
       </div>
 
       <div class="concept-filter-bar" role="group" aria-label="Filter builds by engineering pillar">
-        <button type="button" class="concept-chip" aria-pressed="true" data-concept="all">All Builds (10)</button>
+        <button type="button" class="concept-chip" aria-pressed="true" data-concept="all">All Builds (11)</button>
         <button type="button" class="concept-chip" aria-pressed="false" data-concept="local">01 · Indie Local &amp; Useful Tools</button>
         <button type="button" class="concept-chip" aria-pressed="false" data-concept="ml">02 · Machine Learning</button>
         <button type="button" class="concept-chip" aria-pressed="false" data-concept="agents">03 · AI Agents</button>
@@ -378,7 +381,31 @@
           </div>
         </article>
 
-        <!-- 5. FreshPowder -->
+        <!-- 5. Clearcut -->
+        <article class="release-card" data-build="clearcut" data-pillars="local eval">
+          <div>
+            <img class="release-card-art" src="clearcut/cover.jpg" width="360" height="144" alt="" aria-hidden="true">
+            <div class="release-top">
+              <h3 class="release-title"><a href="clearcut/">Clearcut</a></h3>
+              <span class="release-route" aria-hidden="true">/clearcut/</span>
+            </div>
+            <p class="release-desc">
+              Multi-catalog specialist deal engine powering 5 gear worlds across 91&nbsp;retailers.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">5 worlds</span>
+              <span class="metric-badge">91 shops</span>
+              <span class="metric-badge">Daily refresh</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="clearcut/">Overview →</a>
+            <a href="https://clearcut.clifan.com/">Live hub ↗</a>
+            <a href="https://github.com/lifan-builds/clearcut">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 6. FreshPowder -->
         <article class="release-card" data-build="freshpowder" data-pillars="local eval">
           <div>
             <img class="release-card-art" src="freshpowder/cover.jpg" width="360" height="144" alt="" aria-hidden="true">
@@ -438,7 +465,7 @@
               Evidence-gated daily AI brief distilling noisy launches into source-linked Top 10 technical&nbsp;developments.
             </p>
             <div class="metric-strip" aria-hidden="true">
-              <span class="metric-badge"><span data-brief-count>66</span> briefs</span>
+              <span class="metric-badge"><span data-brief-count>68</span> briefs</span>
               <span class="metric-badge">Source-linked</span>
               <span class="metric-badge">EN / 中文</span>
             </div>
@@ -497,6 +524,29 @@
           </div>
         </article>
 
+        <!-- EchoFrame -->
+        <article class="release-card" data-build="echoframe" data-pillars="local ml eval">
+          <div>
+            <img class="release-card-art" src="echoframe/cover.jpg" width="360" height="144" alt="" aria-hidden="true">
+            <div class="release-top">
+              <h3 class="release-title"><a href="echoframe/">EchoFrame</a></h3>
+              <span class="release-route" aria-hidden="true">/echoframe/</span>
+            </div>
+            <p class="release-desc">
+              Ad-free AI-curated iPhone ambient photo frame for Amazon Echo Show (Vega OS &amp; Fire OS) with 1600×960 portrait diptychs and Juno DNS&nbsp;sinkholing.
+            </p>
+            <div class="metric-strip" aria-hidden="true">
+              <span class="metric-badge">16:10 diptychs</span>
+              <span class="metric-badge">0 Sponsored ads</span>
+              <span class="metric-badge">Mac off 24/7</span>
+            </div>
+          </div>
+          <div class="release-links">
+            <a class="primary-action" href="echoframe/">Overview →</a>
+            <a href="https://github.com/lifan-builds/echoframe">GitHub ↗</a>
+          </div>
+        </article>
+
         <!-- 9. CastForge -->
         <article class="release-card" data-build="castforge" data-pillars="ml eval">
           <div>
@@ -548,7 +598,7 @@
       <div class="section-header">
         <div>
           <h2 id="writing-heading">Writing, Quick Thoughts &amp; Field Notes</h2>
-          <p class="section-sub">Sharp builder takes (X, Reddit, RedNote), long-form essays, and <span data-brief-count>66</span> daily AI Builder Briefs.</p>
+          <p class="section-sub">Sharp builder takes (X, Reddit, RedNote), long-form essays, and <span data-brief-count>68</span> daily AI Builder Briefs.</p>
         </div>
         <a class="section-link" href="journal/">Open full journal →</a>
       </div>
@@ -604,13 +654,23 @@
         <div class="track-box">
           <div class="track-head">
             <h3>Daily AI Builder Briefs</h3>
-            <span class="track-badge"><span data-brief-count>66</span> Editions</span>
+            <span class="track-badge"><span data-brief-count>68</span> Editions</span>
           </div>
           <p class="brief-stream-intro">
             Daily field notes on AI developments that change what builders make and evaluate, with primary receipts.
           </p>
           <!-- HOME-BRIEF-STREAM:START -->
           <div class="brief-stream-list" role="list">
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-21.html">
+              <span class="brief-row-title">Thinking Machines Lab open-sources Inkling 2…</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-21">2026.11.21</time>
+            </a>
+            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-20.html">
+              <span class="brief-row-title">Google adds on-demand Tool Retrieval to the…</span>
+              <span class="leader-dots" aria-hidden="true"></span>
+              <time class="brief-row-date" datetime="2026-11-20">2026.11.20</time>
+            </a>
             <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-19.html">
               <span class="brief-row-title">Google DeepMind ships Gemini 4 Neon with…</span>
               <span class="leader-dots" aria-hidden="true"></span>
@@ -631,20 +691,10 @@
               <span class="leader-dots" aria-hidden="true"></span>
               <time class="brief-row-date" datetime="2026-11-15">2026.11.15</time>
             </a>
-            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-14.html">
-              <span class="brief-row-title">Anthropic shows why safety scores change with…</span>
-              <span class="leader-dots" aria-hidden="true"></span>
-              <time class="brief-row-date" datetime="2026-11-14">2026.11.14</time>
-            </a>
-            <a class="brief-stream-row" role="listitem" href="journal/ai-builder-brief/2026-11-13.html">
-              <span class="brief-row-title">OpenRouter measures which agent checks improve…</span>
-              <span class="leader-dots" aria-hidden="true"></span>
-              <time class="brief-row-date" datetime="2026-11-13">2026.11.13</time>
-            </a>
           </div>
           <!-- HOME-BRIEF-STREAM:END -->
           <div class="journal-links">
-            <a href="journal/ai-builder-brief/">All <span data-brief-count>66</span> daily briefs →</a>
+            <a href="journal/ai-builder-brief/">All <span data-brief-count>68</span> daily briefs →</a>
             <a href="ai-builder-brief/">Brief pipeline →</a>
           </div>
         </div>
@@ -656,6 +706,16 @@
         <a class="section-link" href="journal/#thoughts">All quick takes (EN / 中文) →</a>
       </div>
       <div class="ledger-list" role="list">
+        <a class="ledger-row" role="listitem" href="journal/#codex-execution-worker">
+          <span class="ledger-title">Turning unused Codex quotas into a bounded execution worker →</span>
+          <span class="ledger-summary">Gemini 4 orchestrates; Codex runs read-only gpt-6.2-sol or git-guarded --allow gpt-6.2-astra via quotaswitch codex exec (EN / 中文).</span>
+          <span class="ledger-meta" aria-hidden="true">X · RedNote 小红书</span>
+        </a>
+        <a class="ledger-row" role="listitem" href="journal/#echoframe-juno-ads">
+          <span class="ledger-title">Echo Show is decent hardware ruined by Amazon’s ad team →</span>
+          <span class="ledger-summary">Auto-curating 5,000+ iPhone photos into 16:10 side-by-side portrait pairs and blocking Vega OS’s 4 ad-beacon domains (EN / 中文).</span>
+          <span class="ledger-meta" aria-hidden="true">X · Reddit</span>
+        </a>
         <a class="ledger-row" role="listitem" href="journal/#codex-quota-worker">
           <span class="ledger-title">The only viable way to use Codex quota →</span>
           <span class="ledger-summary">Carbon for Plan, Design &amp; Verification; GPT (Astra / 6.1 Sol) locked to Implementation Only via Proxy API (EN / 中文).</span>
@@ -814,7 +874,7 @@
         <p class="footer-col-title">Writing &amp; Channels</p>
         <ul class="footer-nav-list">
           <li><a href="journal/">Builder Journal &amp; Quick Takes</a></li>
-          <li><a href="journal/ai-builder-brief/"><span><span data-brief-count>66</span> Daily AI Briefs</span></a></li>
+          <li><a href="journal/ai-builder-brief/"><span><span data-brief-count>68</span> Daily AI Briefs</span></a></li>
           <li><a href="feed.xml">Atom / RSS Feed</a></li>
           <li><a href="https://github.com/lifan-builds">GitHub (@lifan-builds) ↗</a></li>
           <li><a href="https://clifan.substack.com/">Substack ↗</a></li>

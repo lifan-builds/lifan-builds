@@ -5,11 +5,39 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-19T08:00:00Z</updated>
+  <updated>2026-11-21T18:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>Turning unused Codex quotas into a bounded execution worker</title>
+    <link href="https://clifan.com/journal/#codex-execution-worker" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#codex-execution-worker</id>
+    <updated>2026-11-21T18:00:00Z</updated>
+    <summary>Codex is genuinely bad at architecture and open-ended coding. It buries small changes under defensive guards and wrapper shims.</summary>
+  </entry>
+  <entry>
+    <title>Echo Show is decent hardware ruined by Amazon’s ad team</title>
+    <link href="https://clifan.com/journal/#echoframe-juno-ads" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#echoframe-juno-ads</id>
+    <updated>2026-11-21T18:00:00Z</updated>
+    <summary>You put an Echo Show in the kitchen for timers and family photos, and half the day it’s pitching dish sponges while cropping vertical iPhone shots right across people’s foreheads. Meanwhile 5,000+ photos sit unseen on your phone because nobody keeps up with hand-sorting albums every month.</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-21): Thinking Machines Lab open-sources Inkling 2 Mini… · Dragos canary-token audit uncovers three AI…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-21.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-21.html</id>
+    <updated>2026-11-21T08:00:00Z</updated>
+    <summary>Local looped transformers and supply-chain security collide with machine-checked frontier math: Thinking Machines open-sources 26.4B `Inkling 2 Mini` for 32 GB laptops, Dragos plants…</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-20): Google adds on-demand Tool Retrieval to the Gemini… · OpenAI launches GPT-Live-1.1 API with $0.02/minute…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-20.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-20.html</id>
+    <updated>2026-11-20T08:00:00Z</updated>
+    <summary>API platforms add stateful cost controls as Google ships Gemini Tool Retrieval and opens `genie-4` to developers, OpenAI introduces `gpt-live-1.1` with $0.02/min WebRTC Standby…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-19): Google DeepMind ships Gemini 4 Neon with faster… · Microsoft launches MAI Code 2 and Flash with…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-19.html" rel="alternate" type="text/html"/>
@@ -177,20 +205,6 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-29.html</id>
     <updated>2026-10-29T08:00:00Z</updated>
     <summary>Open weights and cheaper reasoning expand deployment choices, while new monitoring disclosures and task-level evaluations expose how much work remains between a capable model…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-28): Anthropic documents five exploit chains against… · Lambert explains why harder AI rankings can mislead…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-28.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-28.html</id>
-    <updated>2026-10-28T08:00:00Z</updated>
-    <summary>Stronger cyber agents and cheaper model orchestration raise the stakes for evaluating complete workflows, preserving instructions, and checking what a benchmark actually measures.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-27): OpenAI and Anthropic publish ETH disproofs that… · Cloudflare explains how rejected prompts exposed…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-27.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-27.html</id>
-    <updated>2026-10-27T08:00:00Z</updated>
-    <summary>AI-generated research demands better verification, while serving failures and agent workflows make the surrounding system as consequential as the model.</summary>
   </entry>
   <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>

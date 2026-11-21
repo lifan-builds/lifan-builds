@@ -5,11 +5,25 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-19T08:00:00Z</updated>
+  <updated>2026-11-21T08:00:00Z</updated>
   <author>
     <name>Lifan Chen</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-21): Thinking Machines Lab open-sources Inkling 2 Mini… · Dragos canary-token audit uncovers three AI…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-21.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-21.html</id>
+    <updated>2026-11-21T08:00:00Z</updated>
+    <summary>Local looped transformers and supply-chain security collide with machine-checked frontier math: Thinking Machines open-sources 26.4B `Inkling 2 Mini` for 32 GB laptops, Dragos plants…</summary>
+  </entry>
+  <entry>
+    <title>AI Builder Brief (2026-11-20): Google adds on-demand Tool Retrieval to the Gemini… · OpenAI launches GPT-Live-1.1 API with $0.02/minute…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-20.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-20.html</id>
+    <updated>2026-11-20T08:00:00Z</updated>
+    <summary>API platforms add stateful cost controls as Google ships Gemini Tool Retrieval and opens `genie-4` to developers, OpenAI introduces `gpt-live-1.1` with $0.02/min WebRTC Standby…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-19): Google DeepMind ships Gemini 4 Neon with faster… · Microsoft launches MAI Code 2 and Flash with…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-19.html" rel="alternate" type="text/html"/>
@@ -205,19 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-17.html</id>
     <updated>2026-10-17T08:00:00Z</updated>
     <summary>Today’s most useful developments explain how to review, understand, and contain increasingly capable agents, alongside a fresh DeepSeek release.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-16): Meta releases Muse Spark Open, expanding… · A new memory synthesis explains why agents retain…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-16.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-16.html</id>
-    <updated>2026-10-16T08:00:00Z</updated>
-    <summary>New downloadable models broaden builders’ deployment choices, while the strongest technical reading asks whether an agent can correctly revise what it already knows.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-15): OpenAI reports Codex removing 800,000 lines while… · StateHarness turns project state into a tested…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-15.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-15.html</id>
-    <updated>2026-10-15T08:00:00Z</updated>
-    <summary>OpenAI’s Core Experimentation team says five engineers used GPT-6 Astra and GPT-6.1 Sol to merge more than 1,400 maintenance pull requests, delete over 800,000 lines, cut one…</summary>
   </entry>
 </feed>

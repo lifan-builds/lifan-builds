@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EchoFrame — Ad-Free AI-Curated iPhone Photo Frame for Echo Show | Lifan Chen</title>
+  <meta name="description" content="Turn an Amazon Echo Show (Vega OS or Fire OS) into an ad-free, zero-crop AI-curated iPhone ambient photo frame with 16:10 portrait diptychs and Juno DNS sinkholing.">
+  <link rel="canonical" href="https://clifan.com/echoframe/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <meta property="og:title" content="EchoFrame — Ad-free AI-curated iPhone photo frame for Echo Show">
+  <meta property="og:description" content="AI vision safety &amp; beauty scoring, focal-safe 16:10 portrait diptychs, and Vega OS Juno ad-beacon sinkholing for 24/7 standalone Echo Show displays.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/echoframe/">
+  <meta property="og:image" content="https://clifan.com/echoframe/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EchoFrame — Ad-free AI-curated iPhone photo frame for Echo Show">
+  <meta name="twitter:description" content="Turn Echo Show into a calm 16:10 museum-matted iPhone photo frame with zero Sponsored cards and zero Mac background daemons.">
+  <meta name="twitter:image" content="https://clifan.com/echoframe/og.jpg">
+  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Chen home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Chen</span>
+        <span class="wordmark-role">EchoFrame</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://github.com/lifan-builds/echoframe">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <section class="sp-hero-grid" aria-labelledby="ef-hero-heading">
+      <div>
+        <p class="status-line">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span>AI-NATIVE PHOTO ALBUM · 16:10 DIPTYCHS · AD-FREE ECHO SHOW</span>
+        </p>
+        <h1 id="ef-hero-heading">Make Echo Show useful again. <span class="cover-headline-accent">Auto-curate iPhone photos.</span></h1>
+        <p class="subpage-lead">EchoFrame turns raw iPhone camera rolls into a clean <code>1600×960</code> slideshow—dropping screenshots and receipts, pairing vertical shots around faces, and blocking Echo Show’s Sponsored&nbsp;ads.</p>
+
+        <div class="subpage-actions">
+          <a class="button primary" href="https://github.com/lifan-builds/echoframe">View repository &amp; setup ↗</a>
+          <a class="button secondary" href="https://github.com/lifan-builds/echoframe/blob/main/docs/echo-show-ad-architecture.md">Vega OS ad notes ↗</a>
+        </div>
+
+        <div class="sp-install-widget" aria-label="Clone and run EchoFrame">
+          <div class="sp-install-bar">
+            <span class="sp-install-prompt" aria-hidden="true">$</span>
+            <code class="sp-install-code" id="ef-install-cmd" aria-live="polite">git clone https://github.com/lifan-builds/echoframe.git</code>
+            <button type="button" class="sp-copy-btn" id="ef-copy-btn" data-copied="false">Copy</button>
+          </div>
+          <div class="sp-install-meta">
+            <div class="sp-install-switch" role="group" aria-label="Select EchoFrame workflow step">
+              <button type="button" class="sp-install-pill" aria-pressed="true" data-cmd="git clone https://github.com/lifan-builds/echoframe.git">clone repo</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="python3 scripts/extract_iphone_album.py --source-dir ./photos">curate iPhone</button>
+              <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="python3 scripts/export_amazon_photos.py --reveal">export 16:10</button>
+            </div>
+            <span class="sp-install-guard">MIT · Mac closed 24/7</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sp-bench-panel" aria-labelledby="ef-bench-heading">
+        <div class="sp-bench-header">
+          <strong class="sp-bench-title" id="ef-bench-heading">Countertop Display Signal-to-Noise</strong>
+          <span class="sp-bench-pill">0 Sponsored interrupts</span>
+        </div>
+
+        <div class="sp-bars" role="list" aria-label="Comparison of ad interruptions and portrait cropping across Echo Show display modes">
+          <div class="sp-bar-row is-winner" role="listitem">
+            <span class="sp-bar-label">EchoFrame (24/7)</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-win" style="width: 8%"></div></div>
+            <span class="sp-bar-val">0 ads · 0% crop</span>
+          </div>
+          <div class="sp-bar-row" role="listitem">
+            <span class="sp-bar-label">Silk Browser Kiosk</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-second" style="width: 54%"></div></div>
+            <span class="sp-bar-val">600s eviction</span>
+          </div>
+          <div class="sp-bar-row" role="listitem">
+            <span class="sp-bar-label">Stock Home Deck</span>
+            <div class="sp-bar-track" aria-hidden="true"><div class="sp-bar-fill is-warn" style="width: 100%"></div></div>
+            <span class="sp-bar-val">Juno ad loop</span>
+          </div>
+        </div>
+
+        <div class="sp-bench-foot">
+          <span>4-domain Juno DNS sinkhole + 3h Photo Frame routines</span>
+          <a href="https://github.com/lifan-builds/echoframe/blob/main/docs/echo-show-ad-architecture.md">REA report ↗</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="subpage-workbench" aria-label="Interactive EchoFrame pipeline inspector">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select EchoFrame subsystem">
+          <button type="button" class="subpage-tab" role="tab" aria-selected="true" tabindex="0" data-mode="curate">1 · AI Vision &amp; 16:10 Diptychs</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="ads">2 · Vega OS Juno Sinkhole</button>
+          <button type="button" class="subpage-tab" role="tab" aria-selected="false" tabindex="-1" data-mode="edge">3 · Standalone &amp; R2 Edge</button>
+        </div>
+        <span class="subpage-meta" id="ef-meta">64-bit dHash + focal_xy face guard · 2048px sRGB</span>
+      </div>
+
+      <div class="subpage-stage-box has-chrome" aria-hidden="true">
+        <div class="sp-stage-chrome">
+          <div class="chrome-dots"><span></span><span></span><span></span></div>
+          <span id="ef-window">EchoFrame · iPhone USB / Folder -> 16:10 Diptychs -> Ad-Free Echo Show</span>
+          <span class="sp-stage-pill" id="ef-pill">● 0 Mac Daemons ✓</span>
+        </div>
+
+        <div class="sp-broll-grid">
+          <div class="sp-broll-pane">
+            <div class="subpage-stage-top">
+              <strong id="ef-title">$ python3 scripts/extract_iphone_album.py --source-dir ~/Pictures/iPhone</strong>
+              <span id="ef-badge">Vision safety gate + side-by-side portrait pairing</span>
+            </div>
+            <pre class="subpage-stage-pre" id="ef-pre"><span class="tok-cmd">$ python3</span> scripts/extract_iphone_album.py --source-dir ~/Pictures/iPhone
+<span class="tok-ok">✓</span> Filtered screenshots, receipts &amp; burst duplicates (<span class="tok-num">64-bit dHash</span>)
+<span class="tok-ok">✓</span> Rendered <span class="tok-num">104</span> focal-safe <span class="tok-str">1600×960</span> portrait diptychs on <span class="tok-str">#0b0e13</span> matte
+<span class="tok-ok">✓</span> Indexed <span class="tok-num">6</span> channels with <span class="tok-str">text-embedding-3-large</span> semantic vectors</pre>
+          </div>
+
+          <div class="sp-broll-media">
+            <img class="sp-broll-img" src="assets/hero-plate.jpg" width="480" height="240" alt="">
+            <div class="sp-broll-caption">
+              <span>1600×960 gallery matte</span>
+              <span>Vega OS + Fire OS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subpage-features" aria-label="EchoFrame architecture pillars">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="14" y="12" width="136" height="52" rx="4" fill="#131d28" stroke="#f59e0b"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#fcd34d">PORTRAIT A · focal_xy</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Palette &amp; date matched</text>
+          <rect x="170" y="12" width="136" height="52" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">PORTRAIT B · 16:10</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">1600×960 gallery matte</text>
+        </svg>
+        <h2>Museum 16:10 diptychs</h2>
+        <p>Rejects receipts, screenshots, and closed eyes, then pairs vertical portraits by palette and capture window around <code>focal_xy</code> face&nbsp;centers.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#2a1215" stroke="#f87171"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#fca5a5">✗ trck.ahs / jet.amazon</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">0.0.0.0 DNS sinkhole</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">✓ m.media-amazon</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">Photos &amp; AVS intact</text>
+        </svg>
+        <h2>Firmware-verified ad block</h2>
+        <p>Sinkholes outbound <code>junoAdUnservedImpression</code> beacons via Echo Wi-Fi <code>DNS 1/2</code> or NextDNS while keeping voice and photos&nbsp;live.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0d151d" stroke="#243342"/>
+          <rect x="10" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#60a5fa"/>
+          <text x="82" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#93c5fd">EXIF + SHA-256 DELTA</text>
+          <text x="82" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">&lt; 6% of free 5 GB tier</text>
+          <rect x="166" y="14" width="144" height="48" rx="4" fill="#131d28" stroke="#34d399"/>
+          <text x="238" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34d399">LAN + PRIVATE R2</text>
+          <text x="238" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#eef3f7">ES5 Silk + pocket remote</text>
+        </svg>
+        <h2>24/7 standalone + R2 edge</h2>
+        <p>Runs natively on Echo Show with your Mac powered off, plus an optional HMAC-gated Cloudflare Worker and R2 frame for wall&nbsp;tablets.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Chen (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="../faster-mac-use/">Faster Mac Use →</a>
+      <a href="../quotaswitch/">QuotaSwitch →</a>
+      <a href="https://github.com/lifan-builds/echoframe">GitHub ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const pills = [...document.querySelectorAll(".sp-install-pill")];
+      const cmdEl = document.getElementById("ef-install-cmd");
+      const copyBtn = document.getElementById("ef-copy-btn");
+
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          pills.forEach((p) => p.setAttribute("aria-pressed", String(p === pill)));
+          if (cmdEl) cmdEl.textContent = pill.dataset.cmd || "";
+        });
+      });
+
+      if (copyBtn && cmdEl) {
+        copyBtn.addEventListener("click", async () => {
+          const text = cmdEl.textContent.trim();
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (_) {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand("copy"); } catch (_) {}
+            ta.remove();
+          }
+          copyBtn.dataset.copied = "true";
+          copyBtn.textContent = "✓ Copied";
+          clearTimeout(copyBtn._t);
+          copyBtn._t = setTimeout(() => {
+            copyBtn.dataset.copied = "false";
+            copyBtn.textContent = "Copy";
+          }, 1600);
+        });
+      }
+
+      const MODES = {
+        curate: {
+          title: "$ python3 scripts/extract_iphone_album.py --source-dir ~/Pictures/iPhone",
+          badge: "Vision safety gate + side-by-side portrait pairing",
+          meta: "64-bit dHash + focal_xy face guard · 2048px sRGB",
+          html: `<span class="tok-cmd">$ python3</span> scripts/extract_iphone_album.py --source-dir ~/Pictures/iPhone\n<span class="tok-ok">✓</span> Filtered screenshots, receipts &amp; burst duplicates (<span class="tok-num">64-bit dHash</span>)\n<span class="tok-ok">✓</span> Rendered <span class="tok-num">104</span> focal-safe <span class="tok-str">1600×960</span> portrait diptychs on <span class="tok-str">#0b0e13</span> matte\n<span class="tok-ok">✓</span> Indexed <span class="tok-num">6</span> channels with <span class="tok-str">text-embedding-3-large</span> semantic vectors`
+        },
+        ads: {
+          title: "$ python3 scripts/configure_alexa_ad_free.py --verify-dns 192.168.1.1",
+          badge: "Vega OS ambienthome + Juno beacon sinkhole",
+          meta: "trck.ahs &amp; jet.amazon -> 0.0.0.0 · AVS &amp; Photos live",
+          html: `<span class="tok-cmd">$ python3</span> scripts/configure_alexa_ad_free.py --verify-dns 192.168.1.1\n<span class="tok-ok">✓</span> trck.ahs.*.advertising.amazon.dev -&gt; <span class="tok-num">0.0.0.0</span> · prod.na.jet.amazon -&gt; <span class="tok-num">0.0.0.0</span>\n<span class="tok-ok">✓</span> m.media-amazon.com &amp; avs-alexa-14-na.amazon.com -&gt; <span class="tok-str">LIVE</span>\n<span class="tok-ok">✓</span> 5 daily 3h <span class="tok-str">"Start Photo Frame"</span> routines active (<span class="tok-num">07:30–22:50</span>)`
+        },
+        edge: {
+          title: "$ python3 scripts/export_amazon_photos.py &amp;&amp; python3 scripts/stage_cloud_bundle.py",
+          badge: "Lossless EXIF DateTimeOriginal + float16 R2 vector index",
+          meta: "MacOS ImageCaptureCore USB bridge + __Host-frame_auth Worker",
+          html: `<span class="tok-cmd">$ python3</span> scripts/export_amazon_photos.py\n<span class="tok-ok">✓</span> <span class="tok-num">390</span> landscape-ready <span class="tok-num">2048px</span> slides (<span class="tok-num">286 MB</span> · <span class="tok-num">5.6%</span> of free 5 GB tier)\n<span class="tok-ok">✓</span> Optional R2 edge bundle staged with <span class="tok-str">X-Robots-Tag: noindex</span> &amp; HMAC cookie`
+        }
+      };
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("ef-title").innerHTML = m.title;
+        document.getElementById("ef-badge").textContent = m.badge;
+        document.getElementById("ef-meta").innerHTML = m.meta;
+        document.getElementById("ef-pre").innerHTML = m.html;
+      }
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
