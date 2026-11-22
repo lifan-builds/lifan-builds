@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./avatar/github_profile_banner.svg" alt="Lifan Builds — staff engineer building local-first systems" width="100%" />
+  <img src="./avatar/github_profile_banner.svg" alt="Lifan Builds — builder @ Google building local-first systems" width="100%" />
 </p>
 
 <div align="center">
 
 # Lifan
 
-**Staff Engineer @ Google** · local-first products · agent systems · agent evaluation · self-improving agent harnesses
+**Builder @ Google** · local-first products · agent systems · agent evaluation · self-improving agent harnesses
 
 <a href="https://clifan.com"><img src="https://img.shields.io/badge/workshop-clifan.com-0b1220?style=for-the-badge&color=f59e0b" alt="Workshop clifan.com" /></a>
 <a href="https://github.com/lifan-builds"><img src="https://img.shields.io/github/followers/lifan-builds?style=for-the-badge&logo=github&label=followers&labelColor=0b1220&color=5eead4" alt="GitHub followers" /></a>

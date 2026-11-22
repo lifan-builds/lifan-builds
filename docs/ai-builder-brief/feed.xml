@@ -6,7 +6,7 @@
     <description>Daily ranked Top-10 source-linked AI developments and audio briefings for builders.</description>
     <language>en</language>
     <atom:link href="https://clifan.com/ai-builder-brief/feed.xml" rel="self" type="application/rss+xml" />
-    <itunes:author>Lifan Chen</itunes:author>
+    <itunes:author>Lifan Builds</itunes:author>
     <itunes:summary>Daily ranked Top-10 source-linked AI developments and audio briefings for builders.</itunes:summary>
     <itunes:image href="https://clifan.com/ai-builder-brief/cover.jpg" />
     <itunes:category text="Technology" />

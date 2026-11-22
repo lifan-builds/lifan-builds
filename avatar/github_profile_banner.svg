@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
-  <title id="title">Lifan Builds — staff engineer building local-first systems, multi-cursor AI agents, and evaluation loops</title>
+  <title id="title">Lifan Builds — builder @ Google building local-first systems, multi-cursor AI agents, and evaluation loops</title>
   <desc id="desc">A dark code-window banner pairing Lifan's engineering stack and evaluation loop with a moonlit mountain and snowboarder silhouette.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -34,7 +34,7 @@
   <circle cx="82" cy="81" r="6" fill="#f26d75"/>
   <circle cx="103" cy="81" r="6" fill="#f4c95d"/>
   <circle cx="124" cy="81" r="6" fill="#62d6a7"/>
-  <text x="150" y="87" fill="#d7f6fa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="1.4">STAFF ENGINEER · CLIFAN.COM</text>
+  <text x="150" y="87" fill="#d7f6fa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="1.4">BUILDER @ GOOGLE · CLIFAN.COM</text>
 
   <rect x="58" y="128" width="508" height="224" rx="15" fill="#091521" fill-opacity="0.86" stroke="#315368"/>
   <text x="82" y="164" fill="#77d1e3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18.5">const lifan = {</text>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>AI Builder Brief — Daily Editions by Lifan Chen</title>
+  <title>AI Builder Brief — Daily Editions by Lifan Builds</title>
   <subtitle>Evidence-gated daily ranked Top-10 AI developments and source-linked field notes for builders.</subtitle>
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
   <updated>2026-11-21T08:00:00Z</updated>
   <author>
-    <name>Lifan Chen</name>
+    <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
   <entry>

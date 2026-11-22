@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Lifan Chen (Lifan Builds) — Journal &amp; AI Builder Brief</title>
+  <title>Lifan Builds — Journal &amp; AI Builder Brief</title>
   <subtitle>Local-first software, multi-cursor agent systems, engineering essays, and source-linked daily AI field notes.</subtitle>
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
   <updated>2026-11-21T18:00:00Z</updated>
   <author>
-    <name>Lifan Chen</name>
+    <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
   <entry>
