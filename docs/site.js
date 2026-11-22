@@ -1156,3 +1156,5 @@ for (const btn of backUpBtns) {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
   });
 }
+
+import './telemetry.js';
