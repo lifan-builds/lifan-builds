@@ -18,9 +18,11 @@
   <meta name="twitter:title" content="Perks Reminder — Track every card benefit with zero bank logins">
   <meta name="twitter:description" content="Recover annual fees across duplicate household cards with portable JSON backups and zero Plaid bank connections.">
   <meta name="twitter:image" content="https://clifan.com/perks-reminder/og.jpg">
-  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
+  <script>try{if(localStorage.getItem('clifan-theme')!=='light')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="../styles.css">
   <script type="module" src="../site.js"></script>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
 </head>
 <body>
   <header class="site-header">
@@ -201,7 +203,7 @@ Hilton Aspire (Resort · 1104) 2026-H2      $200 Hilton Resort Credit  <span cla
         export: {
           title: "$ npm run card-template:validate && cat perks-export.json",
           badge: "Schema-checked catalog + 1-click JSON portability",
-          meta: "src/lib/static-catalog.ts · MIT licensed",
+          meta: "src/lib/static-catalog.ts · Source-available",
           html: `{\n  <span class="tok-key">"schemaVersion"</span>: <span class="tok-num">2</span>,\n  <span class="tok-key">"cards"</span>: [{ <span class="tok-key">"templateKey"</span>: <span class="tok-str">"amex-platinum"</span>, <span class="tok-key">"nickname"</span>: <span class="tok-str">"P1"</span>, <span class="tok-key">"endingDigits"</span>: <span class="tok-str">"4009"</span> }],\n  <span class="tok-key">"benefitStatuses"</span>: [{ <span class="tok-key">"benefitKey"</span>: <span class="tok-str">"uber-cash-monthly"</span>, <span class="tok-key">"cycle"</span>: <span class="tok-str">"2026-11"</span>, <span class="tok-key">"state"</span>: <span class="tok-ok">"COMPLETED"</span> }]\n}`
         }
       };

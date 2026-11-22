@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" role="img" aria-label="Applied ML and calibrated forecasts">
+  <defs>
+    <linearGradient id="bg-ml" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1522"/>
+      <stop offset="100%" stop-color="#071019"/>
+    </linearGradient>
+    <linearGradient id="band-ml" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66a6ff" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#66a6ff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="260" height="120" fill="url(#bg-ml)"/>
+  <g opacity="0.18" stroke="#2d4760" stroke-width="1">
+    <path d="M12 26H248M12 52H248M12 78H248M12 102H248"/>
+    <path d="M58 14V106M118 14V106M178 14V106M234 14V106"/>
+  </g>
+  <path d="M14 88 C50 72, 76 42, 112 46 C146 50, 174 20, 210 28 C226 31, 238 38, 248 33 L248 68 C234 72, 222 64, 206 62 C172 56, 146 82, 112 80 C76 78, 50 96, 14 102 Z" fill="url(#band-ml)"/>
+  <path d="M14 95 C50 84, 76 60, 112 63 C146 66, 174 38, 210 45 C226 48, 238 53, 248 48" fill="none" stroke="#66a6ff" stroke-width="2.2"/>
+  <path d="M14 92 C52 81, 80 66, 112 60 C144 54, 174 44, 210 50 C226 52, 238 46, 248 42" fill="none" stroke="#34d399" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <circle cx="112" cy="63" r="3.5" fill="#0b1522" stroke="#66a6ff" stroke-width="2"/>
+  <circle cx="210" cy="45" r="3.5" fill="#0b1522" stroke="#34d399" stroke-width="2"/>
+  <rect x="14" y="13" width="118" height="19" rx="4" fill="#102030" stroke="#243849"/>
+  <text x="22" y="25.5" font-family="JetBrains Mono, ui-monospace, monospace" font-size="8" fill="#93c5fd">NWP + SNOTEL · ±1σ</text>
+  <rect x="164" y="84" width="82" height="18" rx="4" fill="#102030" stroke="#243849"/>
+  <text x="173" y="96" font-family="JetBrains Mono, ui-monospace, monospace" font-size="8" fill="#34d399">2.37" MAE</text>
+</svg>

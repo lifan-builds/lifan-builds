@@ -18,9 +18,11 @@
   <meta name="twitter:title" content="EchoFrame — Ad-free AI-curated iPhone photo frame for Echo Show">
   <meta name="twitter:description" content="Turn Echo Show into a calm 16:10 museum-matted iPhone photo frame with zero Sponsored cards and zero Mac background daemons.">
   <meta name="twitter:image" content="https://clifan.com/echoframe/og.jpg">
-  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
+  <script>try{if(localStorage.getItem('clifan-theme')!=='light')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="../styles.css">
   <script type="module" src="../site.js"></script>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
 </head>
 <body>
   <header class="site-header">
@@ -71,7 +73,7 @@
               <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="python3 scripts/extract_iphone_album.py --source-dir ./photos">curate iPhone</button>
               <button type="button" class="sp-install-pill" aria-pressed="false" data-cmd="python3 scripts/export_amazon_photos.py --reveal">export 16:10</button>
             </div>
-            <span class="sp-install-guard">MIT · Mac closed 24/7</span>
+            <span class="sp-install-guard">Source-available · Mac closed 24/7</span>
           </div>
         </div>
       </div>

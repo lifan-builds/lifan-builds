@@ -19,7 +19,7 @@
     (() => {
       try {
         const saved = localStorage.getItem("clifan-theme");
-        const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const dark = saved !== "light";
         document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
       } catch {}
     })();
@@ -576,6 +576,8 @@
       .pipeline-svg { min-width: 560px; }
     }
   </style>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
 </head>
 <body>
 <div class="shell">
@@ -699,7 +701,7 @@
 
   <footer>
     <span>Automated briefing. Verify claims against linked primary sources; Reddit and newsletter summaries are never used as factual inputs.</span>
-    <span><a href="../">← Lifan Builds</a> · <a href="../castforge/">CastForge →</a> · <a href="../nitan-podcast/">Nitan Podcast →</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">MIT License</a></span>
+    <span><a href="../">← Lifan Builds</a> · <a href="../castforge/">CastForge →</a> · <a href="../nitan-podcast/">Nitan Podcast →</a> · <a href="https://github.com/lifan-builds/ai-builder-brief">GitHub ↗</a></span>
   </footer>
 </div>
 

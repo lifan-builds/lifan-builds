@@ -20,9 +20,11 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="Lifan Chen — Journal &amp; AI Builder Brief" href="https://clifan.com/feed.xml">
   <title>Lifan Chen (Lifan Builds) — Portfolio, Writing &amp; Field Notes</title>
-  <script>try{if(localStorage.getItem('clifan-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
+  <script>try{if(localStorage.getItem('clifan-theme')!=='light')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="site.js"></script>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
 </head>
 <body data-cover="closed">
   <header class="site-header">
@@ -37,8 +39,8 @@
         <a href="#journal" data-open-workbench="all">Writing</a>
         <a href="journal/ai-builder-brief/">Daily Briefs</a>
         <a href="#about" data-open-workbench="all">About</a>
-        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
-          <span data-theme-label>Light</span>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="true" aria-label="Toggle color theme">
+          <span data-theme-label>Dark</span>
           <kbd aria-hidden="true">T</kbd>
         </button>
         <a class="nav-button" href="https://github.com/lifan-builds">GitHub ↗</a>
@@ -55,18 +57,14 @@
         <div class="cover-title-col">
           <p class="status-line hero-stagger-1">
             <span class="status-indicator" aria-hidden="true"></span>
-            <span>LIFAN CHEN · INDIE BUILDER &amp; STAFF ENGINEER @ GOOGLE</span>
+            <span>LIFAN CHEN · SEATTLE · STAFF ENGINEER @ GOOGLE</span>
           </p>
           <h1 class="cover-headline hero-stagger-2">
-            Local tools, frontier ML, and AI agents&#8288;—<span class="cover-headline-accent">verified by&nbsp;evals.</span>
+            Local Mac tools, multi-agent harnesses, and <span class="cover-headline-accent">measurable&nbsp;evals.</span>
           </h1>
         </div>
         <div class="cover-hero-art hero-stagger-2" aria-hidden="true">
-          <div class="pixel-studio-dock">
-            <img class="cover-avatar-img" src="assets/lifan-avatar-pixel.png" width="72" height="72" alt="">
-            <span class="pixel-dock-sep"></span>
-            <img class="cover-party-img" src="assets/party-sprites-pixel.png" width="118" height="72" alt="">
-          </div>
+          <img class="cover-avatar-img" src="assets/lifan-avatar-pixel.png" width="84" height="84" alt="">
         </div>
       </div>
 
@@ -74,7 +72,7 @@
         <!-- Pillar 01: Local & Useful Tools -->
         <button type="button" class="cover-card is-focused" data-open-pillar="local">
           <span class="cover-card-idx">01 · LOCAL &amp; USEFUL</span>
-          <img class="cover-card-img" src="assets/workshop-room.svg" width="320" height="120" alt="" aria-hidden="true">
+          <img class="cover-card-img" src="assets/pillar-local.svg" width="320" height="120" alt="" aria-hidden="true">
           <strong class="cover-card-title">Indie Local Tools</strong>
           <span class="cover-card-stat">0 cloud bytes · 6 apps</span>
           <span class="cover-card-cta">Explore local builds&nbsp;→</span>
@@ -83,7 +81,7 @@
         <!-- Pillar 02: Machine Learning -->
         <button type="button" class="cover-card" data-open-pillar="ml">
           <span class="cover-card-idx">02 · MACHINE LEARNING</span>
-          <img class="cover-card-img" src="assets/jrpg-overworld-pixel.png" width="320" height="120" alt="" aria-hidden="true">
+          <img class="cover-card-img" src="assets/pillar-ml.svg" width="320" height="120" alt="" aria-hidden="true">
           <strong class="cover-card-title">Applied ML</strong>
           <span class="cover-card-stat"><span data-brief-count>68</span> briefs · TTS &amp; NWP</span>
           <span class="cover-card-cta">Explore ML pipelines&nbsp;→</span>
@@ -92,7 +90,7 @@
         <!-- Pillar 03: AI Agents -->
         <button type="button" class="cover-card" data-open-pillar="agents">
           <span class="cover-card-idx">03 · AI AGENTS</span>
-          <img class="cover-card-img" src="assets/pillar-ml-agents-pixel.jpg" width="320" height="120" alt="" aria-hidden="true">
+          <img class="cover-card-img" src="assets/pillar-agents.svg" width="320" height="120" alt="" aria-hidden="true">
           <strong class="cover-card-title">AI Agent Systems</strong>
           <span class="cover-card-stat">3-cursor swarm · MCP</span>
           <span class="cover-card-cta">Explore agent harnesses&nbsp;→</span>
@@ -101,7 +99,7 @@
         <!-- Pillar 04: Evaluation & Quality -->
         <button type="button" class="cover-card" data-open-pillar="eval">
           <span class="cover-card-idx">04 · EVAL &amp; QUALITY</span>
-          <img class="cover-card-img" src="assets/pillar-eval-forge-pixel.jpg" width="320" height="120" alt="" aria-hidden="true">
+          <img class="cover-card-img" src="assets/pillar-eval.svg" width="320" height="120" alt="" aria-hidden="true">
           <strong class="cover-card-title">Eval &amp; Quality</strong>
           <span class="cover-card-stat">114× fewer tok · 2.37&quot; MAE</span>
           <span class="cover-card-cta">Explore benchmarks&nbsp;→</span>
@@ -763,8 +761,8 @@
     <section class="site-section" id="about" aria-labelledby="about-heading">
       <div class="section-header">
         <div>
-          <h2 id="about-heading">About &amp; Engineering Philosophy</h2>
-          <p class="section-sub">How I design, verify, and ship local-first tools and agent harnesses.</p>
+          <h2 id="about-heading">About</h2>
+          <p class="section-sub">What I build on nights and weekends, and why most of it stays local.</p>
         </div>
         <a class="section-link" href="https://x.com/LifanBuilds">Say hello on X (@LifanBuilds) ↗</a>
       </div>
@@ -772,23 +770,22 @@
       <div class="about-grid">
         <div class="about-prose">
           <div class="about-art-row" aria-hidden="true">
-            <img class="about-avatar-img" src="assets/lifan-avatar-pixel.png" width="84" height="84" alt="">
-            <img class="about-party-img" src="assets/party-sprites-pixel.png" width="168" height="84" alt="">
+            <img class="about-avatar-img" src="assets/lifan-avatar-pixel.png" width="88" height="88" alt="">
           </div>
           <p>
-            I’m a Staff Engineer at Google building local-first software, agent systems, and the evaluation loops that make autonomous workflows&nbsp;trustworthy.
+            I’m a Staff Engineer at Google in Seattle. Outside work, I build local Mac utilities, multi-agent harnesses, and snow or gear trackers whenever existing apps get bloated, overpriced, or start cramming ads onto my screens.
           </p>
           <p>
-            I focus on practical automation with clear boundaries: keep personal data on the user’s machine, measure every agent action with token and latency receipts, and require human approval before mutating external state.
+            My defaults are simple: keep private data on your own machine, verify speed and token wins with real runs instead of slides, and stop for human approval before anything touches an external account.
           </p>
           <div class="stack-pills" aria-hidden="true">
+            <span class="stack-pill">Go</span>
             <span class="stack-pill">Python</span>
             <span class="stack-pill">TypeScript</span>
-            <span class="stack-pill">Next.js</span>
-            <span class="stack-pill">FastAPI</span>
-            <span class="stack-pill">macOS AX / Swift</span>
+            <span class="stack-pill">Swift / macOS AX</span>
             <span class="stack-pill">Chrome MV3 / CDP</span>
-            <span class="stack-pill">Claude Code &amp; Codex</span>
+            <span class="stack-pill">Gemini / Antigravity</span>
+            <span class="stack-pill">Codex</span>
           </div>
         </div>
 

@@ -18,7 +18,7 @@
       (() => {
         try {
           const saved = localStorage.getItem("clifan-theme");
-          const dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const dark = saved !== "light";
           document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
         } catch {}
       })();
@@ -523,7 +523,9 @@
         .telemetry-svg { min-width: 560px; }
       }
     </style>
-  </head>
+    <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+</head>
   <body>
     <div class="shell">
       <header class="topbar">

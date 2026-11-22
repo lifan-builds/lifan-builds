@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" role="img" aria-label="Multi-agent routing and harnesses">
+  <defs>
+    <linearGradient id="bg-agents" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1422"/>
+      <stop offset="100%" stop-color="#081018"/>
+    </linearGradient>
+    <radialGradient id="glow-agents" cx="25%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#66a6ff" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#66a6ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="260" height="120" fill="url(#bg-agents)"/>
+  <rect width="260" height="120" fill="url(#glow-agents)"/>
+  <rect x="12" y="34" width="80" height="52" rx="7" fill="#112031" stroke="#66a6ff" stroke-width="1.5"/>
+  <text x="52" y="55" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="8.6" font-weight="600" fill="#e8f1f8">GEMINI 4</text>
+  <text x="52" y="70" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="7.4" fill="#93c5fd">Orchestrator</text>
+  <path d="M92 60 C110 60, 114 24, 132 24" fill="none" stroke="#66a6ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M92 60 L132 60" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M92 60 C110 60, 114 96, 132 96" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="132" y="12" width="116" height="24" rx="5" fill="#0f1d2b" stroke="#2c4966" stroke-width="1.2"/>
+  <circle cx="143" cy="24" r="2.8" fill="#66a6ff"/>
+  <text x="151" y="27" font-family="JetBrains Mono, ui-monospace, monospace" font-size="7.8" fill="#e8f1f8">Chrome MV3 · bg</text>
+  <rect x="132" y="48" width="116" height="24" rx="5" fill="#0f1d2b" stroke="#26544a" stroke-width="1.2"/>
+  <circle cx="143" cy="60" r="2.8" fill="#34d399"/>
+  <text x="151" y="63" font-family="JetBrains Mono, ui-monospace, monospace" font-size="7.8" fill="#e8f1f8">macOS AX · 0px</text>
+  <rect x="132" y="84" width="116" height="24" rx="5" fill="#0f1d2b" stroke="#5a4522" stroke-width="1.2"/>
+  <circle cx="143" cy="96" r="2.8" fill="#fbbf24"/>
+  <text x="151" y="99" font-family="JetBrains Mono, ui-monospace, monospace" font-size="7.8" fill="#e8f1f8">codex · --allow</text>
+</svg>
