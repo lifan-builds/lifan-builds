@@ -212,7 +212,7 @@ const BUILD_DATA = {
       <text x="443" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">NET ROI +$1,145</text>
       <text x="443" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">0 Bank Logins · JSON</text>`,
     metrics: [
-      { val: '18★ GitHub', lbl: 'Source-available' },
+      { val: '18★ GitHub', lbl: 'Open source' },
       { val: '0 logins', lbl: 'No Plaid or bank auth' },
       { val: 'JSON export', lbl: 'Portable user data' }
     ],
