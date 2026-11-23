@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-21T08:00:00Z</updated>
+  <updated>2026-11-22T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-22): Lean and Mathlib communities certify Alpöge&#x27;s… · OpenRouter off-boards three inference providers and…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-22.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-22.html</id>
+    <updated>2026-11-22T08:00:00Z</updated>
+    <summary>Independent verification replaces claims across math, inference security, and model benchmarks: the Lean and Mathlib communities certify Levent Alpöge&#x27;s 17M-line Riemann Hypothesis proof across…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-21): Thinking Machines Lab open-sources Inkling 2 Mini… · Dragos canary-token audit uncovers three AI…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-21.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-18.html</id>
     <updated>2026-10-18T08:00:00Z</updated>
     <summary>Human attention, retrieval economics, and reliable access matter more today than another round of model leaderboard claims.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-17): Claude Code’s team cuts review loops while reducing… · Goodfire argues native neurons deserve another look…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-17.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-17.html</id>
-    <updated>2026-10-17T08:00:00Z</updated>
-    <summary>Today’s most useful developments explain how to review, understand, and contain increasingly capable agents, alongside a fresh DeepSeek release.</summary>
   </entry>
 </feed>

@@ -103,11 +103,11 @@ const BUILD_DATA = {
     art: 'clearcut/cover.jpg',
     repo: 'https://clearcut.clifan.com/',
     repoLabel: 'Launch Clearcut Hub ↗',
-    summary: 'Multi-catalog specialist gear deal engine powering 5 worlds—Snow, Cycling, Tools, Camp, and Water—across 91 retailers.',
+    summary: 'Multi-catalog specialist gear deal engine powering 5 worlds—Snow, Cycling, Tools, Camp, and Water—across 100 retailers.',
     pillars: ['local', 'eval'],
     diagram: `
       <rect x="6" y="12" width="114" height="44" rx="6" fill="#13202c" stroke="#60a5fa" stroke-width="1.4"/>
-      <text x="63" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#93c5fd">91 SPECIALISTS</text>
+      <text x="63" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.6" font-weight="600" fill="#93c5fd">100 SPECIALISTS</text>
       <text x="63" y="43" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.8" fill="#cbd5e1">Shopify · WC · XO</text>
       <line x1="120" y1="34" x2="164" y2="34" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="164" y="12" width="154" height="44" rx="6" fill="#13202c" stroke="#f59e0b" stroke-width="1.5"/>
@@ -122,10 +122,10 @@ const BUILD_DATA = {
       <text x="441" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#5eead4">Tideline (Water · 11)</text>`,
     metrics: [
       { val: '5 worlds', lbl: 'Snow · Bike · Tool · Camp · Water' },
-      { val: '91 shops', lbl: 'Daily retailer snapshots' },
-      { val: '1,409 tests', lbl: 'Variant & junk gates' }
+      { val: '100 shops', lbl: 'Daily retailer snapshots' },
+      { val: '1,412 tests', lbl: 'Variant & junk gates' }
     ],
-    trace: `<span class="tok-comment"># Multi-catalog variant-bound clearance query</span>\n<span class="tok-cmd">$ clearcut-hub</span> serve --port 8760\n✓ 1,409 offline checks passed · 5 gear worlds ready`
+    trace: `<span class="tok-comment"># Multi-catalog variant-bound clearance query</span>\n<span class="tok-cmd">$ clearcut-hub</span> serve --port 8760\n✓ 1,412 offline checks passed · 5 gear worlds ready`
   },
   echoframe: {
     name: 'EchoFrame',
@@ -224,7 +224,7 @@ const BUILD_DATA = {
     href: 'ai-builder-brief/',
     art: 'ai-builder-brief/cover-wide.jpg',
     repo: 'journal/ai-builder-brief/',
-    repoLabel: 'Browse 68 daily briefs →',
+    repoLabel: 'Browse 69 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
     pillars: ['ml', 'agents', 'eval'],
     diagram: `
@@ -238,13 +238,13 @@ const BUILD_DATA = {
       <line x1="334" y1="34" x2="380" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="380" y="12" width="134" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
       <text x="447" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">TOP 10 DAILY BRIEF</text>
-      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">68 Published Editions</text>`,
+      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">69 Published Editions</text>`,
     metrics: [
-      { val: '68 briefs', lbl: 'Published daily archive' },
+      { val: '69 briefs', lbl: 'Published daily archive' },
       { val: '10 stories', lbl: 'Per daily edition' },
       { val: '100% linked', lbl: 'Primary commits & papers' }
     ],
-    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-21.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-21.html`
+    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-22.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-22.html`
   },
   nitan: {
     name: 'Nitan Podcast (泥潭播客)',
@@ -673,7 +673,7 @@ const COVER_TICKER_DATA = {
     links: [
       ['faster-mac-use/', '114× token benchmark'],
       ['close-snow/', '2.37" SNOTEL MAE'],
-      ['journal/ai-builder-brief/', '68 primary-source briefs']
+      ['journal/ai-builder-brief/', '69 primary-source briefs']
     ]
   }
 };
