@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-22T08:00:00Z</updated>
+  <updated>2026-11-23T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-23): Z.ai launches GLM-5.4, looping 28 layers twice… · OpenAI Chief Scientist publishes internal…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-23.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-23.html</id>
+    <updated>2026-11-23T08:00:00Z</updated>
+    <summary>Looped architectures, agent runtimes, and pre-install security gates dominate Monday&#x27;s releases: Z.ai ships `GLM-5.4` by looping 28 layers of its 750B base twice with…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-22): Lean and Mathlib communities certify Alpöge&#x27;s… · OpenRouter off-boards three inference providers and…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-22.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-19.html</id>
     <updated>2026-10-19T08:00:00Z</updated>
     <summary>Agent progress is making credential custody, scheduling overhead, deployment constraints, and inspectable work more consequential than headline benchmark gains.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-18): Anthropic documents agent management becoming a… · DeepSeek opens search and page retrieval as…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-18.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-18.html</id>
-    <updated>2026-10-18T08:00:00Z</updated>
-    <summary>Human attention, retrieval economics, and reliable access matter more today than another round of model leaderboard claims.</summary>
   </entry>
 </feed>
