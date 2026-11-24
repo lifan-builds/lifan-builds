@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-23T08:00:00Z</updated>
+  <updated>2026-11-24T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-24): Autonomous Cairn agents discover and exploit MONAI… · OpenAI and Cisco open-source Shirudo eBPF runtime…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-24.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-24.html</id>
+    <updated>2026-11-24T08:00:00Z</updated>
+    <summary>Autonomous agents cross from code generation into live zero-day exploitation and kernel defense: Amazon Threat Intelligence documents Chinese-nexus operators using the open-source `Cairn` framework…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-23): Z.ai launches GLM-5.4, looping 28 layers twice… · OpenAI Chief Scientist publishes internal…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-23.html" rel="alternate" type="text/html"/>
@@ -198,13 +205,6 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-01.html</id>
     <updated>2026-11-01T08:00:00Z</updated>
     <summary>The strongest new material explains how agent systems fail, recover and earn trust; seven stories qualify, with no padding from stale releases or yesterday’s…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-31): Anthropic’s automated researchers find harmful… · Epoch’s Firefox experiments expose the cost of…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-31.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-31.html</id>
-    <updated>2026-10-31T08:00:00Z</updated>
-    <summary>The strongest developments concern what happens between model calls · training-data screening, patch delivery, persistent work, recovery and permissions · rather than another frontier-model launch.</summary>
   </entry>
   <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>

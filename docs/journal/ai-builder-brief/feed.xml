@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-23T08:00:00Z</updated>
+  <updated>2026-11-24T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-24): Autonomous Cairn agents discover and exploit MONAI… · OpenAI and Cisco open-source Shirudo eBPF runtime…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-24.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-24.html</id>
+    <updated>2026-11-24T08:00:00Z</updated>
+    <summary>Autonomous agents cross from code generation into live zero-day exploitation and kernel defense: Amazon Threat Intelligence documents Chinese-nexus operators using the open-source `Cairn` framework…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-23): Z.ai launches GLM-5.4, looping 28 layers twice… · OpenAI Chief Scientist publishes internal…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-23.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-20.html</id>
     <updated>2026-10-20T08:00:00Z</updated>
     <summary>Better evaluation, cheaper agent models, and more portable compute are expanding builders’ options, while memory fidelity and exposed agent infrastructure reveal the costs that…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-19): OpenCode discloses a Console breach that may expose… · Superlite profiles agent overhead and trades review…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-19.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-19.html</id>
-    <updated>2026-10-19T08:00:00Z</updated>
-    <summary>Agent progress is making credential custody, scheduling overhead, deployment constraints, and inspectable work more consequential than headline benchmark gains.</summary>
   </entry>
 </feed>
