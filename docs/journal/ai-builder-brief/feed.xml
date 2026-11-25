@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-24T08:00:00Z</updated>
+  <updated>2026-11-25T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-25): OpenAI publishes Lean-checked 9/4… · PrismML ships Apache-2.0 Ternary Bonsai 2.5 27B at…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-25.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-25.html</id>
+    <updated>2026-11-25T08:00:00Z</updated>
+    <summary>Frontier math drops, ultra-compact ternary coding weights, and sandbox-isolation limits anchor today&#x27;s engineering cycle: OpenAI posts eight November 24 Lean-backed preprints led by a…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-24): Autonomous Cairn agents discover and exploit MONAI… · OpenAI and Cisco open-source Shirudo eBPF runtime…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-24.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-21.html</id>
     <updated>2026-10-21T08:00:00Z</updated>
     <summary>The most useful advances concern what agents can reach, what their scores actually measure, and which decisions deserve human attention · not just another model’s headline…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-20): Husain and Saha show why default judge thresholds… · DeepSeek releases DeepInfer and explains the…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-20.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-20.html</id>
-    <updated>2026-10-20T08:00:00Z</updated>
-    <summary>Better evaluation, cheaper agent models, and more portable compute are expanding builders’ options, while memory fidelity and exposed agent infrastructure reveal the costs that…</summary>
   </entry>
 </feed>

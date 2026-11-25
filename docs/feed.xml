@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-24T08:00:00Z</updated>
+  <updated>2026-11-25T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-25): OpenAI publishes Lean-checked 9/4… · PrismML ships Apache-2.0 Ternary Bonsai 2.5 27B at…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-25.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-25.html</id>
+    <updated>2026-11-25T08:00:00Z</updated>
+    <summary>Frontier math drops, ultra-compact ternary coding weights, and sandbox-isolation limits anchor today&#x27;s engineering cycle: OpenAI posts eight November 24 Lean-backed preprints led by a…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-24): Autonomous Cairn agents discover and exploit MONAI… · OpenAI and Cisco open-source Shirudo eBPF runtime…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-24.html" rel="alternate" type="text/html"/>
@@ -198,13 +205,6 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-02.html</id>
     <updated>2026-11-02T08:00:00Z</updated>
     <summary>Better measurement beats bigger claims today: eight stories qualify, led by an experiment exposing what short-answer benchmarks miss, alongside LongCat’s delivered API upgrade and…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-11-01): Jepsen finds 96 ParticleDB failures and challenges… · DeepSeek opens a proactive-agent prototype that…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-01.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-11-01.html</id>
-    <updated>2026-11-01T08:00:00Z</updated>
-    <summary>The strongest new material explains how agent systems fail, recover and earn trust; seven stories qualify, with no padding from stale releases or yesterday’s…</summary>
   </entry>
   <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>
