@@ -224,7 +224,7 @@ const BUILD_DATA = {
     href: 'ai-builder-brief/',
     art: 'ai-builder-brief/cover-wide.jpg',
     repo: 'journal/ai-builder-brief/',
-    repoLabel: 'Browse 72 daily briefs →',
+    repoLabel: 'Browse 73 daily briefs →',
     summary: 'Source-linked daily AI engineering developments and builder field notes distilled into evidence-gated Top 10 briefs with primary receipts.',
     pillars: ['ml', 'agents', 'eval'],
     diagram: `
@@ -238,13 +238,13 @@ const BUILD_DATA = {
       <line x1="334" y1="34" x2="380" y2="34" stroke="#34d399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="380" y="12" width="134" height="44" rx="6" fill="#13202c" stroke="#34d399" stroke-width="1.5"/>
       <text x="447" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.2" font-weight="600" fill="#5eead4">TOP 10 DAILY BRIEF</text>
-      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">72 Published Editions</text>`,
+      <text x="447" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.2" fill="#cbd5e1">73 Published Editions</text>`,
     metrics: [
-      { val: '72 briefs', lbl: 'Published daily archive' },
+      { val: '73 briefs', lbl: 'Published daily archive' },
       { val: '10 stories', lbl: 'Per daily edition' },
       { val: '100% linked', lbl: 'Primary commits & papers' }
     ],
-    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-25.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-25.html`
+    trace: `<span class="tok-comment"># Evidence gate: every claim requires primary artifact</span>\n<span class="tok-cmd">verify_brief</span>(<span class="tok-str">"2026-11-26.md"</span>) -> 10/10 primary links verified\n✓ Published to clifan.com/journal/ai-builder-brief/2026-11-26.html`
   },
   nitan: {
     name: 'Nitan Podcast (泥潭播客)',
@@ -673,7 +673,7 @@ const COVER_TICKER_DATA = {
     links: [
       ['faster-mac-use/', '114× token benchmark'],
       ['close-snow/', '2.37" SNOTEL MAE'],
-      ['journal/ai-builder-brief/', '72 primary-source briefs']
+      ['journal/ai-builder-brief/', '73 primary-source briefs']
     ]
   }
 };

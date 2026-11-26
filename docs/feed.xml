@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-25T08:00:00Z</updated>
+  <updated>2026-11-26T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-26): Google Research Cogentic drops six preprints led by… · Anthropic migrates its Messages API from Python to…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-26.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-26.html</id>
+    <updated>2026-11-26T08:00:00Z</updated>
+    <summary>Verification bottlenecks, mandatory MCP gateways, and multi-tenant inference bugs define today&#x27;s build cycle: Google Research&#x27;s `Cogentic` drops six November 25 complexity and number-theory preprints…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-25): OpenAI publishes Lean-checked 9/4… · PrismML ships Apache-2.0 Ternary Bonsai 2.5 27B at…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-25.html" rel="alternate" type="text/html"/>
@@ -198,13 +205,6 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-03.html</id>
     <updated>2026-11-03T08:00:00Z</updated>
     <summary>The most consequential work explains how to inspect, orchestrate and constrain AI systems, while Anthropic’s filing exposes the cost and uncertainty behind rapid capability…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-11-02): Bifocal tests expose long-reasoning failures hidden… · Meituan delivers LongCat-2.5 API access while…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-02.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-11-02.html</id>
-    <updated>2026-11-02T08:00:00Z</updated>
-    <summary>Better measurement beats bigger claims today: eight stories qualify, led by an experiment exposing what short-answer benchmarks miss, alongside LongCat’s delivered API upgrade and…</summary>
   </entry>
   <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>

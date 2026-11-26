@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-25T08:00:00Z</updated>
+  <updated>2026-11-26T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-26): Google Research Cogentic drops six preprints led by… · Anthropic migrates its Messages API from Python to…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-26.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-26.html</id>
+    <updated>2026-11-26T08:00:00Z</updated>
+    <summary>Verification bottlenecks, mandatory MCP gateways, and multi-tenant inference bugs define today&#x27;s build cycle: Google Research&#x27;s `Cogentic` drops six November 25 complexity and number-theory preprints…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-25): OpenAI publishes Lean-checked 9/4… · PrismML ships Apache-2.0 Ternary Bonsai 2.5 27B at…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-25.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-22.html</id>
     <updated>2026-10-22T08:00:00Z</updated>
     <summary>Compromised AI tooling and internet-scale vulnerability disclosures make operational trust urgent, while new evaluation and small-model experiments expose what headline capability scores miss.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-21): Anthropic shows how agents can shrink attack… · Preference Model’s audit shows Terminal-Bench…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-21.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-21.html</id>
-    <updated>2026-10-21T08:00:00Z</updated>
-    <summary>The most useful advances concern what agents can reach, what their scores actually measure, and which decisions deserve human attention · not just another model’s headline…</summary>
   </entry>
 </feed>
