@@ -376,6 +376,35 @@ const BUILD_DATA = {
       { val: '120 resorts', lbl: 'All Ikon & Epic · $0 free' }
     ],
     trace: `<span class="tok-comment"># Out-of-sample 6-model + USDA SNOTEL storm verification</span>\n<span class="tok-cmd">$ python3</span> benchmarks/run_benchmarks.py\n✓ 2.37" storm MAE (vs OpenSnow 4.01") · 3.23 mtn SLR MAE · 72.4% ±1σ`
+  },
+  poe2brain: {
+    name: 'poe2brain',
+    route: 'clifan.com/poe2brain/',
+    href: 'poe2brain/',
+    art: 'poe2brain/cover.jpg',
+    repo: 'https://poe2brain.clifan.com/',
+    repoLabel: 'Launch poe2brain.clifan.com ↗',
+    summary: 'Agent-native Path of Exile 2 (Patch 0.5.5) intelligence engine pairing headless LuaJIT PoB2 dewatering, offline SQLite ground truth, 353 sleeper builds, and 42 MCP tools.',
+    pillars: ['local', 'agents', 'eval'],
+    diagram: `
+      <rect x="6" y="10" width="118" height="48" rx="6" fill="#0b0d12" stroke="#F0C774" stroke-width="1.5"/>
+      <text x="65" y="29" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#F0C774">0.5.5 SQLITE</text>
+      <text x="65" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#F2F0EA">769 Popups · 49 Rules</text>
+      <line x1="124" y1="34" x2="162" y2="34" stroke="#F0C774" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="162" y="10" width="160" height="48" rx="6" fill="#0b0d12" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="242" y="29" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" fill="#38BDF8">HEADLESS LUAJIT POB2</text>
+      <text x="242" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#F2F0EA">Dewater · Bottlenecks</text>
+      <path d="M322 34 L366 15 M322 34 L366 53" stroke="#34D399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
+      <rect x="366" y="4" width="148" height="22" rx="4" fill="#0b0d12" stroke="#34D399" stroke-width="1.2"/>
+      <text x="440" y="18" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#34D399">42 MCP + Live Web App</text>
+      <rect x="366" y="42" width="148" height="22" rx="4" fill="#0b0d12" stroke="#F0C774" stroke-width="1.2"/>
+      <text x="440" y="56" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#F0C774">0-Error Filter · &lt;=50c Regex</text>`,
+    metrics: [
+      { val: '42 tools', lbl: '1:1 MCP + CLI + Web' },
+      { val: '353 builds', lbl: 'Pre-audited 0.5.5 corpus' },
+      { val: '0 POESESSID', lbl: 'Strict GGG ToS boundary' }
+    ],
+    trace: `<span class="tok-comment"># 1-second dewatered sleeper build search (Patch 0.5.5)</span>\n<span class="tok-cmd">$ uv run poe2</span> ninja search --preset sleeper --limit 3\n✓ popyj Pathfinder 15.15M · Noxious_Fumes_ 5.65M · EightChallenge 7.11M`
   }
 };
 

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>poe2brain — Patch 0.5.5 Path of Exile 2 Intelligence Engine | Lifan Builds</title>
+  <meta name="description" content="Open-source Path of Exile 2 (Patch 0.5.5) intelligence engine pairing headless LuaJIT PoB2 dewatering, 769 official popups, 353 audited sleeper builds, and 42 MCP tools.">
+  <link rel="canonical" href="https://clifan.com/poe2brain/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <meta property="og:title" content="poe2brain — Real Path of Exile 2 (0.5.5) Math &amp; Headless PoB2 for Players &amp; AI Agents">
+  <meta property="og:description" content="Zero PoE1 hallucinations, zero POESESSID. Live headless PoB2 dewatering, 353 sleeper builds, <=50-char waystone regex, and 0-error loot filters across 42 MCP tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clifan.com/poe2brain/">
+  <meta property="og:image" content="https://clifan.com/poe2brain/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="poe2brain — Real Path of Exile 2 (0.5.5) Math &amp; Headless PoB2">
+  <meta name="twitter:description" content="42 MCP tools + CLI + hosted web playground for Patch 0.5.5 Forbidden Rites. Open source under GPL-3.0.">
+  <meta name="twitter:image" content="https://clifan.com/poe2brain/og.jpg">
+  <script>try{if(localStorage.getItem('clifan-theme')!=='light')document.documentElement.setAttribute('data-theme','dark');}catch(_){}</script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="page.css">
+  <script type="module" src="../site.js"></script>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../" aria-label="Back to Lifan Builds home">
+        <span class="pixel-mark" aria-hidden="true">LB</span>
+        <span>Lifan Builds</span>
+        <span class="wordmark-role">poe2brain</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="../#quests">Builds</a>
+        <a href="../journal/">Journal</a>
+        <a href="../#about">About</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span data-theme-label>Light</span>
+          <kbd aria-hidden="true">T</kbd>
+        </button>
+        <a class="nav-button" href="https://poe2brain.clifan.com/">Live App ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main wrap">
+    <section class="p2-hero-grid" aria-labelledby="p2-hero-heading">
+      <div>
+        <p class="status-line">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span>GPL-3.0 OPEN SOURCE · PATCH 0.5.5 · 42 MCP TOOLS + LIVE WEB</span>
+        </p>
+        <h1 id="p2-hero-heading">Real PoE2 math. <span class="p2-accent">Zero PoE1&nbsp;hallucinations.</span></h1>
+        <p class="subpage-lead">Headless LuaJIT Path of Building 2 dewatering, offline 0.5.5 SQLite ground truth, 353 sleeper builds, and 0-error loot filters—in your browser or MCP&nbsp;agent.</p>
+
+        <div class="subpage-actions">
+          <a class="button primary" href="https://poe2brain.clifan.com/">Open Live Playground ↗</a>
+          <a class="button secondary" href="https://github.com/lifan-builds/poe2brain">GitHub (GPL-3.0) ↗</a>
+        </div>
+
+        <div class="p2-install-bar" aria-label="Bootstrap poe2brain command">
+          <span class="p2-install-prompt" aria-hidden="true">$</span>
+          <code class="p2-install-code" id="p2-clone-cmd">uv run poe2 bootstrap pob2 &amp;&amp; uv run poe2 ninja search --preset sleeper</code>
+          <button type="button" class="p2-copy-btn" id="p2-copy-btn" data-copied="false">Copy</button>
+        </div>
+      </div>
+
+      <aside class="p2-bench-panel" aria-labelledby="p2-bench-heading">
+        <div class="p2-bench-header">
+          <strong class="p2-bench-title" id="p2-bench-heading">PoE2 0.5.5 Ground-Truth Coverage</strong>
+          <span class="p2-bench-pill">0 PoE1 folklore traps</span>
+        </div>
+
+        <div class="p2-bars" role="list" aria-label="Comparison of verified Patch 0.5.5 rules and tooling coverage">
+          <div class="p2-bar-row is-winner" role="listitem">
+            <span class="p2-bar-label">poe2brain (0.5.5)</span>
+            <div class="p2-bar-track" aria-hidden="true"><div class="p2-bar-fill is-win" style="width: 100%"></div></div>
+            <span class="p2-bar-val">42 tools · PoB2</span>
+          </div>
+          <div class="p2-bar-row" role="listitem">
+            <span class="p2-bar-label">Static Wiki Lookups</span>
+            <div class="p2-bar-track" aria-hidden="true"><div class="p2-bar-fill is-second" style="width: 34%"></div></div>
+            <span class="p2-bar-val">No live math</span>
+          </div>
+          <div class="p2-bar-row" role="listitem">
+            <span class="p2-bar-label">Generic LLM Prompt</span>
+            <div class="p2-bar-track" aria-hidden="true"><div class="p2-bar-fill" style="width: 12%"></div></div>
+            <span class="p2-bar-val">PoE1 traps</span>
+          </div>
+        </div>
+
+        <div class="p2-bench-foot">
+          <span>769 GGG popups · 49 rules · 353 pre-audited builds</span>
+          <a href="https://poe2brain.clifan.com/">Try live workbench ↗</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="subpage-workbench" aria-label="Interactive poe2brain telemetry workbench">
+      <div class="subpage-toolbar">
+        <div class="subpage-tabs" role="tablist" aria-label="Select poe2brain showcase view">
+          <button type="button" class="subpage-tab" id="p2-tab-dewater" role="tab" aria-selected="true" tabindex="0" data-mode="dewater">1 · PoB2 Dewater Audit</button>
+          <button type="button" class="subpage-tab" id="p2-tab-sleeper" role="tab" aria-selected="false" tabindex="-1" data-mode="sleeper">2 · 353 Sleeper Builds</button>
+          <button type="button" class="subpage-tab" id="p2-tab-regex" role="tab" aria-selected="false" tabindex="-1" data-mode="regex">3 · Regex &amp; 2AM Filter</button>
+        </div>
+        <span class="subpage-meta" id="p2-meta">Headless LuaJIT 2.1 · PathOfBuilding-PoE2 (tree 0_5)</span>
+      </div>
+
+      <div class="subpage-stage-box" aria-hidden="true">
+        <svg class="p2-stage-svg" viewBox="0 0 640 94">
+          <rect x="1" y="1" width="638" height="92" rx="8" fill="#0B0D12" stroke="#243342" stroke-width="1.5"/>
+          <rect x="1" y="1" width="638" height="26" rx="8" fill="#141821"/>
+          <circle cx="14" cy="14" r="3.5" fill="#FB7185"/>
+          <circle cx="25" cy="14" r="3.5" fill="#F0C774"/>
+          <circle cx="36" cy="14" r="3.5" fill="#34D399"/>
+          <text x="50" y="17" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#FFF8E7" id="p2-svg-window">poe2brain.clifan.com — Headless PoB2 Dewater Audit · Patch 0.5.5</text>
+          <text x="626" y="17" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700" fill="#F0C774" id="p2-svg-pill">zero POESESSID</text>
+
+          <rect x="16" y="38" width="186" height="44" rx="5" fill="#12151C" stroke="#FB7185" stroke-width="1.1"/>
+          <text x="109" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#FDA4AF">RAW POB-WARRIOR DPS</text>
+          <text x="109" y="71" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#FECDD3">18,038,361 (+219%)</text>
+
+          <line x1="202" y1="60" x2="232" y2="60" stroke="#F0C774" stroke-width="1.6" stroke-dasharray="4 3"/>
+
+          <rect x="232" y="38" width="194" height="44" rx="5" fill="#12151C" stroke="#F0C774" stroke-width="1.4"/>
+          <text x="329" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F0C774">SUSTAINABLE PINNACLE</text>
+          <text x="329" y="71" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#FFF8E7">5,652,710 Real DPS</text>
+
+          <line x1="426" y1="60" x2="454" y2="60" stroke="#34D399" stroke-width="1.6" stroke-dasharray="4 3"/>
+
+          <rect x="454" y="38" width="170" height="44" rx="5" fill="#12151C" stroke="#34D399" stroke-width="1.2"/>
+          <text x="539" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#34D399">AUTO DIAGNOSIS</text>
+          <text x="539" y="71" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#E2E8F0">Top-5 Bottlenecks ✓</text>
+        </svg>
+
+        <div class="subpage-stage-top">
+          <strong id="p2-title">Dewatered Pinnacle Audit · Stripping Fake Shock, Flasks &amp; Non-Boss Configs</strong>
+          <span id="p2-badge">LuaJIT PoB2 · 1:1 MCP + CLI</span>
+        </div>
+        <pre class="subpage-stage-pre" id="p2-pre">CHARACTER          ASCENDANCY           SKILL               RAW DPS      REAL PINNACLE   EHP     MOVE
+popyj              Pathfinder           Ice Shot            19,551,460   15,150,400      29,631  1.99x
+Noxious_Fumes_     Acolyte of Chayula   Poisonburst Arrow   18,038,361    5,652,710      36,369  1.71x
+EightChallenge...  Shaman               Spark                9,419,517    7,113,825      24,586  1.98x</pre>
+      </div>
+    </section>
+
+    <figure class="p2-cover-figure">
+      <img src="cover.jpg" width="1500" height="600" alt="poe2brain obsidian and molten gold brand plate featuring the passive astrolabe emblem and Patch 0.5.5 intelligence highlights">
+      <figcaption class="p2-cover-caption">
+        <span>Hosted bilingual web workbench at poe2brain.clifan.com + 42 local MCP tools for Claude, Cursor, Antigravity, and Cherry Studio.</span>
+        <a href="https://poe2brain.clifan.com/">Launch web app ↗</a>
+      </figcaption>
+    </figure>
+
+    <section class="subpage-features" aria-label="Core poe2brain architecture">
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0B0D12" stroke="#243342"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#12151C" stroke="#F0C774"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#F0C774">SQLITE + FTS5</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F2F0EA">769 Popups · 49 Rules</text>
+          <rect x="164" y="14" width="146" height="48" rx="4" fill="#12151C" stroke="#34D399"/>
+          <text x="237" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34D399">EN / 简体 / 繁體</text>
+          <text x="237" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F2F0EA">23 Ascendancies</text>
+        </svg>
+        <h2>Patch 0.5.5 anti-hallucination truth</h2>
+        <p>Pins every answer to unpacked SQLite data—blocking PoE1 traps like 75% Block caps, Crafting Benches, and removed 0.4&nbsp;Omens.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0B0D12" stroke="#243342"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#12151C" stroke="#38BDF8"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#38BDF8">HEADLESS POB2</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F2F0EA">LuaJIT JSON-RPC</text>
+          <rect x="164" y="14" width="146" height="48" rx="4" fill="#12151C" stroke="#F0C774"/>
+          <text x="237" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#F0C774">SECURABLE TRADE2</text>
+          <text x="237" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F2F0EA">+20% Qual + Runes</text>
+        </svg>
+        <h2>Headless PoB2 &amp; trade ranking</h2>
+        <p>Audits real Pinnacle DPS, diagnoses top bottlenecks, filters whisper price-fixers, and ranks Instant Buyout upgrades by real PoB2&nbsp;gain.</p>
+      </article>
+
+      <article class="subpage-feature-card">
+        <svg viewBox="0 0 320 76" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="319" height="75" rx="6" fill="#0B0D12" stroke="#243342"/>
+          <rect x="10" y="14" width="142" height="48" rx="4" fill="#12151C" stroke="#34D399"/>
+          <text x="81" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#34D399">&lt;=50C REGEX</text>
+          <text x="81" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F2F0EA">0–6 Revive Schedule</text>
+          <rect x="164" y="14" width="146" height="48" rx="4" fill="#12151C" stroke="#FB7185"/>
+          <text x="237" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" fill="#FDA4AF">7-TRAP FILTER</text>
+          <text x="237" y="49" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#F2F0EA">CVD · 2AM Audio</text>
+        </svg>
+        <h2>Regex &amp; 2AM filter studio</h2>
+        <p>Compiles build-aware Waystone stash regexes under 50 characters and generates WCAG/CVD-safe, zero-crash PoE2 loot filters with 2AM&nbsp;chimes.</p>
+      </article>
+    </section>
+
+    <p class="p2-scope-note">
+      <strong>Scope &amp; ToS boundary:</strong> Strictly out-of-game calculation and public-API advisor. Never collects <code>POESESSID</code>, reads game memory, or automates whispers/trades. Inspired by <code>exilemoulei/pob4agents</code> (PoE1); built clean-room for PoE2 under <code>GPL-3.0-only</code>.
+    </p>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span><a href="../">← Back to Lifan Builds (clifan.com)</a></span>
+    <div class="footer-links">
+      <a href="https://poe2brain.clifan.com/">Live Web App ↗</a>
+      <a href="https://github.com/lifan-builds/poe2brain">GitHub Repo ↗</a>
+      <a href="https://github.com/lifan-builds/poe2brain/blob/main/docs/zh/QUICKSTART_WINDOWS.md">Windows 中文指南 ↗</a>
+      <a href="https://x.com/LifanBuilds">X ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const MODES = {
+        dewater: {
+          window: "poe2brain.clifan.com — Headless PoB2 Dewater Audit · Patch 0.5.5",
+          pill: "zero POESESSID",
+          title: "Dewatered Pinnacle Audit · Stripping Fake Shock, Flasks & Non-Boss Configs",
+          badge: "LuaJIT PoB2 · 1:1 MCP + CLI",
+          meta: "Headless LuaJIT 2.1 · PathOfBuilding-PoE2 (tree 0_5)",
+          pre: `CHARACTER          ASCENDANCY           SKILL               RAW DPS      REAL PINNACLE   EHP     MOVE\npopyj              Pathfinder           Ice Shot            19,551,460   15,150,400      29,631  1.99x\nNoxious_Fumes_     Acolyte of Chayula   Poisonburst Arrow   18,038,361    5,652,710      36,369  1.71x\nEightChallenge...  Shaman               Spark                9,419,517    7,113,825      24,586  1.98x`
+        },
+        sleeper: {
+          window: "poe2 ninja search --preset sleeper --limit 3 — Forbidden Rites 0.5.5",
+          pill: "353 pre-audited builds",
+          title: "1-Second Sleeper Build Discovery Across All 23 Ascendancies",
+          badge: "Supports !negation & SSF filters",
+          meta: "Offline corpus + live poe.ninja protobuf & timeline stepping-stone probe",
+          pre: `$ uv run poe2 ninja search --preset sleeper --limit 3\n#1 popyj            Pathfinder           Ice Shot            15.15M DPS   29.6k EHP   1.99x MS\n#2 Noxious_Fumes_   Acolyte of Chayula   Poisonburst Arrow    5.65M DPS   36.4k EHP   1.71x MS\n#3 EightChallenge   Shaman               Spark                7.11M DPS   24.6k EHP   1.98x MS`
+        },
+        regex: {
+          window: "poe2 wiki regex & poe2 filter generate --look 'obsidian gold deuteranopia 2am'",
+          pill: "0 client-crash errors",
+          title: "Build-Aware <=50c Waystone Regex & 2AM CVD-Safe Loot Filter Studio",
+          badge: "7-Trap Validator · 44.1kHz Synth",
+          meta: "0–6 mod revive schedule + WCAG-verified obsidian-gold plates",
+          pre: `SAFE WAYSTONE REGEX (29/50 chars):  !"less recovery|no regen|pen"\nREVIVE SCHEDULE (Patch 0.5.5):      0–1 mod: 5 rev | 4 mods: 2 rev | 6 mods: 0 rev\nLOOT FILTER COMPILER:               32 blocks · 0 errors · obsidian gold · deuteranopia CVD ✓`
+        }
+      };
+
+      const tabs = [...document.querySelectorAll(".subpage-tab")];
+      function select(btn, focus) {
+        tabs.forEach((t) => {
+          const active = t === btn;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        if (focus) btn.focus();
+        const m = MODES[btn.dataset.mode];
+        if (!m) return;
+        document.getElementById("p2-svg-window").textContent = m.window;
+        document.getElementById("p2-svg-pill").textContent = m.pill;
+        document.getElementById("p2-title").textContent = m.title;
+        document.getElementById("p2-badge").textContent = m.badge;
+        document.getElementById("p2-meta").textContent = m.meta;
+        document.getElementById("p2-pre").textContent = m.pre;
+      }
+
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener("click", () => select(btn, false));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            select(tabs[(idx + 1) % tabs.length], true);
+          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            select(tabs[(idx - 1 + tabs.length) % tabs.length], true);
+          }
+        });
+      });
+
+      const copyBtn = document.getElementById("p2-copy-btn");
+      const cmdEl = document.getElementById("p2-clone-cmd");
+      if (copyBtn && cmdEl) {
+        copyBtn.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(cmdEl.textContent.trim());
+            copyBtn.textContent = "✓ Copied";
+            copyBtn.setAttribute("data-copied", "true");
+            setTimeout(() => {
+              copyBtn.textContent = "Copy";
+              copyBtn.setAttribute("data-copied", "false");
+            }, 1800);
+          } catch {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
