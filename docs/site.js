@@ -384,7 +384,7 @@ const BUILD_DATA = {
     art: 'poe2brain/cover.jpg',
     repo: 'https://poe2brain.clifan.com/',
     repoLabel: 'Launch poe2brain.clifan.com ↗',
-    summary: 'Agent-native Path of Exile 2 (Patch 0.5.5) intelligence engine pairing headless LuaJIT PoB2 dewatering, offline SQLite ground truth, 353 sleeper builds, and 42 MCP tools.',
+    summary: 'Agent-native Path of Exile 2 (Patch 0.5.5) intelligence engine pairing headless LuaJIT PoB2 dewatering, offline SQLite ground truth, 353 sleeper builds, and 44 MCP tools.',
     pillars: ['local', 'agents', 'eval'],
     diagram: `
       <rect x="6" y="10" width="118" height="48" rx="6" fill="#0b0d12" stroke="#F0C774" stroke-width="1.5"/>
@@ -396,11 +396,11 @@ const BUILD_DATA = {
       <text x="242" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#F2F0EA">Dewater · Bottlenecks</text>
       <path d="M322 34 L366 15 M322 34 L366 53" stroke="#34D399" stroke-width="1.6" stroke-dasharray="5 4" class="signal-flow-line"/>
       <rect x="366" y="4" width="148" height="22" rx="4" fill="#0b0d12" stroke="#34D399" stroke-width="1.2"/>
-      <text x="440" y="18" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#34D399">42 MCP + Live Web App</text>
+      <text x="440" y="18" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#34D399">44 MCP + Live Web App</text>
       <rect x="366" y="42" width="148" height="22" rx="4" fill="#0b0d12" stroke="#F0C774" stroke-width="1.2"/>
       <text x="440" y="56" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.1" fill="#F0C774">0-Error Filter · &lt;=50c Regex</text>`,
     metrics: [
-      { val: '42 tools', lbl: '1:1 MCP + CLI + Web' },
+      { val: '44 tools', lbl: '1:1 MCP + CLI + Web' },
       { val: '353 builds', lbl: 'Pre-audited 0.5.5 corpus' },
       { val: '0 POESESSID', lbl: 'Strict GGG ToS boundary' }
     ],
