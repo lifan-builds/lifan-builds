@@ -5,17 +5,24 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-26T08:00:00Z</updated>
+  <updated>2026-11-27T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
   <entry>
+    <title>AI Builder Brief (2026-11-27): Datadog open-sources Ephyra, an agentic… · Apache Airflow CVE-2026-120353 exposes worker RCE…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-27.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-27.html</id>
+    <updated>2026-11-27T08:00:00Z</updated>
+    <summary>Verification harnesses, local-inference hardware patches, and production agent guardrails anchor today&#x27;s releases · from Datadog&#x27;s agentic fuzzer and Airflow&#x27;s common.ai RCE to AMD RDNA speedups, CPU…</summary>
+  </entry>
+  <entry>
     <title>AI Builder Brief (2026-11-26): Google Research Cogentic drops six preprints led by… · Anthropic migrates its Messages API from Python to…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-26.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-26.html</id>
     <updated>2026-11-26T08:00:00Z</updated>
-    <summary>Verification bottlenecks, mandatory MCP gateways, and multi-tenant inference bugs define today&#x27;s build cycle: Google Research&#x27;s `Cogentic` drops six November 25 complexity and number-theory preprints…</summary>
+    <summary>Verification bottlenecks, mandatory MCP gateways, and multi-tenant inference bugs define today&#x27;s build cycle: Google Research&#x27;s Cogentic drops six November 25 complexity and number-theory preprints…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-25): OpenAI publishes Lean-checked 9/4… · PrismML ships Apache-2.0 Ternary Bonsai 2.5 27B at…</title>
@@ -29,14 +36,14 @@
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-24.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-24.html</id>
     <updated>2026-11-24T08:00:00Z</updated>
-    <summary>Autonomous agents cross from code generation into live zero-day exploitation and kernel defense: Amazon Threat Intelligence documents Chinese-nexus operators using the open-source `Cairn` framework…</summary>
+    <summary>Autonomous agents cross from code generation into live zero-day exploitation and kernel defense: Amazon Threat Intelligence documents Chinese-nexus operators using the open-source Cairn framework…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-23): Z.ai launches GLM-5.4, looping 28 layers twice… · OpenAI Chief Scientist publishes internal…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-23.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-23.html</id>
     <updated>2026-11-23T08:00:00Z</updated>
-    <summary>Looped architectures, agent runtimes, and pre-install security gates dominate Monday&#x27;s releases: Z.ai ships `GLM-5.4` by looping 28 layers of its 750B base twice with…</summary>
+    <summary>Looped architectures, agent runtimes, and pre-install security gates dominate Monday&#x27;s releases: Z.ai ships GLM-5.4 by looping 28 layers of its 750B base twice with…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-22): Lean and Mathlib communities certify Alpöge&#x27;s… · OpenRouter off-boards three inference providers and…</title>
@@ -50,14 +57,14 @@
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-21.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-21.html</id>
     <updated>2026-11-21T08:00:00Z</updated>
-    <summary>Local looped transformers and supply-chain security collide with machine-checked frontier math: Thinking Machines open-sources 26.4B `Inkling 2 Mini` for 32 GB laptops, Dragos plants…</summary>
+    <summary>Local looped transformers and supply-chain security collide with machine-checked frontier math: Thinking Machines open-sources 26.4B Inkling 2 Mini for 32 GB laptops, Dragos plants…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-20): Google adds on-demand Tool Retrieval to the Gemini… · OpenAI launches GPT-Live-1.1 API with $0.02/minute…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-20.html" rel="alternate" type="text/html"/>
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-20.html</id>
     <updated>2026-11-20T08:00:00Z</updated>
-    <summary>API platforms add stateful cost controls as Google ships Gemini Tool Retrieval and opens `genie-4` to developers, OpenAI introduces `gpt-live-1.1` with $0.02/min WebRTC Standby…</summary>
+    <summary>API platforms add stateful cost controls as Google ships Gemini Tool Retrieval and opens genie-4 to developers, OpenAI introduces gpt-live-1.1 with $0.02/min WebRTC Standby…</summary>
   </entry>
   <entry>
     <title>AI Builder Brief (2026-11-19): Google DeepMind ships Gemini 4 Neon with faster… · Microsoft launches MAI Code 2 and Flash with…</title>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-23.html</id>
     <updated>2026-10-23T08:00:00Z</updated>
     <summary>Machine-checked proofs, revealing agent failures and reusable interfaces matter as much as new models today; read availability and license terms as carefully as capability…</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-22): LiteLLM’s compromised release steals credentials… · PHP’s emergency fixes expose the limits of…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-22.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-22.html</id>
-    <updated>2026-10-22T08:00:00Z</updated>
-    <summary>Compromised AI tooling and internet-scale vulnerability disclosures make operational trust urgent, while new evaluation and small-model experiments expose what headline capability scores miss.</summary>
   </entry>
 </feed>
