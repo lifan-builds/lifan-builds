@@ -56,7 +56,7 @@
       <div class="journal-filter-bar">
         <div class="filter-pills" role="group" aria-label="Filter journal entries">
           <button type="button" class="filter-pill" aria-pressed="true" data-filter="all">All writing</button>
-          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (<span data-thoughts-count>10</span>)</button>
+          <button type="button" class="filter-pill" aria-pressed="false" data-filter="thoughts">Quick thoughts &amp; takes (<span data-thoughts-count>11</span>)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="essays">Essays &amp; build logs (<span data-essays-count>4</span>)</button>
           <button type="button" class="filter-pill" aria-pressed="false" data-filter="briefs">Daily AI Builder Briefs (<span data-brief-count>73</span>)</button>
         </div>
@@ -66,6 +66,41 @@
     <!-- Track 1: Quick Thoughts & Builder Takes (X / Reddit / RedNote 小红书) -->
     <div id="journal-thoughts-section">
       <section class="journal-list wrap" id="thoughts" aria-label="Quick thoughts and community notes from X, Reddit, and RedNote">
+        <article class="long-note thought-card" id="fmu-browser-routing" data-thought-card>
+          <div class="journal-meta">
+            <span>Quick Take · X, Reddit &amp; RedNote (小红书)</span>
+            <div class="thought-meta-right">
+              <div class="lang-switch" role="group" aria-label="Language switch">
+                <button type="button" class="lang-btn" aria-pressed="true" data-lang-btn="en">EN</button>
+                <button type="button" class="lang-btn" aria-pressed="false" data-lang-btn="zh">中文</button>
+              </div>
+              <time datetime="2026-11-26">Nov 2026</time>
+            </div>
+          </div>
+          <div data-lang-pane="en">
+            <h2>A fast browser MCP alone isn’t enough — you need a routing skill</h2>
+            <p>
+              Antigravity’s built-in computer-use harness is pretty rough: it runs in a slow isolated webview that can’t see your logged-in Chrome tabs, and even after installing a fast MCP server, models still fall back to it or open a full browser just to read a YouTube transcript or search Google.
+            </p>
+            <p>
+              I bundled our <code>browser-routing</code> skill right into <code>faster-mac-use</code> as a one-command Antigravity plugin (<code>uvx --from faster-mac-use fmu setup --antigravity</code>). Native CLIs and search run first, headless QA runs at <code>49 ms</code> p50, and logged-in Chrome + macOS apps run in the background at <code>103–144 ms</code> with <code>0.0 px</code> cursor drift. Across <code>8,513</code> live calls over the last 7 days, average footprint is <code>576</code> tokens with a <code>67%</code> compact diff hit rate.
+            </p>
+          </div>
+          <div data-lang-pane="zh" hidden>
+            <h2>光装一个快 MCP 还不够，配齐 browser-routing 才能把 Antigravity 救回来</h2>
+            <p>
+              Antigravity 内置的电脑和浏览器子代理确实偏拉胯：跑在独立的慢速 webview 里，用不了平时登录好的 Chrome 标签页；哪怕你单独装了高速 MCP，模型还是会惯性调内置浏览器，或者看个 YouTube 字幕、搜个公开网页都要先开浏览器绕一圈。
+            </p>
+            <p>
+              索性把平时自用的 <code>browser-routing</code> 路由技能直接打包进了开源的 <code>faster-mac-use</code>，做成了一行安装的 Antigravity 原生插件（<code>uvx --from faster-mac-use fmu setup --antigravity</code>）。接口/字幕直走 CLI，公开搜索先走 <code>search_web</code>，本地调试和已登录 Chrome / 原生 Mac 应用全走后台 <code>fmu</code>。过去 7 天跑了 <code>8,513</code> 次真实调用，中位延迟 <code>49–144 ms</code>，平均每次只要 <code>576</code> tokens，鼠标 <code>0.0 px</code> 偏移。
+            </p>
+          </div>
+          <div class="journal-links">
+            <a href="../faster-mac-use/">Faster Mac Use overview →</a>
+            <a href="https://github.com/lifan-builds/faster-mac-use">GitHub repo ↗</a>
+          </div>
+        </article>
+
         <article class="long-note thought-card" id="codex-execution-worker" data-thought-card>
           <div class="journal-meta">
             <span>Quick Take · X &amp; RedNote (小红书)</span>

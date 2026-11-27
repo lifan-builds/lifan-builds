@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-26T08:00:00Z</updated>
+  <updated>2026-11-26T18:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>A fast browser MCP alone isn’t enough — you need a routing skill</title>
+    <link href="https://clifan.com/journal/#fmu-browser-routing" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/#fmu-browser-routing</id>
+    <updated>2026-11-26T18:00:00Z</updated>
+    <summary>Antigravity’s built-in computer-use harness is pretty rough: it runs in a slow isolated webview that can’t see your logged-in Chrome tabs, and even after installing a fast MCP server, models still fall back to it or open a full browser just to read a YouTube transcript or search Google.</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-26): Google Research Cogentic drops six preprints led by… · Anthropic migrates its Messages API from Python to…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-26.html" rel="alternate" type="text/html"/>

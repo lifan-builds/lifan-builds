@@ -62,13 +62,13 @@
         <div class="hero-copy">
           <h1 id="hero-heading">Background computer use for macOS that never touches your cursor.</h1>
           <p class="hero-lead">
-            Drive unfocused Chrome <strong>"🤖 Agent"</strong> tabs and native macOS apps in parallel at <code>0.0 px</code> drift and 114× fewer&nbsp;tokens.
+            Drive unfocused Chrome <strong>"🤖 Agent"</strong> tabs and native macOS apps — bundled with the <code>browser-routing</code> skill and Antigravity plugin at <code>0.0 px</code> drift.
           </p>
 
           <div class="install-widget" aria-label="Install faster-mac-use">
             <div class="install-bar">
               <span class="prompt-char" aria-hidden="true">$</span>
-              <code id="hero-cmd" aria-live="polite">uvx --from faster-mac-use fmu mcp</code>
+              <code id="hero-cmd" aria-live="polite">uvx --from faster-mac-use fmu setup --antigravity</code>
               <button type="button" class="copy-btn" data-copy-target="hero-cmd">
                 <svg class="copy-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
                   <path class="icon-clip" fill="currentColor" d="M5.75 1a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-3a.75.75 0 0 0-.75-.75h-4.5Zm.75 3V2.5h3V4h-3Zm-2.874-.467a.75.75 0 0 0-.752-1.298A1.75 1.75 0 0 0 2 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 13.25v-9.5a1.75 1.75 0 0 0-.874-1.515.75.75 0 1 0-.752 1.298.25.25 0 0 1 .126.217v9.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-9.5a.25.25 0 0 1 .126-.217Z"/>
@@ -79,11 +79,12 @@
             </div>
             <div class="install-meta">
               <div class="install-switch" role="group" aria-label="Install method">
-                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx --from faster-mac-use fmu mcp">uvx</button>
-                <button type="button" class="install-tab" aria-pressed="false" data-cmd="uv tool install faster-mac-use">uv tool</button>
+                <button type="button" class="install-tab" aria-pressed="true" data-cmd="uvx --from faster-mac-use fmu setup --antigravity">Antigravity</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="uvx --from faster-mac-use fmu setup --all">Skill + All</button>
+                <button type="button" class="install-tab" aria-pressed="false" data-cmd="uvx --from faster-mac-use fmu mcp">MCP only</button>
                 <button type="button" class="install-tab" aria-pressed="false" data-cmd="pip install faster-mac-use">pip</button>
               </div>
-              <code class="guard-inline">50Hz guard: 0.0 px drift · 0 focus theft</code>
+              <code class="guard-inline">8,513 7d calls · 576 avg tok · 0.0 px drift</code>
             </div>
           </div>
 
@@ -545,12 +546,16 @@ let ocr = await app.ocr();`,
 
     const CONFIG_SNIPPETS = {
       mcp: {
-        label: "mcp_config.json / .cursor/mcp.json",
-        code: `{
+        label: "Antigravity Plugin + MCP JSON (fmu + browser-routing)",
+        code: `# One-command Antigravity plugin (MCP + browser-routing skill + rule):
+uvx --from faster-mac-use fmu setup --antigravity
+
+# Or add the MCP server manually to mcp_config.json / .cursor/mcp.json:
+{
   "mcpServers": {
     "faster-mac-use": {
-      "command": "fmu",
-      "args": ["mcp"]
+      "command": "uvx",
+      "args": ["--from", "faster-mac-use", "fmu", "mcp"]
     }
   }
 }`
