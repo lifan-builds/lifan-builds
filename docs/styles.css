@@ -2256,6 +2256,32 @@ dd {
   line-height: 1.6;
 }
 
+.story-move {
+  margin: 10px 0 0;
+  padding: 7px 10px;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  background-color: var(--surface-strong);
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.52;
+}
+
+.story-caveat {
+  margin: 8px 0 0;
+  color: var(--ink-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.story-card code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background-color: var(--surface-strong);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
 .story-links {
   display: flex;
   flex-wrap: wrap;
