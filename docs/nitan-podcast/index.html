@@ -454,6 +454,7 @@
       .ep-player { width: 100%; margin: 10px 0 6px; }
 
       details { color: var(--muted); font-size: 14px; }
+      details:not([open]) > :not(summary) { display: none; }
       details summary { cursor: pointer; font-weight: 600; color: var(--text); }
       .description { white-space: pre-wrap; margin: 10px 0 0; line-height: 1.6; }
       .description a { color: var(--accent); font-weight: 500; }
@@ -509,6 +510,8 @@
         justify-content: space-between;
         gap: 12px;
       }
+
+      footer a { white-space: nowrap; }
 
       @media (max-width: 980px) {
         .topbar .badge { display: none; }

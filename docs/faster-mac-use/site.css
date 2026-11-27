@@ -1055,6 +1055,10 @@ dd {
   color: var(--muted);
 }
 
+.site-footer a {
+  white-space: nowrap;
+}
+
 .footer-links {
   display: flex;
   align-items: center;

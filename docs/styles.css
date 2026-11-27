@@ -2138,7 +2138,8 @@ dd {
 }
 
 .archive-search-input {
-  flex: 1 1 320px;
+  flex: 1 1 240px;
+  min-width: 0;
   max-width: 560px;
   padding: 10px 14px;
   border-radius: 8px;
@@ -2146,7 +2147,7 @@ dd {
   background-color: var(--surface-strong);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .archive-search-input::placeholder {
@@ -2232,6 +2233,7 @@ dd {
 
 .story-content {
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .story-meta {

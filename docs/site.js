@@ -728,12 +728,25 @@ function updateConceptDOM(concept) {
   if (leadBuild) selectBuild(leadBuild);
 }
 
-function applyConceptFilter(concept) {
+function runViewTransition(updateDom, onFinished) {
   if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.startViewTransition(() => updateConceptDOM(concept));
-  } else {
-    updateConceptDOM(concept);
+    const vt = document.startViewTransition(updateDom);
+    const ignoreSuperseded = (err) => {
+      if (err && err.name === 'AbortError') return;
+      throw err;
+    };
+    vt.ready.catch(ignoreSuperseded);
+    vt.updateCallbackDone.catch(ignoreSuperseded);
+    if (onFinished) vt.finished.then(onFinished, ignoreSuperseded);
+    else vt.finished.catch(ignoreSuperseded);
+    return;
   }
+  updateDom();
+  if (onFinished) onFinished();
+}
+
+function applyConceptFilter(concept) {
+  runViewTransition(() => updateConceptDOM(concept));
 }
 
 let startCoverLoop = null;
@@ -769,12 +782,7 @@ function openWorkbench(concept = 'all', scrollSelector = null) {
     else window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.startViewTransition(doOpen).finished.then(scrollAfterOpen);
-  } else {
-    doOpen();
-    scrollAfterOpen();
-  }
+  runViewTransition(doOpen, scrollAfterOpen);
 }
 
 function closeWorkbench() {
@@ -787,11 +795,7 @@ function closeWorkbench() {
     if (startCoverLoop) startCoverLoop();
     if (typeof updateScrollTelemetry === 'function') updateScrollTelemetry();
   };
-  if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.startViewTransition(doClose);
-  } else {
-    doClose();
-  }
+  runViewTransition(doClose);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
