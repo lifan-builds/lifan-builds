@@ -5,7 +5,7 @@ Standalone public repository (`github.com/lifan-builds/lifan-builds`), nested lo
 1. **GitHub `<user>/<user>` profile (`README.md`, `avatar/`):** Preserve intentional HTML alignment, 2-column build table, Shields badges, and exact `./avatar/` paths and casing. Never add unstable third-party stat-card renderers (`github-readme-stats`) or private repository links.
 2. **`clifan.com` GitHub Pages (`docs/`, `docs/CNAME`):** Static vanilla HTML/CSS/JS site featuring:
    - Dual-mode home (`docs/index.html`, `docs/site.js`, `docs/styles.css`): Cover Portal (`#cover-portal`) ↔ Full Workbench (`#full-workbench`).
-   - 10 hosted flagship showcase subpages under `docs/<slug>/`: `faster-mac-use`, `agent-autofill`, `quotaswitch`, `close-snow`, `perks-reminder`, `freshpowder`, `foliofen-cli`, `ai-builder-brief`, `castforge`, and `nitan-podcast`.
+   - 13 hosted flagship showcase subpages under `docs/<slug>/`: `faster-mac-use`, `poe2brain`, `agent-autofill`, `quotaswitch`, `close-snow`, `perks-reminder`, `clearcut`, `freshpowder`, `foliofen-cli`, `echoframe`, `ai-builder-brief`, `castforge`, and `nitan-podcast`.
    - 3-track Builder Journal (`docs/journal/index.html`): `Quick Thoughts` (bilingual EN/ZH toggles), `Essays`, and `Daily AI Builder Briefs` (`docs/journal/ai-builder-brief/`).
 
 ## Per-release asset contract (`docs/<slug>/`)

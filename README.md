@@ -41,8 +41,18 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://clifan.com/faster-mac-use/"><strong>Faster Mac Use (fmu)</strong></a> <sup>NEW</sup><br />
+      <a href="https://clifan.com/poe2brain/"><strong>poe2brain</strong></a> <sup>TOP · NEW</sup><br />
+      <sub>Agent-native Path of Exile 2 (<code>0.5.5</code>) intelligence engine and live web workbench: headless LuaJIT PoB2 dewatering, offline SQLite ground truth, 353 audited sleeper builds, exact crafting EV, and zero-<code>POESESSID</code> CLI/MCP tooling (<a href="https://clifan.com/poe2brain/">overview</a> · <a href="https://poe2brain.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/poe2brain">repo</a>).</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://clifan.com/faster-mac-use/"><strong>Faster Mac Use (fmu)</strong></a> <sup>TOP · NEW</sup><br />
       <sub>Background-first, multi-cursor browser &amp; native macOS computer-use engine (0.0 px cursor drift, 268-tok schema, 1,290–2,024 tok vs. 231,125 in <code>@playwright/mcp</code>, 1,510 tok / 326 ms 3-agent swarm; <a href="https://clifan.com/faster-mac-use/">interactive benchmarks</a> · <a href="https://pypi.org/project/faster-mac-use/">PyPI</a> · <a href="https://github.com/lifan-builds/faster-mac-use">repo</a>).</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://clifan.com/perks-reminder/"><strong>Perks Reminder</strong></a> <sup>PROVEN</sup><br />
+      <sub>Open-source benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations with zero bank logins (<a href="https://clifan.com/perks-reminder/">overview</a> · <a href="https://www.perks-reminder.com/">live app</a> · <a href="https://github.com/lifan-builds/perks-reminder">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://clifan.com/agent-autofill/"><strong>Agent Autofill</strong></a> <sup>NEW</sup><br />
@@ -61,12 +71,12 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://clifan.com/perks-reminder/"><strong>Perks Reminder</strong></a><br />
-      <sub>Open-source benefits tracker for welcome bonuses, annual fees, recurring credits, certificates, and loyalty expirations (<a href="https://clifan.com/perks-reminder/">overview</a> · <a href="https://www.perks-reminder.com/">live app</a> · <a href="https://github.com/lifan-builds/perks-reminder">repo</a>).</sub>
+      <a href="https://clifan.com/echoframe/"><strong>EchoFrame</strong></a> <sup>NEW</sup><br />
+      <sub>Turn an Amazon Echo Show (Vega OS &amp; Fire OS) into an ad-free, zero-crop AI-curated iPhone photo frame with <code>1600×960</code> portrait diptychs and Juno DNS sinkholing (<a href="https://clifan.com/echoframe/">overview</a> · <a href="https://github.com/lifan-builds/echoframe">repo</a>).</sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
-      <sub>Ski and snowboard deal aggregator tracking current and historical deals across 28 North American retailers (<a href="https://clifan.com/freshpowder/">overview</a> · <a href="https://freshpowder.clifan.com/">live app</a> · <a href="https://github.com/lifan-builds/clearcut">repo</a>).</sub>
+      <a href="https://clifan.com/clearcut/"><strong>Clearcut</strong></a> + <a href="https://clifan.com/freshpowder/"><strong>FreshPowder</strong></a><br />
+      <sub>Multi-catalog specialist deal engine powering 5 gear worlds across 100 retailers, with FreshPowder tracking ski/snowboard deals across 28 North American shops (<a href="https://clifan.com/clearcut/">overview</a> · <a href="https://clearcut.clifan.com/">live hub</a> · <a href="https://freshpowder.clifan.com/">FreshPowder live</a> · <a href="https://github.com/lifan-builds/clearcut">repo</a>).</sub>
     </td>
   </tr>
   <tr>
@@ -87,16 +97,6 @@
     <td width="50%" valign="top">
       <a href="https://clifan.com/nitan-podcast/"><strong>Nitan Podcast</strong></a><br />
       <sub>Weekly Chinese podcast generated from USCardForum discussions and shipped through RSS and podcast platforms (<a href="https://clifan.com/nitan-podcast/">listen</a> · <a href="https://github.com/lifan-builds/nitan-podcast">repo</a>).</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://clifan.com/echoframe/"><strong>EchoFrame</strong></a> <sup>NEW</sup><br />
-      <sub>Turn an Amazon Echo Show (Vega OS &amp; Fire OS) into an ad-free, zero-crop AI-curated iPhone photo frame with <code>1600×960</code> portrait diptychs and Juno DNS sinkholing (<a href="https://clifan.com/echoframe/">overview</a> · <a href="https://github.com/lifan-builds/echoframe">repo</a>).</sub>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/lifan-builds/context-harness"><strong>Context Harness</strong></a><br />
-      <sub>Tiny filesystem memory layer for coding agents: durable context files, companion skills, and local scripts.</sub>
     </td>
   </tr>
 </table>
@@ -130,7 +130,7 @@
 <details>
   <summary><strong>More about the portfolio (clifan.com)</strong></summary>
   <br />
-  The through-line across all 10 hosted builds on <a href="https://clifan.com">clifan.com</a> is practical automation with visible boundaries: local data when it should stay local, repeatable evaluation harnesses before claims ship, and human checkpoints before consequential external actions.
+  The through-line across all 13 hosted builds on <a href="https://clifan.com">clifan.com</a> is practical automation with visible boundaries: local data when it should stay local, repeatable evaluation harnesses before claims ship, and human checkpoints before consequential external actions.
 </details>
 
 <p align="center">

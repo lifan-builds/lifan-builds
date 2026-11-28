@@ -2260,13 +2260,15 @@ dd {
 
 .story-move {
   margin: 10px 0 0;
-  padding: 7px 10px;
-  border-left: 2px solid var(--accent);
-  border-radius: 0 6px 6px 0;
-  background-color: var(--surface-strong);
+  padding: 8px 0 0;
+  border-top: 1px solid var(--border);
   color: var(--ink);
   font-size: 13.5px;
   line-height: 1.52;
+}
+
+.story-move strong {
+  color: var(--accent);
 }
 
 .story-caveat {
