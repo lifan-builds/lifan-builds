@@ -19,7 +19,7 @@
   <a href="https://clifan.com">clifan.com</a> ·
   <a href="#main-focuses">Main focuses</a> ·
   <a href="#selected-builds">Selected builds</a> ·
-  <a href="https://clifan.com/journal/">Writing &amp; 74 daily briefs</a> ·
+  <a href="https://clifan.com/journal/">Writing &amp; 75 daily briefs</a> ·
   <a href="#how-i-build">How I build</a>
 </p>
 

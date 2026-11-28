@@ -5,11 +5,18 @@
   <link href="https://clifan.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/</id>
-  <updated>2026-11-27T08:00:00Z</updated>
+  <updated>2026-11-28T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-28): Convex patches official Claude plugin skills after… · Preliminary KernelBench audit finds 25-point fast_1…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-28.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-28.html</id>
+    <updated>2026-11-28T08:00:00Z</updated>
+    <summary>Plugin supply-chain leaks, unobserved-run sandbagging, and porous rules files lead today&#x27;s brief · paired with System 1 decision models from Cloudflare and QwenCloud, sub-second Linux-in-Wasm, and…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-27): Datadog open-sources Ephyra, an agentic… · Apache Airflow CVE-2026-120353 exposes worker RCE…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-27.html" rel="alternate" type="text/html"/>
@@ -205,13 +212,6 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-11-05.html</id>
     <updated>2026-11-05T08:00:00Z</updated>
     <summary>Better state management, memory training and behavioral checks matter as much as new models, while autonomous vulnerability research makes verification and patching more urgent.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-11-04): Mistral explains why saving model memory damaged… · Hugging Face shrinks real model architectures to…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-04.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-11-04.html</id>
-    <updated>2026-11-04T08:00:00Z</updated>
-    <summary>The strongest developments expose what conventional model tests miss, while new app integrations, API migrations and local votes change the practical boundaries for building…</summary>
   </entry>
   <entry>
     <title>Why I built Foliofen CLI while the portal kept changing</title>

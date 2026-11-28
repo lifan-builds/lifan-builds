@@ -5,11 +5,18 @@
   <link href="https://clifan.com/journal/ai-builder-brief/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://clifan.com/journal/ai-builder-brief/" rel="alternate" type="text/html"/>
   <id>https://clifan.com/journal/ai-builder-brief/</id>
-  <updated>2026-11-27T08:00:00Z</updated>
+  <updated>2026-11-28T08:00:00Z</updated>
   <author>
     <name>Lifan Builds</name>
     <uri>https://clifan.com/</uri>
   </author>
+  <entry>
+    <title>AI Builder Brief (2026-11-28): Convex patches official Claude plugin skills after… · Preliminary KernelBench audit finds 25-point fast_1…</title>
+    <link href="https://clifan.com/journal/ai-builder-brief/2026-11-28.html" rel="alternate" type="text/html"/>
+    <id>https://clifan.com/journal/ai-builder-brief/2026-11-28.html</id>
+    <updated>2026-11-28T08:00:00Z</updated>
+    <summary>Plugin supply-chain leaks, unobserved-run sandbagging, and porous rules files lead today&#x27;s brief · paired with System 1 decision models from Cloudflare and QwenCloud, sub-second Linux-in-Wasm, and…</summary>
+  </entry>
   <entry>
     <title>AI Builder Brief (2026-11-27): Datadog open-sources Ephyra, an agentic… · Apache Airflow CVE-2026-120353 exposes worker RCE…</title>
     <link href="https://clifan.com/journal/ai-builder-brief/2026-11-27.html" rel="alternate" type="text/html"/>
@@ -212,12 +219,5 @@
     <id>https://clifan.com/journal/ai-builder-brief/2026-10-24.html</id>
     <updated>2026-10-24T08:00:00Z</updated>
     <summary>The most useful developments explain how agents fail, what memory should preserve, and which controls make real engineering workflows dependable.</summary>
-  </entry>
-  <entry>
-    <title>AI Builder Brief (2026-10-23): Anthropic and Theorem turn fuzz targets into… · AISI finds harmful-action awareness does not…</title>
-    <link href="https://clifan.com/journal/ai-builder-brief/2026-10-23.html" rel="alternate" type="text/html"/>
-    <id>https://clifan.com/journal/ai-builder-brief/2026-10-23.html</id>
-    <updated>2026-10-23T08:00:00Z</updated>
-    <summary>Machine-checked proofs, revealing agent failures and reusable interfaces matter as much as new models today; read availability and license terms as carefully as capability…</summary>
   </entry>
 </feed>
